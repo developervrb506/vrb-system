@@ -1,0 +1,491 @@
+v3.2.2 Oct 2, 2006
+-------------------------------------------
+bug fix - added another layer of validation when deleting old transcripts on server to limit warning errors
+bug fix - fixed variable names in transcript API that was generating error messages
+bug fix - updated transcript API LEFT JOIN query to conform with MySQL 5.0 update
+bug fix - could not view past page 1 of transcripts in setup and admin due to variable name change.  fixed.
+security - few files were further updated to limit possible exploits
+
+
+v3.2.1 (build 2) August 21, 2006
+-------------------------------------------
+enhancement - renamed the "page" variable to "pagex" to limit errors on few server settings
+bug fix - image missing on some locations are now correct
+
+
+v3.2.1 (patch) July 20, 2006
+-------------------------------------------
+enhancement - put a time zone check for PHP versions > 5.0 to limit possible errors
+enhancement - a notice will alert the user if popup blocker disabled the chat window from opening
+enhancement - when initiating chat using auto popup chat window, it will detect if user has popup blocker and will auto set to image scroll
+security - status_image.php checks for valid GET vars on various areas to limit javascript exploits
+security - further checking of css_path variables for validation
+
+
+v3.2 (upgrade) Dec 7, 2005
+-------------------------------------------
+enhancement - slight adjustment of chat window for Firefox 1.5 update
+enhancement - each initiated window now pops up in their own chat window instead of taking over previous session
+bug fix - operator console: when auto login is checked, winapp looped login during exit - fixed
+bug fix - sql replace and insert queried to conform with MySQL 5
+bug fix - modified some internal workings to conform with PHP 5 and MySQL 5
+security - possible JavaScript code injection fix on initial chat window
+
+
+v3.1 (bug fix) June 6, 2005
+-------------------------------------------
+enhancement - interface enhancement of operator console
+enhancement - due to more tabbed browsers, links inside chat opens in new windows, not tabbed
+enhancement - able to view past transcripts in traffic monitor
+enhancement - each operator can now set their own chat theme for their operator chat window
+enhancement - compatibility for NIS 2005 and other recent internet security software
+bug fix - random 2 ops in 1 chat should be fixed
+bug fix - visitor question getting cut off if lengthy - fixed
+bug fix - dollar ($) char in chat caused problems in emailing transcripts - fixed
+bug fix - apostrophe (') char in dept name caused problems in chat - fixed
+bug fix - op-to-op print view showed switched op names for chat - fixed
+bug fix - op's picture (if uploaded) now displays during initiate chat
+bug fix - apostrophe (') char in name is now disabled to limit errors during chat
+bug fix - timezone parsing error if no timezone has been set - fixed
+
+
+v3.0 (upgrade-021105 build) Jan 31, 2005
+-------------------------------------------
+enhancement - new chat window interface with THEMES
+enhancement - new chat engine using silent request method not showing up on status bar on some browsers including firefox
+enhancement - Mac OS compatible ;)
+enhancement - Mozilla > 1.7.x compatible
+enhancement - chat transcripts have the operator's return email instead of company's
+enhancement - chat request question carries over to the leave a message during offline
+enhancement - predefined vars use short $_GET tags for PHP 5 compliant
+bug fix - search transcript page-to-page not showing correct results
+bug fix - swf sound file causing non-secure error on https - fixed
+bug fix - footprint stats and refer URL stats now uses your time zone settings
+bug fix - it now correctly registers "party left" when the "close" link is pressed
+bug fix - Win XP pro IE SP2 "permission denied" error during chat is fixed
+security - major security fix on GET/POST variable passing
+security - all variables passed through sql queries are quoted for ' char
+
+
+v2.8.2 (upgrade) Nov 23, 2004
+-------------------------------------------
+new feature - allow/disable visitors to email transcripts per department
+enhancement - popup block workaround for pushing pages - first tries to open in existing opener window, then reverts to opening a new window
+enhancement - converted sounds from wav to .swf (flash) to increase browser compatibility
+bug fix - multiple chat buttons on same page javascript error fixed
+bug fix - daylight saving time DB optimization loop fixed
+bug fix - major security fix during directory/conf file includes
+
+
+v2.8.1 (bug fix) Oct 28, 2004
+-------------------------------------------
+bug fix - if there exists a spam block ip, the initate chat had errors - fixed
+bug fix - timestamp is corrected on admin view transcripts
+bug fix - track'it correctly stores the refer URL - was not storing previously
+bug fix - WinApp correctly reports no visitors if visitor enters then leaves site
+bug fix - WinApp correctly reports visitors greather then 21 (over 40, it reports 40 at this time)
+enhancement - ability to open two different operator monitor windows without it overriding each other
+
+
+v2.8 (upgrade) Oct 19, 2004
+-------------------------------------------
+new feature - gather visitor email prior to chat
+new feature - ability to remove/clean old DB data to increase performance
+enhancement - chat request now displays indications of auto polled call, busy polled or transferred call
+enhancement - optimized duplicate hostname lookup for faster chat window loading
+bug fix - excessive reloading when operator clicks "Offline" then back "Online" on admin console
+bug fix - display of all canned messages if no dept is assigned to operator - fixed
+
+
+v2.7 (upgrade) Sept 1, 2004
+-------------------------------------------
+new feature - block IPs from accessing chat (spam blocker)
+new feature - departments can be hidden from public access
+new feature - transcripts can be deleted in the setup area
+enhancement - internal excluded IPs clearly marked on the traffic monitor
+enhancement - direct link to operator area from traffic monitor and admin chat area
+enhancement - initiate chat image no longer scrolls
+enhancement - leave message Name box pre-populates from cookie
+bug fix - various config update areas caused errors due to (') character, fixed
+
+
+v2.6.6 (minor bug fix) July 21, 2004
+-------------------------------------------
+enhancement - restructured the chat accept backend to eliminate the random "config error" on some systems
+enhancement - system will flag a chat request if it was a transferred call
+new feature - dbinfo module in the super area
+
+
+v2.6.5 (upgrade) June 23, 2004
+-------------------------------------------
+bug fix - when call is polled to another op, the first op's name appears in "is typing" area on the visitor's chat window. fixed
+bug fix - email sig image not displaying at times. fixed
+bug fix - initiate chat stat corrected
+bug fix - sub category of a sub category did not display all Qs.  fixed
+bug fix - popup blockers blocked chat requests from email sigs. fixed
+new feature - search transcripts in setup area
+new feature - set traffic monitor refresh rate
+new feature - KB integration to admin chat window - be able to select answers directly from KB to be used during chat
+new feature - multi-lined text box during chat
+enhancement - optimized the DB queries during footprint tracking to limit load
+enhancement - multi-lined canned responses
+defunct - proactive survey
+
+
+v2.6.1 (minor bug fix) April 28, 2004
+-------------------------------------------
+enhancement - modified backend DB queries to limit activity load
+
+
+v2.6 (upgrade) April 21, 2004
+-------------------------------------------
+enhancement - operator status autoconnect if internedt connection is interupted
+enhancement - added print option to the Printer Friendly page
+enhancement - restructured the admin canned message input for easier use
+new feature - "visitor rank" added to help identify highly relavent traffic based on defined criterias
+
+
+v2.5.2 (bug fix) April 13, 2004
+-------------------------------------------
+enhancement - tweaked admin console coding to work with WinApp 2.0's new features
+bug fix - apostrophe (') in Operator name caused random errors) - fixed
+bug fix - fixed email sig link always showing online, even if ops are offline
+bug fix - when call is transferred, visitor hold message continues to show - fixed
+bug fix - when call is transferred, the first op's name show in "is typing" in stead of new op's name - fixed
+WinApp 2.0 - new features: small taskbar popup notifier and autologin
+
+
+v2.5.1 (bug fix) Feb 10, 2004
+-------------------------------------------
+new feature - Sales Path (http://www.salespath.net)
+bug fix - globally viewing of transcripts fixed
+bug fix - viewing of transcripts using direct URL fixed
+bug fix - fixed popup blockers disabling operator-to-operator chats
+bug fix - after taking survey and entering chat created errors, fixed
+bug fix - qmail systems rejected emails due to non conforming to norms, fixed
+bug fix - op-to-op chat stalling forever when receiving operator hits "busy", fixed
+bug fix - fixed popup blockers disabling viewing of transcript during chat session
+bug fix - fixed re-pushing of URLs when transferring calls
+bug fix - disabled asking to rate chat during op-to-op chat sessions
+bug fix - Company Name having ' char produced errors on various areas, fixed
+enhancement - op-to-op chat continually displaying connection message even after connected suppressed
+
+
+v2.5 (upgrade) Nov 24, 2003
+-------------------------------------------
+new feature - operator online/offline activity reporting (in setup area)
+new feature - time zone: configure the time so it matches your current time
+bug fix – fixed special char languages check on chat request screen name
+bug fix - update profile (in super area) removed some conf variables - fixed
+bug fix - fixed the "#" char in URL causing "config not found" error
+bug fix - fixed the "&#039;" to the proper ' char in email transcript
+bug fix - global wide sharing of user's canned for all ops in dept - fixed
+bug fix - during INITIATED chat sessions, operator could not PUSH pages - fixed
+bug fix - winXP IE crashing on some occasions when opening traffic monitor – fixed
+enhancement - auto-fill visitor login if repeat visit via cookie
+enhancement - leave a message emails are now marked for easy recognition
+enhancement - FAQ “help index” display to gauge relevance
+enhancement - cleaned up the interface of chat admin area
+enhancement - add operators to multiple departments more easily
+enhancement - closing the "x" on browser, the system will still ask for support rating
+
+
+v2.3 (upgrade) Sept 24th, 2003
+-------------------------------------------
+* bug fix - fix JavaScript error when multiple icons are on one page
+* bug fix - on some Window systems, installation stops because of permission error with phplive.sql file.  fixed.
+* new feature - knowledge base integration
+* new feature - automated knowledge base Q&A ordering engine based on user ratings
+* new feature - text only link to Live Support
+
+
+v2.2 (upgrade) July 30th, 2003
+-------------------------------------------
+* bug fix - sound on/off visibility fix on Netscape Communicator
+* bug fix - the $ being treated as a variable bug is fixed in emailing transcript section
+* new feature - chat duration display when viewing chat transcripts
+* new feature - operator-to-operator chat
+* new feature - polling type selection (set order, round-robin, random, etc.)
+
+
+v2.1.1 (bug fix) June 26, 2003
+-------------------------------------------
+* bug fix - when transferring a call, transcripts did not save.  fixed
+* bug fix - remote killing operator window 404 not found - fixed
+* bug fix - window system double slash ("//") document root fix during profile update
+* enhancement - more friendly error reporting when mysql connection fails
+* enhancement - organized setup menu options for better organization
+* enhancement - added chat timestamp on viewing transcripts
+* enhancement - able to view operating rating in view transcript list
+* enhancement - extra optional comment field during emailing of transcripts in op and setup view transcript
+
+
+v2.1 (bug fix) May 7, 2003
+-------------------------------------------
+* bug fix - remove of old user canned responses/commands when removing a user
+* bug fix - $ character bug fix in emailing transcripts
+* bug fix - operator request statistics fixed (request taken, rejected, not taken)
+* enhancement - visitor connecting screen for more friendly waiting experience
+* enhancement - queue order notification when a request is made (visitor side)
+* enhancement - admin can view visitor's past transcripts within the support chat session
+
+
+v2.0 (upgrade) March 17, 2003
+-------------------------------------------
+* new feature - Track'it: ad and PPC campaign tracking and reporting
+* new feature - image scroll option when initiating chat
+* new feature - sound can be turned on/off on the traffic monitor
+* new feature - canned initiate intro messages
+* new feature - operator and setup admin can email chat transcripts
+* new feature - operator console monitor
+* bug fix - ability to add canned commands/responses with same name
+* bug fix - department initiate stat bug has been fixed
+* bug fix - initiate not correctly marked on stats page - fixed
+* bug fix - survey stat log display fix
+* bug fix - traffic monitor on Netscape sometimes went to "Not Found" - fixed
+* bug fix - special character (') in department created error during create department - fixed
+* bug fix - chat taken/rejected stat was not correct - fixed for the first request (minor bug exists when request is polled)
+* enhancement - better reload method on request monitor (no clicking)
+
+
+v1.9.9 (minor patch) Dec 11, 2002
+-------------------------------------------
+* new feature - setup admin can view saved transcripts
+* new feature - customize border color
+* bug fix - setTimeout set to var in JavaScripts to limit memory leak and freeze on older browsers
+* bug fix - survey text color is set to black.  text shows even when webpage text is set to white
+* bug fix - rating chat session ID matches chat transcript session ID.
+* bug fix - admin cannot edit canned responses - fixed
+
+
+v1.9.8 (upgrade) Nov 18, 2002
+-------------------------------------------
+* new feature - proactive survey.  operators can push surveys to visitors to collect data.
+* new feature - visitors can rate admin's support level
+* new feature - site admin can set operator rating ability for EACH operator
+* enhancement - complete new corporate style GUI interface
+* enhancement - chatsession timeout value increased slightly on default
+* enhancement - auto cleans chatsession files left on file system
+* enhancement - smart checking of operators and department before generating HTML code
+* bug fix - chat requests were being deleted immediately on rare occasions.  fixed.
+* bug fix - when transfer a call, visitor now sees the correct operator name in "typing..." message
+
+
+v1.9.7.2 (minor patch) August 28th, 2002
+-------------------------------------------
+* new feature - added request order to department admins.  it now selects operators by order you set
+* bug fix - fixed setup error if company name has a single quote (')
+* bug fix - variable was not declared in language file.  generated warning, now fixed
+
+
+v1.9.7.1-m (minor patch) August 25th, 2002
+-------------------------------------------
+* enhancement - color changes to admin/setup/super area
+* bug fix - on few PHP 4.2+ builds, it generates warning during saving trascript manually - fixed
+
+
+v1.9.7.1 (patch) August 14th, 2002
+-------------------------------------------
+* bug fix - v1.9.7's modification disabled Netscape users because of JavaScript error.  now it is fixed.
+* bug fix - shifted JavaScript functions around to avoid declaration errors when loading chat window
+* bug fix - better "party is typing" checking procedure
+* bug fix - displays correct initiate data in the stats page
+
+
+v1.9.7 (patch) August 5th, 2002
+-------------------------------------------
+* enhancement - before initiate, it tells if visitor has been already initiated
+* enhancement - when transferring a call, it shows the operator name AND the department
+* enhancement - admin request monitor upgrade to integrate with new WinApp 1.1
+* bug fix - JavaScript error fix at "party is typing" notify (crashes some IE browsers - now fixed)
+* bug fix - encoded the current page URL on initiate chat (variable conflict error fix)
+* bug fix - initiate chat is reported as "initiate" instead of "not taken" on support stat
+* bug fix - fixed variable declaration on couple files.  now it does not generate warning errors in error log files
+* bug fix - when you transfer a call, it shows the current operator in the "party is typing" message
+
+
+v1.9.6 (upgrade) August 1st, 2002
+-------------------------------------------
+* new feature - know when other party is typing a message
+* new feature - track visitor's refer URL
+* new feature - visitors can send a copy of transcript to their email address
+* enhancement - traffic monitor now shows refer URL
+* enhancement - traffic monitor now shows hostname of visitor
+* enhancement - better interface look and icons in setup and admin area
+* enhancement - bettet upgrade/patching method
+* bug fix - operator's own canned messages are not shared anymore
+* bug fix - encoded the URLs on JavaScript prior to passing as GET variable.  the problem of grabbing partial URLs are fixed.
+* bug fix - various minor bug fixes
+
+
+v1.9.5 (upgrade) June 25, 2002
+-------------------------------------------
+* new feature - department can have their own support icon image
+* new feature - department wide canned responses and commands
+* new feature - department support hours (displayed when offline on leave a message screen) 
+* enhancement - full code review for PHP 4.2.x compliance
+* enhancement - no tracking of ip shifted to variables instead of put in text file
+* enhancement - department specific greeting instead of operator specific
+* enhancement - admin request monitor upgrade to integrate with new WinApp 1.0
+* bug fix - took out "save transcript" button on the visitor chat window
+* bug fix - support request taken, rejected, not taken stats fixed
+* bug fix - fixed minor footprint traffic monitor stat bug (better cleaning system)
+
+
+v1.9 (upgrade) Feb 18, 2002
+-------------------------------------------
+* new feature - initiate chat with visitor (Proactive -tm)
+* new feature - real-time visitor monitor
+* enhancement - radio box instead of dept select option
+* enhancement - when rejecting request, it polls to next operator instead taking directly to leave message
+* enhancement - operator can set the time their own time of request console auto close when offline
+* enhancement - hostname resolving of IPs
+* enhancement - status code per department
+* enhancement - remember operator login information for quick access
+* enhancement - smarter checking of admin console open status if same session opens the console window
+* enhancement - department specific html codes generate their own department online/offline status
+* bug fix - saving transcripts overriding eachother (on rare occassions to few, .01%, clients)
+* bug fix - wrong logo display bug on printer friendly page
+
+
+v1.8 (upgrade) Jan 28, 2002
+-------------------------------------------
+* new feature - auto save chat transcripts
+* new feature - admin kill chat sessions
+* new feature - remote kill of admin consols
+* new feature - request polling from operator to operator
+* new feature - department specific requests
+* new feature - edit canned commands and responses
+* new feature - chat timer
+* new feature - chat respond sound
+* new feature - ASP (application service provider) integration (requires separate ASP module purchase)
+* enhancement - restructed database for ASP model
+* enhancement - take visitor question during support request window
+* enhancement - new corporate interface
+* enhancement - pconnect/connect in MySQL db setting
+* enhancement - chat close button
+* enhancement - took out email address in leave a message form
+* enhancement - request box uses HTTP_USER (if set) variable
+* bug fix - windows path fix with chars \n,\r,\t and other control chars
+* bug fix - admin window closes in 10 min when set to offline
+* bug fix - load balance bug fixed, distributing based on request AND sessions
+* bug fix - session timing out during chat
+* bug fix - on admin chat transfer window, shows correct number of sessions instead of zero
+* bug fix - deletion of department minor bug fix (diplaying fix)
+
+
+v1.7 (upgrade) Jan 11, 2002
+-------------------------------------------
+* new feature - call transfer to another operator
+* new feature - add Live! support to your emails
+* bug fix - session time out fix click to view printer friendly
+* enhancement - took out login name prompt if no operator is online on the request page
+* enhancement - load balance checks for ACTIVE sessions, NOT requests
+* enhancement - chat window for visitor opens in different windows per different pages
+
+
+v1.6.3 (patch) Jan 9, 2002
+-------------------------------------------
+* the IE and Netscape reload "hour glass" was eliminated
+* Javascript error with "session_start" pages bug fix
+* the chat engine bugs were cleaned up from the previous version
+
+
+v1.6.2 (patch) Jan 8, 2002
+-------------------------------------------
+* upgraded the chat engine system to use another method to limit notice of refreshing
+* fixed a bug on saving transactips.  it did not save when there was a single quote (')
+* put the department on the admin chat request console
+* fixed the image icon javascript - created error with pages with session_start()
+
+
+v1.6 (upgrade) Jan 1st, 2002
+-------------------------------------------
+* new feature - assign a user to multiple department
+* new feature - online/offline icon changes depending on available operators
+* new feature - track visitor page views
+* new feature - capture the page visitor clicked from to request Live! support
+* new feature - detailed status of page views and unique visits
+* new feature - exclude IPs from page view/footprint tracker
+* upgraded the chat engine so it scrolls from top-down
+* upgraded the chat engine so it scrolls more smooth (JavaScript enhancement)
+* restructured the language pack so there is language pack for only what visitor sees
+* when rejecting a support request, it now sends the visitor directly to leave a message page
+* touched up the navigation on support admin area
+* many bug fixes on various areas.
+* enhancement - admin consol shuts down after 10 minutes if status if offlineleave the consol open at another location
+* enhancement - during chat, it uses admin's NAME instead of login
+* changes - lang packs are available ONLY for the text the visitor sees
+
+
+v. 1.5.3 (patch) Dec 19, 2001
+-------------------------------------------
+* passwords are now stored in MD5 hash key
+* request window now focuses if behind other windows
+* users must now verify their own password before changing
+* canned responses have a %%user%% flag to insert visitor's name
+* admin's Online status turning to Offline has been fixed.
+* manage users area can now EDIT user info
+
+
+v. 1.5.2 (patch) Dec 18, 2001
+-------------------------------------------
+* fixed JavaScript error message when adding user
+* you may now delete canned responses and commands
+* UPGRADE: users can now change their own feedback
+* $dbh passing by reference error
+* when viewing Printer Friendly view, your customized logo now shows
+* on statistics area, the requests take, rejected and not taken column is fixed
+* ALL text is now located in the language pack
+* added more language pack variables
+
+
+v. 1.5 (upgrade) Dec 17, 2001
+-------------------------------------------
+* new feature - multiple admins per department
+* new feature - load balancing to distribute requests to online department support admins
+* new feature - language packs.  you edit 99% of text using the language packs.
+* new feature - 100% customizable/rebranding capabilities with no sign of PHP Live! mark.
+* new feature - web interface for uploading logo, support image
+* new feature - web interface to customize colors
+* new feature - save/view/search support transcripts
+* new feature - statistics of daily/monthly support requests per user/department
+* new feature - monitor admin's support activity: total requests taken, not taken and rejected
+* new feature - https URL is added to admin commands (url, push, image)
+* modification - when you push a page, word docs, or other files, it knows to not to time out
+* modification - setup process is smarter
+* bug fix - rejecting request is fixed
+
+
+v. 1.3 (upgrade) Dec 12, 2001
+-------------------------------------------
+* new feature - canned responses
+* new feature - canned commands
+* edit welcome greeting
+* gather some user information (browser, os, resolution, ip)
+
+
+v. 1.1 (patch) Dec 11, 2001
+-------------------------------------------
+* Added Sound alert instead of just window focus on admin console.
+* Added Online/Offline status to the user request box.
+* Minor bug fixes on session handling.
+* View Printer Friendly output of support session.
+
+
+v. 1.0 Dec 9, 2001
+-------------------------------------------
+* Restructured session handling method.
+* Major fixing of session handling and managing multiple session.
+* Fixed session bug when you try to test using same browser for both admin and request.
+* Fixed counter bug when tracking if party has left chat.
+* Cleaned up the setup area.
+* Window focuses on admin console when request is made.
+
+
+v. 0.1 (beta)
+December 8, 2001
+-------------------------------------------
+Initial public beta release of PHP Live! Support
+
+

@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+body {
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/*fonts*/
+.20blackuppercase {
+	font-size:20px;
+	color:#000;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.error_box{
+	position: absolute;
+	margin-left: 520px;
+	width: 450px;
+	margin-top: 50px;
+	color:#900;
+	font-size:12px;
+}
+
+.13boldwhiteuppercase {
+	font-size:13px;
+	color:#FFF;
+	text-transform:uppercase;
+	font-weight:bold;
+	float:left
+}
+
+.wrapper {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+
+.wrapper_top {
+	width:998px;
+	height:176px;
+	float:left;
+}
+
+.logo {
+	width:253px;
+	height:96px;
+	float:left;
+	margin-top:20px;
+}
+
+.right-top {
+	width:476px;
+	height:30px;
+	float:right;
+	margin-top:90px;
+	background-color:#404040;
+	padding:5px;
+}
+.side-righttop {
+	width:11px;
+	height:40px;
+	float:left;
+	margin-left:-5px;
+	margin-top:-5px;
+}
+
+.content-user-pass {
+	width:129px;
+	height:27px;
+	float:left;
+	margin-left:30px;
+	margin-top:0px;
+}
+
+.content-btn-login {
+	width:88px;
+	height:27px;
+	float:left;
+	margin-left:30px;
+	margin-top:2px;
+}
+
+input.login-top {
+	width:127px;
+	height:25px;
+	background-color:#FFF;
+	border:1px solid #999;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#404040;
+	text-align:center;
+	font-weight:bold;
+}
+
+.banner_logos {
+	width:998px;
+	height:225px;
+	float:left;
+	background-image:url(../images/ezpay/back-banner-logos.jpg);
+	background-position:right;
+	background-repeat:no-repeat;
+}
+
+.logos-finance {
+	width:auto;
+	height:auto;
+	float:left;
+	margin-left:25px;
+	margin-top:80px;
+}
+
+.text-finance {
+	width:214px;
+	height:140px;
+	float:right;
+	margin-right:50px;
+	margin-top:50px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:50px;
+	color:#000;
+	line-height:45px;
+}
+
+.wrapper-moreinfo-skype {
+	float:left;
+	width:996px;
+	height:460px;
+	border:1px solid #cccccc;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.text-top-moreinfo {
+	width:894px;
+	height:25px;
+	float:left;
+	margin-left:53px;
+	margin-top:60px;
+	font-size:18px;
+	color:#404040;
+}
+
+.wrapper-choose {
+	float:left;
+	width:1000px;
+	height:240px;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.tit_whychooseus {
+	float:left;
+	width:300px;
+	height:25px;
+	margin-top:100px;
+	font-size:25px;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+
+.arrow_chooseus {
+	float:left;
+	width:14px;
+	height:210px;
+	margin-top:10px;
+}
+
+.box_text_chooseus {
+	float:left;
+	width:260px;
+	height:155px;
+	margin-left:40px;
+	margin-right:40px;
+	margin-top:40px;
+	font-size:12px;
+	color:#333;
+}
+
+.tit_chooseus2 {
+	float:left;
+	width:220px;
+	height:23px;
+	border-bottom:2px dotted #000;
+	font-size:18px;
+	text-transform:uppercase;
+	color:#000;
+}
+
+
+.box-userskype {
+	float:left;
+	width:256px;
+	height:336px;
+	border:1px solid #cdcdcd;
+	/*background-image:url(../images/ezpay/back-userskype.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;*/
+	margin-left:55px;
+	margin-top:20px;
+}
+
+.name_userskype {
+	width:155px;
+	height:95px;
+	float:left;
+	margin-left:50px;
+	margin-top:15px;
+	color:#000;
+	text-align:center;
+	font-size:14px;
+	color:#666;
+	line-height:24px;
+}
+
+.account_userskype {
+	float:left;
+	height:25px;
+	width:100px;
+	margin-left:25px;
+	padding-left:30px;
+	background-image:url(../images/ezpay/skype2.png);
+	color:#666;
+	background-repeat:no-repeat;
+	text-align:left;
+}
+
+.linedotted {
+	width:210px;
+	height:2px;
+	float:left;
+	border-top: dotted  #999 1px;
+	margin-top:14px;
+	margin-bottom:8px;
+	margin-left:20px;
+}
+
+.picture_userskype {
+	width:118px;
+	height:129px;
+	float:left;
+	margin-left:70px;
+	margin-top:0px;
+}
+
+.btn_skype_status {
+	width:181px;
+	height:43px;
+	float:left;
+	margin-left:35px;
+	margin-top:10px;
+}
+
+.bottom {
+	width:100%;
+	height:209px;
+	background-color:#999f3b;
+	border-bottom:9px solid #404040;
+	margin-bottom:50px;
+	float:left;
+}
+.content_bottom {
+	width:1000px;
+	height:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.logo_bottom {
+	width:146px;
+	height:55px;
+	float:left;
+	margin:15px;
+	margin-top:80px;
+}
+
+.text_right_bottom {
+	width:240px;
+	height:100px;
+	float:right;
+	padding:30px;
+	margin-top:20px;
+	border-left:1px solid #FFF;
+	color:#404040;
+	font-size:12px;
+}
+
+.live_support_top {
+	width:264px;
+	height:18px;
+	float:right;
+	background-image:url(https://www.ezpay.com/images/ezpay/live_support_top.png);
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	text-align:right;
+	padding-right:20px;
+	padding-top:2px;
+}
+
+

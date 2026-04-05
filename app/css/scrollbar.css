@@ -1,0 +1,37 @@
+#wrapper1{
+    position: fixed;
+    width: 100px;
+    border: none 0px red;
+    overflow-x: scroll; 
+    overflow-y:hidden;
+    z-index: 10000;
+    padding: 7px 0 60px 27px;
+    background-color: #008000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 9px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.6);
+    background-image: url("http://localhost:8080/ck/images/sidetoside.png");
+    background-position: 50% 40%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    left: 320px;
+    top: 266px;
+  }
+
+  #wrapper1{
+    height: 20px;
+  }
+
+  #div1 {
+    width:15500px; /*Aqui define la sensibilidad del scroll*/
+    height: 20px; 
+  } 
+
+  #wrapper2{
+    width: 150px;
+    height: 
+    padding: 15px;
+    overflow-x: scroll;
+  }

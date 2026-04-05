@@ -1,0 +1,608 @@
+
+	<!DOCTYPE HTML PUBLIC "-/W3C/DTD XHTML 1.0 Transitional/EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html>
+    <HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="Bet with Us">
+    
+    <!--<meta name="google-translate-customization" content="850af3aab9df52c0-1111978e695f2729-g87703a3f0fd07b91-d"></meta>-->
+	<link rel="stylesheet" type="text/css" href="http://server1.myimagesfiles.com/Qubic/images/themes/theme1/theme1.css?v=70">
+    <link rel="stylesheet" type="text/css" href="http://server1.myimagesfiles.com/Qubic/qubic/scripts/coverflow/coverflow.css?v=70">
+    
+    	<link rel="stylesheet" type="text/css" href="http://server1.myimagesfiles.com/Qubic/css/commun.css?version=70">
+  	
+
+    <link rel="stylesheet" type="text/css" href="http://server1.myimagesfiles.com/Qubic/qubic/scripts/tooltipster/tooltipster.css?version=70" />
+	<script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/fancybox/jquery-1.4.2.min.js?version=70"></script>
+	<script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/fancybox/jquery.mousewheel-3.0.4.pack.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/fancybox/jquery.fancybox-1.3.4.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/autosugest/autosuggest.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/autosugest/autosuggestinit.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/scripts/CommonJavaScript.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/tooltipster/jquery.tooltipster.js?version=70"></script>
+
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/ticker/facescroll.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/ticker/ticker.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/countdown/countdown.js?version=70"></script>
+    <script type="text/javascript" src="http://server1.myimagesfiles.com/Qubic/qubic/scripts/ticker/jquery-ui.min.js?version=70"></script>
+	<link rel="stylesheet" type="text/css" href="http://server1.myimagesfiles.com/Qubic/qubic/scripts/fancybox/jquery.fancybox-1.3.4.css?version=70" media="screen" />
+	<title>byx4202 | Home</title>
+
+	<script type="text/javascript">
+		function loadSettings(){
+
+			$.fancybox.showActivity();
+			$.ajax({
+				type	: "GET",
+				cache	: false,
+				url		: "PlayerSettings.php",
+				data	: "ip=1",
+				success: function(data) {
+					$.fancybox(data);
+				}
+			});
+			return false;
+		}
+		function loadNewFeatures(){
+
+			$.fancybox.showActivity();
+			$.ajax({
+				type	: "GET",
+				cache	: false,
+				url		: "Newfeatures.php",
+				data	: "ip=1",
+				success: function(data) {
+					$.fancybox(data);
+				}
+			});
+			return false;
+		}
+	</script>
+
+    <!--[if IE]>
+		<style>
+           	#trends .inner{
+			width:567px !important;
+			overflow:hidden !important;
+			zoom:1 !important;
+			position:relative !important;
+			margin-left:284px !important;
+			top:0px !important;
+			}
+            .tooltipster-default {
+				border-radius: 5px;
+				border: 1px solid #362D2F;
+				background: transparent #000;
+				color: #fff;
+				width:380px;
+				height:90px;
+				background-color:#000;
+				opacity:0.8;
+				filter:alpha(opacity=80); /* For IE8 and earlier */
+			}
+         </style>
+	<![endif]-->
+    <!--[if lte IE 6]>
+    <script src="/Qubic/qubic/scripts/pngfixie6/DD_belatedPNG_0.0.8a-min.js"></script>
+    <![endif]-->
+
+	
+	
+ <script type="text/javascript">
+	$(document).ready(function() {
+  		var page={};
+         
+		$(function() {
+			new FrontPage().init();
+		});		
+		$(function() {
+			$('.tooltip').tooltipster({
+				animation: 'grow',
+				position: 'bottom'
+			});
+			$('.limitstooltip').tooltipster({
+				animation: 'grow',
+				position: 'top'
+			});
+		});
+		
+	    $('.inner2').vTicker({
+			speed: 500,
+			pause: 3000,
+			showItems: 3,
+			animation: 'fade',
+			mousePause: true,
+			height: 0,
+			direction: 'up'
+		});
+		page.trendDescriptions = {};
+		loadTrendDescriptions();
+		
+	   var badBrowser = (/MSIE ((5\.5)|6)/.test(navigator.userAgent) && navigator.platform == "Win32");
+	   if (badBrowser) {
+		   DD_belatedPNG.fix('img');
+			$('body').supersleight();
+	   }
+
+	   hideTickerFast()
+
+	});
+	</script>
+</HEAD><BODY onScroll="if (typeof balance != 'undefined' )scrollAdj(balance)">
+<script type="text/javascript">			
+			function getProps(gameNum,correlationID){
+              divID='#PropsData_' + gameNum;
+			  if($(divID).html() != "" && $(divID).is(':visible')==true)
+			   $(divID).hide();
+			  else if($(divID).html() != "" && $(divID).is(':visible')==false)
+			   $(divID).show();
+			  else{
+			   $("#loadingAjax").show();
+				$.ajax({
+					type	: "GET",
+					cache	: false,
+					url		: "ContestbyCorrelationIDAjax.php",
+					data	: "correlationID="+correlationID,
+					success: function(data) {
+						$(divID).append(data);						
+						$("#loadingAjax").fadeOut(2000);
+					}
+				});
+			    }
+				return false;
+			}
+			function getPeriods(gameNum,periods){
+              divID='#PeriodsData_' + gameNum;			  
+			  if($(divID).html() != "" && $(divID).is(':visible')==true)
+			   $(divID).hide();
+			  else if($(divID).html() != "" && $(divID).is(':visible')==false)
+			   $(divID).show();
+			  else{
+			   $("#loadingAjax").show();
+				$.ajax({
+					type	: "GET",
+					cache	: false,
+					url		: "GamePeriodsAjax.php",
+					data	: "gameNum="+gameNum+"&periods="+periods,
+					success: function(data) {
+						$(divID).append(data);
+						$("#loadingAjax").fadeOut(2000);
+					}
+				});
+			    }
+				return false;
+			}
+</script>
+<style>
+#loadingAjax
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    display: none;
+    background: transparent url("images/loadingAjax.gif");
+    z-index: 1000;
+    height: 50px;
+    width: 50px;
+	background-size: 50px 50px;
+}
+</style>
+<div id="loadingAjax" class="loadingAjax"></div>
+
+ 	
+	<div style="position:relative; top:0; padding:3px; width:987px; margin:auto auto; text-align:center;" align="center">
+	
+	
+        <div id="newfeatures" align="center">New Features <a id="newfeaureslink" style="color:#FD1342; cursor:pointer" onclick="loadNewFeatures()">(click here)</a></div>
+
+
+        <div id="ticker_system" class="fbChatSidebar">
+			
+            <div id="vertical-ticker" >
+
+                <table cellpadding="0" cellspacing="0"><tr valign="top"><td  onclick="showTicker();" style="cursor:pointer">
+                <li>
+              	<div class='desc' style='width:300px; height:12px;'><div style='font-size:12px;font-size-adjust: 0.5; width:100%; overflow-x:hidden; overflow-y:auto' >No New Messages</div></div>
+                </li>
+                </td></tr>
+                <tr><td align="center" style=" background-color:#000; position:relative; cursor:pointer; background-image:url(http://server1.myimagesfiles.com/Qubic//qubic/scripts/countdown/img/scroll.png); background-size: 30px 8px; height:8px; background-repeat:no-repeat; text-align:center; background-position:center " onclick="showTicker();"></td></tr>
+                </table>
+            </div>
+			
+         </div>         		 
+		 <div id="google_language_drop">
+		    <div id="google_translate_element" class="-blank">
+		   <select name="language" onChange="javascript:window.location=window.location.href.split('?')[0]+'?lang=' + this.value">
+		    <option value="English"selected >English</option><option value="Spanish" >Spanish</option><option value="Chinese (Simp)" >Chinese (Simp)</option><option value="French" >French</option>
+		   </select>
+		   </div>
+		 </div>
+				 
+		 <!--myluckybuck block-->
+		 	
+		 <!--end myluckybuck block-->
+     </div>
+
+
+     <!-- End TranslateThis Button -->
+    <script type="text/javascript">
+	var estadoSlinkS=1;
+	function newFeaturesLinkS(){
+
+		if(estadoSlinkS==1){
+			document.getElementById("newfeaureslink").style.color="#fff";
+			estadoSlinkS=0;
+		}
+		else{
+			estadoSlinkS=1;
+			document.getElementById("newfeaureslink").style.color="#FD1342";
+		}
+	}
+	setInterval("newFeaturesLinkS()",1000);
+
+
+    </script>
+      	  
+      <div id="wrapper">
+	  
+    	<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+			<tr>
+				<td id="clientName" nowrap="nowrap" style="text-align:center" >&nbsp;<um><strong>Account:</strong></um>&nbsp;<strong>byx4202</strong>
+                </td>
+				
+                
+    		    <td nowrap="nowrap" id="currentBalanceField" style="text-align:center;">&nbsp;<um><strong>Current Balance:</strong></um>&nbsp; <font color=red>USD&nbsp;-24,065</font>&nbsp;
+				
+				</td>
+				
+                
+    		    <td nowrap="nowrap" id="totalPendingField" style="text-align:center">&nbsp;<a href="SpecificPlayerPendingWagers.php"><um><strong><font color="white" size="2px">Total Pending:</strong></um>&nbsp; USD&nbsp;1,725.00&nbsp;</font></a>
+				</td>
+                
+
+
+    	    	<td nowrap="nowrap" id="currentAvailableField" style="border-left:1px solid #fff; text-align:center">
+
+                
+	        		<strong>&nbsp;<um>Current Available:</um>&nbsp;</strong>
+                    	<span style="color:#00ADEE">
+                        	USD&nbsp;24,210.0 &nbsp;
+                        </span>
+				</td>
+				
+    		    <td nowrap="nowrap" id="logoutField" style="text-align:center">
+        			<Strong>
+                    	&nbsp;
+                    	<a href="LogoutSucessful.php" style="color:red; font-size:16px;">Log Out</a>
+                        &nbsp;
+                    </Strong>
+				</td>
+				
+			</tr>
+		</table>
+		
+        <div class="pages" style="margin-left:auto; margin-right:auto">
+        	<table id="table_menu" width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:14px">
+            	<tr height="26px" >
+                <!--Straight cases-->
+                  	
+                    <!--Straight activo-->
+					<td class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-blue-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow0.style.backgroundPosition='0 -52px'" onmouseout="arrow0.style.backgroundPosition='0 -52px'"><A href="StraightSportSelection.php" style="line-height: 26px;"><center>Straight bets</center></a></td>
+                    <td width="17px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 -52px;" id="arrow0">&nbsp;</td>
+                    
+                	<!--Teaser cases-->
+                     
+                    <!--Straight active && teaser over-->
+                    <td class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow1.style.backgroundPosition='0 -52px'; arrow0.style.backgroundPosition='0 -182px'" onmouseout="arrow1.style.backgroundPosition='0 0'; arrow0.style.backgroundPosition='0 -52px'" ><A href="TeaserTeaserSelect.php" style="line-height: 26px;"><center>Teasers</center></a></td>
+					<td width="14px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 0" id="arrow1">&nbsp;&nbsp;</td>
+                    
+
+                     <!--Parlay cases-->
+                     
+                    <!--parlay no active && teaser no active-->
+                    <td class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow2.style.backgroundPosition='0 -52px'; arrow1.style.backgroundPosition='0 -26px'" onmouseout="arrow2.style.backgroundPosition='0 0'; arrow1.style.backgroundPosition='0 0'"><A href="StraightSportSelection.php?wagerType=Parlay" style="line-height: 26px;"><center>Parlays/RR</center></a></td>
+                    <td width="14px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 0" id="arrow2">&nbsp;&nbsp;</td>
+					
+
+                	<!--If bets cases-->
+                    
+                    <td class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow3.style.backgroundPosition='0 -52px'; arrow2.style.backgroundPosition='0 -26px'" onmouseout="arrow3.style.backgroundPosition='0 0'; arrow2.style.backgroundPosition='0 0'"><A href="IfbetsSportSelection.php" style="line-height: 26px;"><center>If Bets</center></a></td>
+                    <td width="14px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 0" id="arrow3">&nbsp;&nbsp;</td>
+					
+
+							<!--Action reverse cases-->
+							
+							 <!--if bet active action reverse over-->
+							 
+							<td class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow4.style.backgroundPosition='0 -156px'; arrow3.style.backgroundPosition='0 -26px'" onmouseout="arrow4.style.backgroundPosition='0 -104px'; arrow3.style.backgroundPosition='0 0'"><A href="StraightSportSelection.php?wagerType=Action%20Reverse" style="line-height: 26px;"><center>Action Reverse</center></a></td>
+							<td width="14px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 -104px" id="arrow4">&nbsp;&nbsp;</td>
+							 
+							<!--Turbo props cases-->
+							
+							<td class="menuSelection" id="navcasino" width="250px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-red-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow5.style.backgroundPosition='0 -52px'; arrow4.style.backgroundPosition='0 -26px'" onmouseout="arrow5.style.backgroundPosition='0 -78px'; arrow4.style.backgroundPosition='0 -104px'">
+							
+						   <!--
+							 ** NEW LIVE BETTING MODULE
+							-->
+							<!--<A href="LiveSportSelection.php?wagerType=Straight%20Bet" style="line-height: 26px;"><center>Live Betting</center></a>-->
+							
+							 <li>
+								<a href="#" onclick="GoToURl('NewLiveSportSelection.php?wagerType=Straight%20Bet')" style="line-height: 26px;"><center>Dynamic Live Betting</center></a>															 
+							</li>
+							
+							</td>
+
+							<!--<td width="14px" style="background-image:url(images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 -78px" id="arrow5">&nbsp;&nbsp;</td>-->
+                            
+							<!--horses Cases-->
+							
+							<td width="14px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 -78px" id="arrow5">&nbsp;&nbsp;</td>
+							
+							 <!--no props active && no casino active-->
+							<td class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow6.style.backgroundPosition='0 -52px'; arrow5.style.backgroundPosition='0 -130px'" onmouseout="arrow6.style.backgroundPosition='0 0'; arrow5.style.backgroundPosition='0 -78px'">
+							 
+							<A href="HorsesTrackSelection.php" style="line-height: 26px;"><center>Horses</center></a>
+							
+							</td>
+							
+
+
+
+
+							<!--casino Cases-->
+							
+							<td width="14px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-arrows.png); background-repeat:no-repeat; background-position:0 0" id="arrow6">&nbsp;&nbsp;</td>
+							<!--<td class="menuSelection" width="180px" style="background-image:url(images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow6.style.backgroundPosition='0 -26px'" onmouseout="arrow6.style.backgroundPosition='0 0'">-->
+							
+							<td id="navcasino" class="menuSelection" width="180px" style="background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/main-bar-black-1px.png); background-repeat: repeat-x; cursor:pointer" onmouseover="arrow6.style.backgroundPosition='0 -26px'" onmouseout="arrow6.style.backgroundPosition='0 0'">
+							
+							 <A href="#" style="line-height: 26px;"><center  style="color:#AAAAAA;">Not Available</center></a>
+							 
+							 </td>							 
+								
+                </tr>
+  			</table>
+            </div>
+			
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td id="tdCategoriesContainer">
+                        <div class="categories" style="margin:3px auto 0 auto;">
+                            <table width="928px" border="0" cellpadding="0" cellspacing="0" style="font-size:12px; background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/options_fullbg.png); background-repeat:no-repeat;">
+                                <tr>
+                                    <td id="categoriesHomeField" style="text-align:center"><a style="color:#fff" href="StraightLoginSportSelection.php"><center><div class="spriteHome"><br></div>Home</center></a></td>
+                                    <td style="border-left:1px solid #fff;"></td>
+                                    <td class="categoriesStandardFields" style="text-align:center" ><a style="color:#fff" href="Scores.php"><center><div class="spriteScores"><br></div>Scores</center></a></td>
+                                     <td style="border-left:1px solid #fff;"></td>
+                                    <!--<td class="categoriesStandardFields" style="text-align:center"><a style="color:#fff" href="PlayerTransactions.php?transactionListDays=1"><center><div class="spriteReports"><br></div>Reports</center></a></td>-->
+                                    <td style="border-left:1px solid #fff;"></td>
+
+
+									
+                                   		<td class="categoriesStandardFields" style="text-align:center"><a style="color:#fff" href="SpecificPlayerPendingWagers.php" ><center><div class="spritePending" ><br></div><div id="pendingWagersNumberE"><strong><center>1</center></strong></div><span style="padding:0 0 0 15px">Pending Wagers </span></center></a></td>
+										
+									 <td style="border-left:1px solid #fff;"></td>
+                                    <td class="categoriesStandardFields" style="text-align:center"><center><a style="color:#fff" href="PlayerDailyFigure.php"><div class="spriteDailyFigure" ><br></div><span>Daily Figures</span></center></a></td>
+                                    <td style="border-left:1px solid #fff;"></td>
+                                    <td class="categoriesStandardFields" style="text-align:center"><center><a style="color:#fff" href="SpecificPlayerWeeklyFigure.php"><div class="spriteWeeklyFigure" ><br></div><span>Graded Wagers</span></center></a></td>
+                                     <td style="border-left:1px solid #fff;"></td>
+                                    <td id="categoriesTransactionsField" style="text-align:center"><center><a style="color:#fff" href="SpecificPlayerTransactions.php"><div class="spriteTransaction" ><br></div><span>Transactions</span></center></a></td>
+
+                                     <td style="border-left:1px solid #fff;"></td>
+                                     
+                                    <td class="categoriesStandardFields" style="text-align:center; padding:0 0 0 0"><center><a style="color:#fff" href="PanelMessage.php" ><div class="spriteMessages" ><br></div><div id="messagesNumberE" ><strong><center>
+                                     0
+
+                                    </center></strong></div><span>Messages</span></center></a></td>
+									 
+
+									 <td style="border-left:1px solid #fff;"></td>
+
+									<td class="categoriesStandardFields" style="text-align:center; padding:0 20px 0 0">
+									    
+									  <center><a style="color:#fff" href="PlayerPanic.php"><div class="spriteIconBoss" ><br></div><span>Boss</span></center></a>
+									  
+									</td>
+
+                                </tr>
+                            </table>
+                        </div>
+        	   		 </td>
+	        	</tr>
+                <tr>
+                	<td align="left">
+                    	
+                        <div id="trends2" class="container" align="left" >
+
+                         	<div id="scores_tool" class="inner2" style="height:31px!important">
+                                <span class="trend-label2">Result:</span>
+                                <span class="trend-label2" style="position:relative; left:95px">NEWS:</span>
+
+						      	<ul id="ul_scores" class="trendscontent2" style="zoom: 1;position:relative;top:0px">
+                                	<li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_Russia.png' ></td><td align=center>Hockey              <br>3 | 0</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_Norway.png' ></td></tr><tr valign=top><td align=center>Russia                                  </td><td></td><td align=center>Norway                                  </td></tr></table>">Russ  3 - 0 Norw</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_Canada.png' ></td><td align=center>Hockey              <br>4 | 0</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_France.png' ></td></tr><tr valign=top><td align=center>Canada                                  </td><td></td><td align=center>France                                  </td></tr></table>">Cana  4 - 0 Fran</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_Danmark.png' ></td><td align=center>Hockey              <br>4 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_Kazakhstan.png' ></td></tr><tr valign=top><td align=center>Denmark                                 </td><td></td><td align=center>Kazakhstan                              </td></tr></table>">Denm  4 - 1 Kaza</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/hk_Germany.png' ></td><td align=center>Hockey              <br>4 | 2</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/NHL.png' ></td></tr><tr valign=top><td align=center>Germany                                 </td><td></td><td align=center>Hungary                                 </td></tr></table>">Germ  4 - 2 Hung</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Amkar_Perm_logo.png' ></td></tr><tr valign=top><td align=center>FK UFA</td><td></td><td align=center>Amkar Perm</td></tr></table>">FK U  0 - 1 Amka</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Dynamo_Moscow_logo.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Kuban_Krasnodar_loogo.png' ></td></tr><tr valign=top><td align=center>Dynamo Moscow</td><td></td><td align=center>Kuban Krasnodar</td></tr></table>">Dyna  0 - 1 Kuba</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Ural_Yekaterinburg_logo.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td></tr><tr valign=top><td align=center>Ural Yekaterinburg</td><td></td><td align=center>FK Rostov</td></tr></table>">Ural  0 - 1 FK R</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Terek_Grozny_logo.png' ></td><td align=center>Soccer              <br>0 | 3</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Spartak_Moscow_logo.png' ></td></tr><tr valign=top><td align=center>Terek Grozny</td><td></td><td align=center>Spartak Moscow</td></tr></table>">Tere  0 - 3 Spar</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 2</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/CSKA_Moscow_logo.png' ></td></tr><tr valign=top><td align=center>Krasnodar</td><td></td><td align=center>CSKA Moscow</td></tr></table>">Kras  0 - 2 CSKA</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  0 - 1 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  0 - 1 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  0 - 1 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  0 - 1 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Russian Premier League.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  0 - 1 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/brondi_if_logo.png' ></td><td align=center>Soccer              <br>3 | 2</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Esbjerg_fB_logo.png' ></td></tr><tr valign=top><td align=center>Brondby IF</td><td></td><td align=center>Esbjerg fB</td></tr></table>">Bron  3 - 2 Esbj</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/FC_Nordsjaelland_logo.png' ></td><td align=center>Soccer              <br>0 | 2</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/FC_Copenhagen_logo.png' ></td></tr><tr valign=top><td align=center>FC Nordsjaelland</td><td></td><td align=center>FC Copenhagen</td></tr></table>">FC N  0 - 2 FC C</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Randers_FC_logo.png' ></td><td align=center>Soccer              <br>3 | 2</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Viborg_FF_logo.png' ></td></tr><tr valign=top><td align=center>Randers FC</td><td></td><td align=center>Viborg FF</td></tr></table>">Rand  3 - 2 Vibo</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Denmark Sas Superliga.png' ></td><td align=center>Soccer              <br>1 | 0</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Denmark Sas Superliga.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  1 - 0 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Denmark Sas Superliga.png' ></td><td align=center>Soccer              <br>0 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Denmark Sas Superliga.png' ></td></tr><tr valign=top><td align=center>X2</td><td></td><td align=center>1X</td></tr></table>">X2  0 - 1 1X</a></li><li ><a style="cursor:pointer" class="search_link2 tooltip" rel="<table cellpadding=4 cellspacing=4 width=250px><tr valign=top><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Soccer-generic-home.png' ></td><td align=center>Soccer              <br>2 | 1</td><td><img width=86px src='http://server1.myimagesfiles.com/Qubic/logos/Soccer-generic-home.png' ></td></tr><tr valign=top><td align=center>FC Vaduz</td><td></td><td align=center>Grasshoppers FC</td></tr></table>">FC V  2 - 1 Gras</a></li>
+                               	</ul>
+
+  							</div>
+  							<span class="fade fade-left2">&nbsp;</span>
+						</div>
+
+
+
+                        <div id="trends" align="left">
+  							<div class="inner">
+	 							<ul class="trendscontent" style="zoom: 1;position:">
+									 <li class="trend-label">&nbsp;&nbsp;</li>
+                    				 <li>
+						            	<a href="StraightSportSelection.php" class="search_link" name="" rel="nofollow">BACKUP WEBSITE: <strong><font color='#FF0000'>2backup365.com</font></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BACKUP WEBSITE: <strong><font color='#FF0000'>www.2backup365.com</font></strong>&nbsp;</a>
+
+						          	 </li>
+                                 </ul>
+  							</div>
+  							<span class="fade fade-left">&nbsp;</span><span class="fade fade-right">&nbsp;</span>
+						</div>
+                        <div style="width:100%">
+                       		<div id="score_popup" style="display:none;">
+
+                            </div>
+                       </div>
+					   
+					</td>
+                </tr>
+        	</table>
+            
+
+          	<table cellspacing="0" border="0" width="100%" align="left">
+               <tr valign="top">
+
+                    <td style=" width:100%" >
+                    	<div id="contentright">
+                         
+                            <div class="postP">
+                          
+                                <div  style=" padding:3px; height:100%">
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="margin:0px auto 4px auto;" >
+<tr>
+<td class="tb_search_top">
+<table cellspacing="0" cellpadding="0"><tr><td>
+<form method="post" name="searchform"  action=""><input type="hidden" name="action" value="Search" /><INPUT onKeyDown="if (event.keyCode == 13) submit()" type="text" value="" class="keyword_search_qubic" name="keyword_search" id="keyword_search"  /><input type="Submit" value="Search" class="search_submit"><INPUT type="hidden" id=inetWagerNumber name=inetWagerNumber value="0.38299084050285103"><INPUT type="hidden" id=inetSportSelection name=inetSportSelection value="sport"></form>
+</td><td>
+
+</td>
+<td>
+
+<FORM name="ParlayAmountForm" method="post" action="PlayerGameSelection.php">
+    <INPUT type="hidden" id=SortByTime name=SortByTime value="SortByTime">
+    <INPUT style="float:left;margin-left:10px;" class="input_login" type="submit" value="Sort by Time" id=submit9 name=submit9>
+</FORM>
+
+
+</td>
+<td><INPUT type="button" style="float:left;margin-left:10px;" class="input_login" value="Update Lines" id=submit1 name=submit1 onClick="window.location.reload()" ></td>
+</tr></table></td></tr></table>
+
+
+<FORM name="GameSelectionForm" method="post" action="StraightVerifyWager.php">
+	<INPUT  style="float:left;margin-left:10px;margin-top:-15px;" type="hidden" id=inetWagerNumber name=inetWagerNumber value="0.38299084050285103">
+
+	<INPUT type="hidden" id=contestIdx name=contestIdx value=""><INPUT type="hidden" id=contestantIdx name=contestantIdx value="">
+    <input id=submit1 name=submit1  style="position:absolute; margin:-30px 0 0 740px; z-index:2000;" type="image" src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/btn_continue.png" onmouseover="this.src='/Qubic/images/images_topbar/images_content/btn_continue_parlay_over.png'" onmouseout="this.src='/Qubic/images/images_topbar/images_content/btn_continue.png'" onClick="form_submit(this);return false;">
+
+	
+
+			<input id=changemode name=changemode  style="position:absolute; margin:-30px 0 0 63px; z-index:2000;" type="image" src="/Qubic/images/images_topbar/images_content/btn_normalMode.png" onMouseOver="this.src='/Qubic/images/images_topbar/images_content/btn_normalMode_over.png'" onMouseOut="this.src='/Qubic/images/images_topbar/images_content/btn_normalMode.png'" onClick="window.location.href='PlayerGameSelection.php?mode=normal';return false;">
+
+			
+	<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+	 var volumentbetsvisible = false;
+	 function showVolumeBetsControls() {
+		var i = document.GameSelectionForm.elements.length;
+		for (var k = 0; k < i; k++) {
+			if (document.GameSelectionForm.elements[k].name == "volumenbetchk") {
+				if (!volumentbetsvisible) {
+					document.GameSelectionForm.elements[k].style.display = "inline";
+				}
+				else {
+					document.GameSelectionForm.elements[k].style.display = "none";
+				}
+			}
+		}
+		volumentbetsvisible = !volumentbetsvisible;
+	}
+	function IsNumeric(sText) {
+		var ValidChars = "0123456789.";
+		var IsNumber = true;
+		var Char;
+
+
+		for (i = 0; i < sText.length && IsNumber == true; i++) {
+			Char = sText.charAt(i);
+			if (ValidChars.indexOf(Char) == -1) {
+				IsNumber = false;
+			}
+		}
+		return IsNumber;
+
+	}
+
+	function applyVolumenAmount(element, textField) {
+		if (IsNumeric(document.GameSelectionForm.elements["volumeamount"].value) == false || document.GameSelectionForm.elements["volumeamount"].value.length == 0) {
+		  alert("An invalid amount for the wager was entered, enter a valid amount to use for all bets!!!.");
+		  document.GameSelectionForm.elements["volumeamount"].focus();
+		  return;
+	  }
+	  if(element.checked==true)
+		  document.GameSelectionForm.elements[textField].value = document.GameSelectionForm.elements["volumeamount"].value;
+	  else
+		  document.GameSelectionForm.elements[textField].value = "";
+	}
+    </script>
+	<div style="background-color:#000; color:#fff;border:1px solid #fff; text-align:center;width: 280px;margin-left: auto;margin-right: auto; padding:5px">
+	<input type="checkbox"  name="volumebets" onClick="showVolumeBetsControls()">&nbsp;Use same amount for all bets:&nbsp;<input type="text" name="volumeamount" id="volumeamount" size="4"><br>
+	</div>
+	
+	<div id="mainTab"><INPUT type="hidden" id=correlationID name=correlationID value=""><div class='div_advance_header'>MLB BASEBALL Game</div><TABLE cellspacing=0 cellpadding=2 border=0 width=100% style='position:relative;top:0;padding-left:2px;padding-right:2px' ><tr  class='type_title_header'><th   width="230px" class="type_title_header_td"><strong>Team Name</strong></th><th  width="153px" class="type_title_header_td"><strong>Run Line</strong></th><th  width="90px" class="type_title_header_td"><strong>Money Line</strong></th><th  width="153px" class="type_title_header_td"><strong>Total Points</strong></th><th  width="122px" class="type_title_header_td"> <strong> Team Total </strong> </th><th  width="122px" class="type_title_header_td"> <strong> Team Total </strong> </th></tr><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Atlanta Braves @ Pittsburgh Pirates</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;07:05PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>951</strong></span><span data-language="Atlanta Braves"> Atlanta Braves </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox10' name='pitcherCheckbox10' type='checkbox' >&nbsp;W. Perez - R must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_0">&nbsp;&nbsp;+1&#189;&nbsp;-120</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_0">&nbsp;+179&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_0">&nbsp;o8&nbsp;+105</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_0">&nbsp;o3&#189;&nbsp;+115</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_0">&nbsp;u3&#189;&nbsp;-135</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>952</strong></span><span data-language="Pittsburgh Pirates"> Pittsburgh Pirates </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox20' name='pitcherCheckbox20' type='checkbox' >&nbsp;J. Niese - L must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_0">&nbsp;&nbsp;-1&#189;&nbsp;+100 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_0">&nbsp;-192&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_0">&nbsp;u8&nbsp;-125</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_0">&nbsp;o4&#189;&nbsp;&nbsp;-105</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_0')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_0">&nbsp;u4&#189;&nbsp;&nbsp;-115 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594961972','951-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594961972','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594961972" class="PropsData_594961972"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594961972" class="PeriodsData_594961972"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Miami Marlins @ Philadelphia Phillies</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;07:05PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>953</strong></span><span data-language="Miami Marlins"> Miami Marlins </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox11' name='pitcherCheckbox11' type='checkbox' >&nbsp;A. Conley - L must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_1">&nbsp;&nbsp;-1&#189;&nbsp;+135</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_1">&nbsp;-122&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_1">&nbsp;o7&#189;&nbsp;-105</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_1">&nbsp;o4&nbsp;-110</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_1">&nbsp;u4&nbsp;-110</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>954</strong></span><span data-language="Philadelphia Phillies"> Philadelphia Phillies </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox21' name='pitcherCheckbox21' type='checkbox' >&nbsp;J. Eickhoff - R must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_1">&nbsp;&nbsp;+1&#189;&nbsp;-155 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_1">&nbsp;+112&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_1">&nbsp;u7&#189;&nbsp;-115</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_1">&nbsp;o3&#189;&nbsp;&nbsp;+100</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_1')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_1">&nbsp;u3&#189;&nbsp;&nbsp;-120 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594961982','953-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594961982','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594961982" class="PropsData_594961982"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594961982" class="PeriodsData_594961982"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Tampa Bay Rays @ Toronto Blue Jays</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;07:05PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>957</strong></span><span data-language="Tampa Bay Rays"> Tampa Bay Rays </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox12' name='pitcherCheckbox12' type='checkbox' >&nbsp;D. Smyly - L must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_2">&nbsp;&nbsp;+1&#189;&nbsp;-185</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_2">&nbsp;+111&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_2">&nbsp;o8&nbsp;-115</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_2">&nbsp;o4&nbsp;-115</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_2">&nbsp;u4&nbsp;-105</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>958</strong></span><span data-language="Toronto Blue Jays"> Toronto Blue Jays </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox22' name='pitcherCheckbox22' type='checkbox' >&nbsp;J.A. Happ - L must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_2">&nbsp;&nbsp;-1&#189;&nbsp;+165 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_2">&nbsp;-121&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_2">&nbsp;u8&nbsp;-105</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_2">&nbsp;o4&nbsp;&nbsp;-120</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_2')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_2">&nbsp;u4&nbsp;&nbsp;+100 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594962002','957-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594962002','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594962002" class="PropsData_594962002"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594962002" class="PeriodsData_594962002"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Minnesota Twins @ Detroit Tigers</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;07:10PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>959</strong></span><span data-language="Minnesota Twins"> Minnesota Twins </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox13' name='pitcherCheckbox13' type='checkbox' >&nbsp;J. Berrios - R must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_3">&nbsp;&nbsp;+1&#189;&nbsp;-170</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_3">&nbsp;+124&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_3">&nbsp;o8&#189;&nbsp;-115</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_3">&nbsp;o3&#189;&nbsp;-125</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_3">&nbsp;u3&#189;&nbsp;+105</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>960</strong></span><span data-language="Detroit Tigers"> Detroit Tigers </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox23' name='pitcherCheckbox23' type='checkbox' >&nbsp;J. Zimmermann - R must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_3">&nbsp;&nbsp;-1&#189;&nbsp;+150 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_3">&nbsp;-134&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_3">&nbsp;u8&#189;&nbsp;-105</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_3">&nbsp;o4&#189;&nbsp;&nbsp;+100</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_3')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_3">&nbsp;u4&#189;&nbsp;&nbsp;-120 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594962012','959-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594962012','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594962012" class="PropsData_594962012"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594962012" class="PeriodsData_594962012"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Texas Rangers @ Oakland Athletics</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;10:05PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>961</strong></span><span data-language="Texas Rangers"> Texas Rangers </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox14' name='pitcherCheckbox14' type='checkbox' >&nbsp;D. Holland - L must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_4">&nbsp;&nbsp;+1&#189;&nbsp;-200</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_4">&nbsp;+108&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_4">&nbsp;o8&#189;&nbsp;+100</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_4">&nbsp;o4&nbsp;-115</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_4">&nbsp;u4&nbsp;-105</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>962</strong></span><span data-language="Oakland Athletics"> Oakland Athletics </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox24' name='pitcherCheckbox24' type='checkbox' >&nbsp;S. Manaea - L must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_4">&nbsp;&nbsp;-1&#189;&nbsp;+170 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_4">&nbsp;-118&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_4">&nbsp;u8&#189;&nbsp;-120</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_4">&nbsp;o4&nbsp;&nbsp;-120</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_4')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_4">&nbsp;u4&nbsp;&nbsp;+100 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594962022','961-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594962022','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594962022" class="PropsData_594962022"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594962022" class="PeriodsData_594962022"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Cincinnati Reds @ Cleveland Indians</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;06:10PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>963</strong></span><span data-language="Cincinnati Reds"> Cincinnati Reds </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox15' name='pitcherCheckbox15' type='checkbox' >&nbsp;J. Lamb - L must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_5">&nbsp;&nbsp;+1&#189;&nbsp;-130</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_5">&nbsp;+165&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_5">&nbsp;o8&#189;&nbsp;-115</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_5">&nbsp;o4&nbsp;-105</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_5">&nbsp;u4&nbsp;-115</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>964</strong></span><span data-language="Cleveland Indians"> Cleveland Indians </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox25' name='pitcherCheckbox25' type='checkbox' >&nbsp;C. Anderson - R must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_5">&nbsp;&nbsp;-1&#189;&nbsp;+110 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_5">&nbsp;-175&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_5">&nbsp;u8&#189;&nbsp;-105</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_5">&nbsp;o4&#189;&nbsp;&nbsp;-105</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_5')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_5">&nbsp;u4&#189;&nbsp;&nbsp;-115 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594962032','963-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594962032','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594962032" class="PropsData_594962032"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594962032" class="PeriodsData_594962032"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">New York Yankees @ Arizona Diamondbacks</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;09:40PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>965</strong></span><span data-language="New York Yankees"> New York Yankees </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox16' name='pitcherCheckbox16' type='checkbox' >&nbsp;C. Green - R must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_6">&nbsp;&nbsp;+1&#189;&nbsp;-210</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_6">&nbsp;+103&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_6">&nbsp;o9&nbsp;-110</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_6">&nbsp;o4&#189;&nbsp;-105</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_6">&nbsp;u4&#189;&nbsp;-115</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>966</strong></span><span data-language="Arizona Diamondbacks"> Arizona Diamondbacks </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox26' name='pitcherCheckbox26' type='checkbox' >&nbsp;R. Ray - L must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_6">&nbsp;&nbsp;-1&#189;&nbsp;+175 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_6">&nbsp;-113&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_6">&nbsp;u9&nbsp;-110</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_6">&nbsp;o4&#189;&nbsp;&nbsp;-105</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_6')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_6">&nbsp;u4&#189;&nbsp;&nbsp;-115 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594962042','965-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594962042','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594962042" class="PropsData_594962042"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594962042" class="PeriodsData_594962042"></div></td></tr></table></TD></TR><TR><TD colspan=8 NOWRAP width='100%' style=' color:#fff; text-align:left ' align='left'><table cellpadding="0" cellspacing="0" border="0" width="100%" class="teams_betting_options_advance"><tr valign="top" ><td align="left" colspan=10 class="tbl_betAmount_opt_advance_date"   ><div class="game_note_cotainer_advance"> <span class="sport_week_bet_date">Los Angeles Angels @ Los Angeles Dodgers</span></div><div class="opt_advance_date">Mon 5/16&nbsp;&nbsp;10:10PM</div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px"   ><div class="team1_name_up"><span class="game_number_local">&nbsp;<strong>967</strong></span><span data-language="Los Angeles Angels"> Los Angeles Angels </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox  id='pitcherCheckbox17' name='pitcherCheckbox17' type='checkbox' >&nbsp;M. Shoemaker - R must pitch</span></div> </td> <td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S1_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S1_7">&nbsp;&nbsp;+1&#189;&nbsp;-125</td><td class="tbl_betAmount_td"  width="90px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M1_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M1_7">&nbsp;+178&nbsp;</td><td class="tbl_betAmount_td" width="153px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L1_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L1_7">&nbsp;o7&#189;&nbsp;-105</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E1_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E1_7">&nbsp;o3&nbsp;-120</td><td class="tbl_betAmount_td" width="122px"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E3_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E3_7">&nbsp;u3&nbsp;+100</td></tr><tr valign="top" class="tbl_betAmount_opt_advance"><td align="left" width="230px" ><div class="team2_name_down"><span class="game_number_visitor">&nbsp;<strong>968</strong></span><span data-language="Los Angeles Dodgers"> Los Angeles Dodgers </span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style='font-size:11px; font-style:italic'><INPUT class=checkbox id='pitcherCheckbox27' name='pitcherCheckbox27' type='checkbox' >&nbsp;K. Maeda - R must pitch </span></div></td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'S2_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="S2_7">&nbsp;&nbsp;-1&#189;&nbsp;+105 </td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'M2_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="M2_7">&nbsp;-188&nbsp;</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'L2_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="L2_7">&nbsp;u7&#189;&nbsp;-115</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E2_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E2_7">&nbsp;o4&nbsp;&nbsp;-135</td><td class="tbl_betAmount_td"><input id="volumenbetchk" class="limitstooltip" rel="Max:$1500" type="checkbox" name="volumenbetchk" onclick="applyVolumenAmount(this,'E4_7')" style="display:none;"><INPUT class="limitstooltip" rel="Max:$1500" style="width:40px;" size="4"  type="textbox" onkeypress="return SoloNumeros(event);"  value="" id="checkboxx" name="E4_7">&nbsp;u4&nbsp;&nbsp;+115 </td> </tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><input type="button" value="Props" onclick="getProps('594962052','967-g')">&nbsp;<input type="button" value="1st 5 Innings" onclick="getPeriods('594962052','1st 5 Innings')"></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PropsData_594962052" class="PropsData_594962052"></div></td></tr><tr valign="top" class="tbl_betAmount_opt_advance" ><td colspan="6"><div id="PeriodsData_594962052" class="PeriodsData_594962052"></div></td></tr></table></TD></TR></TABLE><BR/><BR/><br />
+    <input id=submit1 name=submit1  style="position:absolute; margin:-30px 0 0 740px; z-index:2000;" type="image" src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/btn_continue.png" onmouseover="this.src='/Qubic/images/images_topbar/images_content/btn_continue_parlay_over.png'" onmouseout="this.src='/Qubic/images/images_topbar/images_content/btn_continue.png'" onClick="form_submit(this);return false;">
+
+	
+</div>
+<br />
+
+</FORM>
+
+	</div>
+                            </div>
+                        </div>
+                    </td>
+               </tr>
+        	</table>
+        </div>		
+        </div>		
+        <div id="new_footer">
+    	<table width="100%" cellspacing="0" cellpadding="0" border="0" style="float:left;background-image:url(http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/bg_footer.png); background-repeat:no-repeat; border-bottom:2px solid #D6D6D6;" >
+        	<tr valign="bottom">
+            	<td valign="top" style="float:right; padding:10px 0 0 0">
+
+                        
+                                        <img src="/Qubic/images/images_topbar/images_content/phone-symbol.png" class="phone_img">
+                    	<span class="phone_img_text" style="color:#FFF">
+                                        <um>Wagering Phone</um><br>#1-866-978-6980      </span>
+
+                </td>
+                <td style=" padding:2px 0 0 70px;">
+				 
+                	<img src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/settings_icon.png"  style="cursor:pointer; " onClick="javascript:loadSettings();" class="settings_icon">
+				 
+                </td>
+                <td  valign="middle" >
+                	<img src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/separador.png" height="20px" style="margin:0 30px 0 0">
+                </td>
+				
+                	<td  style=" padding:2px 0 0 0;">
+                		<a href="Rules.php"><img src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/rules_icon.png" class="rules_icon"></a>
+                	</td>
+				
+                 <td  valign="middle" >
+                	<img src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/separador.png" height="20px" style="margin:0 30px 0 30px">
+                </td>
+                <td style=" padding:5px 0 0 0;">
+                 
+
+				               		<a href="Contactus.php"><img src="http://server1.myimagesfiles.com/Qubic/images/images_topbar/images_content/contact_icon.png"  class="contact_icon"></a>
+               	
+                </td>
+                <td align="center" style=" padding:0 20px 0 0;" valign="middle" class="copyright">
+                	 All Rights Reserved.<br />Copyright 2016.
+                </td>
+            </tr>
+        </table>
+         <div style="height:15px">&nbsp;</div>
+    </div>
+				 
+	</body>
+    </html>
+
+	

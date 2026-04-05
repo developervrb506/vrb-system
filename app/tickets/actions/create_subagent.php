@@ -1,0 +1,24 @@
+<? include(ROOT_PATH . "/ck/db/handler.php"); ?>
+<?
+$mobile         = clean_str_ck($_POST["mobile"]);
+$player  = clean_str_ck($_POST["player"]);
+$target_agent  = clean_str_ck($_POST["target_agent"]);
+$wpx  = clean_str_ck($_POST["wpx"]);
+if($wpx != ""){$agent = two_way_enc($wpx, true);}
+$department     = get_live_help_department($department_id);
+
+$data["why"] = "agent";
+$data["subject"] = "Agent SubAgent Tk ".clean_str_ck($_POST["subject"]);
+$data["acc"] = $player;
+$data["data"] = $agent;
+$data["message"] = clean_str_ck($_POST["message"]);
+$data["cat"] = 47;
+$ticket = do_post_request("http://www.sportsbettingonline.ag/utilities/process/reports/send_tiket.php",$data);	
+
+      
+if (isset($mobile) and $mobile == 1) { 
+   header("Location: ../thanks.php?web=".$ticket->vars["website"]."&mobile=".$mobile."&wpx=".$wpx);
+} else {
+   header("Location: ../thanks.php?web=".$ticket->vars["website"]."&wpx=".$wpx);	
+}
+?>

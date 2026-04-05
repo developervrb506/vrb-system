@@ -1,0 +1,1 @@
+<span class='error' id='error_box'><? if (isset($_GET["e"])) { echo "" . get_error_ck($_GET["e"]) . $_GET["etxt"] ."<br /><br />"; }?></span>

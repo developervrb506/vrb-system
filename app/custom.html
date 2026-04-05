@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret IP Access</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .popup-container {
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-box {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      width: 320px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .popup-box h2 {
+      font-size: 16px;
+      color: #f7941e;
+      margin-bottom: 10px;
+    }
+
+    .popup-box input[type="text"],
+    .popup-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .popup-box button {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      background-color: #f15a24;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .popup-box button:hover {
+      background-color: #d8481d;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 15px;
+    }
+
+    #custom-alert {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #custom-alert-box {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      max-width: 300px;
+    }
+
+    #custom-alert-box button {
+      padding: 8px 20px;
+      background: #f15a24;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="popup-container">
+  <div class="popup-box">
+    <h2>Just enter the IP</h2>
+
+    <input type="text" id="ip_input" placeholder="IP Address">
+    <input type="password" id="secret_key" placeholder="Secret Key">
+
+    <button id="submit_secret">Submit</button>
+
+    <div class="note">This portal is only visible to those who know the way.</div>
+  </div>
+</div>
+
+<div id="custom-alert">
+  <div id="custom-alert-box">
+    <p id="custom-alert-message" style="margin-bottom:15px;"></p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+</div>
+
+<script>
+// Detectar IP preferiblemente IPv6, si no, usar IPv4
+(async function setPreferredIP() {
+  let ip = "";
+
+  try {
+    const res6 = await fetch('https://api64.ipify.org?format=json');
+    const data6 = await res6.json();
+    ip = data6.ip;
+    console.log("IPv6 detected:", ip);
+  } catch (e) {
+    try {
+      const res4 = await fetch('https://api.ipify.org?format=json');
+      const data4 = await res4.json();
+      ip = data4.ip;
+      console.log("Fallback to IPv4:", ip);
+    } catch (err) {
+      console.error("No IP could be fetched.");
+    }
+  }
+
+  if (ip) {
+    document.getElementById('ip_input').value = ip;
+  }
+})();
+
+// Hash SHA-256
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex;
+}
+
+// Validar y enviar
+document.getElementById('submit_secret').addEventListener('click', async function () {
+  const ip = document.getElementById('ip_input').value.trim();
+  const password = document.getElementById('secret_key').value.trim();
+
+  if (!ip || !password) {
+    showCustomAlert("Both IP and Secret Key are required.");
+    return;
+  }
+
+  const hashedSecret = await hashPassword(password);
+
+  fetch('./process/actions/add_settings.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ ip: ip, secret: hashedSecret })
+  })
+  .then(response => response.text())
+  .then(result => {
+    showCustomAlert(result);
+  })
+  .catch(err => {
+    console.error("Error sending data:", err);
+  });
+});
+
+function showCustomAlert(message) {
+  document.getElementById('custom-alert-message').innerText = message;
+  document.getElementById('custom-alert').style.display = 'flex';
+}
+
+function closeCustomAlert() {
+  document.getElementById('custom-alert').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
