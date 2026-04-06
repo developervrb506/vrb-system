@@ -261,7 +261,7 @@ if(isset($_GET["player"])){
 
    <br />
    <?php /*?> <script type="text/javascript">
-	load_url_content_in_div('http://localhost:8080/ck/baseball_file/jobs/pitchers_game_fix_data.php<? echo $data ?>',"pitcher");
+	load_url_content_in_div('<?= BASE_URL ?>/ck/baseball_file/jobs/pitchers_game_fix_data.php<? echo $data ?>',"pitcher");
     </script><?php */?>
 </div>
 

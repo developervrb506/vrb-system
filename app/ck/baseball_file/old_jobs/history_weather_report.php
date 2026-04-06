@@ -6,8 +6,8 @@
 <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Test Baseball</title>
 <link rel="stylesheet" type="text/css" media="all" href="../../../includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -118,7 +118,7 @@ $constants = get_baseball_constants();
       <td class="table_td<? echo $style ?>" style="font-size:12px;"><? echo $weather->vars["wind_gust"] ?></td> 
       <td class="table_td<? echo $style ?>" style="font-size:12px;"><? echo $weather->vars["air_pressure"] ?></td> 
       <td class="table_td<? echo $style ?>" style="font-size:12px;"><? echo $weather->vars["dewpoint"] ?></td> 
-      <td class="table_td<? echo $style ?>" style="font-size:12px;"><a href=      "http://localhost:8080/ck/baseball_file/old_jobs/history_weather_action.php?thome=<? echo $col->vars["team_home"] ?>&gid=<? echo $col->vars["id"] ?>&gdate=<? echo $col->vars["startdate"]?>" class= "normal_link"  target="_blank">Update from Hystory </a>
+      <td class="table_td<? echo $style ?>" style="font-size:12px;"><a href="<?= BASE_URL ?>/ck/baseball_file/old_jobs/history_weather_action.php?thome=<? echo $col->vars["team_home"] ?>&gid=<? echo $col->vars["id"] ?>&gdate=<? echo $col->vars["startdate"]?>" class= "normal_link"  target="_blank">Update from Hystory </a>
      </tr>
    <? }?> 
 

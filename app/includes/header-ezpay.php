@@ -2,7 +2,7 @@
 <div class="new_header_ezpay">
 <div class="header_top">
 Call Us: <span>(+506) 2228-<span style="display:none;">**</span>9034</span>&nbsp;&nbsp;&nbsp;
-<?php /*?><a style="color:#FFF; text-decoration: none;" href="" onclick="Javascript:window.open('http://localhost:8080/livehelp/request_email.php?l=admtop&amp;x=1&amp;deptid=5&amp;agsite=ezpay','livehelp','width=530,height=410,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">LIVE SUPPORT&gt;&gt;</a><?php */?>
+<?php /*?><a style="color:#FFF; text-decoration: none;" href="" onclick="Javascript:window.open('<?= BASE_URL ?>/livehelp/request_email.php?l=admtop&amp;x=1&amp;deptid=5&amp;agsite=ezpay','livehelp','width=530,height=410,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">LIVE SUPPORT&gt;&gt;</a><?php */?>
 <!--end header_top--></div>
 <?php /*?><div class="header_left"><a href="https://www.ezpay.com" title="EZPay.com" id="logo"></a></div><?php */?>
 <div class="header_right">

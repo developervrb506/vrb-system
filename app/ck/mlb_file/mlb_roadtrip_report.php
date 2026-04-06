@@ -8,12 +8,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>MLB SYSTEM</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/process/js/FileSaver.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/ck/mlb_file/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/FileSaver.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/mlb_file/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 
@@ -223,7 +223,7 @@ else if ($other != ""){
 	?>
   <div id="div_team_<? echo $teams[$st]->vars["id"] ?>">
     <div>
-       <img style="width:35px" src="http://localhost:8080/ck/mlb_file/images/<? echo $teams[$st]->vars["logo"]?>.png">
+       <img style="width:35px" src="<?= BASE_URL ?>/ck/mlb_file/images/<? echo $teams[$st]->vars["logo"]?>.png">
       <span> <strong><? echo $teams[$st]->vars["team"]?>  </strong> </span> 
       
     </div>	
@@ -284,7 +284,7 @@ else if ($other != ""){
          <td class="table_td<? echo $style ?>" align="center"><? echo $sc->vars["date"]?></td>
 		 <td class="table_td<? echo $style ?>" align="center"><? echo $teams[$st]->vars["team"]?></td>
 		 <td class="table_td<? echo $style ?>" align="center"><? if($sc->vars["team_home"] == $st){ echo 'VS'; $away = false;  $team2 = $sc->vars["team_away"]; $str_team = "home"; }else { echo '@'; $away = true; $away_total++; $team2 = $sc->vars["team_home"]; $str_team = 'away'; } ?></td>  
-		 <td class="table_td<? echo $style ?>" ><img style="width:25px" src="http://localhost:8080/ck/mlb_file/images/<? echo $teams[$team2]->vars["logo"]?>.png">
+		 <td class="table_td<? echo $style ?>" ><img style="width:25px" src="<?= BASE_URL ?>/ck/mlb_file/images/<? echo $teams[$team2]->vars["logo"]?>.png">
 		  &nbsp;&nbsp; <?  echo $teams[$team2]->vars["team"] ?></td>   
 		 <td class="table_td<? echo $style ?>" align="center"><? if($sc->vars["team_winner"]) { if($sc->vars["team_winner"] == $st  ){ echo '<span style="font-size:16px;color:Green"><strong>W</strong></span>'; $g_result++;} else { echo '<span style="font-size:16px;color:Red"><strong>L</strong></span>'; $g_l_result++;} }  ?></td>          
 		 <td  name ="lines" class="table_td<? echo $style ?>_blue game" align="center"><? echo $sc->vars["away_points"]." - ".$sc->vars["home_points"] ?></td>     

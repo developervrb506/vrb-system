@@ -12,7 +12,7 @@ $durango = get_random_durango_name($type);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../process/js/functions.js"></script>
- <script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+ <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 </head>
 <body style="background:#fff; padding:20px;">
 <span class="page_title">Skincare Name</span><br /><br />
@@ -78,7 +78,7 @@ $durango = get_random_durango_name($type);
         <td>Send Email:</td>
         <td>
         	<? create_objects_list("email", "email", $data, "id", "name", "-- None --") ?><br />
-            <a href="http://localhost:8080/ck/skincare_email_list.php" class="normal_link" target="_parent">
+            <a href="<?= BASE_URL ?>/ck/skincare_email_list.php" class="normal_link" target="_parent">
             	Manage emails list
             </a>
         </td>

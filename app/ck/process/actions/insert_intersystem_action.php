@@ -79,9 +79,9 @@ if(is_numeric($_POST["cash_arch"])){
 
 if(!isset($_POST["burl"])){
 	if($_POST["mobile"]){
-		header("Location: http://localhost:8080/ck/mobile/intersystem_transaction.php?e=29");
+		header("Location: " . BASE_URL . "/ck/mobile/intersystem_transaction.php?e=29");
 	}else{
-		header("Location: http://localhost:8080/ck/balances_transactions.php?e=29");	
+		header("Location: " . BASE_URL . "/ck/balances_transactions.php?e=29");	
 	}
 }else{
 	header("Location: ".$_POST["burl"]);	

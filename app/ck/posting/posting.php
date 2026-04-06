@@ -7,9 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Postings</title>
-<link rel="stylesheet" type="text/css" media="all" href="http://localhost:8080/includes/calendar/jsDatePick_ltr.min.css" />
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/includes/calendar/jsDatePick.min.1.3.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
 		new JsDatePick({
@@ -33,7 +33,7 @@
   validations.push({id:"content",type:"null", msg:"Please provide a Content"});      
 </script>
 
-<script type="text/javascript" src="http://localhost:8080/ck/includes/htmltinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/htmltinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea",
@@ -98,8 +98,8 @@ else {
 <div align="right"><span ><a href="posting_view.php">Back</a></span></div>
 <BR><BR>
 <? // TO check the metatag ID,  afther the Post is created the Metatag URL will be Updated ?>
-<form method="post" action="http://localhost:8080/ck/posting/posting.php">
-&nbsp;&nbsp;<a href="http://localhost:8080/ck/metatags.php" target="_blank" title="Click to Open Metatags Tool">Metatag ID</a> :
+<form method="post" action="<?= BASE_URL ?>/ck/posting/posting.php">
+&nbsp;&nbsp;<a href="<?= BASE_URL ?>/ck/metatags.php" target="_blank" title="Click to Open Metatags Tool">Metatag ID</a> :
 <input type="text" name="metatag" id="metatag" value="<? echo $metatag_id ?>" />
 <input type="submit" value="check" /> &nbsp;&nbsp;
 <? if ($check > 0 && $check == 1) { ?>

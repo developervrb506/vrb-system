@@ -1,16 +1,16 @@
 <? include(ROOT_PATH . "/ck/process/security.php"); ?>
-<script type="text/javascript" src="http://localhost:8080/process/js/ajax.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/ajax.js"></script>
 <? if($current_clerk->im_allow("graded_games_checker")){ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 <script type="text/javascript" src="../process/js/functions.js"></script>
 <script type="text/javascript" src="../process/js/jquery.js"></script>
 
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 
 <script type="text/javascript">
 Shadowbox.init();

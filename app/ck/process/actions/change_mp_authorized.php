@@ -13,7 +13,7 @@ if(!is_null($trans)){
 	
 }
 
-header("Location: http://localhost:8080/ck/moneypak_transactions.php?e=76");
+header("Location: " . BASE_URL . "/ck/moneypak_transactions.php?e=76");
 
 ?>
 <? }else{echo "Access Denied";} ?>

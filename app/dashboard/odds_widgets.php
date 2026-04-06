@@ -49,7 +49,7 @@ function generate_code(){
 	wiframe.width = w.value;
 	wiframe.height = h.value;
 	
-	var wurl = "http://localhost:8080/widgets/odds_widget.php?";	
+	var wurl = BASE_URL . "/widgets/odds_widget.php?";	
 	wurl += size_qs + "&ls=" + get_tabs_widget();
 	wurl += "&b=<? echo $book->id ?>";
 	
@@ -240,7 +240,7 @@ function get_tabs_widget(){
             <input type="button" value="Generate Code" onclick="generate_code()" />
         </td>
         <td width="50%" valign="top">
-        	<iframe id="ipreview" frameborder="0" width="300" height="600" src="http://localhost:8080/widgets/odds_widget.php?w=300&h=595&b=<? echo $book->id ?>&ls=NFL-NCAAF-NHL-MLB-NBA-NCAAB-BOXING-MMA" scrolling="no">
+        	<iframe id="ipreview" frameborder="0" width="300" height="600" src="<?= BASE_URL ?>/widgets/odds_widget.php?w=300&h=595&b=<? echo $book->id ?>&ls=NFL-NCAAF-NHL-MLB-NBA-NCAAB-BOXING-MMA" scrolling="no">
             </iframe>            
         </td>
       </tr>

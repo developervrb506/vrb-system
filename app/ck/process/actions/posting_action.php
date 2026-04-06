@@ -195,7 +195,7 @@ if ($posting->vars["id"] != ""){
 if ($edit){ $action = 'u'; }
 else { $action = 'a'; }
 
-header("Location: http://localhost:8080/ck/posting/posting_view.php?a=".$action);
+header("Location: " . BASE_URL . "/ck/posting/posting_view.php?a=".$action);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

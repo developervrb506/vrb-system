@@ -16,7 +16,7 @@ if($rule_unread["rule"] != ""){
 }
 ?>
 <div class="time_marker_box">
-	<iframe src="http://localhost:8080/ck/includes/time_logs.php" scrolling="no" width="200" height="100" frameborder="0"></iframe>
+	<iframe src="<?= BASE_URL ?>/ck/includes/time_logs.php" scrolling="no" width="200" height="100" frameborder="0"></iframe>
 </div>
 
 
@@ -270,8 +270,8 @@ if($rule_unread["rule"] != ""){
     <br />
     <div id="agent_stats_rep">Loading Agent Stats...</div><?php */?>
     <script type="text/javascript">
-	//load_url_content_in_div('http://localhost:8080/ck/includes/phone_home_reports.php',"sales_stats_rep");
-	//load_url_content_in_div('http://localhost:8080/ck/includes/agent_phone_home_reports.php',"agent_stats_rep");
+	//load_url_content_in_div('<?= BASE_URL ?>/ck/includes/phone_home_reports.php',"sales_stats_rep");
+	//load_url_content_in_div('<?= BASE_URL ?>/ck/includes/agent_phone_home_reports.php',"agent_stats_rep");
 	</script>
     <? } ?>
     
@@ -303,7 +303,7 @@ if($rule_unread["rule"] != ""){
           <td class="table_td<? echo $style ?>"><? echo $rcall->vars["call_start"] ?></td>
           <td class="table_td<? echo $style ?>"><? echo $rname->vars["next_date"] ?></td>
           <td class="table_td<? echo $style ?>" align="center">
-          	<a href="http://localhost:8080/ck/call.php?nid=<? echo $rname->vars["id"] ?>" class="normal_link">Open</a>
+          	<a href="<?= BASE_URL ?>/ck/call.php?nid=<? echo $rname->vars["id"] ?>" class="normal_link">Open</a>
           </td>
           <td class="table_td<? echo $style ?>" align="center">
           	<a href="call_history.php?nid=<? echo $rname->vars["id"] ?>" rel="shadowbox;height=230;width=570" title="<? echo $rname->full_name() ?> Call History" class="normal_link">Calls</a>

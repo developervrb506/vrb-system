@@ -881,7 +881,7 @@ class ck_message{
 		$content .= "<br /><br />You received a New Private Message on VRB Marketing From: " . $this->vars["from"]->vars["name"];
 		$content .= '<br /><br />"'.$this->vars["title"].'"';
 		$content .= '<br /><br />'.str_replace("rnrn","<br />",nl2br($this->vars["content"]));
-		$content .= '<br /><br /><a href="http://localhost:8080">vrbmarketing.com</a>';
+		$content .= '<br /><br /><a href="<?= BASE_URL ?>">vrbmarketing.com</a>';
 		send_email_ck($this->vars["to"]->vars["email"], "You have a new Private Message on VRB", $content, true);
 	}
 	function change_important(){
@@ -1231,7 +1231,7 @@ class reporter{
 						$net = $data_box->deposits + $data_box->payouts;
 						
 						//$in_link = "<a href = '#' class='normal_link'>Inactive</a>";
-                     $in_link = '<a href="http://localhost:8080/ck/sbo_inactive_player_by_agent.php?id='.$ck->vars["id"].'" class="normal_link" target="_blank" >Inactive</a>';
+                     $in_link = '<a href="<?= BASE_URL ?>/ck/sbo_inactive_player_by_agent.php?id='.$ck->vars["id"].'" class="normal_link" target="_blank" >Inactive</a>';
 					
 						$content[] = array($cph,$ck->vars["name"],$calls,$cph,$data_box->actives_last,$data_box->actives_this,$data_box->payouts,$data_box->deposits,$net,$in_link);
 					}else{

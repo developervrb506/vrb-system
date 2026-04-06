@@ -7,15 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Special trends</title>
-  <link rel="stylesheet" type="text/css" media="all" href="http://localhost:8080/includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+  <link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
-  <script type="text/javascript" src="http://localhost:8080/includes/calendar/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
+  <script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
       window.onload = function(){
           new JsDatePick({
@@ -43,7 +43,7 @@ function redirect(){
 	if(selection.checked){sel = selection.value;}
 	
 	if(games != "" && perc != ""){
-		location.href = "http://localhost:8080/ck/affiliates/20games.php?p=" + perc + "&g=" + games + "&l=" + league + "&fd=" + from + "&td=" + to + "&sel=" + sel;	
+		location.href = BASE_URL . "/ck/affiliates/20games.php?p=" + perc + "&g=" + games + "&l=" + league + "&fd=" + from + "&td=" + to + "&sel=" + sel;	
 	}else{
 		alert("Write the percentage and the games");
 	}

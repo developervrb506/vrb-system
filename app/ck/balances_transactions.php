@@ -30,11 +30,11 @@ $status = post_get("status_list","pe");
 		var params = "?id="+id+"&f=<? echo $from ?>&t=<? echo $to ?>&s=<? echo $status ?>";
 		if(type == "c"){
 			if(confirm("Are you sure you want to Cancel this Transaction?")){				
-				location.href = "http://localhost:8080/ck/process/actions/cancel_intersystem_action.php"+params;
+				location.href = BASE_URL . "/ck/process/actions/cancel_intersystem_action.php"+params;
 			}
 		}else if(type == "a"){
 			if(confirm("Are you sure you want to Accept this Transaction?")){				
-				location.href = "http://localhost:8080/ck/process/actions/accept_intersystem_action.php"+params;
+				location.href = BASE_URL . "/ck/process/actions/accept_intersystem_action.php"+params;
 			}
 		}
 	}
@@ -48,8 +48,8 @@ $status = post_get("status_list","pe");
 		}
 	}
 </script>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>

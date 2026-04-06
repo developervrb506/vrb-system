@@ -21,6 +21,6 @@ if(!is_null($payout)){
 }
 
 
-header("Location: http://localhost:8080/ck/moneypak_limbos.php?e=81");
+header("Location: " . BASE_URL . "/ck/moneypak_limbos.php?e=81");
 ?>
 <? }else{echo "Access Denied";} ?>

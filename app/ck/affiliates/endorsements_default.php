@@ -7,9 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Endorsement Default</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -45,7 +45,7 @@ function update_endorsement_default(id){
 </script>
 
 </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 </head>
 
 <body>

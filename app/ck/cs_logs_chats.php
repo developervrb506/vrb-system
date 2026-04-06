@@ -26,7 +26,7 @@ $tomorrow = date("Y-m-d", strtotime($today."+1 DAY"));
 $chats = get_closed_chats_by_date($today, $tomorrow);
 $lives = get_live_chats_info();
 for($x=0;$x<count($lives);$x++){
-	//if(file_exists("http://localhost:8080/livehelp/web/chatsessions/".$live["session"]."_transcript.txt")){
+	//if(file_exists(BASE_URL . "/livehelp/web/chatsessions/".$live["session"]."_transcript.txt")){
 		$lives[$x]["formatted"] = file_get_contents("../livehelp/web/chatsessions/".$lives[$x]["session"]."_transcript.txt");
 	//}
 }

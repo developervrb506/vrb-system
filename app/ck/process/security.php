@@ -22,16 +22,16 @@ if ($_SESSION["ckloged"] && $_SESSION['ck_ip'] == md5($_SERVER['HTTP_USER_AGENT'
     if (!$no_log_page) { rec_page_log();  }
 	if(!$current_clerk->vars["available"]){
 		session_destroy();		 
-		header("Location: http://localhost:8080/index.php?1");
+		header("Location: " . BASE_URL . "/index.php?1");
 		exit();
 	}else if(!$current_clerk->vars["new_pass"] && !$no_change_pass){
-		header("Location: http://localhost:8080/ck/change_password.php");
+		header("Location: " . BASE_URL . "/ck/change_password.php");
 		exit();
 	}
 }else{
     if (!$no_log_page) { rec_page_log('4'); }
 	session_destroy(); 
-	header("Location: http://localhost:8080/index.php?2");
+	header("Location: " . BASE_URL . "/index.php?2");
 	exit();
 }
 

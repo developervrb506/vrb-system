@@ -7,6 +7,6 @@ if(!is_null($lead)){
 	$lead->vars["deleted"] = "1";
 	$lead->update(array("deleted"));
 }
-header("Location: http://localhost:8080/ck/affiliates_leads.php?e=83");
+header("Location: " . BASE_URL . "/ck/affiliates_leads.php?e=83");
 ?>
 <? }else{echo "Access Denied";} ?>

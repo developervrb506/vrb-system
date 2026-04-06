@@ -127,7 +127,7 @@ include_once("./livehelp/chat_top_header_mobile.php") ;
 <link href="css/layout.css?<? echo mt_rand(); ?>" rel="stylesheet" type="text/css" />
 <link href="themes/<?php echo $THEME ?>/style.css?<? echo mt_rand(); ?>" rel="stylesheet" type="text/css" />
 <?php if ($agsite_desc == 'ezpay') { ?>
-<link href="http://localhost:8080/livehelp/css/ezpay-chat.css" rel="stylesheet" type="text/css" />
+<link href="<?= BASE_URL ?>/livehelp/css/ezpay-chat.css" rel="stylesheet" type="text/css" />
 <?php } else { ?>
 <link href="http://www.sportsbettingonline.ag/utilities/css/style.css?<? echo mt_rand(); ?>" rel="stylesheet" type="text/css" />
 <?php } ?>

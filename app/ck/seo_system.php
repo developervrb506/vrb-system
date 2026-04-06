@@ -3,17 +3,17 @@
 <script type="text/javascript">
 function delete_seo_entry(id){	
  if(confirm("Are you sure you want to delete this seo entry?")){   	  
-    document.location.href = 'http://localhost:8080/ck/process/actions/delete_seo_entry_action.php?delete_id='+ id;   
+    document.location.href = BASE_URL . '/ck/process/actions/delete_seo_entry_action.php?delete_id='+ id;   
  }
 }
 function paid_seo_entry(id,paid_message,paid_status){	
  if(confirm('Are you sure you want to '+ paid_message +' this seo entry?')){   	  
-    document.location.href = 'http://localhost:8080/ck/process/actions/paid_seo_entry_action.php?paid_id='+ id +'&paid_status='+ paid_status;   
+    document.location.href = BASE_URL . '/ck/process/actions/paid_seo_entry_action.php?paid_id='+ id +'&paid_status='+ paid_status;   
  }
 }
 function complete_seo_entry(id,paid_message,paid_status){	
  if(confirm('Are you sure you want to masrk as  '+ paid_message +' this seo entry?')){   	  
-    document.location.href = 'http://localhost:8080/ck/process/actions/complete_seo_entry_action.php?paid_id='+ id +'&paid_status='+ paid_status;   
+    document.location.href = BASE_URL . '/ck/process/actions/complete_seo_entry_action.php?paid_id='+ id +'&paid_status='+ paid_status;   
  }
 }
 </script>

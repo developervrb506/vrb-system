@@ -15,9 +15,9 @@ if(!is_numeric(param("c"))){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title><? echo $category ->vars["name"] ?></title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript" src="../process/js/functions.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
@@ -43,10 +43,10 @@ Shadowbox.init();
 function print_link($item, $extra = ""){
 	global $deleteds;
 	?> 
-    <form action="http://localhost:8080/ck/process/actions/edit_menu_item.php?i=<? echo $item ->vars["id"] ?>" method="post">
+    <form action="<?= BASE_URL ?>/ck/process/actions/edit_menu_item.php?i=<? echo $item ->vars["id"] ?>" method="post">
     <? echo $extra ?>
       	<a href="<? echo $item ->vars["link"] ?>" class="normal_link"><? echo ucwords(strtolower($item ->vars["name"])) ?></a>
-        &nbsp;&nbsp;&nbsp;<span class="read_text" style="cursor:pointer;" onclick="location.href = 'http://localhost:8080/ck/process/actions/delete_menu_item.php?i=<? echo $item ->vars["id"] ?>'">
+        &nbsp;&nbsp;&nbsp;<span class="read_text" style="cursor:pointer;" onclick="location.href = BASE_URL . '/ck/process/actions/delete_menu_item.php?i=<? echo $item ->vars["id"] ?>'">
         	<? if($deleteds){echo "UN";} ?>DELETE
         </span> 
         <? if(!$deleteds){ ?>

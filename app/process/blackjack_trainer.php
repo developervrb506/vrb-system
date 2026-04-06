@@ -31,8 +31,8 @@ body {
    <?php /*?><iframe src="//widgetgames.playblackjack.com//files/movies/gameContainer.swf?sponsor=Wagerweb&affiliate=<? echo get_affiliate_code($aff->id, 1) ?>/<? echo $aff->web_name ?> " allowtransparency="true" marginheight="0" marginwidth="0" frameborder="0" height="270" width="270" scrolling="auto"></iframe><?php */?>
    <iframe src="http://widgetgames.playblackjack.com/index.asp?sponsor=Wagerweb&affiliate=<? echo get_affiliate_code($aff->id, 1) ?>/<? echo $aff->web_name ?> " allowtransparency="true" marginheight="0" marginwidth="0" frameborder="0" height="270" width="270" scrolling="auto"></iframe>
    <? if($promo != ""){ ?>
-   <a href="http://localhost:8080/process/redir.php?pid=<? echo $promo ?>&aid=<? echo $_GET["aid"] ?>" target="_blank">
-   	<img src="http://localhost:8080/process/image.php?pid=<? echo $promo ?>&aid=<? echo $_GET["aid"] ?>" width="270" height="25" border="0" />
+   <a href="<?= BASE_URL ?>/process/redir.php?pid=<? echo $promo ?>&aid=<? echo $_GET["aid"] ?>" target="_blank">
+   	<img src="<?= BASE_URL ?>/process/image.php?pid=<? echo $promo ?>&aid=<? echo $_GET["aid"] ?>" width="270" height="25" border="0" />
    </a>
    <? } ?>
    

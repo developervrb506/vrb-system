@@ -35,8 +35,8 @@ function review_alert(id){
 	 	}
 	  
 	  
-	   // document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/alert_props_action.php?id="+id;
-		//document.location = "http://localhost:8080/ck/process/actions/alert_props_action.php?id="+id;
+	   // document.getElementById("idel").src = BASE_URL . "/ck/process/actions/alert_props_action.php?id="+id;
+		//document.location = BASE_URL . "/ck/process/actions/alert_props_action.php?id="+id;
 		//document.getElementById("td_"+id).innerHTML = "Reviewed";
 	
 }	

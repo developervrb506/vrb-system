@@ -13,7 +13,7 @@ $live_help_departments = get_live_help_departments();
 <? if (isset($mobile) and $mobile == 1) { ?>
 <? include("header_top_mobile.php") ?>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript">
 var validations = new Array();
 
@@ -120,7 +120,7 @@ function disable_btn(id){
 <? } else { ?>
 
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript">
 var validations = new Array();
 <? if($web != "thebestperhead.com"){ $title_name = "Username:"; ?>

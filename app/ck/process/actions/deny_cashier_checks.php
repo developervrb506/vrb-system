@@ -11,7 +11,7 @@ if(!is_null($trans)){
 	rec_process($trans->vars["id"], "Cashier Checks", "Payout", $trans->vars["account"], $trans->vars["amount"], $pre_status, $trans->vars["status"], $current_clerk->vars["id"], $trans->vars["back_message"]);
 	
 	
-	header("Location: http://localhost:8080/ck/cashier_checks_payouts.php");
+	header("Location: " . BASE_URL . "/ck/cashier_checks_payouts.php");
 }
 ?>
 <? }else{echo "Access Denied";} ?>

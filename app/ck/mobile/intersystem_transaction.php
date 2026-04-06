@@ -18,8 +18,8 @@ $preusers[] = array("name"=>"Michael","email"=>"davejohnson000@hotmail.com");
 
              user-scalable=no;" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/ck/balances/api/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript" src="../../process/js/functions.js"></script>
 	<script type="text/javascript">
     var validations = new Array();

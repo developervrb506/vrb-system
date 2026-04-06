@@ -11,7 +11,7 @@
 <script type="text/javascript">
 function sent_moneypak(id){
 	if(confirm("Are you sure you want Sent this moneypak Promo?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/buy_moneypaks_promo_action.php?id="+id+"&action=sent";
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/buy_moneypaks_promo_action.php?id="+id+"&action=sent";
 		document.getElementById("td_"+id).innerHTML = "<strong>YES</strong>";
 	}
 }
@@ -19,7 +19,7 @@ function sent_moneypak(id){
 <script type="text/javascript">
 function delete_moneypak(id){
 	if(confirm("Are you sure you want to DELETE "+name+" from the system?")){
-				document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/buy_moneypaks_promo_action.php?id="+id+"&action=active";
+				document.getElementById("idel").src = BASE_URL . "/ck/process/actions/buy_moneypaks_promo_action.php?id="+id+"&action=active";
 
 		document.getElementById("tr_"+id).style.display = "none";
 	}

@@ -24,6 +24,6 @@ $website->vars["last_modification_by"] = $current_clerk->vars["id"];
 $website->insert();
 
 
-header("Location: http://localhost:8080/ck/seo_get_lead.php");
+header("Location: " . BASE_URL . "/ck/seo_get_lead.php");
 ?>
 <? }else{echo "Access Denied";} ?>

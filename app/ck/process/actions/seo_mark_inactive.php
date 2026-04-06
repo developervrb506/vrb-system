@@ -14,6 +14,6 @@ $log->vars["ldate"] = date("Y-m-d H:i:s");
 $log->vars["action"] = "mi";
 $log->insert();
 
-header("Location: http://localhost:8080/ck/seo_index.php?e=72");
+header("Location: " . BASE_URL . "/ck/seo_index.php?e=72");
 ?>
 <? }else{echo "Access Denied";} ?>

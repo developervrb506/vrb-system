@@ -28,7 +28,7 @@ $camp->vars["active"] = $active;
 $camp->vars["affiliate"] = $aff;
 $camp->update();
 
-//header("Location: http://localhost:8080/ck/affiliates/partners_campaignes.php");
+//header("Location: " . BASE_URL . "/ck/affiliates/partners_campaignes.php");
 ?>
-<script>location.href = "http://localhost:8080/ck/affiliates/partners_campaignes.php";</script>
+<script>location.href = BASE_URL . "/ck/affiliates/partners_campaignes.php";</script>
 <? } else { echo "ACCESS DENIED"; }?>

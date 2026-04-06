@@ -18,7 +18,7 @@ if($current_clerk->im_allow("seo_system")) {
 }
 
 if(!clean_get("internal")){
-	header("Location: http://localhost:8080/ck/seo_rankings.php?e=72");
+	header("Location: " . BASE_URL . "/ck/seo_rankings.php?e=72");
 }
 
 ?>

@@ -52,15 +52,15 @@ if($dgs != "AFFILIATE NOT FOUND"){
 
 if ($aff_balance){ ?>
   <script>
-   parent.location.href = "http://localhost:8080/ck/affiliate_balance_report.php?e=41";	
+   parent.location.href = BASE_URL . "/ck/affiliate_balance_report.php?e=41";	
   </script>
 <? }
 else{
 	?>
   <script>
-    parent.location.href = "http://localhost:8080/ck/affiliate_draw.php?e=41";	
+    parent.location.href = BASE_URL . "/ck/affiliate_draw.php?e=41";	
   </script>	
-  <? //header("Location: http://localhost:8080/ck/affiliate_draw.php?$msg");   
+  <? //header("Location: " . BASE_URL . "/ck/affiliate_draw.php?$msg");   
 }
 
 

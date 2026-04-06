@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Twitter members</title>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="http://localhost:8080/twitter/js/scripts.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/twitter/js/scripts.js"></script>
 </head>
 <body>
 <iframe width="1" height="1" frameborder="0" scrolling="no" id="idel"></iframe>
@@ -17,7 +17,7 @@
 <script>
 function delete_member(id){
   if(confirm("Are you sure to delete this member?")){    
-     document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/create_twitter_member_action.php?delete=true&id="+id;
+     document.getElementById("idel").src = BASE_URL . "/ck/process/actions/create_twitter_member_action.php?delete=true&id="+id;
 	 document.getElementById("tr_"+id).style.display = 'none';       
   }
 }
@@ -55,7 +55,7 @@ $members = get_all_twitter_members($name,$sport,$teamid,$offset,$no_of_records_p
 
 <br /><br />
 
-<form action="http://localhost:8080/ck/twitter_members.php" id="search_form" method="post">
+<form action="<?= BASE_URL ?>/ck/twitter_members.php" id="search_form" method="post">
 
 <table width="800" border="0" cellspacing="0" cellpadding="0">
   <tr>    
@@ -97,7 +97,7 @@ $members = get_all_twitter_members($name,$sport,$teamid,$offset,$no_of_records_p
 	   ?>                           		
 	  
        <li style="float:left;">
-           <form action="http://localhost:8080/ck/twitter_members.php" id="pag_form_<? echo $i; ?>" name="pag_form_<? echo $i; ?>" method="post">             
+           <form action="<?= BASE_URL ?>/ck/twitter_members.php" id="pag_form_<? echo $i; ?>" name="pag_form_<? echo $i; ?>" method="post">             
              <input type="hidden" name="name" value="<? echo $name; ?>">            
              <input type="hidden" name="sport" value="<? echo $sport; ?>">
              <input type="hidden" name="teamid" value="<? echo $teamid; ?>">             

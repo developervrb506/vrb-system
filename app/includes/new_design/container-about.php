@@ -1,5 +1,5 @@
 <div class="page_title">
-  <div class="page_title_about-us"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="http://localhost:8080/images/new_design/about_us_image.jpg" width="95" height="84" alt="ABOUT VRB Marketing" border="0" />
+  <div class="page_title_about-us"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="<?= BASE_URL ?>/images/new_design/about_us_image.jpg" width="95" height="84" alt="ABOUT VRB Marketing" border="0" />
     <h1>ABOUT VRB Marketing</h1>
     <p>We don't offer online marketing products. We offer a partnership.</p>
     <!--end page_title_seo--></div>
@@ -37,7 +37,7 @@
 <div class="lines_detail_3"></div>
 <br class="clearfloat"  />
 <div class="about_us_team">
-  <div class="about_us_team_title"> <img src="http://localhost:8080/images/new_design/team_icon.png" style="display:block; padding-left:380px; margin-top:-20px" width="140" height="81" alt="Meet the team" border="0" />
+  <div class="about_us_team_title"> <img src="<?= BASE_URL ?>/images/new_design/team_icon.png" style="display:block; padding-left:380px; margin-top:-20px" width="140" height="81" alt="Meet the team" border="0" />
     <h1>Meet the VRB team </h1>
   </div>
   <br class="clearfloat"  />

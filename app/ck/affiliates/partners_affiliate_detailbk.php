@@ -7,9 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Manage Partners</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -63,7 +63,7 @@ if($affiliates->vars["sub"] == 0){
 	$subwebs = get_affiliates_sub_websites($affiliates->vars["id"]);
 	foreach($subwebs as $subw){
 		echo "&nbsp;&nbsp;|&nbsp;&nbsp;";
-		?> <a target="_blank" href="http://localhost:8080/ck/affiliates/partners_affiliate_detail.php?affid=<? echo $subw["id"] ?>">
+		?> <a target="_blank" href="<?= BASE_URL ?>/ck/affiliates/partners_affiliate_detail.php?affid=<? echo $subw["id"] ?>">
 			<? echo $subw["websitename"] ?>
         </a> <?
 		

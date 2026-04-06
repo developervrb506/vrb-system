@@ -17,7 +17,7 @@
 
 
 <? include "includes/print_error.php" ?>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript">
     var validations = new Array();
     validations.push({id:"account",type:"null", msg:"Please Write the Player Account"});

@@ -8,7 +8,7 @@ if(!is_null($trans)){
 	$trans->vars["usps"] = $_POST["usps"];
 	$trans->vars["back_message"] = $_POST["bmsg"] . ". ".$trans->vars["back_message"];
 	$trans->update(array("back_message","status","number","usps"));
-	header("Location: http://localhost:8080/ck/moneyorder_payouts.php");
+	header("Location: " . BASE_URL . "/ck/moneyorder_payouts.php");
 }
 ?>
 <? }else{echo "Access Denied";} ?>

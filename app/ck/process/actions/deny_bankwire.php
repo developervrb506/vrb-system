@@ -11,7 +11,7 @@ if(!is_null($trans)){
 	rec_process($trans->vars["id"], "Bank Wire", "Payout", $trans->vars["account"], $trans->vars["amount"], $pre_status, $trans->vars["status"], $current_clerk->vars["id"], $trans->vars["back_message"]);
 	
 	
-	header("Location: http://localhost:8080/ck/wire_payouts.php");
+	header("Location: " . BASE_URL . "/ck/wire_payouts.php");
 }
 ?>
 <? }else{echo "Access Denied";} ?>

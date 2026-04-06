@@ -5,10 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 <title>Events leagues</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -50,9 +50,9 @@ function save_book_url(site, book){
 	var content = document.getElementById("book_url_"+book).value;
 	//alert(document.getElementById("book_url_"+book).value);
 	
-	document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/site_book_target_action.php?site="+site+"&book="+book+"&content="+content;
+	document.getElementById("idel").src = BASE_URL . "/ck/process/actions/site_book_target_action.php?site="+site+"&book="+book+"&content="+content;
 	document.getElementById("book_url_"+book).style.border = "solid 1px green"
-	//window.location	= "http://localhost:8080/ck/process/actions/site_book_target_action.php?site="+site+"&book="+book+"&content="+content;
+	//window.location	= BASE_URL . "/ck/process/actions/site_book_target_action.php?site="+site+"&book="+book+"&content="+content;
 	
 }
 </script>
@@ -91,7 +91,7 @@ function save_book_url(site, book){
 <div align="right">
 	<iframe width="1" height="1" frameborder="0" scrolling="no" id="idel"></iframe>
 </div>
-<div align="right"><span ><a href="http://localhost:8080/ck/widget_manager/events_leagues.php">Back</a></span></div>
+<div align="right"><span ><a href="<?= BASE_URL ?>/ck/widget_manager/events_leagues.php">Back</a></span></div>
 <form action="" method="post" >
 
  <select style="font-size:20px; height:35px" name ="site" onchange="this.form.submit()" >
@@ -249,7 +249,7 @@ function save_book_url(site, book){
    <strong>AFFILIATE</strong>&nbsp;&nbsp; 
    <input type="text" style="width: 50px;" readonly="readonly" value="<? echo $_GET["aid"]?>">
    &nbsp;&nbsp;
-   <a href="http://localhost:8080/ck/affiliates/partners_search_ids_box.php?site=<? echo $site ?>&<? echo $_SERVER['QUERY_STRING'];?>" class="normal_link" rel="shadowbox;height=270;width=400">Add Affiliate</a>
+   <a href="<?= BASE_URL ?>/ck/affiliates/partners_search_ids_box.php?site=<? echo $site ?>&<? echo $_SERVER['QUERY_STRING'];?>" class="normal_link" rel="shadowbox;height=270;width=400">Add Affiliate</a>
    <BR>
    ( Affiliate is Optional, it used to track the banner )
    <BR /><BR />

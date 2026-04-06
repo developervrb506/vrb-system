@@ -7,21 +7,21 @@ if($current_clerk->im_allow("baseball_file")){ ?>
   <link href="../../css/style.css" rel="stylesheet" type="text/css" />
   <title>Baseball Report</title>
   <link rel="stylesheet" type="text/css" media="all" href="../../includes/calendar/jsDatePick_ltr.min.css" />
-  <link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
    
-   <script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.9.1.js"></script> 
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/ck/includes/Datatables/DataTables/css/jquery.dataTables.min.css">
-  <script type="text/javascript" src="http://localhost:8080/ck/includes/Datatables/DataTables/js/jquery.dataTables.min.js"> </script>
+   <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.9.1.js"></script> 
+  <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>/ck/includes/Datatables/DataTables/css/jquery.dataTables.min.css">
+  <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/Datatables/DataTables/js/jquery.dataTables.min.js"> </script>
   
    <?
    /*
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>     
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/ck/includes/Datatables/datatables.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>/ck/includes/Datatables/datatables.css">
    
-    <script type="text/javascript" src="http://localhost:8080/ck/includes/Datatables/DataTables/js/jquery.dataTables.min.js"> </script>
-   <script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-  <script type="text/javascript" charset="utf8" src="http://localhost:8080/ck/includes/DataTables/datatables.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/Datatables/DataTables/js/jquery.dataTables.min.js"> </script>
+   <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+  <script type="text/javascript" charset="utf8" src="<?= BASE_URL ?>/ck/includes/DataTables/datatables.js"></script>
 
  */?>
 
@@ -29,7 +29,7 @@ if($current_clerk->im_allow("baseball_file")){ ?>
 
 
   <script type="text/javascript" src="js/functions.js"> </script>
-  <script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+  <script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 
   <script type="text/javascript">
   Shadowbox.init();

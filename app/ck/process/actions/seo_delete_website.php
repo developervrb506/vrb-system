@@ -7,6 +7,6 @@ if($current_clerk->im_allow("seo_system")) {
 
 }
 
-header("Location: http://localhost:8080/ck/seo_black_list.php?e=72");
+header("Location: " . BASE_URL . "/ck/seo_black_list.php?e=72");
 
 ?>

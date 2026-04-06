@@ -87,13 +87,13 @@ if(isset($_POST["process"])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
 <title>PPH Accounts</title>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 
 </head>
 <body>
@@ -279,7 +279,7 @@ if(isset($_GET["detail"])){
 
 	<?php /*?><? if($current_clerk->im_allow("backend_permissions")){ ?>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="http://localhost:8080/ck/manage_backend_permissions.php" class="normal_link">Backend Permissions</a>
+    <a href="<?= BASE_URL ?>/ck/manage_backend_permissions.php" class="normal_link">Backend Permissions</a>
     <? } ?><?php */?>
     </p>
 

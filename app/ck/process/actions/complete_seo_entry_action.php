@@ -14,10 +14,10 @@ if($current_clerk->im_allow("seo_system")) {
 		$group->update();	
 				
 		if ($paid_status == 1) {
-		   header("Location: http://localhost:8080/ck/seo_system.php?e=98");	
+		   header("Location: " . BASE_URL . "/ck/seo_system.php?e=98");	
 		}
 		else {
-		   header("Location: http://localhost:8080/ck/seo_system.php?e=99");	
+		   header("Location: " . BASE_URL . "/ck/seo_system.php?e=99");	
 		}
 	}
 }

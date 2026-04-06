@@ -8,6 +8,6 @@
 	$name->insert();
 
 
-header("Location: http://localhost:8080/ck/expense_email_list.php?e=80");
+header("Location: " . BASE_URL . "/ck/expense_email_list.php?e=80");
 ?>
 <? }else{echo "Access Denied";} ?>

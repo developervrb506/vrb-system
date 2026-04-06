@@ -43,10 +43,10 @@ $ticket_transfer->vars["depid_destination"] = $dep;
 $ticket_transfer->insert();
 
 if ($view){
-	header("Location: http://localhost:8080/ck/view_ticket.php?tid=".$_POST["view"]);
+	header("Location: " . BASE_URL . "/ck/view_ticket.php?tid=".$_POST["view"]);
 }
 else{
-	header("Location: http://localhost:8080/ck/tickets.php");	
+	header("Location: " . BASE_URL . "/ck/tickets.php");	
 }
 
 ?>

@@ -46,7 +46,7 @@ validations.push({id:"rollover",type:"numeric", msg:"Please insert the Roll Over
 
 <div class="form_box">
     <br />
-    <iframe src="http://localhost:8080/ck/loader_sbo.php?type=agent&data=<? echo $account ?>" frameborder="0" scrolling="auto" width="100%" height="350"></iframe>
+    <iframe src="<?= BASE_URL ?>/ck/loader_sbo.php?type=agent&data=<? echo $account ?>" frameborder="0" scrolling="auto" width="100%" height="350"></iframe>
 </div>
 </form>
 </div>

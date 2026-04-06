@@ -1638,7 +1638,7 @@ function rec_process($tid, $mth, $type, $plyr, $amn, $psta, $nstat, $clerk, $rea
 			  "reason"=>$reason
 	);
 	
-	do_post_request("http://localhost:8080/ck/process/ws/process_transaction.php", $data);
+	do_post_request(BASE_URL . "/ck/process/ws/process_transaction.php", $data);
 }
 
 function ezpay_methods(){

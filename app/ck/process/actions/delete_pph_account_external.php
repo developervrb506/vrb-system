@@ -8,6 +8,6 @@ if(!is_null($account)){
 	
 	$account->update(array("deleted"));
 }
-header("Location: http://localhost:8080/ck/pph_external.php?e=94");
+header("Location: " . BASE_URL . "/ck/pph_external.php?e=94");
 ?>
 <? }else{echo "Access Denied";} ?>

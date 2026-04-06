@@ -1,5 +1,5 @@
 <div class="page_title">
-  <div class="page_title_web_design"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="http://localhost:8080/images/new_design/web_design.jpg" width="95" height="84" alt="WEB DESIGN" border="0" />
+  <div class="page_title_web_design"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="<?= BASE_URL ?>/images/new_design/web_design.jpg" width="95" height="84" alt="WEB DESIGN" border="0" />
     <h1>WEB DESIGN</h1>
     <p>Design a more profitable online presence.</p>
     <!--end page_title_seo--></div>

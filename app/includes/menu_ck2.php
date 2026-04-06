@@ -21,9 +21,9 @@
              
              <li> <a href="javascript:;">|<input type="text" placeholder=" Type to search on menu" id="param_menu" onkeyup="search_menu();" />|</a> <ul class="nav"><li id="menu_search_res"></li></ul> </li>
              
-             <li> <a href="http://localhost:8080/ck/page_menu.php?c=del">DELETED</a> </li>
+             <li> <a href="<?= BASE_URL ?>/ck/page_menu.php?c=del">DELETED</a> </li>
              
-             <li> <a href="http://localhost:8080/process/login/logout.php">Logout</a> </li>
+             <li> <a href="<?= BASE_URL ?>/process/login/logout.php">Logout</a> </li>
              
         </ul>     
     
@@ -35,7 +35,7 @@
 function search_menu(){
 	var param = $("#param_menu").val();
 	$("#menu_search_res").html("<li><a href='javascript:;'>Searching...</a></li>");	
-	$.get("http://localhost:8080/ck/process/actions/menu_search.php?param="+param, function( data ) {
+	$.get(BASE_URL . "/ck/process/actions/menu_search.php?param="+param, function( data ) {
 	  if(data != ""){
 		  $("#menu_search_res").html(data);	
 	  }else{

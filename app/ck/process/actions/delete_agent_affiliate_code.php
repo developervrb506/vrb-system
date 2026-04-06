@@ -13,6 +13,6 @@ print_r($aff_code);
 $aff_code->delete();
 
 
-header("Location: http://localhost:8080/ck/create_user.php?uid=".$clerk."");
+header("Location: " . BASE_URL . "/ck/create_user.php?uid=".$clerk."");
 
 ?>

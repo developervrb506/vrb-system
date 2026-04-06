@@ -25,7 +25,7 @@ if( isset($_GET["id"]) ) {
 	}
 }
 
-header("Location: http://localhost:8080/ck/affiliates/partners_testimonials.php?a=".$action);
+header("Location: " . BASE_URL . "/ck/affiliates/partners_testimonials.php?a=".$action);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

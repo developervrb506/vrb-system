@@ -14,7 +14,7 @@ ini_set('memory_limit', '-1');
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Import Props</title>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="http://www.sportsbettingonline.ag/utilities/js/validate.js?exp_date=20190716"></script>
 </head>
 <body>
@@ -69,7 +69,7 @@ Extra: (Sport)
   
  function reload_page(){
   var book = document.getElementById('book').value;
-  window.location.href = "http://localhost:8080/ck/import_props.php?book="+book;
+  window.location.href = BASE_URL . "/ck/import_props.php?book="+book;
   //alert(book);
  }
  

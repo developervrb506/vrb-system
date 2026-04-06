@@ -40,7 +40,7 @@ if($request_msg != ""){
 	$part2 = $new_review ->vars["id"];
 	
 	$hidden_id = $part1 + $part2;
-	$link = '<a href="http://localhost:8080/send_review.php?transaction='.$part1.'&review_id='.$hidden_id.'">click here</a>';
+	$link = '<a href="<?= BASE_URL ?>/send_review.php?transaction='.$part1.'&review_id='.$hidden_id.'">click here</a>';
 	
 	$request_msg = nl2br($request_msg);
 	$request_msg .= "<br /><br />Please $link to write a review.<br /><br /><br /><br />-- Do not Reply this message, this is an automatic response --"; 

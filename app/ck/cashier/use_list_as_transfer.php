@@ -11,7 +11,7 @@
 <div class="page_content" style="padding:10px;">
 <p><strong>Use deposits as Transfer</strong></p>
 <script type="text/javascript" src="../../process/js/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ck/balances/api/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
 
 <?
 $list = $_GET["l"];

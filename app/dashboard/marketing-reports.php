@@ -31,7 +31,7 @@
 <? include "../includes/menu.php" ?>
 <div class="page_content" style="padding-left:50px;">
 <span class="page_title">Marketing Report</span><br /><br />
-<div style="float:right;" class="normal_link"><a href="http://localhost:8080/dashboard/reports.php"><strong><< Back</strong></a></div>
+<div style="float:right;" class="normal_link"><a href="<?= BASE_URL ?>/dashboard/reports.php"><strong><< Back</strong></a></div>
 <br /><br />
 <?
 $from_date = $_POST["from"];

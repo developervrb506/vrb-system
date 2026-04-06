@@ -6,6 +6,6 @@ if(!is_null($posting)){
   $posting->delete();	
 }
 
-header("Location: http://localhost:8080/ck/posting/posting_view.php");
+header("Location: " . BASE_URL . "/ck/posting/posting_view.php");
 
 ?>

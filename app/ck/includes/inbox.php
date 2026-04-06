@@ -127,7 +127,7 @@ if($preview){
     
 <script type="text/javascript">
 var action_frame = document.getElementById("action_frame");
-var action_url = "http://localhost:8080/ck/process/actions/messages_processor.php";
+var action_url = BASE_URL . "/ck/process/actions/messages_processor.php";
 var error_box = document.getElementById("error_box");
 function open_close_message(id){
 	line = document.getElementById(id);
@@ -135,7 +135,7 @@ function open_close_message(id){
 	tr = document.getElementById("tr_"+id);
 	if(line.style.display == "none"){
 		line.style.display = "table-cell";
-		frame.src = "http://localhost:8080/ck/process/actions/read_message_action.php?m=" + id;
+		frame.src = BASE_URL . "/ck/process/actions/read_message_action.php?m=" + id;
 		tr.className = "tr_read";
 	}else{
 		line.style.display = "none";

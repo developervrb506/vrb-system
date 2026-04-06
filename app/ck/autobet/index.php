@@ -14,7 +14,7 @@ $snoopy->proxy_pass = "gators";
 
 
 
-$snoopy->fetch("http://localhost:8080/ip.php");
+$snoopy->fetch(BASE_URL . "/ip.php");
 print $snoopy->results;
 
 

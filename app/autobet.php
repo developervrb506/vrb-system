@@ -1,1 +1,1 @@
-<? header("Location: http://localhost:8080/ck/autobet/sum_mode.php"); ?>
+<? header("Location: " . BASE_URL . "/ck/autobet/sum_mode.php"); ?>

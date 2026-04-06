@@ -9,6 +9,6 @@ if(!is_null($entry)){
 }
 
 
-header("Location: http://localhost:8080/ck/seo_system.php");
+header("Location: " . BASE_URL . "/ck/seo_system.php");
 ?>
 <? }else{echo "Access Denied";} ?>

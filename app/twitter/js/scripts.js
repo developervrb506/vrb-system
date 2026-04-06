@@ -4,7 +4,7 @@ $(document).ready(function(){
    var team   = $('#choosen_team').val();
               
    $.ajax({
-		 url: 'http://localhost:8080/ck/process/api/get-teams.php',
+		 url: '/ck/process/api/get-teams.php',
 		 type: 'post',
 		 data: {league:league},
 		 dataType: 'json',	 
@@ -35,7 +35,7 @@ $(document).ready(function(){
    var league = $(this).val();   
           
 	   $.ajax({
-		 url: 'http://localhost:8080/ck/process/api/get-teams.php',
+		 url: '/ck/process/api/get-teams.php',
 		 type: 'post',
 		 data: {league:league},
 		 dataType: 'json',	 

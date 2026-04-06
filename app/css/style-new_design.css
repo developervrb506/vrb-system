@@ -2,7 +2,7 @@
 /* CSS Document */
 body {
 	background-color:#e7e8ed;
-	background-image:url(http://localhost:8080/images/new_design/vrb_background.png);
+	background-image:url(/images/new_design/vrb_background.png);
 	background-repeat:repeat-x;
 	background-position:0 0;
 	padding:0px;
@@ -10,7 +10,7 @@ body {
 }
 .body_pages {
 	background-color:#e7e8ed;
-	background-image:url(http://localhost:8080/images/new_design/pages_background.jpg);
+	background-image:url(/images/new_design/pages_background.jpg);
 	background-repeat:repeat-x;
 	background-position:0 0;
 	padding:0px;
@@ -18,7 +18,7 @@ body {
 }
 .body_blank_pages {
 	background-color:#e7e8ed;
-	background-image:url(http://localhost:8080/images/new_design/blank_page_background.jpg);
+	background-image:url(/images/new_design/blank_page_background.jpg);
 	background-repeat:repeat-x;
 	background-position:0 0;
 	padding:0px;
@@ -40,12 +40,12 @@ body {
 	width:380px;
 	height:60px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/vrb-marketing_logo.png);
+	background-image:url(/images/new_design/vrb-marketing_logo.png);
 }
 .login_space {
 	width:746px;
 	height:55px;
-	background-image:url(http://localhost:8080/images/new_design/login_background.png);
+	background-image:url(/images/new_design/login_background.png);
 	background-repeat:no-repeat;
 	display:block;
 	margin-top:-50px;
@@ -99,7 +99,7 @@ body {
 	width:78px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/home_btn_bg.png);
+	background-image:url(/images/new_design/home_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -133,7 +133,7 @@ body {
 	width:89px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/about_us_btn_bg.png);
+	background-image:url(/images/new_design/about_us_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -167,7 +167,7 @@ body {
 	width:102px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/consulting_btn_bg.png);
+	background-image:url(/images/new_design/consulting_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -201,7 +201,7 @@ body {
 	width:62px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/seo_btn_bg.png);
+	background-image:url(/images/new_design/seo_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -235,7 +235,7 @@ body {
 	width:169px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/content_btn_bg.png);
+	background-image:url(/images/new_design/content_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -269,7 +269,7 @@ body {
 	width:169px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/content_btn_bg.png);
+	background-image:url(/images/new_design/content_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -303,7 +303,7 @@ body {
 	width:112px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/social-media_btn_bg.png);
+	background-image:url(/images/new_design/social-media_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -336,7 +336,7 @@ body {
 	width:112px;
 	height:20px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/contact_us_btn_bg.png);
+	background-image:url(/images/new_design/contact_us_btn_bg.png);
 	background-repeat:no-repeat;
 	background-position:center center;
 	text-align:center;
@@ -359,7 +359,7 @@ body {
 .shadow_detail {
 	width:900px;
 	height:25px;
-	background-image:url(http://localhost:8080/images/new_design/shadow_detail_1.png);
+	background-image:url(/images/new_design/shadow_detail_1.png);
 	display:block;
 }
 
@@ -369,7 +369,7 @@ body {
 	height:32px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/images/blank_page_title_bg.png);
+	background-image:url(/images/new_design/images/blank_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:center;
 }
@@ -378,7 +378,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/contact_us_page_title_bg.png);
+	background-image:url(/images/new_design/contact_us_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -388,7 +388,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/page_title_bg.png);
+	background-image:url(/images/new_design/page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:center;
 }
@@ -397,7 +397,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/seo_page_title_bg.png);
+	background-image:url(/images/new_design/seo_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -406,7 +406,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/ppc_page_title_bg.png);
+	background-image:url(/images/new_design/ppc_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -415,7 +415,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/content_page_title_bg.png);
+	background-image:url(/images/new_design/content_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -424,7 +424,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/email_page_title_bg.png);
+	background-image:url(/images/new_design/email_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -433,7 +433,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/about_us_title_bg.png);
+	background-image:url(/images/new_design/about_us_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -442,7 +442,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/build_links_title_bg.png);
+	background-image:url(/images/new_design/build_links_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -451,7 +451,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/design_page_title_bg.png);
+	background-image:url(/images/new_design/design_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -460,7 +460,7 @@ body {
 	height:82px;
 	padding-top:5px;
 	padding-bottom:25px;
-	background-image:url(http://localhost:8080/images/new_design/social_media_page_title_bg.png);
+	background-image:url(/images/new_design/social_media_page_title_bg.png);
 	background-repeat:no-repeat;
 	text-align:left;
 }
@@ -566,7 +566,7 @@ body {
 }
 
 .contact_us_right_content li {
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 /*****SEO*****/
@@ -604,7 +604,7 @@ body {
 	padding-left:30px;
 }
 .seo_right_content li {
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 
@@ -644,7 +644,7 @@ body {
 	padding-left:40px;
 }
 .content_consulting_right_content li {
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 /***** EMAIL MARKETING ****/
@@ -683,7 +683,7 @@ body {
 }
 .email_right_content li {
 	margin-bottom:5px;
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 /*****PCC CAMPAIGNS ****/
@@ -722,7 +722,7 @@ body {
 }
 .ppc_right_content li {
 	margin-bottom:5px;
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 /***** WEB DESIGN ****/
@@ -761,7 +761,7 @@ body {
 }
 .web_design_right_content li {
 	margin-bottom:5px;
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 /***** ABOUT US ****/
@@ -807,7 +807,7 @@ body {
 }
 .about_us_right_content li {
 	margin-bottom:5px;
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 .about_us_team {
 	width:900px;
@@ -884,7 +884,7 @@ body {
 }
 .social_media_right_content li {
 	margin-bottom:5px;
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 .social_media_categories {
 	width:900px;
@@ -899,7 +899,7 @@ body {
 .smc_column_1 {
 	width:240px;
 	height:170px;
-	background-image:url(http://localhost:8080/images/new_design/sm_strategy.png);
+	background-image:url(/images/new_design/sm_strategy.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	display:block;
@@ -920,7 +920,7 @@ body {
 .smc_column_2 {
 	width:240px;
 	height:170px;
-	background-image:url(http://localhost:8080/images/new_design/sm_management.png);
+	background-image:url(/images/new_design/sm_management.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	display:block;
@@ -942,7 +942,7 @@ body {
 .smc_column_3 {
 	width:260px;
 	height:170px;
-	background-image:url(http://localhost:8080/images/new_design/sm_reputation.png);
+	background-image:url(/images/new_design/sm_reputation.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	display:block;
@@ -996,7 +996,7 @@ body {
 }
 .link_building_right_content li {
 	margin-bottom:5px;
-	list-style-image:url(http://localhost:8080/images/new_design/bullet_point.png);
+	list-style-image:url(/images/new_design/bullet_point.png);
 }
 
 /*ABOUT US_SECTION MAIN PAGE*/
@@ -1004,7 +1004,7 @@ body {
 	width:900px;
 	height:150px;
 	padding-top:30px;
-	background-image:url(http://localhost:8080/images/new_design/about_us_background.png);
+	background-image:url(/images/new_design/about_us_background.png);
 	background-repeat:no-repeat;
 	text-align:center;
 }
@@ -1036,7 +1036,7 @@ body {
 .lines_detail_1 {
 	width:900px;
 	height:57px;
-	background-image:url(http://localhost:8080/images/new_design/lines_detail-1.png);
+	background-image:url(/images/new_design/lines_detail-1.png);
 	background-repeat:no-repeat;
 }
 .section_content {
@@ -1050,7 +1050,7 @@ body {
 	padding:20px 50px 0px 50px;
 }
 .consulting_section {
-	background-image:url(http://localhost:8080/images/new_design/consulting_icon.png);
+	background-image:url(/images/new_design/consulting_icon.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	width:375px;
@@ -1078,7 +1078,7 @@ body {
 	margin:0 auto;
 }
 .seo_section {
-	background-image:url(http://localhost:8080/images/new_design/seo_icon.png);
+	background-image:url(/images/new_design/seo_icon.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	width:375px;
@@ -1106,7 +1106,7 @@ body {
 	margin:0 auto;
 }
 .content_section {
-	background-image:url(http://localhost:8080/images/new_design/content_icon.png);
+	background-image:url(/images/new_design/content_icon.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	width:375px;
@@ -1134,7 +1134,7 @@ body {
 	margin:0 auto;
 }
 .social_media_section {
-	background-image:url(http://localhost:8080/images/new_design/social_media_icon.png);
+	background-image:url(/images/new_design/social_media_icon.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	width:375px;
@@ -1164,31 +1164,31 @@ body {
 .lines_detail_2 {
 	width:900px;
 	height:40px;
-	background-image:url(http://localhost:8080/images/new_design/lines_detail-2.png);
+	background-image:url(/images/new_design/lines_detail-2.png);
 	background-repeat:no-repeat;
 }
 .lines_detail_3 {
 	width:900px;
 	height:40px;
-	background-image:url(http://localhost:8080/images/new_design/lines_detail-3.png);
+	background-image:url(/images/new_design/lines_detail-3.png);
 	background-repeat:no-repeat;
 }
 .lines_detail_4 {
 	width:900px;
 	height:57px;
-	background-image:url(http://localhost:8080/images/new_design/lines_detail-4.png);
+	background-image:url(/images/new_design/lines_detail-4.png);
 	background-repeat:no-repeat;
 }
 .shadow_detail_2 {
 	width:900px;
 	height:20px;
-	background-image:url(http://localhost:8080/images/new_design/shadow_detail_2.png);
+	background-image:url(/images/new_design/shadow_detail_2.png);
 	background-repeat:no-repeat;
 }
 .client_comments {
 	width:900px;
 	height:215px;
-	background-image:url(http://localhost:8080/images/new_design/clients_comments_bg.png);
+	background-image:url(/images/new_design/clients_comments_bg.png);
 	background-position:center center;
 	background-repeat:no-repeat;
 	margin-bottom:5px;
@@ -1226,7 +1226,7 @@ body {
 .footer_top_detail {
 	width:900px;
 	height:14px;
-	background-image:url(http://localhost:8080/images/new_design/footer_top_detail.png);
+	background-image:url(/images/new_design/footer_top_detail.png);
 	background-repeat:no-repeat;
 }
 
@@ -1247,7 +1247,7 @@ body {
 .footer_top {
 	width:900px;
 	height:87px;
-	background-image:url(http://localhost:8080/images/new_design/top_footer_detail.png);
+	background-image:url(/images/new_design/top_footer_detail.png);
 	background-repeat:no-repeat;
 }
 .toll_free {
@@ -1279,7 +1279,7 @@ body {
 	width:70px;
 	height:40px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/live_chat_icon.png);
+	background-image:url(/images/new_design/live_chat_icon.png);
 	margin-top:-23px;
 	float:right;
 }
@@ -1287,7 +1287,7 @@ body {
 	width:70px;
 	height:40px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/live_chat_icon_hover.png);
+	background-image:url(/images/new_design/live_chat_icon_hover.png);
 	margin-top:-23px;
 	float:right;
 }
@@ -1295,7 +1295,7 @@ body {
 	width:56px;
 	height:56px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/twitter_icon.png);
+	background-image:url(/images/new_design/twitter_icon.png);
 	float:left;
 	margin-left:180px;
 	margin-top:8px;
@@ -1304,7 +1304,7 @@ body {
 	width:56px;
 	height:56px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/twitter_icon_hover.png);
+	background-image:url(/images/new_design/twitter_icon_hover.png);
 	float:left;
 	margin-left:180px;
 	margin-top:8px;
@@ -1313,7 +1313,7 @@ body {
 	width:56px;
 	height:56px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/g_plus_icon.png);
+	background-image:url(/images/new_design/g_plus_icon.png);
 	float:left;
 	margin-left:10px;
 	margin-top:8px;
@@ -1322,7 +1322,7 @@ body {
 	width:56px;
 	height:56px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/g_plus_icon_hover.png);
+	background-image:url(/images/new_design/g_plus_icon_hover.png);
 	float:left;
 	margin-left:10px;
 	margin-top:8px;
@@ -1347,7 +1347,7 @@ body {
 .footer_site_map h1{
 	font-size:14px;
 	font-weight:bold;
-	background-image:url(http://localhost:8080/images/new_design/bullet_1.png);
+	background-image:url(/images/new_design/bullet_1.png);
 	background-repeat:no-repeat;
 	background-position:0px 3px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -1372,7 +1372,7 @@ body {
 .footer_spacer_detail {
 	width:11px;
 	height:171px;
-	background-image:url(http://localhost:8080/images/new_design/footer_spacer_detail.png);
+	background-image:url(/images/new_design/footer_spacer_detail.png);
 	background-repeat:no-repeat;
 	float:left;
 	margin-top:-10px;
@@ -1393,7 +1393,7 @@ body {
 	width:45px;
 	height:30px;
 	display:block;
-	background-image:url(http://localhost:8080/images/new_design/address_icon.png);
+	background-image:url(/images/new_design/address_icon.png);
 	background-repeat:no-repeat;
 	padding-top:30px;
 	margin-left:110px;

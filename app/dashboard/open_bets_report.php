@@ -7,8 +7,8 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title><? echo $book_name ?> Open Bets Report</title>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -32,7 +32,7 @@ Shadowbox.init();
 <? include "../includes/header.php" ?>
 <? include "../includes/menu.php" ?>
 <div class="page_content" style="padding-left:50px;">
-<span class="page_title"><? echo $book_name ?> Open Bets Report</span><div style="float:right;" class="normal_link"><a href="http://localhost:8080/dashboard/reports.php?bk=<? echo $bookid ?>"><strong><< Back</strong></a></div><br /><br />
+<span class="page_title"><? echo $book_name ?> Open Bets Report</span><div style="float:right;" class="normal_link"><a href="<?= BASE_URL ?>/dashboard/reports.php?bk=<? echo $bookid ?>"><strong><< Back</strong></a></div><br /><br />
 <?
 $book = $bookid; //Book Id
 $code = get_affiliate_code($current_affiliate->id, $book);

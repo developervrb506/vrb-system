@@ -13,7 +13,7 @@
         <li>CashBack Bonus - $1 for every $200 played</li>
       </ul>
       <p><strong>Promo Code</strong>: <? echo $current_affiliate->web_name ?></p>
-      <p><a href="http://localhost:8080/landings/casino/?aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">Click here</a> to secure above promotion</p>
+      <p><a href="<?= BASE_URL ?>/landings/casino/?aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">Click here</a> to secure above promotion</p>
       <p><strong>Additional  Current Promos:</strong></p>
       <ul type="disc">
         <li>100% Reload Bonus</li>

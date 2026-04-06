@@ -52,6 +52,6 @@ else{
 	}
 }
 
-header("Location: http://localhost:8080/ck/betting_edge/betting_edge.php?e=82");
+header("Location: " . BASE_URL . "/ck/betting_edge/betting_edge.php?e=82");
 ?>
 <? }else{echo "Access Denied";} ?>

@@ -162,7 +162,7 @@ a.content_link:hover{
 	font-size:12px;
 }
 .table_header{
-	background:url(http://localhost:8080/images/temp/table_header_back.jpg) repeat-x bottom left #fff;
+	background:url(/images/temp/table_header_back.jpg) repeat-x bottom left #fff;
 	border-top:1px solid #d5d5d5;
 	border-left:1px solid #d5d5d5;
 	border-right: 1px solid #d5d5d5;
@@ -172,7 +172,7 @@ a.content_link:hover{
 	/*font-weight:bold;*/
 }
 .table_header_samll{
-	background:url(http://localhost:8080/images/temp/table_header_back.jpg) repeat-x bottom left #fff;
+	background:url(/images/temp/table_header_back.jpg) repeat-x bottom left #fff;
 	border-top:1px solid #d5d5d5;
 	border-left:1px solid #d5d5d5;
 	border-right: 1px solid #d5d5d5;

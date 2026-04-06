@@ -87,13 +87,13 @@ if(isset($_POST["process"])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
 <title>PPH Accounts</title>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 
 </head>
 <body>
@@ -308,20 +308,20 @@ if(isset($_GET["detail"])){
      &nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="sports_headlines.php" class="normal_link">Sports Headlines</a>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="http://localhost:8080/ck/agent_manager/agent_index.php" class="normal_link">Agent Manager</a>
+    <a href="<?= BASE_URL ?>/ck/agent_manager/agent_index.php" class="normal_link">Agent Manager</a>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-    <? /* <a href="http://localhost:8080/ck/agent_money_line_blocker.php" class="normal_link">Agent Money Blocker</a> */?>
-     <a href="http://localhost:8080/ck/agent_money_line_blocker_sport.php" class="normal_link">Agent Money Blocker</a>
+    <? /* <a href="<?= BASE_URL ?>/ck/agent_money_line_blocker.php" class="normal_link">Agent Money Blocker</a> */?>
+     <a href="<?= BASE_URL ?>/ck/agent_money_line_blocker_sport.php" class="normal_link">Agent Money Blocker</a>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="http://localhost:8080/ck/agent_period_blocker.php" class="normal_link">Agent Period Blocker</a>
+      <a href="<?= BASE_URL ?>/ck/agent_period_blocker.php" class="normal_link">Agent Period Blocker</a>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="http://localhost:8080/ck/pph_videos_view.php" class="normal_link">Videos PPH Sites</a>
+    <a href="<?= BASE_URL ?>/ck/pph_videos_view.php" class="normal_link">Videos PPH Sites</a>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="http://localhost:8080/ck/manage_backends.php" class="normal_link">Agent Backends</a>
+    <a href="<?= BASE_URL ?>/ck/manage_backends.php" class="normal_link">Agent Backends</a>
 
 	<?php /*?><? if($current_clerk->im_allow("backend_permissions")){ ?>
      &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="http://localhost:8080/ck/manage_backend_permissions.php" class="normal_link">Backend Permissions</a>
+    <a href="<?= BASE_URL ?>/ck/manage_backend_permissions.php" class="normal_link">Backend Permissions</a>
     <? } ?><?php */?>
     </p>
     <p>

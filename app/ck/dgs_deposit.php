@@ -111,7 +111,7 @@ validations.push({id:"cbonus",type:"numeric", msg:"Please insert the Casino Bonu
       </tr>
     </table>
     <br />
-    <iframe src="http://localhost:8080/ck/loader_sbo.php?type=dgs_deposit&data=<? echo $account ?>&url=<? echo $cash_url ?>"  frameborder="0" scrolling="auto" width="100%" height="250"></iframe>
+    <iframe src="<?= BASE_URL ?>/ck/loader_sbo.php?type=dgs_deposit&data=<? echo $account ?>&url=<? echo $cash_url ?>"  frameborder="0" scrolling="auto" width="100%" height="250"></iframe>
 </div>
 </form>
 </div>

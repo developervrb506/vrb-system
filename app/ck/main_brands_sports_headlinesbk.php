@@ -6,18 +6,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Main Brands Sports Headlines</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
  
 <script type="text/javascript">
 <!--
 
 function delete_headline(id){
 	if(confirm("Are you sure you want to DELETE this entry from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/insert_main_brands_sports_headlines_action.php?id="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/insert_main_brands_sports_headlines_action.php?id="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
@@ -56,7 +56,7 @@ function submit_frm(){
 ?>
 
 <iframe width="1" height="1" frameborder="0" scrolling="no" id="idel"></iframe>
-<a href="http://localhost:8080/ck/main_brands_sports_headlines_create.php">Add a New</a><br /><br />
+<a href="<?= BASE_URL ?>/ck/main_brands_sports_headlines_create.php">Add a New</a><br /><br />
 
 <form method="post" id="frm_brand" name="frm_brand">
 
@@ -112,7 +112,7 @@ if(!is_null($headlines)) { ?>
         <th class="table_td<? echo $style ?>"><? echo $type; ?></th>
         <th class="table_td<? echo $style ?>" nowrap="nowrap"><? echo  $hd->vars["start_time"]; ?></th>
         <th class="table_td<? echo $style ?>" nowrap="nowrap"><? echo $hd->vars["end_time"]; ?></th>
-        <th class="table_td<? echo $style ?>"><a class="normal_link" href="http://localhost:8080/ck/main_brands_sports_headlines_create.php?id=<? echo $hd->vars["id"] ?>">Edit</a></th>  
+        <th class="table_td<? echo $style ?>"><a class="normal_link" href="<?= BASE_URL ?>/ck/main_brands_sports_headlines_create.php?id=<? echo $hd->vars["id"] ?>">Edit</a></th>  
         <th class="table_td<? echo $style ?>"><a class="normal_link" href="javascript:delete_headline(<? echo $hd->vars["id"] ?>,'delete')">Delete</a>
         </th> 
   </tr>

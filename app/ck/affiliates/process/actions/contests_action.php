@@ -225,7 +225,7 @@ if($current_clerk->im_allow("affiliates_system")){
    }
   	
 
-header("Location: http://localhost:8080/ck/affiliates/contest.php?message=".$msg);
+header("Location: " . BASE_URL . "/ck/affiliates/contest.php?message=".$msg);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

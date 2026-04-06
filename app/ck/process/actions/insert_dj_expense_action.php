@@ -30,9 +30,9 @@ if($_POST["report"]){
 }
 else{
 	if($_POST["mobile"]){
-		header("Location: http://localhost:8080/ck/mobile/dj_expense.php?e=47");
+		header("Location: " . BASE_URL . "/ck/mobile/dj_expense.php?e=47");
 	}else{
-		?><script type="text/javascript">parent.location.href = "http://localhost:8080/ck/dj_expenses_index.php?e=47";</script><?
+		?><script type="text/javascript">parent.location.href = BASE_URL . "/ck/dj_expenses_index.php?e=47";</script><?
 	}
 }
 ?>

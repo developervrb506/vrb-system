@@ -27,6 +27,6 @@ if(!is_null($adj)){
 }
 
 
-header("Location: http://localhost:8080/ck/balances.php");
+header("Location: " . BASE_URL . "/ck/balances.php");
 ?>
 <? }else{echo "Access Denied";} ?>

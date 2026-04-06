@@ -8,9 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>NHL SYSTEM</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 Shadowbox.init();
 
@@ -100,7 +100,7 @@ if($parsing){
  <?  if($ts->vars["id"] != $team){  $i++; ?>
    <tr>
      <td class="table_td<? echo $style ?>" align="center"><? echo $ts->vars["team"]?></td>
-     <td class="table_td<? echo $style ?>" align="center"><img style="width:60px" src="http://localhost:8080/ck/nhl_file/images/<? echo $ts->vars["logo"]?>.png"></td>     
+     <td class="table_td<? echo $style ?>" align="center"><img style="width:60px" src="<?= BASE_URL ?>/ck/nhl_file/images/<? echo $ts->vars["logo"]?>.png"></td>     
      <td class="table_td<? echo $style ?>" align="center"><? echo $ts->vars["arena"]?></td>     
      <td class="table_td<? echo $style ?>" align="center"><input <? if(!$parsing){ ?> disabled="disabled" <? } ?> readonly="readonly" style="width:50px" type="text" name="dt_<? echo $ts->vars["id"] ?>" value="<? echo  $dist_team[$team."_".$ts->vars["id"]]->vars["distance"]?>"></td> 
     <? if($parsing){ ?>       <td class="table_td<? echo $style ?>" align="center"><input style="width:50px" type="text" name="t_<? echo $ts->vars["id"] ?>" value="<? echo  $distance[$ts->vars["id"]]["distance"]?>"></td>  <? } ?>

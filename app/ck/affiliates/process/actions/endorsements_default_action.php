@@ -25,7 +25,7 @@ if( isset($_GET["id"]) ) {
 	}
 }
 
-header("Location: http://localhost:8080/ck/affiliates/endorsements_default.php?a=".$action);
+header("Location: " . BASE_URL . "/ck/affiliates/endorsements_default.php?a=".$action);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

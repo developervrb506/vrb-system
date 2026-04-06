@@ -26,7 +26,7 @@ $data["amount"] = $vcc->vars["amount"];
 $data["fees"] = $vcc->vars["deposit_fee"];
 $key = two_way_enc(implode("_*_",$data));
 
-header("Location: http://localhost:8080/ck/dgs_payout.php?mts=".$key);*/
+header("Location: " . BASE_URL . "/ck/dgs_payout.php?mts=".$key);*/
 
 ?>
 <? }else{echo "Access Denied";} ?>

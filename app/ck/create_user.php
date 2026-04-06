@@ -35,7 +35,7 @@ if(isset($_GET["uid"])){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Create New User</title>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.3.min.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.3.min.js"> </script>
 <script type="text/javascript" src="../process/js/functions.js"></script>
  <script>
     jQuery.noConflict(); // prevent conflicts with prototype
@@ -62,18 +62,18 @@ validations3.push({id:"aff_code",type:"null", msg:"Please add a code"});
 //Shadowbox.init();
 function delete_login(id,clerk){
 	if(confirm("Are you sure you want to DELETE this Login ?")){
-		//document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_phone_login.php?id="+id;
+		//document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_phone_login.php?id="+id;
 	    //document.getElementById("tr_"+id).style.display = "none";
-	  document.location = "http://localhost:8080/ck/process/actions/delete_phone_login.php?id="+id+"&clerk="+clerk;	
+	  document.location = BASE_URL . "/ck/process/actions/delete_phone_login.php?id="+id+"&clerk="+clerk;	
 	}
 }
 
 
 function delete_aff(id,clerk){
 	if(confirm("Are you sure you want to DELETE this AFF Code ?")){
-		//document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_phone_login.php?id="+id;
+		//document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_phone_login.php?id="+id;
 	    //document.getElementById("tr_"+id).style.display = "none";
-	  document.location = "http://localhost:8080/ck/process/actions/delete_agent_affiliate_code.php?id="+id+"&clerk="+clerk;	
+	  document.location = BASE_URL . "/ck/process/actions/delete_agent_affiliate_code.php?id="+id+"&clerk="+clerk;	
 	}
 }
 
@@ -89,7 +89,7 @@ function check_image(){
 var name = document.getElementById("image").value;
 var ext = '.jpg';  
 
-var image_url = "http://localhost:8080/images/profile_images/"+name+ext;	
+var image_url = BASE_URL . "/images/profile_images/"+name+ext;	
 	
 $.get(image_url)
     .done(function() { 

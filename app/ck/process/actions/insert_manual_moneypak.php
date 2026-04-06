@@ -31,6 +31,6 @@ $pak->vars["number"] = $number;
 $pak->vars["manual"] = 1;
 $pak->insert();
 
-header("Location: http://localhost:8080/ck/moneypak_transactions.php");
+header("Location: " . BASE_URL . "/ck/moneypak_transactions.php");
 ?>
 <? }else{echo "Access Denied";} ?>

@@ -7,6 +7,6 @@ if($current_clerk->im_allow("seo_system")) {
 	if(!is_null($seo_entry)){
 		$seo_entry->delete();
 	}
-	header("Location: http://localhost:8080/ck/seo_system.php?e=97");
+	header("Location: " . BASE_URL . "/ck/seo_system.php?e=97");
 }
 ?>

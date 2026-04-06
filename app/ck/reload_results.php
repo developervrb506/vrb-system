@@ -7,8 +7,8 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>SBO Reload Report</title>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -116,7 +116,7 @@ $columns = search_names_by_added_date($from,$to,$id_list,$data);
     <td class="table_td<? echo $style ?>" style="font-size:12px;"><? echo $col->vars["last_name"] ?>
     </td>
  
-    <td class="table_td<? echo $style ?>" style="font-size:12px;"><a href=      "http://localhost:8080/ck/edit_name.php?nid=<? echo $col->vars["acc_number"] ?>" class= "normal_link"  target="_blank"><? echo $col->vars["acc_number"]  ?> </a>
+    <td class="table_td<? echo $style ?>" style="font-size:12px;"><a href="<?= BASE_URL ?>/ck/edit_name.php?nid=<? echo $col->vars["acc_number"] ?>" class= "normal_link"  target="_blank"><? echo $col->vars["acc_number"]  ?> </a>
     </td>
    
     <td class="table_td<? echo $style ?>" style="font-size:12px;"><? echo $col->vars["email"] ?>
@@ -129,7 +129,7 @@ $columns = search_names_by_added_date($from,$to,$id_list,$data);
     <td class="table_td<? echo $style ?>" style="font-size:12px;"><? echo str_boolean($col->vars["deposit"])?>
     </td>
    
-     <td class="table_td<? echo $style ?>" style="font-size:12px;"><a href="http://localhost:8080/ck/calls.php?nid=<? echo $col->vars["acc_number"] ?>" class="normal_link" target="_blank">Calls</a>
+     <td class="table_td<? echo $style ?>" style="font-size:12px;"><a href="<?= BASE_URL ?>/ck/calls.php?nid=<? echo $col->vars["acc_number"] ?>" class="normal_link" target="_blank">Calls</a>
      </td>
 
     </tr>

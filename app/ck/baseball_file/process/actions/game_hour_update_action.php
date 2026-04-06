@@ -21,11 +21,11 @@ $data = "?gid=".$_POST["gid"];
 <div id="pitcher">Loading Info, this proccess take some minutes Please Wait...</div>
    <br />
     <script type="text/javascript">
-	load_url_content_in_div('http://localhost:8080/ck/baseball_file/process/actions/game_hour_update_action_data.php<? echo $data ?>',"pitcher");
+	load_url_content_in_div('<?= BASE_URL ?>/ck/baseball_file/process/actions/game_hour_update_action_data.php<? echo $data ?>',"pitcher");
     </script>
 </div>	
 
-<!--<script type="text/javascript">parent.location.href="http://localhost:8080/ck/baseball_file/report.php"</script>-->
+<!--<script type="text/javascript">parent.location.href="<?= BASE_URL ?>/ck/baseball_file/report.php"</script>-->
 </body>
 </html>
 

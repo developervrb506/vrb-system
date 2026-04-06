@@ -127,7 +127,7 @@ function mark_free(def){
       </tr>
     </table>
     <br />
-    <iframe src="http://localhost:8080/ck/loader_sbo.php?type=dgs_payouts&data=<? echo $account ?>&url=<? echo $cash_url ?>" frameborder="0" scrolling="auto" width="100%" height="50"></iframe>
+    <iframe src="<?= BASE_URL ?>/ck/loader_sbo.php?type=dgs_payouts&data=<? echo $account ?>&url=<? echo $cash_url ?>" frameborder="0" scrolling="auto" width="100%" height="50"></iframe>
 </div>
 </form>
 </div>

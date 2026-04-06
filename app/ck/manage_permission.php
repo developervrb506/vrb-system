@@ -6,7 +6,7 @@
 <script type="text/javascript">
 function delete_permission(clerk,permission_id){
 	if(confirm("Are you sure you want to Remove this Permission?")){
-	  document.location = "http://localhost:8080/ck/process/actions/delete_permission_user.php?clerk="+clerk+"&permission="+permission_id;
+	  document.location = BASE_URL . "/ck/process/actions/delete_permission_user.php?clerk="+clerk+"&permission="+permission_id;
 		
 	}
 }

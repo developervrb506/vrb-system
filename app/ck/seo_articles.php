@@ -36,7 +36,7 @@ $lists = get_all_seo_articles();
     <td class="table_td<? echo $style ?>"><? echo $list->vars["name"]; ?></td>
     <td class="table_td<? echo $style ?>"><? echo $list->vars["brand"]; ?></td>
     <td class="table_td<? echo $style ?>"><? echo $list->vars["keyword"]; ?></td>
-    <td class="table_td<? echo $style ?>"><a href="http://localhost:8080/ck/csv/<? echo $list->vars["file"]; ?>" target="_blank" class="normal_link">View File</a></td>
+    <td class="table_td<? echo $style ?>"><a href="<?= BASE_URL ?>/ck/csv/<? echo $list->vars["file"]; ?>" target="_blank" class="normal_link">View File</a></td>
     <td class="table_td<? echo $style ?>"><a href="seo_new_article.php?lid=<? echo $list->vars["id"]; ?>" class="normal_link">Edit</a></td>
   </tr>
   

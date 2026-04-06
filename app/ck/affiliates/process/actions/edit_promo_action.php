@@ -25,7 +25,7 @@ $promo->vars["type"] = $type;
 $promo->vars["comment"] = $comment;
 $promo->update();
 
-header("Location: http://localhost:8080/ck/affiliates/partners_campaigne_view.php?cid=" . $_POST["cid"]);
+header("Location: " . BASE_URL . "/ck/affiliates/partners_campaigne_view.php?cid=" . $_POST["cid"]);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

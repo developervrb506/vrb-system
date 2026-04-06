@@ -20,13 +20,13 @@
 
 <tr>
    <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_affiliates.php">Manage Affiliates</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_affiliates.php">Manage Affiliates</a><br />
         Manage the Affiliate Partners
    </td>
 </tr>
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_search_ids.php">Search by Id >> Affiliate Search</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_search_ids.php">Search by Id >> Affiliate Search</a><br />
         Affiliate search by ID
     </td>
   </tr> 
@@ -35,7 +35,7 @@
   
   <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates_report.php">Affiliates Report</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates_report.php">Affiliates Report</a><br />
         Displays all information for all affiliates
     </td>
   </tr>
@@ -46,7 +46,7 @@
   
   <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates_main_report.php">Affiliates Main Report</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates_main_report.php">Affiliates Main Report</a><br />
         Displays all information for all affiliates in a more complete way.
     </td>
   </tr>
@@ -55,7 +55,7 @@
 
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_approve.php">Approve Partners</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_approve.php">Approve Partners</a><br />
         Approve or Decline Pending Affiliates
     </td>
   </tr>
@@ -63,7 +63,7 @@
 <? if($current_clerk->im_allow("affiliate_leads")){ ?>
   <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates_leads.php">Affiliate Leads</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates_leads.php">Affiliate Leads</a><br />
         Manage the option to handle the affiliates leads
     </td>
   </tr>
@@ -71,7 +71,7 @@
    
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_campaignes.php">Banners Campaigns </a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_campaignes.php">Banners Campaigns </a><br />
         Manage and customize Affiliate Banners campaigns
     </td>
   </tr> 
@@ -82,7 +82,7 @@
 
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/inactive_affiliates_banners.php">Affiliates Inactive Banners</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/inactive_affiliates_banners.php">Affiliates Inactive Banners</a><br />
         View all inactive banners in a period of time
     </td>
   </tr> 
@@ -92,14 +92,14 @@
 
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_text_link_view.php">Manage Text Links</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_text_link_view.php">Manage Text Links</a><br />
         Manage the text links
     </td>
   </tr> 
   
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_custom_promotype_view.php">Manage Custom Promotion types</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_custom_promotype_view.php">Manage Custom Promotion types</a><br />
         Manage and customize promotions
     </td>
   </tr>     
@@ -107,7 +107,7 @@
 <? if($current_clerk->im_allow("affiliate_descriptions")){ ?>             
   <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates_description.php">AF Comments >> Affiliate Bonus Codes</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates_description.php">AF Comments >> Affiliate Bonus Codes</a><br />
         Manage the option to create bonus codes, and internal notes on special promotions for the Affiliates  
     </td>
   </tr>
@@ -115,28 +115,28 @@
  
 <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/endorsements_default.php">Default Endorsements</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/endorsements_default.php">Default Endorsements</a><br />
         Create and Edit Default Endorsements
     </td>
   </tr> 
 
  <?php /*?><tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/contest.php">Insider Contests</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/contest.php">Insider Contests</a><br />
         Manage the option to handle the Insider Contests
     </td>
   </tr><?php */?> 
  
  <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_news.php">News & Updates</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_news.php">News & Updates</a><br />
         Add and edit News and Updates 
     </td>
   </tr>
   
   <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_testimonials.php">Testimonials</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_testimonials.php">Testimonials</a><br />
         Manage and Add Testimonials
     </td>
   </tr>  
@@ -144,7 +144,7 @@
  <? if($current_clerk->im_allow("agent_freeplays")){ ?>
   <tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/agent_freeplays.php">AF Free plays</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/agent_freeplays.php">AF Free plays</a><br />
         Manage the option to create Free Plays to Agents
     </td>
   </tr>
@@ -153,7 +153,7 @@
   
   <?php /*?><tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/partners_campaignes.php">Manage Casino Games</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/partners_campaignes.php">Manage Casino Games</a><br />
         Access to Manage Casino Games Links
     </td>
   </tr><?php */?>  
@@ -162,7 +162,7 @@
   
   <?php /*?><tr>
       <td width="50%">
-        <a class="normal_link" href="http://localhost:8080/ck/affiliates/20games.php">Special Trends</a><br />
+        <a class="normal_link" href="<?= BASE_URL ?>/ck/affiliates/20games.php">Special Trends</a><br />
         Manage the option to pick the best trends for game
     </td>
   </tr><?php */?>

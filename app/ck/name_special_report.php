@@ -71,10 +71,10 @@ $i=0;
         <td class="table_td<? echo $style ?>" align="center"><? if ($request !== null) { echo $request->color_status(); } ?></td>
         <? } ?>       
         <td class="table_td<? echo $style ?>" align="center">
-        	<a href="http://localhost:8080/ck/calls.php?nid=<? echo $name->vars["id"]; ?>" target="_blank" class="normal_link">Calls</a>
+        	<a href="<?= BASE_URL ?>/ck/calls.php?nid=<? echo $name->vars["id"]; ?>" target="_blank" class="normal_link">Calls</a>
         </td>
         <td class="table_td<? echo $style ?>" align="center">
-        	<a href="http://localhost:8080/ck/edit_name.php?nid=<? echo $name->vars["id"]; ?>" target="_blank" class="normal_link">View</a>
+        	<a href="<?= BASE_URL ?>/ck/edit_name.php?nid=<? echo $name->vars["id"]; ?>" target="_blank" class="normal_link">View</a>
         </td>        
       </tr>
       <? } ?>

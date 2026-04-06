@@ -66,6 +66,6 @@ else{
 	}
 }
 
-header("Location: http://localhost:8080/ck/sports_headlines.php?e=82");
+header("Location: " . BASE_URL . "/ck/sports_headlines.php?e=82");
 ?>
 <? }else{echo "Access Denied";} ?>

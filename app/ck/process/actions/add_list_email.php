@@ -7,5 +7,5 @@
 	$name->vars["list"] = $_POST["list"];
 	$name->insert();
 
-header("Location: http://localhost:8080/ck/".$_POST["url"]."?e=80");
+header("Location: " . BASE_URL . "/ck/".$_POST["url"]."?e=80");
 ?>

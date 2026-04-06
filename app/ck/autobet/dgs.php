@@ -39,7 +39,7 @@ class _dgs_robot{
 	}
 	
 	function get_my_ip(){
-		return $this->getUrl("http://localhost:8080/ip.php");
+		return $this->getUrl(BASE_URL . "/ip.php");
 	}
 	
 	function create_bet($pre_place = false){

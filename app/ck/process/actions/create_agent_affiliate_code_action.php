@@ -10,6 +10,6 @@ $clerk = clean_get("clerk");
 	$agent_aff->vars["aff"] =  clean_get("aff_code");
 	$agent_aff->insert();
 	
-    header("Location: http://localhost:8080/ck/create_user.php?uid=".$clerk."");
+    header("Location: " . BASE_URL . "/ck/create_user.php?uid=".$clerk."");
 
 ?>

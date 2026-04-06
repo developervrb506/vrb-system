@@ -28,9 +28,9 @@ if(!is_null($payout)){
 
 
 if($payout->vars["method"] == 'k'){
-	header("Location: http://localhost:8080/ck/cashier_checks_payouts.php");
+	header("Location: " . BASE_URL . "/ck/cashier_checks_payouts.php");
 }else{
-	header("Location: http://localhost:8080/ck/moneypak_limbos.php");
+	header("Location: " . BASE_URL . "/ck/moneypak_limbos.php");
 }
 ?>
 <? }else{echo "Access Denied";} ?>

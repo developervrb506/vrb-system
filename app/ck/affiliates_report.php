@@ -8,13 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Affiliates Report</title>
-<?php /*?><link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<?php /*?><link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
 <?php */?>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
 <script type="text/javascript" src="../includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
@@ -85,7 +85,7 @@ $params = "?from=".$from."&to=".$to."&saf=".$saf;
 switch($brand->vars["id"]){
 	case "1":
 		//Wagerweb
-		echo file_get_contents("http://localhost:8080/ck/ww_affiliates_commission_report.php$params");
+		echo file_get_contents(BASE_URL . "/ck/ww_affiliates_commission_report.php$params");
 	break;
 	case "3":
 		//SBO

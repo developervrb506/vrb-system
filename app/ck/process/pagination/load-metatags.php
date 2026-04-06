@@ -22,7 +22,7 @@ function change_page(value){
 	document.location.href = "" + value;
 }
 </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 
 <? if(isset($_POST['pageId']) && !empty($_POST['pageId']))
 {

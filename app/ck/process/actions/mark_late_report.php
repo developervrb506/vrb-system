@@ -13,7 +13,7 @@ $result->vars["result"] = $_POST["result"];
 $result->vars["by"] = $current_clerk->vars["id"];
 $result->insert();
 
-header("Location: http://localhost:8080/ck/late_report.php");
+header("Location: " . BASE_URL . "/ck/late_report.php");
 exit;
 ?>
 <? }else{echo "Access Denied";} ?>

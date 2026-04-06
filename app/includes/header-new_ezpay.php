@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ezpay.com</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
 <link href="css/ezpay_style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -11,7 +11,7 @@
 <body>
 <div class="wrapper">
 <div class="live_support_top">Call Us: <span>(+506) 2228-<span style="display:none;">**</span>9034</span>&nbsp;&nbsp;&nbsp;
-<?php /*?><a style="color:#FFF; text-decoration: none;" href="" onclick="Javascript:window.open('http://localhost:8080/livehelp/request_email.php?l=admtop&amp;x=1&amp;deptid=5&amp;agsite=ezpay','livehelp','width=530,height=410,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">LIVE SUPPORT&gt;&gt;</a><?php */?></div>
+<?php /*?><a style="color:#FFF; text-decoration: none;" href="" onclick="Javascript:window.open('<?= BASE_URL ?>/livehelp/request_email.php?l=admtop&amp;x=1&amp;deptid=5&amp;agsite=ezpay','livehelp','width=530,height=410,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">LIVE SUPPORT&gt;&gt;</a><?php */?></div>
 	<div class="wrapper_top">
     	<div class="logo"><img src="images/ezpay/ezpay.jpg" width="253" height="96" /></div>
         <div class="error_box"><? if ( isset($_GET["e"]) and $_GET["e"] != "" ) { echo get_error($_GET["e"]); } ?></div>

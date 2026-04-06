@@ -17,7 +17,7 @@ if($conn_id){ echo 'OK';}
 
 if (ftp_get($conn_id, $main_path.$local_file, $local_file, FTP_ASCII))
   { 
-  $path = "http://localhost:8080/audio/".$local_file;
+  $path = BASE_URL . "/audio/".$local_file;
   header("Location: $path");
   }
 else

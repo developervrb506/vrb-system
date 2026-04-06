@@ -71,7 +71,7 @@ case 7:
 <table width="98%" align="center" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td align="center"><br /><br />
-     <div style="float:right;" class="normal_link"><a href="http://localhost:8080/dashboard/reports.php?bk=1"><strong><< Back</strong></a></div>
+     <div style="float:right;" class="normal_link"><a href="<?= BASE_URL ?>/dashboard/reports.php?bk=1"><strong><< Back</strong></a></div>
      <br /><br />
      <iframe src="<? echo $url ?>" name="iframe1" width="850" height="600" scrolling="auto" style="background-color:#FFFFFF" frameborder="0"></iframe>
      <br /><br />

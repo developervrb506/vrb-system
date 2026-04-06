@@ -13,18 +13,18 @@
 <? include "../includes/menu.php" ?>
 <div class="page_content" style="padding-left:50px;">
 <span class="page_title">Commissions Reports</span><br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=1">Commissions</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=1">Commissions</a>
 <br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=2">Daily Figures</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=2">Daily Figures</a>
 <?php /*?><br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=3">Position by Game</a><?php */?>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=3">Position by Game</a><?php */?>
 <br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=4">Player Report</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=4">Player Report</a>
 <br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=5">Payment Statement by Date</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=5">Payment Statement by Date</a>
 <br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=6">Conversion Report</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=6">Conversion Report</a>
 <br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/asp_report_results.php?report=7">Player Deposits by Date</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/asp_report_results.php?report=7">Player Deposits by Date</a>
 </div>
 <? include "../includes/footer.php" ?>

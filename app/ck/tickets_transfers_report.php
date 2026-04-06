@@ -14,7 +14,7 @@ if($sto==""){$sto = date("Y-m-d");}
 
 <title>Ticket Tranfers Report</title>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 <script type="text/javascript" src="../includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
 	window.onload = function(){

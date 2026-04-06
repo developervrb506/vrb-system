@@ -36,31 +36,31 @@ include(ROOT_PATH . "/includes/books.php");
 </p><?php */?>
 <table width="100%" border="0" cellspacing="2" cellpadding="2">
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/marketing-reports.php?bk=<? echo $_GET["bk"] ?>">Marketing Report</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/marketing-reports.php?bk=<? echo $_GET["bk"] ?>">Marketing Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view clicks and impressions by PID, Campaign, Banner size, website and brand.</div></td>
   </tr>
   <tr>
-    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/wagerweb_reports.php?report=1">Commissions</a></div></td>
+    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/wagerweb_reports.php?report=1">Commissions</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view commissions earned by week. It includes Net Revenue, Win / Loss and Negative Carry-Over balances. </div></td>
   </tr>
   <tr>
-    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/wagerweb_reports.php?report=2">Daily Figures</a></div></td>
+    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/wagerweb_reports.php?report=2">Daily Figures</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view wagers placed by your players during the current week or the previous week.  Get detailed info on wagers placed by clicking through on each figure.</div></td>
   </tr>
   <tr>
-    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/wagerweb_reports.php?report=3">Player Report</a></div></td>
+    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/wagerweb_reports.php?report=3">Player Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view your players Net Revenue, Current Balance, Join Date and Status.</div></td>
   </tr>
   <tr>
-    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/wagerweb_reports.php?report=4">Payment Statement</a></div></td>
+    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/wagerweb_reports.php?report=4">Payment Statement</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view details about your past commission payouts. It includes payment method, amount and date.</div></td>
   </tr>
   <tr>
-    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/wagerweb_reports.php?report=5">Conversion Report</a></div></td>
+    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/wagerweb_reports.php?report=5">Conversion Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view the conversion percentage from new player sign up to deposit, on a weekly basis. </div></td>
   </tr>
   <tr>
-    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/wagerweb_reports.php?report=6">Player Deposits</a></div></td>
+    <td><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/wagerweb_reports.php?report=6">Player Deposits</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view when a player has made a deposit and the respective amount. Historical is based on last 90 days.</div></td>
   </tr>
 </table>
@@ -69,35 +69,35 @@ include(ROOT_PATH . "/includes/books.php");
 
 <table width="100%" border="0" cellspacing="2" cellpadding="2">
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/marketing-reports.php?bk=<? echo $_GET["bk"] ?>">Marketing Report</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/marketing-reports.php?bk=<? echo $_GET["bk"] ?>">Marketing Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view clicks and impressions by PID, Campaign, Banner size, website and brand.</div></td>
   </tr>
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/revenue_report.php?bk=<? echo $_GET["bk"] ?>">Revenue Report</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/revenue_report.php?bk=<? echo $_GET["bk"] ?>">Revenue Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view Net Revenue and commissions generated per product. Plus, any adjustments that have been calculated within the total. </div></td>
   </tr>
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/daily_figures_report.php?bk=<? echo $_GET["bk"] ?>">Daily Figures</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/daily_figures_report.php?bk=<? echo $_GET["bk"] ?>">Daily Figures</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view wagers placed by your players during the current week or the previous week. Get detailed info on wagers placed by clicking through on each figure.</div></td>
   </tr>
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/players_report.php?bk=<? echo $_GET["bk"] ?>">Player Report</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/players_report.php?bk=<? echo $_GET["bk"] ?>">Player Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view your players Net Revenue by product, Join Date and Status.</div></td>
   </tr>
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/agent_accounting_report_new.php?bk=<? echo $_GET["bk"] ?>">Agent Accounting</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/agent_accounting_report_new.php?bk=<? echo $_GET["bk"] ?>">Agent Accounting</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view a breakdown of commissions earned and adjustments calculated into the current balance.  </div></td>
   </tr>
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/payment_statement_report.php?bk=<? echo $_GET["bk"] ?>">Payment Statement</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/payment_statement_report.php?bk=<? echo $_GET["bk"] ?>">Payment Statement</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view details about your past commission payouts. It includes payment method, amount and date.</div></td>
   </tr>
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/conversion_report.php?bk=<? echo $_GET["bk"] ?>">Conversion Report</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/conversion_report.php?bk=<? echo $_GET["bk"] ?>">Conversion Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view the conversion percentage from new player sign up to deposit, on a weekly basis. </div></td>
   </tr>  
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/open_bets_report.php?bk=<? echo $_GET["bk"] ?>">Open Bets</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/open_bets_report.php?bk=<? echo $_GET["bk"] ?>">Open Bets</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view any open wagers.</div></td>
   </tr>    
 </table>
@@ -106,7 +106,7 @@ include(ROOT_PATH . "/includes/books.php");
 
 <table width="100%" border="0" cellspacing="2" cellpadding="2">
   <tr>
-    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="http://localhost:8080/dashboard/marketing-reports.php?bk=<? echo $_GET["bk"] ?>">Marketing Report</a></div></td>
+    <td width="25%"><div style="float:none;" class="gray_box"><a class="normal_link" href="<?= BASE_URL ?>/dashboard/marketing-reports.php?bk=<? echo $_GET["bk"] ?>">Marketing Report</a></div></td>
     <td><div style="float:none;" class="gray_box">Use this report to view clicks and impressions by PID, Campaign, Banner size, website and brand.</div></td>
   </tr>    
 </table>

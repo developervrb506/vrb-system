@@ -15,7 +15,7 @@
 	$promo->insert(); 			
 		
 	
-	header("Location: http://localhost:8080/ck/affiliates/partners_text_link_view.php");
+	header("Location: " . BASE_URL . "/ck/affiliates/partners_text_link_view.php");
 
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

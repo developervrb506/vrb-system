@@ -5,12 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/jquery.js"></script>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/jquery.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript" src="../../includes/calendar/jsDatePick.min.1.3.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/ajax.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/ajax.js"></script>
 <script type="text/javascript">
 	Shadowbox.init();
 </script>
@@ -36,14 +36,14 @@ a:hover + .tkbox,.tkbox:hover{
 
 function delete_ticket(id){
 	if(confirm("Are you sure you want to DELETE this ticket from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_ticket.php?id="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_ticket.php?id="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
 
 function remove_ticket(id){
 	if(confirm("Are you sure you want to REMOVE this ticket from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_ticket.php?removed=1&id="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_ticket.php?removed=1&id="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
@@ -92,7 +92,7 @@ function action_checkbox(action,total){
 	   }
 	  if (check){
 		var tks = tickets.substring(0, tickets.length - 10);
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_ticket.php?action="+action+"&tks="+tks;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_ticket.php?action="+action+"&tks="+tks;
 	  }
   }
 }
@@ -385,7 +385,7 @@ include "includes/print_error.php";
        <form method="post" action="" >
        <input name="tk" type="hidden" id="tk<? echo $tk->vars["id"] ?>" value="<? echo $tk->vars["id"] ?>" />
                
-         <input type="image" style="width: 30px;" src="http://localhost:8080/ck/images/pencil.png" />
+         <input type="image" style="width: 30px;" src="<?= BASE_URL ?>/ck/images/pencil.png" />
         </form>
      </td>
     <? } ?>
@@ -401,7 +401,7 @@ include "includes/print_error.php";
        <input name="tk_comment" type="hidden" id="comment<? echo $tk->vars["id"] ?>" value="<? echo $tk->vars["id"] ?>" />
          
          <? if ($comment || $allow){ ?>       
-         <img title="<? echo $tk->vars["comment"] ?>" style="width: 30px;" src="http://localhost:8080/ck/images/<? echo $comment_img?>" onclick="show_comment('<? echo $tk->vars["id"]?>','<? echo $allow ?>')" />
+         <img title="<? echo $tk->vars["comment"] ?>" style="width: 30px;" src="<?= BASE_URL ?>/ck/images/<? echo $comment_img?>" onclick="show_comment('<? echo $tk->vars["id"]?>','<? echo $allow ?>')" />
          <textarea  required="required" <? if (!$allow){ echo ' readonly="readonly"' ;} ?> style="display:none" cols="12" rows="6" name="comment_text" id="comment_text_<? echo $tk->vars["id"]?>"><? echo $tk->vars["comment"] ?></textarea>
          
          <input type="submit" value="Save" style="display:none" id="comment_but_<? echo $tk->vars["id"]?>">
@@ -413,7 +413,7 @@ include "includes/print_error.php";
     <td class="table_td<? echo $style ?>" align="center"><? echo $tk->vars["id"]; ?></td>
 	<td class="table_td<? echo $style ?>" align="center"><? echo $tk->vars["tdate"]; ?></td>
     <td  <?  if($current_clerk->im_allow("delete_tickets")){ ?>title="<? echo small_text(strip_tags($tk->vars["message"]),150); ?>" <? } ?>  class="table_td<? echo $style ?>" align="center"><? echo $tk->vars["name"]; ?><br />
-	<a href="http://localhost:8080/ck/cashier/player_detail.php?pid=<? echo $tk->vars["player_account"] ?>" class="normal_link" rel="shadowbox;height=220;width=500"><? echo $tk->vars["player_account"] ?></a>
+	<a href="<?= BASE_URL ?>/ck/cashier/player_detail.php?pid=<? echo $tk->vars["player_account"] ?>" class="normal_link" rel="shadowbox;height=220;width=500"><? echo $tk->vars["player_account"] ?></a>
 	
     
     <? if ($tk->vars["email"] != "") { echo '<br />'.$tk->vars["email"]; } ?>
@@ -425,19 +425,19 @@ include "includes/print_error.php";
      <?
 	 if ($categories[$tk->vars["ticket_category"]]->vars["instructions"] != "") {?>
      
-	<a rel="shadowbox;height=280;width=400" href="http://localhost:8080/ck/ticket_instructions.php?c=<? echo $tk->vars["ticket_category"] ?>" title="Ticket Instructions">
+	<a rel="shadowbox;height=280;width=400" href="<?= BASE_URL ?>/ck/ticket_instructions.php?c=<? echo $tk->vars["ticket_category"] ?>" title="Ticket Instructions">
       <img style="height: 20px;width: 20px;"   title='Instructions: <?  echo clean_chars($categories[$tk->vars["ticket_category"]]->vars["instructions"]) ?>' src="images/info1.png" />
     </a>
     <? } ?>
                   
     </div>
       <? if($current_clerk->im_allow("delete_tickets")){ ?>
-     <a rel="shadowbox;height=300;width=400" class="normal_link" href="http://localhost:8080/ck/view_ticket_internal.php?tid=<? echo $tk->vars["id"] ?>" style="color:#000" >
+     <a rel="shadowbox;height=300;width=400" class="normal_link" href="<?= BASE_URL ?>/ck/view_ticket_internal.php?tid=<? echo $tk->vars["id"] ?>" style="color:#000" >
       <? } ?>
 	<? echo $tk->vars["subject"]; ?>
        <? if($current_clerk->im_allow("delete_tickets")){ ?>
     </a>
-    <?php /*?><div id="r_<? echo $tk->vars["id"]; ?>" name="r_<? echo $tk->vars["id"]; ?>" class="tkbox"><iframe src="http://localhost:8080/ck/view_ticket_internal.php?tid=<? echo $tk->vars["id"] ?>" width = "550px" height = "300px"></iframe></div><?php */?>
+    <?php /*?><div id="r_<? echo $tk->vars["id"]; ?>" name="r_<? echo $tk->vars["id"]; ?>" class="tkbox"><iframe src="<?= BASE_URL ?>/ck/view_ticket_internal.php?tid=<? echo $tk->vars["id"] ?>" width = "550px" height = "300px"></iframe></div><?php */?>
       <? } ?>
       
       
@@ -445,7 +445,7 @@ include "includes/print_error.php";
       <? if(count($responses)>0){ ?>
        <div align="left">
  		
-       <a href="http://localhost:8080/ck/view_ticket_internal.php?tid=<? echo $tk->vars["id"] ?>" rel="shadowbox;height=300;width=400" >
+       <a href="<?= BASE_URL ?>/ck/view_ticket_internal.php?tid=<? echo $tk->vars["id"] ?>" rel="shadowbox;height=300;width=400" >
        <img style="height: 20px;width: 20px;"    src="images/response.png" />
        </a>
        

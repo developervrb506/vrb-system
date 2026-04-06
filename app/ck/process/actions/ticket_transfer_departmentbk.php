@@ -7,6 +7,6 @@ $ticket->vars["dep_id_live_chat"] = $dep;
 
 $ticket->update(array("dep_id_live_chat"));
 
-header("Location: http://localhost:8080/ck/tickets.php");
+header("Location: " . BASE_URL . "/ck/tickets.php");
 
 ?>

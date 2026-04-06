@@ -27,7 +27,7 @@ if($current_clerk->im_allow("seo_system")) {
 	}
 
 }
-//header("Location: http://localhost:8080/ck/seo_lists.php?e=72");
+//header("Location: " . BASE_URL . "/ck/seo_lists.php?e=72");
 ?>
 
-<script>location.href = "http://localhost:8080/ck/seo_lists.php?e=72";</script>
+<script>location.href = BASE_URL . "/ck/seo_lists.php?e=72";</script>

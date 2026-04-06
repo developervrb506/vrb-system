@@ -11,8 +11,8 @@ function fix_data(player,pre,id){
    
  
 	if(confirm("Are you sure you want to UPDATE this player?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/baseball_file/process/actions/fix_player_data.php?player="+player+"&pre="+pre;
-     	//document.location = "http://localhost:8080/ck/baseball_file/process/actions/fix_player_data.php?player="+player+"&pre="+pre;
+		document.getElementById("idel").src = BASE_URL . "/ck/baseball_file/process/actions/fix_player_data.php?player="+player+"&pre="+pre;
+     	//document.location = BASE_URL . "/ck/baseball_file/process/actions/fix_player_data.php?player="+player+"&pre="+pre;
 		document.getElementById("table_"+id).style.display = "none";
 	}
 

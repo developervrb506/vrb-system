@@ -2,7 +2,7 @@
 
 <div class="time_marker_box">
 <? if(!$current_clerk->im_allow("just_queue_calls") && $current_clerk->vars['user_group']->vars['id'] != 27 ) { ?>
-	<iframe src="http://localhost:8080/ck/includes/time_logs.php" scrolling="no" width="200" height="100" frameborder="0"></iframe>
+	<iframe src="<?= BASE_URL ?>/ck/includes/time_logs.php" scrolling="no" width="200" height="100" frameborder="0"></iframe>
  <? } ?>   
 </div>
 

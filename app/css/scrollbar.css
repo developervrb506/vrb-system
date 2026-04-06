@@ -12,7 +12,7 @@
     font-size: 16px;
     border-radius: 9px;
     box-shadow: 0 0 16px rgba(0,0,0,0.6);
-    background-image: url("http://localhost:8080/ck/images/sidetoside.png");
+    background-image: url("/ck/images/sidetoside.png");
     background-position: 50% 40%;
     background-size: 50%;
     background-repeat: no-repeat;

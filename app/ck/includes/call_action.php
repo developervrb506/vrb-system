@@ -1,5 +1,5 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/includes/calendar_time/datetimepicker_css.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar_time/datetimepicker_css.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
 <script type="text/javascript" src="../includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
@@ -76,7 +76,7 @@ validations.push({id:"extra_in",type:"null", msg:"This field is required"});
     <td valign="top"><? echo nl2br($name->vars["message_to_clerk"]); ?></td>
     <td colspan="4" rowspan="2" valign="top">
     	<strong>Transactions:</strong>
-    	<iframe src="http://localhost:8080/ck/loader_sbo.php?type=player&data=<? echo $name->vars["acc_number"] ?>" frameborder="1" scrolling="auto" width="100%" height="200"></iframe>
+    	<iframe src="<?= BASE_URL ?>/ck/loader_sbo.php?type=player&data=<? echo $name->vars["acc_number"] ?>" frameborder="1" scrolling="auto" width="100%" height="200"></iframe>
     </td>
  </tr>
   <tr>

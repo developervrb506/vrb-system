@@ -86,7 +86,7 @@ function show_braodcast(){
         <td><textarea name="msg" cols="20" rows="5" id="msg"></textarea></td>
       </tr> 
       <tr>    
-        <td><input type="image" src="http://localhost:8080/images/temp/submit.jpg" /></td>
+        <td><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" /></td>
         <td>&nbsp;</td>
       </tr>
     </table>
@@ -130,7 +130,7 @@ function show_braodcast(){
         <td><textarea name="msg" cols="30" rows="10" id="msg2"></textarea></td>
       </tr> 
       <tr>    
-        <td><input type="image" src="http://localhost:8080/images/temp/submit.jpg" /></td>
+        <td><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" /></td>
         <td>&nbsp;</td>
       </tr>
     </table>

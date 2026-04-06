@@ -30,7 +30,7 @@
   <!--end sections--></div>
 <div class="shadow_detail_2"></div>
 <div class="client_comments_container">
-  <div class="header_client_comments"> <img style="display:block; float:left; margin-right:20px;" src="http://localhost:8080/images/new_design/client_comment_icon.png" width="91" height="96" alt="Client Comments Icon" border="0" />
+  <div class="header_client_comments"> <img style="display:block; float:left; margin-right:20px;" src="<?= BASE_URL ?>/images/new_design/client_comment_icon.png" width="91" height="96" alt="Client Comments Icon" border="0" />
     <h1>What our clients have been commenting about us</h1>
     <!--header_client_comments--></div>
   <div class="client_comments"><br />
@@ -38,5 +38,5 @@
     <p>We're impressed with your team's knowledge and how helpeful everyone has been.<br />
     </p>
     <p>I'll surely recommend you to anyone looking for  a quality marketing consultancy service.</p>
-    <img style=" margin-left:540px;" src="http://localhost:8080/images/new_design/smartenglishco_logo.png" width="152" height="25" alt="Client Logo" border="0" /></div>
+    <img style=" margin-left:540px;" src="<?= BASE_URL ?>/images/new_design/smartenglishco_logo.png" width="152" height="25" alt="Client Logo" border="0" /></div>
   <!--client_comments_container--></div>

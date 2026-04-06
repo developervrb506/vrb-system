@@ -1,7 +1,7 @@
 
 <div class="wrapper">
 <div class="top">
-  <div class="logoVRB"><a href="http://localhost:8080/"><img src="../images/VRB_logo_processing.png" width="355" height="50" border="0" /></a></div>
+  <div class="logoVRB"><a href="<?= BASE_URL ?>/"><img src="../images/VRB_logo_processing.png" width="355" height="50" border="0" /></a></div>
   <div class="wrapper_right_top">    
     <div class="login_top" style="margin-top: 25px;">
       <div class="wrapper_box_login">

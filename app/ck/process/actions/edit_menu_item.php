@@ -10,6 +10,6 @@ if(!is_null($item)){
 	$item ->update(array("name","description"));
 }
 
-header("Location: http://localhost:8080/ck/page_menu.php?c=".$item ->vars["parent"]);
+header("Location: " . BASE_URL . "/ck/page_menu.php?c=".$item ->vars["parent"]);
 
 ?>

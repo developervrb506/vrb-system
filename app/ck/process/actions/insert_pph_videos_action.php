@@ -24,6 +24,6 @@ else{
 	}
 }
 
-header("Location: http://localhost:8080/ck/pph_videos_view.php?e=82");
+header("Location: " . BASE_URL . "/ck/pph_videos_view.php?e=82");
 ?>
 <? }else{echo "Access Denied";} ?>

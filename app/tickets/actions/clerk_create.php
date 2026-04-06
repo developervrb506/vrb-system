@@ -55,7 +55,7 @@
    
    
 	
-	header("Location: http://localhost:8080/ck/tickets.php?e=96");
+	header("Location: " . BASE_URL . "/ck/tickets.php?e=96");
 	
 
 }

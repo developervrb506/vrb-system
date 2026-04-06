@@ -6,7 +6,7 @@ require_once(ROOT_PATH . "/includes/mail/class-phpmailer.php");
 
 /*Global Variables*/
 //$url_headlines_vrb = 'http://jobs.inspin.com/images/vrb/headlines/';
-$url_headlines_vrb = 'http://localhost:8080/images/headlines/';
+$url_headlines_vrb = BASE_URL . '/images/headlines/';
 
 function affiliates_db() {
   global $mysqli;
@@ -236,7 +236,7 @@ function clean_extension($value){
 	return $value;
 }
 function get_path(){
-		return "http://localhost:8080";
+		return BASE_URL;
 }
 function unique_count($list){
 	$unique = 0;
@@ -554,7 +554,7 @@ function current_URL() {
 }
 function redir_www(){
 	if(!contains(current_URL(),"www.")){
-		header("Location: http://localhost:8080");
+		header("Location: " . BASE_URL);
 	}
 }
 function strcontains($full,$search){

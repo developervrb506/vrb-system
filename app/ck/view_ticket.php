@@ -26,7 +26,7 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
 <title>View Ticket</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/ajax.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/ajax.js"></script>
 <script type="text/javascript" src="includes/js/jquery-1.8.0.min.js"></script>
 <script>
 
@@ -35,14 +35,14 @@ function action_ticket(id,action){
 	
 	if (action == 'delete'){
 		if(confirm("Are you sure you want to DELETE this ticket from the system?")){
-			location.href =  "http://localhost:8080/ck/process/actions/delete_ticket.php?id="+id+"&v=1";
+			location.href =  BASE_URL . "/ck/process/actions/delete_ticket.php?id="+id+"&v=1";
 			
 		}
 	}
 	else if (action == 'remove'){
 		
 		if(confirm("Are you sure you want to REMOVE this ticket from the system?")){
-		location.href = "http://localhost:8080/ck/process/actions/delete_ticket.php?removed=1&id="+id+"&v=1";
+		location.href = BASE_URL . "/ck/process/actions/delete_ticket.php?removed=1&id="+id+"&v=1";
 		
 	   }
 		
@@ -82,7 +82,7 @@ $tgroup = $groups[$ticket->vars["dep_id_live_chat"]];
    <span ><a class="normal_link" href="javascript:;" onclick="action_ticket('<? echo $ticket->vars["id"] ?>','delete');">
        	Delete    </a></span>&nbsp;&nbsp;&nbsp;     
      <? } ?>    
-  <span ><a href="http://localhost:8080/ck/tickets.php">Back</a></span></div>      
+  <span ><a href="<?= BASE_URL ?>/ck/tickets.php">Back</a></span></div>      
 
  
  
@@ -109,7 +109,7 @@ $tgroup = $groups[$ticket->vars["dep_id_live_chat"]];
        <form method="post" action="" >
        <input name="tk" type="hidden" id="tk<? echo $ticket->vars["id"] ?>" value="<? echo $ticket->vars["id"] ?>" />
                
-         <input type="image" style="width: 30px;" src="http://localhost:8080/ck/images/pencil.png" />
+         <input type="image" style="width: 30px;" src="<?= BASE_URL ?>/ck/images/pencil.png" />
         </form>
      </td>
     <? } ?>
@@ -245,7 +245,7 @@ $tgroup = $groups[$ticket->vars["dep_id_live_chat"]];
             <strong>Attach File:</strong> 
             <div id="pre_upload">
                 <input name="file_up" type="file" id="file_up">
-                <input name="burl" type="hidden" id="burl" value="http://localhost:8080/ck/view_ticket.php?tid=<? echo $ticket->vars["id"] ?>#response">
+                <input name="burl" type="hidden" id="burl" value=BASE_URL . "/ck/view_ticket.php?tid=<? echo $ticket->vars["id"] ?>#response">
                 <input name="name" type="hidden" id="name" value="<? echo $file_name ?>">
                 <input name="sd" type="button" id="sd" value="Attach" onclick="upload_xfile();">
             </div>

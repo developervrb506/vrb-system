@@ -79,7 +79,7 @@ Only the clerk can close the ticket, so the last record of responses will have a
 	if ($all_clerks[$res->vars["by"]]->vars["image"] != "no_image"){
 	
 	  ?>
-	  <div style="margin-bottom:10px; float:left;"><img style="width:50px; height:50px; border:4px solid #036;" src="http://localhost:8080/images/profile_images/<? echo $all_clerks[$res->vars["by"]]->vars["image"] ?>"></div>
+	  <div style="margin-bottom:10px; float:left;"><img style="width:50px; height:50px; border:4px solid #036;" src="<?= BASE_URL ?>/images/profile_images/<? echo $all_clerks[$res->vars["by"]]->vars["image"] ?>"></div>
 	  <?
 	  
 	}

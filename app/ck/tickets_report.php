@@ -39,7 +39,7 @@ $completed = $_POST["completed"];
 
 function delete_ticket(id){
 	if(confirm("Are you sure you want to DELETE this ticket from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_ticket.php?id="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_ticket.php?id="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }

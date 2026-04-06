@@ -27,11 +27,11 @@ $zipas = get_all_zip_address("state, country_short");
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Paks Transactions</title>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
-<script type="text/javascript" src="http://localhost:8080/ck/balances/api/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -50,8 +50,8 @@ Shadowbox.init();
 		});
 	};
 </script>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -268,7 +268,7 @@ $nets = json_decode(@file_get_contents("http://www.sportsbettingonline.ag/utilit
             <? if(!$tran->vars["archived"]){ ?>
             <a href="javascript:;" class="normal_link" onclick="display_div('pay_<? echo $tran->vars["id"] ?>')">Payout</a>
             <div style="display:none;" id="pay_<? echo $tran->vars["id"] ?>">
-                <form method="post"  action="http://localhost:8080/ck/loader_sbo.php"   >
+                <form method="post"  action="<?= BASE_URL ?>/ck/loader_sbo.php"   >
                 <input name="loader" type="hidden" value= "moneypak_transactions" />
                 <input name="deposit" type="hidden" id="deposit" value="<? echo $tran->vars["id"]; ?>" />
                 Player:<input name="player" type="text" id="player<? echo $tran->vars["id"] ?>" />

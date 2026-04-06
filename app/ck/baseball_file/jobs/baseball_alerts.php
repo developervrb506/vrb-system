@@ -14,7 +14,7 @@
 	
 	 $gid =$game->vars["id"]; 	
 	 $alert = new _baseball_alert();
-	 $alert->vars["message"] = 'The game '.$team_away->vars['team_name'].' vs '.$team_home->vars['team_name'].' needs to fix the Hour --- <a href="http://localhost:8080/ck/baseball_file/game_hour_fix.php?gid='.$gid.'" class="normal_link" rel="shadowbox;height=270;width=300">Fix Now</a>';
+	 $alert->vars["message"] = 'The game '.$team_away->vars['team_name'].' vs '.$team_home->vars['team_name'].' needs to fix the Hour --- <a href="<?= BASE_URL ?>/ck/baseball_file/game_hour_fix.php?gid='.$gid.'" class="normal_link" rel="shadowbox;height=270;width=300">Fix Now</a>';
 	 $alert->vars["adate"] = date("Y-m-d H:i:s");
 	 $alert->vars["type"] = "espn_id";
 	 $alert->insert();

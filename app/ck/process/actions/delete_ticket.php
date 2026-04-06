@@ -55,10 +55,10 @@ if(isset($_GET["action"])){
 			
 		 ?>
 			<script type="text/javascript">
-			window.location = "http://localhost:8080/ck/tickets.php"; 
+			window.location = BASE_URL . "/ck/tickets.php"; 
 			</script>
 			<?
-		  // header("Location: http://localhost:8080/ck/tickets.php");	
+		  // header("Location: " . BASE_URL . "/ck/tickets.php");	
 		}
 		
 		

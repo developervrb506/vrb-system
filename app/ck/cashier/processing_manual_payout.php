@@ -30,7 +30,7 @@ if(is_numeric($tans)){
     <form method="post" action="poster.php" onsubmit="return validate(validations)" target="_top">    
     <input name="way" type="hidden" id="way" value="manual_process_payout" />
     <input name="ring" type="hidden" id="ring" value="<? echo $tans + 114901265 ?>" />
-    <input name="burl" type="hidden" id="burl" value="http://localhost:8080/ck/cashier/payouts.php" />              
+    <input name="burl" type="hidden" id="burl" value=BASE_URL . "/ck/cashier/payouts.php" />              
 	<table width="100%" border="0" cellspacing="0" cellpadding="5">
       <tr>
         <td><strong>MTCN:</strong></td>

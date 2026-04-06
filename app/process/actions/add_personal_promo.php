@@ -8,6 +8,6 @@ $promo = new promo(0, $text . "_-_" . $current_affiliate->id . "_-_", "t");
 
 insert_promo($promo, $campaign);
 	
-header("Location: http://localhost:8080/dashboard/text_links.php?cid=". $campaign->id . "&e=8");	 
+header("Location: " . BASE_URL . "/dashboard/text_links.php?cid=". $campaign->id . "&e=8");	 
 
 ?>

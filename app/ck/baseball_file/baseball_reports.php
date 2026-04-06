@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Baseball Reports</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -146,14 +146,14 @@ Displays the all games information for each team<BR>
 <a href="pitcher_report.php" class="normal_link">Pitcher Report </a><br />
 Displays the all games information for each pitcher<BR>
 <br /><br />
-<a href="http://localhost:8080/ck/mlb_file/mlb_travel_report.php" class="normal_link">MLB Travel Report</a><br />
+<a href="<?= BASE_URL ?>/ck/mlb_file/mlb_travel_report.php" class="normal_link">MLB Travel Report</a><br />
 Show the Game Data according the # games and away games<BR>
 <br /><br />
-<a href="http://localhost:8080/ck/mlb_file/mlb_roadtrip_report.php" class="normal_link">MLB Road Trip Report</a> <br />
+<a href="<?= BASE_URL ?>/ck/mlb_file/mlb_roadtrip_report.php" class="normal_link">MLB Road Trip Report</a> <br />
 Show the information for the next Game after the # of Away Days <BR>
 <br /><br />
 <br /><br />
-<a href="http://localhost:8080/ck/baseball_file/stadium_formula_data.php" class="normal_link">STADIUM FORMULA DATA</a> <br />
+<a href="<?= BASE_URL ?>/ck/baseball_file/stadium_formula_data.php" class="normal_link">STADIUM FORMULA DATA</a> <br />
 Manage the Data form the Stadiums Formulas PK - AIRP -ADI <BR>
 <br /><br />
 

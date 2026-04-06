@@ -1,6 +1,6 @@
 <?php
 $LANG = ARRAY() ;		// MUST initialize, DO NOT CHANGE
-$LANG['DEFAULT_BRANDING'] = "Powered by <a href='http://localhost:8080/?link' target='newwin'>VRB Marketing</a> " ;
+$LANG['DEFAULT_BRANDING'] = "Powered by <a href='\" . BASE_URL . \"/?link' target='newwin'>VRB Marketing</a> " ;
 
 /*** chat page titles */
 //orig: Request Live! Support Request

@@ -200,9 +200,9 @@ if($emaile == 0 || isset($_GET["edit"])) {
 } 
 	
  	if ( $id != "" ) {	
- 	   header("Location: http://localhost:8080/ck/affiliates/partners_affiliate_detail.php?affid=".$id."");
+ 	   header("Location: " . BASE_URL . "/ck/affiliates/partners_affiliate_detail.php?affid=".$id."");
 	} else {
-	   header("Location: http://localhost:8080/ck/affiliates/partners_affiliates.php");	
+	   header("Location: " . BASE_URL . "/ck/affiliates/partners_affiliates.php");	
 	   
 	}
 ?>

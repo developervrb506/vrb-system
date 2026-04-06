@@ -1,5 +1,5 @@
 <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1">
-  <param name="movie" value="http://localhost:8080/ck/includes/swf/alert1.swf" />
+  <param name="movie" value=BASE_URL . "/ck/includes/swf/alert1.swf" />
   <param name="quality" value="high" />
   <param name="wmode" value="opaque" />
   <param name="swfversion" value="6.0.65.0" />
@@ -7,7 +7,7 @@
   <param name="expressinstall" value="../Scripts/expressInstall.swf" />
   <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
   <!--[if !IE]>-->
-  <object type="application/x-shockwave-flash" data="http://localhost:8080/ck/includes/swf/alert1.swf" width="1" height="1">
+  <object type="application/x-shockwave-flash" data=BASE_URL . "/ck/includes/swf/alert1.swf" width="1" height="1">
     <!--<![endif]-->
     <param name="quality" value="high" />
     <param name="wmode" value="opaque" />

@@ -23,7 +23,7 @@ if($type == 1){
 	
 }else if($type == 2){
 	$image_url = $_GET["img"];
-	if($image_url == ""){$image_url = "http://localhost:8080/images/temp/def_wd_img.gif";}
+	if($image_url == ""){$image_url = BASE_URL . "/images/temp/def_wd_img.gif";}
 	$redirection = "http://jobs.inspin.com/includes/ticker/widget/index.php?dt=$display_tabs&col=$color&img=$image_url&vrb=t";
 	if($print != ""){
 		echo $redirection;

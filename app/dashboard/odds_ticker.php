@@ -38,7 +38,7 @@ function generate_code(){
 	var wiframe = document.getElementById("ipreview");
 	
 	
-	var wurl = "http://localhost:8080/widgets/odds_widget.php?ticker";	
+	var wurl = BASE_URL . "/widgets/odds_widget.php?ticker";	
 	wurl += "&ls=" + get_tabs_widget();
 	wurl += "&b=<? echo $book->id ?>";
 	
@@ -210,7 +210,7 @@ function get_tabs_widget(){
 
 <div style="float:none;" class="gray_box">
 	<strong>Preview</strong><br />
-    <iframe id="ipreview" frameborder="0" width="672" height="136" src="http://localhost:8080/widgets/odds_widget.php?ticker&b=<? echo $book->id ?>&ls=NFL-NCAAF-NHL-MLB-NBA-NCAAB-BOXING-MMA" scrolling="no"></iframe>
+    <iframe id="ipreview" frameborder="0" width="672" height="136" src="<?= BASE_URL ?>/widgets/odds_widget.php?ticker&b=<? echo $book->id ?>&ls=NFL-NCAAF-NHL-MLB-NBA-NCAAB-BOXING-MMA" scrolling="no"></iframe>
     
     <br /><br />
     <strong>Code</strong><br />

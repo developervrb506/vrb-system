@@ -68,7 +68,7 @@ if($type == "t" || $type == "m"){
 	}
 	
 }
-header("Location: http://localhost:8080/ck/affiliates/partners_campaigne_view.php?cid=".$cid);
+header("Location: " . BASE_URL . "/ck/affiliates/partners_campaigne_view.php?cid=".$cid);
 	
 
 ?>

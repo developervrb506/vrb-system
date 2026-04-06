@@ -7,9 +7,9 @@ ini_set('memory_limit','-1');
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="../../includes/calendar/jsDatePick_ltr.min.css" />
 <script type="text/javascript" src="../../includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
@@ -118,7 +118,7 @@ Shadowbox.init();
        if(B < 10) { B = "0"+B;}
        var value = main+A+B;
        document.getElementById("dt_"+id).value = value;
-       document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/keeplog.php?ac=c&d="+value;
+       document.getElementById("idel").src = BASE_URL . "/ck/process/actions/keeplog.php?ac=c&d="+value;
        document.getElementById("bt_"+id).style.display = 'none';
 	}  
 

@@ -11,7 +11,7 @@ set_time_limit(0);
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../includes/js/jquery-ui.css" rel="stylesheet" type="text/css" />
 <title>Events leagues</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script src="../includes/js/jquery-ui-1-11.js"></script>  
 <script>
 function progress_bar() {
@@ -68,7 +68,7 @@ function progress_bar() {
 <div class="page_content" style="padding-left:50px;">
 <span class="page_title">Opener</span>&nbsp;&nbsp;&nbsp;<img style="margin-top:5px"  title="<? echo $opener->vars["opener"]?>" src="http://lines.sportsbettingonline.ag/utilities/process/stats/widget/images/books/<? echo $opener->vars["opener"];?>_big.jpg" /><br /><br />
 
-  <div align="right"><span ><a href="http://localhost:8080/ck/widget_manager/events_leagues.php">Back</a></span></div>
+  <div align="right"><span ><a href="<?= BASE_URL ?>/ck/widget_manager/events_leagues.php">Back</a></span></div>
 
 <div style="float:left; height:100px" >
 <form action="" method="post" >

@@ -18,6 +18,6 @@ foreach ($books as $bookid){
    update_affiliates_by_sportbook($affid,$bookid,$afcode,$afpassword);
 }
 
-header("Location: http://localhost:8080/ck/affiliates/partners_approve.php?e=4");
+header("Location: " . BASE_URL . "/ck/affiliates/partners_approve.php?e=4");
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

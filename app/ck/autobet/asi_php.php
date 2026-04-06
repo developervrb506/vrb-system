@@ -33,7 +33,7 @@ class _asi_php_robot{
 		
 	}
 	function get_my_ip(){
-		$this->snoopy->fetch("http://localhost:8080/ip.php");
+		$this->snoopy->fetch(BASE_URL . "/ip.php");
 		return 	$this->snoopy->results;
 	}
 	function create_bet($pre_place = false){

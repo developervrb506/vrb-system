@@ -47,7 +47,7 @@ if(!is_null($game)){
  }
 ?> 
 <script>
-window.location = "http://localhost:8080/ck/baseball_file/report.php";
+window.location = BASE_URL . "/ck/baseball_file/report.php";
 </script>
 <?
 

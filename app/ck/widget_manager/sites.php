@@ -4,10 +4,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 <title>Events leagues</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -46,7 +46,7 @@ Shadowbox.init();
 <? include "../../includes/menu_ck.php" ?>
 <div class="page_content" style="padding-left:50px;">
 <span class="page_title">Sites </span>
-<div align="right"><span ><a href="http://localhost:8080/ck/widget_manager/events_leagues.php">Back</a></span></div>
+<div align="right"><span ><a href="<?= BASE_URL ?>/ck/widget_manager/events_leagues.php">Back</a></span></div>
 <form action="" method="post" >
 
  <select style="font-size:20px; height:35px" name ="site" onchange="this.form.submit()" >
@@ -134,7 +134,7 @@ Shadowbox.init();
 	 
 	 
 	?><script> alert("Data Saved, Please Procced to Reorder your books");
-        var x = 'http://localhost:8080/ck/widget_manager/sites.php?site=<? echo $site ?>';
+        var x = BASE_URL . '/ck/widget_manager/sites.php?site=<? echo $site ?>';
 	  	window.location.href = x;
       </script><?
 	 
@@ -216,7 +216,7 @@ Shadowbox.init();
 		  $sites_details->update(array("leagues"));
 	 }
 	?><script> alert("Data Saved");
-        var x = 'http://localhost:8080/ck/widget_manager/sites.php?site=<? echo $site ?>';
+        var x = BASE_URL . '/ck/widget_manager/sites.php?site=<? echo $site ?>';
 	   	window.location.href = x;
       </script><?
 	 

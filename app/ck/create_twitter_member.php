@@ -20,7 +20,7 @@ if( isset($id) && !empty($id) ){
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Tweets</title>
 <script type="text/javascript" src="../process/js/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/twitter/js/scripts.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/twitter/js/scripts.js"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"id",type:"null", msg:"The twitter id is required"});
@@ -38,7 +38,7 @@ validations.push({id:"teams_dd",type:"null", msg:"The team is required"});
 
 <? include "includes/print_error.php" ?>
 
-<a href="http://localhost:8080/ck/twitter_members.php"><< Back</a><br><br />
+<a href="<?= BASE_URL ?>/ck/twitter_members.php"><< Back</a><br><br />
 
 <div class="form_box" style="width:650px;">
 	<form method="post" action="process/actions/create_twitter_member_action.php" onsubmit="return validate(validations);">

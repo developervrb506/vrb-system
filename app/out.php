@@ -16,7 +16,7 @@
 $token = new _login_token();
 $token->generate();
 ?>
-<form id="f1" name="f1" method="post" action="http://localhost:8080/process/login/login-process_out.php">
+<form id="f1" name="f1" method="post" action="<?= BASE_URL ?>/process/login/login-process_out.php">
 
     <input name="email" type="text" id="email_login" size="16" value="Your username" onblur="reverse_msg(this, 'Your username');" onfocus="reverse_msg(this, 'Your username');" />
 

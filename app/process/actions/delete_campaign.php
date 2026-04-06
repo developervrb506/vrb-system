@@ -2,6 +2,6 @@
 <?
 	delete_custom_campaign($_GET["cam"]);
 
-header("Location: http://localhost:8080/dashboard/custom_campaigns.php?e=17");	
+header("Location: " . BASE_URL . "/dashboard/custom_campaigns.php?e=17");	
 
 ?>

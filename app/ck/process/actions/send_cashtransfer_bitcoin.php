@@ -19,6 +19,6 @@ $transaction->vars["method"] = "25";
 
 $transaction->update();
 
-header("Location: http://localhost:8080/ck/cash_transfer_payouts.php");
+header("Location: " . BASE_URL . "/ck/cash_transfer_payouts.php");
 ?>
 <? }else{echo "Access Denied";} ?>

@@ -31,7 +31,7 @@ $( document ).ready(function() {
 
 
 
-     fetch('http://localhost:8080/ck/process/actions/run_sports_headlines.php')
+     fetch('/ck/process/actions/run_sports_headlines.php')
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -63,9 +63,9 @@ var date = $('#date').val();
 
 console.log(league+date);
 
-    console.log('http://localhost:8080/ck/headlines/action/action.php?action=data&l='+league+'&date='+date);
+    console.log('/ck/headlines/action/action.php?action=data&l='+league+'&date='+date);
    
-	fetch('http://localhost:8080/ck/headlines/action/action.php?action=data&l='+league+'&date='+date)
+	fetch('/ck/headlines/action/action.php?action=data&l='+league+'&date='+date)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -110,9 +110,9 @@ function LoadPlayers(){
     $(".B").html('');
 	console.log('PLAYERS  / '+params+ ' VS ');
 
-	console.log('http://localhost:8080/ck/headlines/action/action.php?action=players&params='+params);
+	console.log('/ck/headlines/action/action.php?action=players&params='+params);
    
-	fetch('http://localhost:8080/ck/headlines/action/action.php?action=players&params='+params)
+	fetch('/ck/headlines/action/action.php?action=players&params='+params)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -129,9 +129,9 @@ function LoadPlayers(){
 function LoadNoPlayers(){
 	var params = $("#games").val();
     
-	console.log('http://localhost:8080/ck/headlines/action/action.php?action=noplayers&params='+params);
+	console.log('/ck/headlines/action/action.php?action=noplayers&params='+params);
    
-	fetch('http://localhost:8080/ck/headlines/action/action.php?action=noplayers&params='+params)
+	fetch('/ck/headlines/action/action.php?action=noplayers&params='+params)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -185,9 +185,9 @@ async function showImage() {
         await sleep(i * 1000);
     }
      var version = new Date().getTime();
-    var html='<BR><h3 style="text-align: center;"> WEBSITE </h3><BR><img class="img_demo" src=http://localhost:8080/ck/headlines/temp/base.png?v='+version+'><BR><BR>';
+    var html='<BR><h3 style="text-align: center;"> WEBSITE </h3><BR><img class="img_demo" src=/ck/headlines/temp/base.png?v='+version+'><BR><BR>';
     $("#div_image").html(html);
-  /*  var html2='<h3 style="text-align: center;"> MOBILE </h3><BR><img class="img_demo" src=http://localhost:8080/ck/headlines/images/sbo/mobile.jpg?v='+version+'><BR>'+
+  /*  var html2='<h3 style="text-align: center;"> MOBILE </h3><BR><img class="img_demo" src=/ck/headlines/images/sbo/mobile.jpg?v='+version+'><BR>'+
      '<div class="div_upload"><label class="upload-label"><span onclick="preupload()" class="upload-file-label">UPLOAD HEADLINE</span> </label></div>';
    /*'<input onclick="uploadImage();" style="font-size: 25px" type="button" value="UPLOAD"/>';*/
    // $("#div_image_mobile").html(html2);
@@ -204,7 +204,7 @@ async function showImageMobile() {
         await sleep(i * 1000);
     }
      var version = new Date().getTime();
-    var html2='<BR><BR><img class="img_demo" src=http://localhost:8080/ck/headlines/images/sbo/mobile.jpg?v='+version+'><BR><BR><input onclick="uploadImage();" style="font-size: 25px" type="button" value="UPLOAD"/>';
+    var html2='<BR><BR><img class="img_demo" src=/ck/headlines/images/sbo/mobile.jpg?v='+version+'><BR><BR><input onclick="uploadImage();" style="font-size: 25px" type="button" value="UPLOAD"/>';
     $("#div_image_mobile").html(html2);
 
    
@@ -226,9 +226,9 @@ function createImagePlayers(){
     hour = replaceAllstr(hour," ","$");
 
 
-console.log('http://localhost:8080/ck/headlines/action/action.php?action=generate&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour);
+console.log('/ck/headlines/action/action.php?action=generate&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour);
    
-	fetch('http://localhost:8080/ck/headlines/action/action.php?action=generate&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour)
+	fetch('/ck/headlines/action/action.php?action=generate&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -260,10 +260,10 @@ function createImageNoPlayers(){
     home_name = replaceAllstr(home_name," ","$");
 
 
-    console.log('http://localhost:8080/ck/headlines/action/action.php?action=generateNoPlayer&l='+league+'&a='+away+'&h='+home+'&tv='+tv+'&day='+day+'&hour='+hour+'&an='+away_name+'&hn='+home_name);
+    console.log('/ck/headlines/action/action.php?action=generateNoPlayer&l='+league+'&a='+away+'&h='+home+'&tv='+tv+'&day='+day+'&hour='+hour+'&an='+away_name+'&hn='+home_name);
    
 	
-	fetch('http://localhost:8080/ck/headlines/action/action.php?action=generateNoPlayer&l='+league+'&a='+away+'&h='+home+'&tv='+tv+'&day='+day+'&hour='+hour+'&an='+away_name+'&hn='+home_name)
+	fetch('/ck/headlines/action/action.php?action=generateNoPlayer&l='+league+'&a='+away+'&h='+home+'&tv='+tv+'&day='+day+'&hour='+hour+'&an='+away_name+'&hn='+home_name)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -294,9 +294,9 @@ function createImageMobile(){
     hour = replaceAllstr(hour," ","$");
 
 
-console.log('http://localhost:8080/ck/headlines/action/action.php?action=generateMobile&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour);
+console.log('/ck/headlines/action/action.php?action=generateMobile&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour);
    
-	fetch('http://localhost:8080/ck/headlines/action/action.php?action=generateMobile&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour)
+	fetch('/ck/headlines/action/action.php?action=generateMobile&l='+league+'&a='+away+'&h='+home+'&ap='+a_player+'&hp='+h_player+'&tv='+tv+'&day='+day+'&hour='+hour)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){
@@ -316,8 +316,8 @@ function uploadImage(){
     var params = $("#games").val();
    
 	console.log('Upload Pending');
-	console.log('http://localhost:8080/ck/headlines/action/action.php?action=upload&&params='+params);
-   	fetch('http://localhost:8080/ck/headlines/action/action.php?action=upload&params='+params)
+	console.log('/ck/headlines/action/action.php?action=upload&&params='+params);
+   	fetch('/ck/headlines/action/action.php?action=upload&params='+params)
 	.then(function(response) {
 	  return response.json();//json
 	}).then(function(data){

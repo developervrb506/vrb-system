@@ -7,7 +7,7 @@ if (isset($_GET["date"])) { $date = $_GET["date"]; } else { $date = date("Y_m_d"
     if ($callback) {
         echo "{$_GET['callback']}(";
     }
-    echo file_get_contents("http://localhost:8080/ck/baseball_file/app/json_files/".$date."_schedules.json");
+    echo file_get_contents(BASE_URL . "/ck/baseball_file/app/json_files/".$date."_schedules.json");
     if ($callback) {
         echo ")";
     }

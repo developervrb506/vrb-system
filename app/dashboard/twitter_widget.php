@@ -8,7 +8,7 @@ $category =  get_category($_GET["category"]);
 if($_POST){
 	$path = "../images/affiliates/twitter_logos/";
 	$filename = upload_image_partners("logo_file", $path, $current_affiliate->id."_twitter");
-	if($filename != ""){$logo_url = "http://localhost:8080/images/affiliates/twitter_logos/" . $filename;}
+	if($filename != ""){$logo_url = BASE_URL . "/images/affiliates/twitter_logos/" . $filename;}
 	else{$logo_url = $_POST["logo_url"];}
 	$banner_id = $_POST["banners_list"];
 	$width = $_POST["width"];

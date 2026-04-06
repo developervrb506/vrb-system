@@ -22,6 +22,6 @@ if($insert){
 }
 
 
-header("Location: http://localhost:8080/ck/schedules.php?".$_POST["group"]."&realdate=".$_POST["week"]);
+header("Location: " . BASE_URL . "/ck/schedules.php?".$_POST["group"]."&realdate=".$_POST["week"]);
 ?>
 <? }else{echo "Access Denied";} ?>

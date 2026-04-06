@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Metatags</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 <? if($_GET["a"] == "a"){ ?>
 alert("Record Added");
@@ -35,8 +35,8 @@ function change_page(value){
   validations = new Array();
   validations.push({id:"url",type:"null", msg:"Please provide a url"});  
 </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/htmltinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/htmltinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea",
@@ -61,11 +61,11 @@ tinymce.init({
 function changePagination(pageId,liId){
      $(".flash").show();
      $(".flash").fadeIn(400).html
-                ('Loading <img src="http://localhost:8080/ck/images/ajax-loader.gif" />');
+                ('Loading <img src="<?= BASE_URL ?>/ck/images/ajax-loader.gif" />');
      var dataString = 'pageId='+ pageId;
      $.ajax({
            type: "POST",
-           url: "http://localhost:8080/ck/process/pagination/load-metatags.php",
+           url: BASE_URL . "/ck/process/pagination/load-metatags.php",
            data: dataString,
            cache: false,
            success: function(result){

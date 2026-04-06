@@ -78,7 +78,7 @@ if(!$no_email){
 	$acontent = "New Ticket inserted from ".$ticket->vars["name"]." (".$ticket->vars["email"].")<br /><br />";
 	$acontent .= nl2br($_POST["message"]);
 	$acontent .= "<br /><br />";
-	$acontent .= "<a href='http://localhost:8080/ck/view_ticket.php?tid=".$ticket->vars["id"]."'>Click here to respond</a>";
+	$acontent .= "<a href='\" . BASE_URL . \"/ck/view_ticket.php?tid=".$ticket->vars["id"]."'>Click here to respond</a>";
 	
 	/*$clerk = get_clerk_by_name($ticket->vars["category"]);
 	

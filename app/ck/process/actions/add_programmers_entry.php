@@ -22,6 +22,6 @@ if(isset($_POST["edit_id"])){
 	$en->insert();
 }
 
-header("Location: http://localhost:8080/ck/programmers_book.php?e=82&en=".$en->vars["id"]);
+header("Location: " . BASE_URL . "/ck/programmers_book.php?e=82&en=".$en->vars["id"]);
 ?>
 <? }else{echo "Access Denied";} ?>

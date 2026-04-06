@@ -7,6 +7,6 @@ if(!is_null($method)){
 	$method->delete_account($_GET["acc"]);
 }
 
-header("Location: http://localhost:8080/ck/cashier_access_list.php?mid=".$method->vars["id"]."&e=79");
+header("Location: " . BASE_URL . "/ck/cashier_access_list.php?mid=".$method->vars["id"]."&e=79");
 ?>
 <? }else{echo "Access Denied";} ?>

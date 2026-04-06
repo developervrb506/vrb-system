@@ -58,8 +58,8 @@ if (isset($_POST['process'])){
 function conf_delete(name, id){
    
   if(confirm("Are you sure you want to DELETE "+name+" Category and ALL its Tickets from the system? ")){
-   // console.log("http://localhost:8080/ck/process/actions/delete_tickets_category.php?delete="+id);
-    document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_tickets_category.php?delete="+id;
+   // console.log(BASE_URL . "/ck/process/actions/delete_tickets_category.php?delete="+id);
+    document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_tickets_category.php?delete="+id;
     document.getElementById("tr_"+id).style.display = "none";
     alert('Tickets Deleted !!');
 
@@ -100,7 +100,7 @@ if(isset($_GET["detail"])){
 	validations.push({id:"description",type:"null", msg:"Comment is required"});
     </script>
     <div align="right">
-     <span ><a href="http://localhost:8080/ck/tickets_categories.php">Back</a></span>
+     <span ><a href="<?= BASE_URL ?>/ck/tickets_categories.php">Back</a></span>
     </div>
 	<div class="form_box" style="width:500px;">
         <form method="post" action="?e=52" onsubmit="return validate(validations)" enctype="multipart/form-data">

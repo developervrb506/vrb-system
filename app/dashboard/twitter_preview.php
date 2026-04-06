@@ -20,7 +20,7 @@ $footer_banner = $_GET["fb"];
 
 <span class="page_title">Player Tweets Preview</span><br /><br />
 
-<iframe width="<? echo $_GET["w"]; ?>" height="800" frameborder="0" src="http://localhost:8080/process/twitter_page.php?le=<? echo $_GET["l"]; ?>&aid=<? echo $aff_id ?>&pid_top=<? echo $top_banner ?>&pid_bot=<? echo $footer_banner ?>"></iframe>
+<iframe width="<? echo $_GET["w"]; ?>" height="800" frameborder="0" src="<?= BASE_URL ?>/process/twitter_page.php?le=<? echo $_GET["l"]; ?>&aid=<? echo $aff_id ?>&pid_top=<? echo $top_banner ?>&pid_bot=<? echo $footer_banner ?>"></iframe>
 
 </div>
 <? include "../includes/footer.php" ?>

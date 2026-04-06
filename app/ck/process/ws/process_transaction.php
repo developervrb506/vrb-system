@@ -65,7 +65,7 @@ if($password == "Fr021334HkasdUUUqwe1qa81LLa"){
 				//insert alert
 				$alert = new _alert();
 				$alert->vars["message"] = $account.' $'.$amount.' '. $method. ' '. $type. ' Denied, Id: '.$transaction.' Date:'.$pdate.' Type: '.strtolower(substr($type,0,2)).
-				'<br /><a target="_blank" href="http://localhost:8080/ck/call.php?odid='.$name->vars["id"].'" class="normal_link">Open Call</a>';
+				'<br /><a target="_blank" href="<?= BASE_URL ?>/ck/call.php?odid='.$name->vars["id"].'" class="normal_link">Open Call</a>';
 				$alert->vars["adate"] = date("Y-m-d H:i:s");
 				$alert->vars["type"] = "denied_trans";
 				$alert->insert();

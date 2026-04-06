@@ -14,10 +14,10 @@
   //exit;
   switch($_POST["action"]){
     case "games":
-    	header("Location: http://localhost:8080/ck/weather_system/create_line.php?from=".$_POST["date"]);
+    	header("Location: " . BASE_URL . "/ck/weather_system/create_line.php?from=".$_POST["date"]);
 	    break;	
 	case "matchups":	
-    	header("Location: http://localhost:8080/ck/weather_system/create_matchups.php?from=".$_POST["date"]);
+    	header("Location: " . BASE_URL . "/ck/weather_system/create_matchups.php?from=".$_POST["date"]);
 	    break;	
 
   }

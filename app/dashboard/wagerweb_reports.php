@@ -10,8 +10,8 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>WagerWeb Reports</title>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -43,7 +43,7 @@ if (!isset($report)) {
    $report = $_POST["report"];
 }
 
-$url = 'http://localhost:8080/dashboard/wagerweb_report_results.php';
+$url = BASE_URL . '/dashboard/wagerweb_report_results.php';
 
 $affiliate_code        = get_affiliate_code($_SESSION["aff_id"], 1);
 //$affiliate_password  = get_affiliate_password($_SESSION["aff_id"], 1);
@@ -166,7 +166,7 @@ case 6: ?>
 <table width="98%" align="center" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td align="center">
-     <div style="float:right;" class="normal_link"><a href="http://localhost:8080/dashboard/reports.php?bk=1"><strong><< Back</strong></a></div>
+     <div style="float:right;" class="normal_link"><a href="<?= BASE_URL ?>/dashboard/reports.php?bk=1"><strong><< Back</strong></a></div>
      <iframe src="<? echo $url ?><? echo $data ?>" name="iframe1" width="100%" height="10000" scrolling="auto" style="background-color:#FFFFFF" frameborder="0"></iframe>
     </td>
   </tr>

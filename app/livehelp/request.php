@@ -654,7 +654,7 @@ include_once("./livehelp/chat_top_header_mobile.php") ;
 <link href="css/layout.css?<? echo mt_rand(); ?>" rel="stylesheet" type="text/css" />
 <link href="themes/<?php echo $THEME ?>/style.css?<? echo mt_rand(); ?>" rel="stylesheet" type="text/css" />
 <?php if ($agsite_desc == 'ezpay') { ?>
-<link href="http://localhost:8080/livehelp/css/ezpay-chat.css" rel="stylesheet" type="text/css" />
+<link href="<?= BASE_URL ?>/livehelp/css/ezpay-chat.css" rel="stylesheet" type="text/css" />
 <?php } else { ?>
 <link href="http://www.sportsbettingonline.ag/utilities/css/style.css?<? echo mt_rand(); ?>" rel="stylesheet" type="text/css" />
 <?php } ?>
@@ -823,9 +823,9 @@ include_once("./livehelp/chat_top_header_mobile.php") ;
 	?>
     <?php /*?><div class="bottom_chat">Powered by 
     <?php if ($agsite_desc == 'ezpay') { ?>
-    <a style="color:#000; font-weight:bold;" href="http://localhost:8080/">vrbmarketing.com</a>
+    <a style="color:#000; font-weight:bold;" href="<?= BASE_URL ?>/">vrbmarketing.com</a>
     <?php } else { ?>
-    <a style="color:#FFF;" href="http://localhost:8080/">vrbmarketing.com</a>
+    <a style="color:#FFF;" href="<?= BASE_URL ?>/">vrbmarketing.com</a>
     <?php } ?>    
     </div><?php */?>
     <?php endif; ?>

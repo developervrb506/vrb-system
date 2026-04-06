@@ -16,7 +16,7 @@ if(!is_null($trans)){
 	do_post_request("http://www.sportsbettingonline.ag/utilities/process/reports/add_payout_to_CRM.php", $data);*/
 	rec_process($trans->vars["id"], "Cash Transfer", "Payout", $trans->vars["sender_account"], $trans->vars["amount"], $pre_status, $trans->vars["status"], $current_clerk->vars["id"], $trans->vars["back_message"]);
 	
-	header("Location: http://localhost:8080/ck/cash_transfer_payouts.php");
+	header("Location: " . BASE_URL . "/ck/cash_transfer_payouts.php");
 }
 ?>
 <? }else{echo "Access Denied";} ?>

@@ -26,7 +26,7 @@ class _image_customize_mobile{
   var $imgFinal;      //  Variable que contiene imagen GD con un el producto , el texto y logo.
   var $fsize = 20;   // Tamaño de la letra SKU
   var $ffile = "../font/JosefinSans-Bold.ttf"; // Font usada para la letra de SKU
-  var $mainpath = 'http://localhost:8080/ck/headlines/';
+  var $mainpath = BASE_URL . '/ck/headlines/';
   var $control = false;
 
    function __construct(){

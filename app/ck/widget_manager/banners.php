@@ -11,10 +11,10 @@ $sec = "15";
 <meta http-equiv="refresh" content="<?php echo $sec?>;URL="<? echo $page  ?>"">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 <title>Events leagues</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -28,7 +28,7 @@ Shadowbox.init();
 
  $banner = get_event_banner(($_GET["id"]));
  $banner->delete();
- header("location: http://localhost:8080/ck/widget_manager/banners.php");
+ header("Location: " . BASE_URL . "/ck/widget_manager/banners.php");
 
 
 } ?>
@@ -38,7 +38,7 @@ Shadowbox.init();
 <? include "../../includes/menu_ck.php" ?>
 <div class="page_content" style="padding-left:50px;">
 <span class="page_title">Banners</span>
-<div align="right"><span ><a href="http://localhost:8080/ck/widget_manager/events_leagues.php">Back</a></span></div>
+<div align="right"><span ><a href="<?= BASE_URL ?>/ck/widget_manager/events_leagues.php">Back</a></span></div>
 <BR>
 &nbsp;&nbsp;  <a href="add_banner.php" class="normal_link" rel="shadowbox;height=270;width=400">Add a Banner</a>
 

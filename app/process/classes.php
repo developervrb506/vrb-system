@@ -141,21 +141,21 @@ class promo{
 	function update(){
 		update_promo($this);
    }
-   function get_code($current_affiliate, $folder = "http://localhost:8080/process"){
+   function get_code($current_affiliate, $folder = BASE_URL . "/process"){
 	  $code= "<!--Affiliate Code Start Here-->";
 	  $code.= '<a href="'.$folder.'/redir.php?pid='.$this->id.'&aid='.$current_affiliate->id.'" target="_blank">';
 	  if($this->type == "t"){$code.= $this->name;}
-	  $code.= '<img border="0" src="http://localhost:8080/process/image.php?pid='.$this->id.'&aid='.$current_affiliate->id.'" />';
+	  $code.= '<img border="0" src="<?= BASE_URL ?>/process/image.php?pid='.$this->id.'&aid='.$current_affiliate->id.'" />';
 	  $code.= '</a>';
 	  $code.= "<!--Affiliate Code End Here-->";
 	  return $code;
   }
-  function get_image_link($current_affiliate, $folder = "http://localhost:8080/process"){
+  function get_image_link($current_affiliate, $folder = BASE_URL . "/process"){
 	  $code= $folder.'/redir.php?pid='.$this->id.'&aid='.$current_affiliate->id;
 	  return $code;
   }
   function get_image_url($current_affiliate){
-	  $code= 'http://localhost:8080/process/image.php?pid='.$this->id.'&aid='.$current_affiliate->id;
+	  $code= BASE_URL . '/process/image.php?pid='.$this->id.'&aid='.$current_affiliate->id;
 	  return $code;
   }
   function get_size(){

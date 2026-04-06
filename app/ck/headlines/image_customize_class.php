@@ -24,7 +24,7 @@ class _image_customize_no_player{
   var $fsize = 20;   // Tamaño de la letra SKU
   var $font_teams = "C://websites//www.vrbmarketing.com//ck//headlines//font//_novabold.ttf"; // Font usada para la letra de SKU
   var $font_time = "C://websites//www.vrbmarketing.com//ck//headlines//font//_BebasNeue.ttf"; // Font usada para la letra de SKU
-  var $mainurl = 'http://localhost:8080/ck/headlines/';
+  var $mainurl = BASE_URL . '/ck/headlines/';
   var $mainpath = "C://websites//www.vrbmarketing.com//ck//headlines//";
 
   var $control = false;

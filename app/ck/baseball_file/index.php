@@ -8,9 +8,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 		<title>MLB SYSTEM</title>
-		<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-		<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+		<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+		<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 		<script type="text/javascript">
 		Shadowbox.init();
 		</script>
@@ -35,10 +35,10 @@
 		<br /><br />    
 		*/ ?>
             
-		&nbsp;&nbsp;&nbsp;<a href="http://localhost:8080/ck/mlb_file/mlb_travel.php" class="normal_link">MLB Travel Teams</a> <br />
+		&nbsp;&nbsp;&nbsp;<a href="<?= BASE_URL ?>/ck/mlb_file/mlb_travel.php" class="normal_link">MLB Travel Teams</a> <br />
 		&nbsp;&nbsp;&nbsp;Show the Miles for a team<BR>
 		<br /><br />
-		&nbsp;&nbsp;&nbsp;<a href="http://localhost:8080/ck/mlb_file/teams_distance.php" class="normal_link">Teams Distance</a> <br />
+		&nbsp;&nbsp;&nbsp;<a href="<?= BASE_URL ?>/ck/mlb_file/teams_distance.php" class="normal_link">Teams Distance</a> <br />
 		&nbsp;&nbsp;&nbsp;Manage the Distance between the Stadiums,<BR>
 		<br /><br />
 		&nbsp;&nbsp;&nbsp;<a href="baseball_reports.php" class="normal_link">Reports</a><br />

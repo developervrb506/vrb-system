@@ -3,163 +3,163 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td>
-        <a class="menu_link" href="http://localhost:8080/ck/index.php">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/index.php">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
         <? if($current_clerk->im_allow("email_requests")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/email_requests.php">Email Requests</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/email_requests.php">Email Requests</a>&nbsp;&nbsp;&nbsp;&nbsp;
          <? } ?>
         
         
         <? if($current_clerk->im_allow("phone_admin")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/list.php">Lists</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="menu_link" href="http://localhost:8080/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/list.php">Lists</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
-        <a class="menu_link" href="http://localhost:8080/ck/webs.php">Websites</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="menu_link" href="http://localhost:8080/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/webs.php">Websites</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         <? if($current_clerk->im_allow("rules")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
          <? } ?>
 		<? if($current_clerk->im_allow("phone_names")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("users") || $current_clerk->admin()) { ?>
-        <a class="menu_link" href="http://localhost:8080/ck/clerks.php">Users</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/clerks.php">Users</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("all_schedules") || $current_clerk->is_manager()){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/schedules.php">SCHEDULES</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/schedules.php">SCHEDULES</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <?
 		if($current_clerk->admin()){
 			?>
 			
-            <a class="menu_link" href="http://localhost:8080/ck/user_groups.php">Groups</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="menu_link" href="http://localhost:8080/ck/list.php">Lists</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="menu_link" href="http://localhost:8080/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/user_groups.php">Groups</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/list.php">Lists</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
           
-            <a class="menu_link" href="http://localhost:8080/ck/webs.php">Websites</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="menu_link" href="http://localhost:8080/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="menu_link" href="http://localhost:8080/ck/messages.php" onclick="document.cookie = 'msgdays=; path=/';document.cookie = 'mstitle=; path=/'; ">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/webs.php">Websites</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/messages.php" onclick="document.cookie = 'msgdays=; path=/';document.cookie = 'mstitle=; path=/'; ">
             	Messages
             </a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="menu_link" href="http://localhost:8080/ck/deposist_report_new.php">Deposits</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="menu_link" href="http://localhost:8080/ck/transactions.php">Transactions</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/deposist_report_new.php">Deposits</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/transactions.php">Transactions</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="menu_link" href="settings.php">Settings</a>&nbsp;&nbsp;&nbsp;&nbsp;            
 			<?
 		}else if($current_clerk->vars["level"]->vars["is_sales"]){
 			?>
 			<? if($current_clerk->vars["user_group"]->vars["id"] == 15 ){?>
-            		<a class="menu_link" href="http://localhost:8080/ck/name_agent_search_new.php">Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            		<a class="menu_link" href="<?= BASE_URL ?>/ck/name_agent_search_new.php">Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <? }else{ ?>
-            		<a class="menu_link" href="http://localhost:8080/ck/name_search_new.php">Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            		<a class="menu_link" href="<?= BASE_URL ?>/ck/name_search_new.php">Search</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <? } ?>
             
-            <iframe frameborder="0" width="1" height="1" scrolling="no" src="http://localhost:8080/ck/process/actions/auto_transfer.php"></iframe>
+            <iframe frameborder="0" width="1" height="1" scrolling="no" src="<?= BASE_URL ?>/ck/process/actions/auto_transfer.php"></iframe>
 			<?
 			if($current_clerk->vars["level"]->vars["sale_manager"]){
 				?>
-                <a class="menu_link" href="http://localhost:8080/ck/manage_sales_clerks.php">Clerks</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="menu_link" href="http://localhost:8080/ck/list.php">Lists</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a class="menu_link" href="http://localhost:8080/ck/leads.php">Manage Leads</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="menu_link" href="http://localhost:8080/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="menu_link" href="http://localhost:8080/ck/calls.php">Calls</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="menu_link" href="http://localhost:8080/ck/webs.php">Websites</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="menu_link" href="http://localhost:8080/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="menu_link" href="<?= BASE_URL ?>/ck/manage_sales_clerks.php">Clerks</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="menu_link" href="<?= BASE_URL ?>/ck/list.php">Lists</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="menu_link" href="<?= BASE_URL ?>/ck/leads.php">Manage Leads</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="menu_link" href="<?= BASE_URL ?>/ck/names.php">Names</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="menu_link" href="<?= BASE_URL ?>/ck/calls.php">Calls</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="menu_link" href="<?= BASE_URL ?>/ck/webs.php">Websites</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="menu_link" href="<?= BASE_URL ?>/ck/rules.php">Rules</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<?
 			}
 		}?>
         
         <? if($current_clerk->im_allow("clerks_deposit_report")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/deposist_report_new.php">Deposits</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/deposist_report_new.php">Deposits</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         <? if($current_clerk->im_allow("clerks_transaction")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/transactions.php">Transactions</a>&nbsp;&nbsp;&nbsp;&nbsp;        
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/transactions.php">Transactions</a>&nbsp;&nbsp;&nbsp;&nbsp;        
         <? } ?>
         <? if($current_clerk->im_allow("betting_basics")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/betting_index.php">Betting</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/betting_index.php">Betting</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         <? if($current_clerk->im_allow("sbo_main_page")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/sbo_index.php">SBO</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/sbo_index.php">SBO</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if(!$current_clerk->im_allow("sbo_main_page") && $current_clerk->im_allow("sbo_banking")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/sbo_banking.php">SBO Banking</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/sbo_banking.php">SBO Banking</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
              
         <? if($current_clerk->im_allow("expenses_admin")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/expenses_index.php">Expenses</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/expenses_index.php">Expenses</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
           <? if($current_clerk->im_allow("office_expenses")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/office_expenses_index.php">Office's Expenses</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/office_expenses_index.php">Office's Expenses</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("dj_expenses")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/dj_expenses_index.php">Michael's Expenses</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/dj_expenses_index.php">Michael's Expenses</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("credit_accounting")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/credit.php">Credit</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/credit.php">Credit</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("pph_accounting")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/pph.php">PPH</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/pph.php">PPH</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("balances")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/balances.php">Balance Sheet</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="menu_link" href="http://localhost:8080/ck/income_statement.php">Income Statement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/balances.php">Balance Sheet</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/income_statement.php">Income Statement</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         <? if($current_clerk->im_allow("processing_balances")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/processing_balances.php">Processing Balance Sheet</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/processing_balances.php">Processing Balance Sheet</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         <? if($current_clerk->im_allow("pph_balances")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/pph_balances.php">PPH Balance Sheet</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/pph_balances.php">PPH Balance Sheet</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->vars["level"]->vars["is_admin"]){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/admin_clerk_index.php">Phone System</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/admin_clerk_index.php">Phone System</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("affiliate_descriptions")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/affiliates_description.php">AF Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/affiliates_description.php">AF Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("programmers_book")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/programmers_book.php">Programmers</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/programmers_book.php">Programmers</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("agent_freeplays")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/agent_freeplays.php">AF FreePlays</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/agent_freeplays.php">AF FreePlays</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("sbo_search_accounts")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/sbo_search_accounts.php">Search SBO Accounts</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/sbo_search_accounts.php">Search SBO Accounts</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("affiliate_leads")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/affiliates_leads.php">AF Leads</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/affiliates_leads.php">AF Leads</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("goals_admin")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/goals.php">Goals</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/goals.php">Goals</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? }else{ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/my_goals.php">My Goals</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/my_goals.php">My Goals</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("sbo_cashback") && !$current_clerk->im_allow("sbo_main_page")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/sbo_cashback.php">10% Cashback</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/sbo_cashback.php">10% Cashback</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("prepaid_transactions")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/prepaid_transactions.php">Prepaid</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/prepaid_transactions.php">Prepaid</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("moneypak_transactions")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/moneypak_transactions.php">Moneypak</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/moneypak_transactions.php">Moneypak</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         
@@ -167,40 +167,40 @@
         <? if($current_clerk->im_allow("process_payouts")){ ?>
         <a class="menu_link" href="javascript:;" onMouseOver="submenu_action(1,true,true)"  onMouseOut="submenu_action(1,false,true)">Payouts</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="subbox1" id="sub1" style="display:none;margin-top: -5px;" onMouseOver="submenu_action(1,true,false)"  onMouseOut="submenu_action(1,false,false)">
-        	<a class="menu_link" href="http://localhost:8080/ck/bitcoins_payouts.php">
+        	<a class="menu_link" href="<?= BASE_URL ?>/ck/bitcoins_payouts.php">
             	Bitcoin Payouts (<? echo count(search_bitcoins_payouts("", "", "pe", "ac")); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/prepaid_payouts.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/prepaid_payouts.php">
             	Prepaid Payouts (<? echo count(search_prepaid_payouts("", "", "pe", "ac")); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/paypal_payouts.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/paypal_payouts.php">
             	Paypal Payouts (<? echo count(search_paypal_payouts("", "", "pe", "ac")); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/cash_transfer_payouts.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/cash_transfer_payouts.php">
             	Cash Transfer Payouts (<? echo count(search_cash_transfer_payouts_for_process("", "")); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/special_payouts.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/special_payouts.php">
             	Special Payouts (<? echo count(search_special_payouts_for_process("", "", "pe", "ac")); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/moneyorder_payouts.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/moneyorder_payouts.php">
             	Money Order Payouts (<? echo count(search_moneyorder_payouts_for_process("", "")); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/moneypak_limbos.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/moneypak_limbos.php">
            	 Moneypak Payouts (<? echo count(get_waiting_mp_payouts()); ?>)
             </a><br />
-            <a class="menu_link" href="http://localhost:8080/ck/local_payouts.php">
+            <a class="menu_link" href="<?= BASE_URL ?>/ck/local_payouts.php">
             	Local Cash Payouts (<? echo count(get_local_cash_payouts_for_process()); ?>)
             </a><br />
         </div>
         <? } ?>
         
         <? if(!$current_clerk->im_allow("sbo_main_page") && $current_clerk->im_allow("special_deposits")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/special_deposit.php">Special Deposits</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="menu_link" href="http://localhost:8080/ck/special_payout.php">Special Payouts</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/special_deposit.php">Special Deposits</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/special_payout.php">Special Payouts</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if((!$current_clerk->im_allow("sbo_main_page")) && (($current_clerk->im_allow("balance_adjustment")) || ($current_clerk->im_allow("balance_disbursements")) || ($current_clerk->im_allow("balance_receipt")))){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/balance_manager.php">Balance Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/balance_manager.php">Balance Manager</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
         <? } ?>
         
@@ -208,45 +208,45 @@
    
   
    <? if(!$current_clerk->im_allow("sbo_main_page") && $current_clerk->im_allow("reverse_transactions")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/reverse_transactions.php">Reverse Transactions</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/reverse_transactions.php">Reverse Transactions</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
         <? } ?>
   
      <? if($current_clerk->im_allow("rec_issues")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/rec_issues.php">Rec Issues</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/rec_issues.php">Rec Issues</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         
         <? // PPH tickets was replaced by department tickets 2013-11-12
 		/* if($current_clerk->im_allow("pph_tickets")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/pph_tickets.php">PPH Tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/pph_tickets.php">PPH Tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } */ ?>
         
          
-        <a class="menu_link" href="http://localhost:8080/ck/department_tickets.php">Tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/department_tickets.php">Tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;
        
         
         <? if($current_clerk->im_allow("tickets")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/tickets.php"> Email Tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/tickets.php"> Email Tickets</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("tickets_clerk")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/tickets_clerk.php">Tickets Clerk</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/tickets_clerk.php">Tickets Clerk</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("cs_logs")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/cs_logs.php" target="_blank">C.S. Logs</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/cs_logs.php" target="_blank">C.S. Logs</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         <? if($current_clerk->im_allow("durango_create")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/durango_create_name.php" target="_blank">Add Durango Name</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/durango_create_name.php" target="_blank">Add Durango Name</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
                 
-        <a class="menu_link" href="http://localhost:8080/ck/reports.php">Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/reports.php">Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
-        <a class="menu_link" href="http://localhost:8080/ck/players_reports.php">Players Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/players_reports.php">Players Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
-        <a class="menu_link" href="http://localhost:8080/ck/crm_reports.php">CRM Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/crm_reports.php">CRM Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
         
         <!--Processing-->
         <? if($current_clerk->im_allow("sbo_processing_clerk") && ! $current_clerk->im_allow("sbo_processing_admin")){ ?>
@@ -282,20 +282,20 @@
             </a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         <? if($current_clerk->im_allow("baseball_file")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/baseball_file/report.php">Baseball</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/baseball_file/report.php">Baseball</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
 		<? if($current_clerk->im_allow("tweets")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/tweets_index.php">Tweets</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/tweets_index.php">Tweets</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         		<? if($current_clerk->im_allow("prepaid_test")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/prepaid_test.php">Prepaid Test</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/prepaid_test.php">Prepaid Test</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         
         <? if($current_clerk->im_allow("cc_cashback")){ ?>
-        <a class="menu_link" href="http://localhost:8080/ck/cc_cashback.php">CC ChargeBack</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu_link" href="<?= BASE_URL ?>/ck/cc_cashback.php">CC ChargeBack</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <? } ?>
         
         
@@ -349,7 +349,7 @@
         <!--End Processing-->
     </td>
     <td style="text-align:right;">
-		<a class="menu_link" href="http://localhost:8080/process/login/logout.php">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="menu_link" href="<?= BASE_URL ?>/process/login/logout.php">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
     </td>
   </tr>
 </table>

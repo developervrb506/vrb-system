@@ -16,7 +16,7 @@
 <br /><br />
 <div class="form_box" style="width:600px;">
 Insert Balance Adjustment<br /><br />
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"account",type:"null", msg:"Please Insert the Account"});
@@ -24,7 +24,7 @@ validations.push({id:"amount",type:"numeric", msg:"Please Insert a Valid Amount"
 validations.push({id:"desc",type:"null", msg:"Please Insert a Description"});
 <? if($_GET["sent"]){echo "alert('Adjustment has been Inserted');";} ?>
 </script>
-<form method="post" action="http://localhost:8080/ck/loader_sbo.php" onsubmit="return validate(validations)">
+<form method="post" action="<?= BASE_URL ?>/ck/loader_sbo.php" onsubmit="return validate(validations)">
 <input name="loader" type="hidden" value= "balance_adjustments" />
 <input name="pass" type="hidden" id="pass" value="VrBAcc@ess" />
 <input name="clerk" type="hidden" id="clerk" value="<? echo $current_clerk->vars["id"] ?>" />

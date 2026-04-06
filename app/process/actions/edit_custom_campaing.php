@@ -9,6 +9,6 @@ if(!is_null($camp)){
 	
 	update_custom_campaign($camp);
 }
-header("Location: http://localhost:8080/dashboard/custom_campaigns.php?e=16");	 
+header("Location: " . BASE_URL . "/dashboard/custom_campaigns.php?e=16");	 
 
 ?>

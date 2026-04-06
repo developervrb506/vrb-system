@@ -21,7 +21,7 @@ $books = $_GET["bks"];
 
 <span class="page_title">Betting Lines Preview</span><br /><br />
 
-<iframe width="<? echo $_GET["w"]; ?>" height="<? echo $_GET["h"]; ?>" frameborder="0" src="http://localhost:8080/process/live_lines_new.php?bks=<? echo $books ?>&le=<? echo $_GET["l"]; ?>&aid=<? echo $aff_id ?>&tb=<? echo $top_banner ?>&fb=<? echo $footer_banner ?>"></iframe>
+<iframe width="<? echo $_GET["w"]; ?>" height="<? echo $_GET["h"]; ?>" frameborder="0" src="<?= BASE_URL ?>/process/live_lines_new.php?bks=<? echo $books ?>&le=<? echo $_GET["l"]; ?>&aid=<? echo $aff_id ?>&tb=<? echo $top_banner ?>&fb=<? echo $footer_banner ?>"></iframe>
 
 </div>
 <? include "../includes/footer.php" ?>

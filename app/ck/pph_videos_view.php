@@ -6,18 +6,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>PPH Sites Videos</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
  
 <script type="text/javascript">
 <!--
 
 function delete_video(id){
 	if(confirm("Are you sure you want to DELETE this video from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/insert_pph_videos_action.php?id="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/insert_pph_videos_action.php?id="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
@@ -37,7 +37,7 @@ if (isset($_POST["btn"])){
 
 //include "includes/print_error.php"; 
 ?>
-<a href="http://localhost:8080/ck/pph_videos_create.php">Add a New</a><br /><br />
+<a href="<?= BASE_URL ?>/ck/pph_videos_create.php">Add a New</a><br /><br />
 <BR>
 <iframe width="1" height="1" frameborder="0" scrolling="no" id="idel"></iframe>
 <?
@@ -80,7 +80,7 @@ if(!is_null($videos)) { ?>
         <th class="table_td<? echo $style ?>"><? echo $site_name["site"]; ?></th>       
 		<th class="table_td<? echo $style ?>"><a class="normal_link" href="<? echo $v->vars["url"]; ?>" target="_blank"><? echo $v->vars["url"]; ?></a></th>
         <th class="table_td<? echo $style ?>"><? echo $v->vars["pdate"]; ?></th>       
-        <th class="table_td<? echo $style ?>"><a class="normal_link" href="http://localhost:8080/ck/pph_videos_create.php?id=<? echo $v->vars["id"] ?>">Edit</a></th>  
+        <th class="table_td<? echo $style ?>"><a class="normal_link" href="<?= BASE_URL ?>/ck/pph_videos_create.php?id=<? echo $v->vars["id"] ?>">Edit</a></th>  
         <th class="table_td<? echo $style ?>"><a class="normal_link" href="javascript:delete_video(<? echo $v->vars["id"] ?>,'delete')">Delete</a>
         </th> 
   </tr>

@@ -3,7 +3,7 @@
 <script>
 function delete_account(id){	
  if(confirm("Are you sure to delete this account?")){   	  
-    document.location.href = 'http://localhost:8080/ck/process/actions/hidden_agent_cashier.php?id='+ id;   
+    document.location.href = BASE_URL . '/ck/process/actions/hidden_agent_cashier.php?id='+ id;   
  }
 }
 </script>

@@ -24,13 +24,13 @@ else {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" media="all" href="http://localhost:8080/includes/calendar/jsDatePick_ltr.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
 <title>Postings View</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
-<script type="text/javascript" src="http://localhost:8080/includes/calendar/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
 		new JsDatePick({
@@ -55,14 +55,14 @@ function confirmation(id,status_id,status) {
 function changePagination(pageId,liId,type,brand,date){
      $(".flash").show();
      $(".flash").fadeIn(400).html
-                ('Loading <img src="http://localhost:8080/ck/images/ajax-loader.gif" />');
+                ('Loading <img src="<?= BASE_URL ?>/ck/images/ajax-loader.gif" />');
      var pageId = 'pageId='+ pageId;
 	 var type = 'type='+ type;
 	 var brand = 'brand='+ brand;
 	 var date = 'date='+ date;
      $.ajax({
            type: "POST",
-           url: "http://localhost:8080/ck/process/pagination/load-postings.php",          
+           url: BASE_URL . "/ck/process/pagination/load-postings.php",          
 		   data: {
            pageId: pageId,
            type: type,
@@ -98,11 +98,11 @@ alert("Record Updated");
 </script>
 
 <span class="page_title">Postings View</span><br /><br />
-<a href="http://localhost:8080/ck/posting/posting.php">Add a new posting</a><br /><br />
+<a href="<?= BASE_URL ?>/ck/posting/posting.php">Add a new posting</a><br /><br />
 
 <table width="100%" border="0" cellspacing="3" cellpadding="3">
   <tr>
-    <td><form action="http://localhost:8080/ck/posting/posting_view.php" method="post">
+    <td><form action="<?= BASE_URL ?>/ck/posting/posting_view.php" method="post">
 <strong>Type:</strong>&nbsp;
 <select name="type">
   <option value="0">Select a Type</option>

@@ -79,9 +79,9 @@ if($emaile == 0) {
 			
 			//header("Location: ../../index.php?e=0");
 			if(isset($_POST["external"])){
-				header("Location: http://localhost:8080/thankyou_external.php");
+				header("Location: " . BASE_URL . "/thankyou_external.php");
 			}else{
-				header("Location: http://localhost:8080/thankyou.php");
+				header("Location: " . BASE_URL . "/thankyou.php");
 			}
 			
 		
@@ -91,7 +91,7 @@ if($emaile == 0) {
 			//-------------
 			
 			if(isset($_POST["external"])){
-				header("Location: http://localhost:8080/dashboard/join_external.php?e=11&ob=$one_book");
+				header("Location: " . BASE_URL . "/dashboard/join_external.php?e=11&ob=$one_book");
 			}else{
 				header("Location: ../../dashboard/join.php?e=11");
 			}
@@ -118,7 +118,7 @@ if($emaile == 0) {
 	   header("Location: http://jobs.inspin.com/wp-admin/partners_affiliate_detail.php?affid=".$id."");
 	} else {	  
 	   if(isset($_POST["external"])){
-		  header("Location: http://localhost:8080/dashboard/join_external.php?e=1&ob=$one_book");
+		  header("Location: " . BASE_URL . "/dashboard/join_external.php?e=1&ob=$one_book");
 	  }else{
 		  header("Location: ../../dashboard/join.php?e=1");	
 	  }

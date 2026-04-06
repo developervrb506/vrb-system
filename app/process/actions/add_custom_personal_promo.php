@@ -11,6 +11,6 @@ $campaign = new campaigne(-1, "", "", "", NULL, "");
 
 insert_promo($promo, $campaign);
 	
-header("Location: http://localhost:8080/dashboard/personal_text_links.php?b=$book&e=8");	 
+header("Location: " . BASE_URL . "/dashboard/personal_text_links.php?b=$book&e=8");	 
 
 ?>

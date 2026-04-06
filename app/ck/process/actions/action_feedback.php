@@ -17,7 +17,7 @@ if(isset($_GET["important"])){
 	  	
 	 	
 	}
-header("Location: http://localhost:8080/ck/tickets_feedback.php?t");	
+header("Location: " . BASE_URL . "/ck/tickets_feedback.php?t");	
 		
 }
 ?>

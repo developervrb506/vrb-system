@@ -32,7 +32,7 @@ $calls = array();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript">
 var str_html = "<table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td class='table_header'align='center'>AFF</td><td class='table_header' align='center'>Name</td><td class='table_header' align='center'>Total</td></tr>";
 
@@ -192,7 +192,7 @@ $affiliates = json_decode(file_get_contents("http://www.sportsbettingonline.ag/u
        <td class="table_td<? echo $style ?>" align="center">
 	
 	<? if (check_ftp_audio_exist($call->vars["uniqueid"],$conn_id)){ ?>
-        <a href="http://localhost:8080/ck/audio_box.php?id=<? echo $call->vars["uniqueid"] ?>" class="normal_link" rel="shadowbox;height=150;width=250"> Listen </a>
+        <a href="<?= BASE_URL ?>/ck/audio_box.php?id=<? echo $call->vars["uniqueid"] ?>" class="normal_link" rel="shadowbox;height=150;width=250"> Listen </a>
    <? } ?>
     </td>
   </tr>

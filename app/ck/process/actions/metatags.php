@@ -35,7 +35,7 @@ if( isset($_GET["id"]) ) {
 	}
 }
 
-header("Location: http://localhost:8080/ck/metatags.php?a=".$action);
+header("Location: " . BASE_URL . "/ck/metatags.php?a=".$action);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

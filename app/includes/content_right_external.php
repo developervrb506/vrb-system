@@ -24,11 +24,11 @@
   <div class="content_right_external" style="height:30px; border-top:1px solid #999;"> 
     <?php /*?><div id="wrap-right"> 
       <ul id="logos-aboutus" class="jcarousel-skin-tango">
-        <li><img src="http://localhost:8080/images/inspin-right.jpg" width="75" height="75" /></li>
-        <li><img src="http://localhost:8080/images/wagerweb-right.jpg" width="75" height="75" /></li>
-        <li><img src="http://localhost:8080/images/sb-logo-right.jpg" width="75" height="75" /></li>
-        <li><img src="http://localhost:8080/images/bet-on-line-right.jpg" width="75" height="75" /></li>
-        <li><img src="http://localhost:8080/images/book-maker-right.jpg" width="75" height="75" /></li>
+        <li><img src="<?= BASE_URL ?>/images/inspin-right.jpg" width="75" height="75" /></li>
+        <li><img src="<?= BASE_URL ?>/images/wagerweb-right.jpg" width="75" height="75" /></li>
+        <li><img src="<?= BASE_URL ?>/images/sb-logo-right.jpg" width="75" height="75" /></li>
+        <li><img src="<?= BASE_URL ?>/images/bet-on-line-right.jpg" width="75" height="75" /></li>
+        <li><img src="<?= BASE_URL ?>/images/book-maker-right.jpg" width="75" height="75" /></li>
       </ul>    
   </div><?php */?>
 </div>

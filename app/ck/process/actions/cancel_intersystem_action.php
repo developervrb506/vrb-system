@@ -13,6 +13,6 @@ if(!is_null($trans)){
 	$trans->update(array("approved_date","approved_by","status"));
 }
 
-header("Location: http://localhost:8080/ck/balances_transactions.php?from=$from&to=$to&status_list=$status&e=54");
+header("Location: " . BASE_URL . "/ck/balances_transactions.php?from=$from&to=$to&status_list=$status&e=54");
 ?>
 <? }else{echo "Access Denied";} ?>

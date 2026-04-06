@@ -11,7 +11,7 @@
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
 <title>Roof Fix</title>
 <link rel="stylesheet" type="text/css" media="all" href="../../includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 
 <script>
 
@@ -126,7 +126,7 @@ TOTAL: <? echo count($games)." Games to be fixed<BR><BR>"; ?>
       </td>
       
       <td id="game_info_<? echo $game->vars["id"]?>" class="table_td<? echo $style ?>" style="font-size:12px;">
-      	<a href="http://localhost:8080/ck/baseball_file/stadium_phones.php?sid=<? echo $stadium->vars["id"]?>" class="normal_link" rel="shadowbox;height=700;width=630"><? echo "(".$game->vars["home_rotation"].") ".$game->vars["home"]?></a>
+      	<a href="<?= BASE_URL ?>/ck/baseball_file/stadium_phones.php?sid=<? echo $stadium->vars["id"]?>" class="normal_link" rel="shadowbox;height=700;width=630"><? echo "(".$game->vars["home_rotation"].") ".$game->vars["home"]?></a>
         <BR><BR>
       </td>
 

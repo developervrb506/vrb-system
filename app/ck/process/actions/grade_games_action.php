@@ -95,7 +95,7 @@ foreach($games as $game){
 
 
 
-header("Location: http://localhost:8080/ck/betting_grading.php?date=$date&sport=$sport&period=$period&e=42");
+header("Location: " . BASE_URL . "/ck/betting_grading.php?date=$date&sport=$sport&period=$period&e=42");
 
 
 ?>

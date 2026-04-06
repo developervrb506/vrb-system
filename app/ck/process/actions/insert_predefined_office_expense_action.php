@@ -22,11 +22,11 @@ if($_POST["report"]){
     </script>
     <?	
 }else if($_POST["reload"]){
-	header("Location: http://localhost:8080/ck/insert_predefined_office_expense.php");
+	header("Location: " . BASE_URL . "/ck/insert_predefined_office_expense.php");
 	
 }else if(!$_POST["noredirect"]){
-	//header("Location: http://localhost:8080/ck/expenses_index.php?e=47");
-	?><script type="text/javascript">parent.location.href = "http://localhost:8080/ck/predefined_office_expenses.php?e=47";</script><?
+	//header("Location: " . BASE_URL . "/ck/expenses_index.php?e=47");
+	?><script type="text/javascript">parent.location.href = BASE_URL . "/ck/predefined_office_expenses.php?e=47";</script><?
 }else{
 	?> <div style="padding:25px; text-align:center; color:#fff; font:Arial, Helvetica, sans-serif; font-size:24px;">Expense Inserted</div> <? 	
 }

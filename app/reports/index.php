@@ -25,6 +25,6 @@
 </a><br /><br /> 
 <a class="normal_link" href="http://ww3.wagerweb.com/agent.asp" target="_blank">Affiliates Signups (stubbs/beer) - check page for our affiliates
 </a><br /><br />
-<a class="normal_link" href="http://localhost:8080/dashboard/marketing-reports.php">Marketing Reports</a>
+<a class="normal_link" href="<?= BASE_URL ?>/dashboard/marketing-reports.php">Marketing Reports</a>
 </div>
 <? include "../includes/footer.php" ?>

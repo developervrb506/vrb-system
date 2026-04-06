@@ -14,6 +14,6 @@
 <div style="text-align:right"><a class="normal_link" href="../process/login/logout.php">Logout</a></div>
 <span class="page_title">Contact Reports</span><br /><br />
 <a href="conversion_el_dorado.php">Conversion El Dorado</a><br /><br />
-<a href="http://localhost:8080/reports/contacts.php?cat=inspin">Contact Reports</a>
+<a href="<?= BASE_URL ?>/reports/contacts.php?cat=inspin">Contact Reports</a>
 </div>
 <? include "../includes/footer.php" ?>

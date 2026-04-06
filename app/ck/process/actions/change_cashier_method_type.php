@@ -9,6 +9,6 @@ if(!is_null($method)){
 	$method->update(array("type"));
 }
 
-header("Location: http://localhost:8080/ck/cashier_access.php?e=78");
+header("Location: " . BASE_URL . "/ck/cashier_access.php?e=78");
 ?>
 <? }else{echo "Access Denied";} ?>

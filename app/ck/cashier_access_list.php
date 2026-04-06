@@ -9,7 +9,7 @@ $method = get_cashier_method($_GET["mid"]);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title><? echo $method->vars["name"] . " " . $method->get_by_str(); ?></title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 </head>
 <body>
 <? include "../includes/header.php" ?>

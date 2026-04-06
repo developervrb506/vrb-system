@@ -14,7 +14,7 @@
      <li><a href= "javascript:;">SYSTEM</a></li>
 	 
 	<? if($current_clerk->im_allow("external_pph_billing")) { ?>
-		<li><a href= "http://localhost:8080/ck/pph_external.php">Billing</a></li>
+		<li><a href="<?= BASE_URL ?>/ck/pph_external.php">Billing</a></li>
     <? } ?>
              
 	 
@@ -22,58 +22,58 @@
 
 <? if($current_clerk->im_allow("lines_system") || $current_clerk->im_allow("props_system")){ ?>
               <li>
-                  <a href="http://localhost:8080/ck/sbo_winners.php">Lines</a>
+                  <a href="<?= BASE_URL ?>/ck/sbo_winners.php">Lines</a>
                    <ul>
-                      <li><a href= "http://localhost:8080/ck/grading_unlock.php">Grading Unlock</a></li>
+                      <li><a href="<?= BASE_URL ?>/ck/grading_unlock.php">Grading Unlock</a></li>
                       <? if($current_clerk->im_allow("props_system")){ ?>
                         <li>
                             <a href="javascript:;">Props System</a>
                             <ul>
-                                <li><a href= "http://localhost:8080/ck/props_alerts.php">Alerts Props</a></li>
-                                <li><a href= "http://localhost:8080/ck/import_props.php">Import Props</a></li>
-                                <li><a href= "http://localhost:8080/ck/import_odds.php">Import Odds</a></li>
+                                <li><a href="<?= BASE_URL ?>/ck/props_alerts.php">Alerts Props</a></li>
+                                <li><a href="<?= BASE_URL ?>/ck/import_props.php">Import Props</a></li>
+                                <li><a href="<?= BASE_URL ?>/ck/import_odds.php">Import Odds</a></li>
                             </ul>
                         </li>
                      <? } ?>
                       <? if($current_clerk->im_allow("lines_system")){ ?>
                       <li>
-                          <a  href= "http://localhost:8080/ck/create_periods.php">Periods</a>
+                          <a  href="<?= BASE_URL ?>/ck/create_periods.php">Periods</a>
                       </li> 
                        <li>
-                          <a  href= "http://localhost:8080/ck/game_description.php">Game Description</a>
+                          <a  href="<?= BASE_URL ?>/ck/game_description.php">Game Description</a>
                       </li> 
                        <li>
-                          <a  href= "http://localhost:8080/ck/graded_games.php">Graded Games</a>
+                          <a  href="<?= BASE_URL ?>/ck/graded_games.php">Graded Games</a>
                       </li> 
                        <li>
-                          <a  href= "http://localhost:8080/ck/graded_games_pending.php">Pending Graded Games</a>
+                          <a  href="<?= BASE_URL ?>/ck/graded_games_pending.php">Pending Graded Games</a>
                       </li> 
                       <li>
-                          <a  href= "http://localhost:8080/ck/bet_changer.php">Bet Changer</a>
+                          <a  href="<?= BASE_URL ?>/ck/bet_changer.php">Bet Changer</a>
                       </li> 
                       <li>
-                          <a  href= "http://localhost:8080/ck/graded_games.php">Graded Games</a>
+                          <a  href="<?= BASE_URL ?>/ck/graded_games.php">Graded Games</a>
                       </li> 
 
                       <?/*
                       <li>
-                          <a href=" http://localhost:8080/ck/graded_games.php">Gadred Games</a>
+                          <a href="<?= BASE_URL ?>/ck/graded_games.php">Gadred Games</a>
                          
                       </li> 
 
                        <li>
-                          <a href=" http://localhost:8080/ck/graded_games_pending.php">Pending Graded Games (WIP) </a>
+                          <a href="<?= BASE_URL ?>/ck/graded_games_pending.php">Pending Graded Games (WIP) </a>
                          
                       </li> 
 
                      
                       
                        <li>
-                          <a href="http://localhost:8080/ck/sbo_winners.php">Weather System</a>
+                          <a href="<?= BASE_URL ?>/ck/sbo_winners.php">Weather System</a>
                           <ul>
-                              <li><a href= "http://localhost:8080/ck/weather_system/">Check Weather</a></li>
-                              <li><a href= "http://localhost:8080/ck/weather_system/create_line.php">Create Game</a></li>
-                              <li><a href= "http://localhost:8080/ck/weather_system/create_matchups.php">Create Matchups</a></li>
+                              <li><a href="<?= BASE_URL ?>/ck/weather_system/">Check Weather</a></li>
+                              <li><a href="<?= BASE_URL ?>/ck/weather_system/create_line.php">Create Game</a></li>
+                              <li><a href="<?= BASE_URL ?>/ck/weather_system/create_matchups.php">Create Matchups</a></li>
                           </ul>
                       </li>  */ ?>
                      <? } ?>
@@ -93,27 +93,27 @@
     
     
              
-			 <li><a href= "http://localhost:8080/ck/index.php">HOME</a></li>
+			 <li><a href="<?= BASE_URL ?>/ck/index.php">HOME</a></li>
 			 <? if($current_clerk->im_allow("users") || $current_clerk->admin()) { ?>
-             <li><a href= "http://localhost:8080/ck/clerks.php">Users</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/clerks.php">Users</a></li>
              <? } ?>
              
              <? if($current_clerk->im_allow("token_generator")){ ?>
-             <li><a href= "http://localhost:8080/ck/token_generator.php">Token Generator</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/token_generator.php">Token Generator</a></li>
              <? } ?>
              
 			 <? if($current_clerk->im_allow("users") || $current_clerk->admin()){ ?>
-             <li><a href= "http://localhost:8080/ck/user_groups.php">Groups</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/user_groups.php">Groups</a></li>
              <? } ?>
              
               <? if($current_clerk->im_allow("group_permissions") || $current_clerk->im_allow("user_permissions")){ ?>
              <li><a href="javascript:;">Permissions</a>
               <ul>
 			     <? if($current_clerk->im_allow("user_permissions")) { ?>
-                 <li><a href= "http://localhost:8080/ck/permissions_user.php"> Users Permissions</a></li>
+                 <li><a href="<?= BASE_URL ?>/ck/permissions_user.php"> Users Permissions</a></li>
                  <? } ?>
                 <? if($current_clerk->im_allow("group_permissions")) { ?>
-                 <li><a href= "http://localhost:8080/ck/permissions_group.php"> Groups Permissions</a></li>
+                 <li><a href="<?= BASE_URL ?>/ck/permissions_group.php"> Groups Permissions</a></li>
                  <? } ?>
                  
                  <? if($current_clerk->im_allow("manage_permission")) { ?>
@@ -125,11 +125,11 @@
              <? } ?>
              
 			 <? if($current_clerk->im_allow("all_schedules") || $current_clerk->is_manager()){ ?>
-             <li><a href= "http://localhost:8080/ck/schedules.php">Schedules</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/schedules.php">Schedules</a></li>
              <? } ?>
              
 			 <? if($current_clerk->admin()){ ?>
-              <li><a href= "http://localhost:8080/ck/messages.php">MESSAGES</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/messages.php">MESSAGES</a></li>
              <? } ?>
              
 			 <? //if($current_clerk->admin()){ ?>
@@ -137,13 +137,13 @@
              <? // } ?>
            
              <? if($current_clerk->im_allow("rules") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"] ){ ?>
-             <li><a href= "http://localhost:8080/ck/rules.php">Rules</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/rules.php">Rules</a></li>
              <? } ?>  
              
              <? if($current_clerk->im_allow("goals_admin")){ ?>
-              <li><a href= "http://localhost:8080/ck/goals.php">GOALS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/goals.php">GOALS</a></li>
              <? }else{ ?> 
-              <li><a href="http://localhost:8080/ck/my_goals.php" >MY GOALS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/my_goals.php" >MY GOALS</a></li>
              <? } ?>    
     </ul></li> 
     
@@ -151,19 +151,19 @@
     <? // AFFILIATES MENU  ?>
 	<? if(($current_clerk->im_allow("affiliates_system")) || ($current_clerk->im_allow("affiliate_descriptions")) || ($current_clerk->im_allow("agent_freeplays")) || ($current_clerk->im_allow("affiliate_leads"))  ){ ?>   
        
-    <li><a href="http://localhost:8080/ck/affiliates/affiliates_index.php">AFFILIATES</a>
+    <li><a href="<?= BASE_URL ?>/ck/affiliates/affiliates_index.php">AFFILIATES</a>
     <ul>
                 	                    					
 					<? if($current_clerk->im_allow("agent_draw")){ ?> 
-                      <li><a href="http://localhost:8080/ck/affiliate_draw_report.php">Affiliate Draw</a></li>
+                      <li><a href="<?= BASE_URL ?>/ck/affiliate_draw_report.php">Affiliate Draw</a></li>
                      <? } ?> 
                      
                      <? if($current_clerk->im_allow("affiliate_balance")){ ?> 
-                      <li><a href="http://localhost:8080/ck/affiliate_balance_report.php">Affiliate Balances</a></li>
+                      <li><a href="<?= BASE_URL ?>/ck/affiliate_balance_report.php">Affiliate Balances</a></li>
                      <? } ?> 
                      
                      <? if($current_clerk->im_allow("sbo_agent_report")){ ?> 
-                      <li><a href="http://localhost:8080/ck/sbo_weekly_agent_report.php" >Weekly Agent Report</a></li>
+                      <li><a href="<?= BASE_URL ?>/ck/sbo_weekly_agent_report.php" >Weekly Agent Report</a></li>
                      <? } ?> 
                     
                 </ul>
@@ -299,11 +299,11 @@
                      <? } ?> 
                      
                      <? if($current_clerk->im_allow("player_ip")) { ?>
-                         <li><a href= "http://localhost:8080/ck/player_ip.php">Player Ips</a></li>
+                         <li><a href="<?= BASE_URL ?>/ck/player_ip.php">Player Ips</a></li>
                     <? } ?>
                     
                     <? if($current_clerk->im_allow("player_security_question")) { ?>
-                         <li><a href= "http://localhost:8080/ck/player_security_question.php">Player Sec. Question</a></li>
+                         <li><a href="<?= BASE_URL ?>/ck/player_security_question.php">Player Sec. Question</a></li>
                     <? } ?>
                      
                      
@@ -360,12 +360,12 @@
            
            
             <? if($current_clerk->im_allow("agent_manager")){ ?>
-              <li><a href="http://localhost:8080/ck/agent_manager/agent_index.php">Agent Manager</a></li>   
+              <li><a href="<?= BASE_URL ?>/ck/agent_manager/agent_index.php">Agent Manager</a></li>   
 		   <? } ?>
            
             <?php /*?><? if(($current_clerk->im_allow("affiliates_system")) || ($current_clerk->im_allow("affiliate_descriptions")) || ($current_clerk->im_allow("agent_freeplays")) || ($current_clerk->im_allow("affiliate_leads"))  ){ ?>
              
-              <li><a href="http://localhost:8080/ck/affiliates/affiliates_index.php"> AFFILIATES</a>
+              <li><a href="<?= BASE_URL ?>/ck/affiliates/affiliates_index.php"> AFFILIATES</a>
               
               	<ul>
                 	
@@ -389,25 +389,25 @@
            
             
          <? if(($current_clerk->im_allow("betting_basics")) || ($current_clerk->im_allow("betting_edge_system")) || ($current_clerk->im_allow("graded_games_checker"))){ ?>
-              <li><a href= "http://localhost:8080/ck/betting_index.php">Betting</a>
+              <li><a href="<?= BASE_URL ?>/ck/betting_index.php">Betting</a>
            <ul> 
            <? if($current_clerk->im_allow("betting_basics")){ ?> 
-     		<li><a href= "http://localhost:8080/ck/betting_index.php">Betting System</a></li>
+     		<li><a href="<?= BASE_URL ?>/ck/betting_index.php">Betting System</a></li>
            <? } ?> 
            
             <? if($current_clerk->im_allow("betting_edge_system")){ ?>
-             <li><a href= "http://localhost:8080/ck/betting_edge/betting_edge.php">BETTING EDGE </a></li>
+             <li><a href="<?= BASE_URL ?>/ck/betting_edge/betting_edge.php">BETTING EDGE </a></li>
            <? } ?>
              </ul>
              </li>
            
           <?  } ?>
             <? if($current_clerk->im_allow("cashier_admin")){ ?>
-              <li><a href="http://localhost:8080/ck/cashier">Cashier</a></li>   
+              <li><a href="<?= BASE_URL ?>/ck/cashier">Cashier</a></li>   
 		   <? } ?>
            
            <? if($current_clerk->im_allow("cc_system")){ ?>
-              <li><a href="http://localhost:8080/ck/cc_index.php">Credit Cards</a></li>   
+              <li><a href="<?= BASE_URL ?>/ck/cc_index.php">Credit Cards</a></li>   
 		   <? } ?>
            
            
@@ -415,59 +415,59 @@
             <? if($current_clerk->im_allow("job_manager")){ ?>
            <li><a href="">JOBS MANAGER </a>
                 <ul>
-                <li ><a href="http://localhost:8080/ck/jobs_manager/espn_games.php">Espn Games ID</a></li>
+                <li ><a href="<?= BASE_URL ?>/ck/jobs_manager/espn_games.php">Espn Games ID</a></li>
                </ul>
             </li>
            <? } ?>
            
             <? if($current_clerk->im_allow("lines_system") || $current_clerk->im_allow("props_system")){ ?>
               <li>
-                  <a href="http://localhost:8080/ck/sbo_winners.php">Lines</a>
+                  <a href="<?= BASE_URL ?>/ck/sbo_winners.php">Lines</a>
                    <ul>
-                      <li><a href= "http://localhost:8080/ck/grading_unlock.php">Grading Unlock</a></li>
+                      <li><a href="<?= BASE_URL ?>/ck/grading_unlock.php">Grading Unlock</a></li>
                       <? if($current_clerk->im_allow("props_system")){ ?>
                         <li>
                             <a href="javascript:;">Props System</a>
                             <ul>
-                                <li><a href= "http://localhost:8080/ck/props_alerts.php">Alerts Props</a></li>
-                                <li><a href= "http://localhost:8080/ck/import_props.php">Import Props</a></li>
-                                <li><a href= "http://localhost:8080/ck/import_odds.php">Import Odds</a></li>
+                                <li><a href="<?= BASE_URL ?>/ck/props_alerts.php">Alerts Props</a></li>
+                                <li><a href="<?= BASE_URL ?>/ck/import_props.php">Import Props</a></li>
+                                <li><a href="<?= BASE_URL ?>/ck/import_odds.php">Import Odds</a></li>
                             </ul>
                         </li>
           			 <? } ?>
                       <? if($current_clerk->im_allow("lines_system")){ ?>
                       <li>
-                          <a  href= "http://localhost:8080/ck/create_periods.php">Periods</a>
+                          <a  href="<?= BASE_URL ?>/ck/create_periods.php">Periods</a>
                       </li> 
                        <li>
-                          <a  href= "http://localhost:8080/ck/game_description.php">Game Description</a>
+                          <a  href="<?= BASE_URL ?>/ck/game_description.php">Game Description</a>
                       </li> 
                        <li>
-                          <a  href= "http://localhost:8080/ck/graded_games.php">Graded Games</a>
+                          <a  href="<?= BASE_URL ?>/ck/graded_games.php">Graded Games</a>
                       </li> 
                        <li>
-                          <a  href= "http://localhost:8080/ck/graded_games_pending.php">Pending Graded Games</a>
+                          <a  href="<?= BASE_URL ?>/ck/graded_games_pending.php">Pending Graded Games</a>
                       </li> 
 
                       <?/*
                       <li>
-                          <a href=" http://localhost:8080/ck/graded_games.php">Gadred Games</a>
+                          <a href="<?= BASE_URL ?>/ck/graded_games.php">Gadred Games</a>
                          
                       </li> 
 
                        <li>
-                          <a href=" http://localhost:8080/ck/graded_games_pending.php">Pending Graded Games (WIP) </a>
+                          <a href="<?= BASE_URL ?>/ck/graded_games_pending.php">Pending Graded Games (WIP) </a>
                          
                       </li> 
 
                      
                       
                        <li>
-                          <a href="http://localhost:8080/ck/sbo_winners.php">Weather System</a>
+                          <a href="<?= BASE_URL ?>/ck/sbo_winners.php">Weather System</a>
                           <ul>
-                              <li><a href= "http://localhost:8080/ck/weather_system/">Check Weather</a></li>
-                              <li><a href= "http://localhost:8080/ck/weather_system/create_line.php">Create Game</a></li>
-                              <li><a href= "http://localhost:8080/ck/weather_system/create_matchups.php">Create Matchups</a></li>
+                              <li><a href="<?= BASE_URL ?>/ck/weather_system/">Check Weather</a></li>
+                              <li><a href="<?= BASE_URL ?>/ck/weather_system/create_line.php">Create Game</a></li>
+                              <li><a href="<?= BASE_URL ?>/ck/weather_system/create_matchups.php">Create Matchups</a></li>
                           </ul>
                       </li>  */ ?>
 		             <? } ?>
@@ -476,23 +476,23 @@
 		   <? } ?>
            
            <? if($current_clerk->im_allow("march_madness")){ ?>
-           <li><a href="http://localhost:8080/ck/add_braket.php">March Madness</a></li> 
+           <li><a href="<?= BASE_URL ?>/ck/add_braket.php">March Madness</a></li> 
            <? } ?>
            
            <? if($current_clerk->im_allow("baseball_file") || $current_clerk->im_allow("nba_system")  || $current_clerk->im_allow("nhl_system") ){ ?>
              <li><a href= "">SPORTS SYSTEM </a>
               <ul>
                <? if($current_clerk->im_allow("baseball_file")){ ?>
-             	<li><a href= "http://localhost:8080/ck/baseball_file/index.php"><img src="../images/mlb.png" width="25px" /><span style="float:right; margin-right: 55px;">MLB</span> </a></li>
+             	<li><a href="<?= BASE_URL ?>/ck/baseball_file/index.php"><img src="../images/mlb.png" width="25px" /><span style="float:right; margin-right: 55px;">MLB</span> </a></li>
          	  <? } ?>
              
               
                 <? if($current_clerk->im_allow("nba_system")){ ?>
-             	<li><a href= "http://localhost:8080/ck/nba_file/index.php"><img src="../images/nba.png" width="25px" /><span style="float:right; margin-right: 55px;">NBA</span> </a></li>
+             	<li><a href="<?= BASE_URL ?>/ck/nba_file/index.php"><img src="../images/nba.png" width="25px" /><span style="float:right; margin-right: 55px;">NBA</span> </a></li>
           		 <? } ?>
               
                <? if($current_clerk->im_allow("nhl_system")){ ?>
-             	<li><a href= "http://localhost:8080/ck/nhl_file/index.php"><img src="../images/nhl.png" width="25px" /><span style="float:right; margin-right: 55px;">NHL</span> </a></li>
+             	<li><a href="<?= BASE_URL ?>/ck/nhl_file/index.php"><img src="../images/nhl.png" width="25px" /><span style="float:right; margin-right: 55px;">NHL</span> </a></li>
     	 	   <? } ?>
               </ul>
              
@@ -507,11 +507,11 @@
 		
 
            <? if($current_clerk->im_allow("programmers_book")){ ?>
-             <li><a href= "http://localhost:8080/ck/programmers_book.php">PROGRAMMER BOOK</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/programmers_book.php">PROGRAMMER BOOK</a></li>
            <? } ?>           
            
           <?php /*?> <? if($current_clerk->im_allow("rescue_center_oldsite")){ ?> 
-     		<li><a href= "http://localhost:8080/ck/rescue_center_oldsite/index.php">Rescue Center Old Site</a></li>
+     		<li><a href="<?= BASE_URL ?>/ck/rescue_center_oldsite/index.php">Rescue Center Old Site</a></li>
            <? } ?><?php */?>
            
            <? if($current_clerk->im_allow("rescue_center")){ ?> 
@@ -519,40 +519,40 @@
             
             <a href="">Rescue Center</a>
                <ul>
-                 <li><a href="http://localhost:8080/ck/rescue_center/index.php">Admin</a></li>
-                 <li><a href="http://localhost:8080/ck/rc_partners/index.php">Partners</a></li>
-                 <li><a href="http://localhost:8080/ck/rescue_center_oldsite/index.php">Old Site Admin</a></li>
+                 <li><a href="<?= BASE_URL ?>/ck/rescue_center/index.php">Admin</a></li>
+                 <li><a href="<?= BASE_URL ?>/ck/rc_partners/index.php">Partners</a></li>
+                 <li><a href="<?= BASE_URL ?>/ck/rescue_center_oldsite/index.php">Old Site Admin</a></li>
                </ul>
             </li>         
             
            <? } ?>
            
            <? if($current_clerk->im_allow("rc_center_org")){ ?> 
-     		<li><a href= "http://localhost:8080/ck/rc_center_org/index.php">Rescue Center.ORG Admin</a></li>
+     		<li><a href="<?= BASE_URL ?>/ck/rc_center_org/index.php">Rescue Center.ORG Admin</a></li>
            <? } ?>        
 		   
 		   <?php /*?><? if($current_clerk->im_allow("volunteer_tours")){ ?> 
-     		<li><a href= "http://localhost:8080/ck/volunteer_tours/index.php">Volunteer Tours</a></li>
+     		<li><a href="<?= BASE_URL ?>/ck/volunteer_tours/index.php">Volunteer Tours</a></li>
            <? } ?><?php */?>
            
            <? if($current_clerk->im_allow("costarican_traveler")){ ?> 
-     		<li><a href= "http://localhost:8080/ck/costarican_traveler/index.php">Costa Rican Traveler</a></li>
+     		<li><a href="<?= BASE_URL ?>/ck/costarican_traveler/index.php">Costa Rican Traveler</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("real_estate")){ ?> 
-     		<li><a href= "http://localhost:8080/ck/real_estate/index.php">Real Estate</a></li>
+     		<li><a href="<?= BASE_URL ?>/ck/real_estate/index.php">Real Estate</a></li>
            <? } ?>  
 		   
 		  <? if($current_clerk->im_allow("seo_system") || $current_clerk->im_allow("system_metatags") || $current_clerk->im_allow("posting")){ ?>
-              <li><a href="http://localhost:8080/ck/seo_index.php">SEO</a></li>   
+              <li><a href="<?= BASE_URL ?>/ck/seo_index.php">SEO</a></li>   
 		   <? } ?>
           
           <? if($current_clerk->im_allow("teams_system")){ ?>
-             <li><a href= "http://localhost:8080/ck/teams_file/teams_logos.php">TEAM SYSTEM</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/teams_file/teams_logos.php">TEAM SYSTEM</a></li>
            <? } ?>
           
            <? if($current_clerk->im_allow("tweets")){ ?>
-             <li><a href= "http://localhost:8080/ck/tweets_index.php">TWEETS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/tweets_index.php">TWEETS</a></li>
            <? } ?>
            
           
@@ -560,10 +560,10 @@
            <? if($current_clerk->im_allow("widget_manager")){ ?>
            <li><a href="">WIDGETS MANAGER</a>
                 <ul>
-                <li><a href="http://localhost:8080/ck/widget_manager/leagues.php">Leagues</a></li>
-                <li><a href="http://localhost:8080/ck/widget_manager/books_order/">Books</a></li>
-                 <?php /*?><li><a href="http://localhost:8080/ck/widget_manager/events_leagues.php">Events leagues</a></li><?php */?>
-                 <li ><a href="http://localhost:8080/ck/widget_manager/poker_tweets/tweets_index.php">Poker Tweets</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/widget_manager/leagues.php">Leagues</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/widget_manager/books_order/">Books</a></li>
+                 <?php /*?><li><a href="<?= BASE_URL ?>/ck/widget_manager/events_leagues.php">Events leagues</a></li><?php */?>
+                 <li ><a href="<?= BASE_URL ?>/ck/widget_manager/poker_tweets/tweets_index.php">Poker Tweets</a></li>
                 </ul>
             </li>
              
@@ -588,7 +588,7 @@
       <li><a href= "javascript:;">PPH</a>
       <ul>  
             <? if($current_clerk->im_allow("pph_accounting")){ ?>
-              <li><a href= "http://localhost:8080/ck/pph.php">PPH</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/pph.php">PPH</a></li>
             <? } ?> 
       </ul></li>
       
@@ -599,29 +599,29 @@
             
          <li><a href= "javascript:;">Admin</a>
          	<ul>
-            	<li><a href= "http://localhost:8080/ck/pph.php?detail">Add Acount</a></li>
-                <li><a href= "http://localhost:8080/ck/pph_transaction.php" rel="shadowbox;height=420;width=405">New Transaction</a></li>
-                <li><a href= "http://localhost:8080/ck/pph_reverse.php" rel="shadowbox;height=350;width=405">Add Expense</a></li>
-                <li><a href= "http://localhost:8080/ck/pph_bill.php" rel="shadowbox;height=480;width=405">Manual Bill</a></li>
-                <li><a href= "http://localhost:8080/ck/pph_ticker_message.php" rel="shadowbox;height=470;width=830">Player Ticker Message</a></li>
-                <li><a href= "http://localhost:8080/ck/agents_messages.php" rel="shadowbox;height=470;width=830">Agent Report Message</a></li>
-                <li><a href= "http://localhost:8080/ck/pph_manage_cashier.php" rel="shadowbox;height=320;width=405">Add Cashier</a></li>
-                <li><a href= "http://localhost:8080/ck/pph_agents_list.php">Agents Accounts</a></li>
-                <li><a href="http://localhost:8080/ck/manage_backends.php" >Agent Backends</a></li>
+            	<li><a href="<?= BASE_URL ?>/ck/pph.php?detail">Add Acount</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_transaction.php" rel="shadowbox;height=420;width=405">New Transaction</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_reverse.php" rel="shadowbox;height=350;width=405">Add Expense</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_bill.php" rel="shadowbox;height=480;width=405">Manual Bill</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_ticker_message.php" rel="shadowbox;height=470;width=830">Player Ticker Message</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/agents_messages.php" rel="shadowbox;height=470;width=830">Agent Report Message</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_manage_cashier.php" rel="shadowbox;height=320;width=405">Add Cashier</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_agents_list.php">Agents Accounts</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/manage_backends.php" >Agent Backends</a></li>
                 <? if($current_clerk->im_allow("backend_permissions")){ ?>
-                <li><a href="http://localhost:8080/ck/manage_backend_permissions.php" >Backend Permissions</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/manage_backend_permissions.php" >Backend Permissions</a></li>
                 <? } ?>
                 <? if($current_clerk->im_allow("access_manager")){ ?>
-                <li><a href="http://localhost:8080/ck/access_manager.php" >Access manager</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/access_manager.php" >Access manager</a></li>
                 <? } ?>
-                <li><a href="http://localhost:8080/ck/player_password.php" >Player Password</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/player_password.php" >Player Password</a></li>
                 
                 <? if($current_clerk->im_allow("new_features")){ ?>
-                <li><a href="http://localhost:8080/ck/new_feature.php">New Features Notes</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/new_feature.php">New Features Notes</a></li>
                 <? } ?>
                 <? if($current_clerk->im_allow("line_blocker")){ ?>
-                <li><a href="http://localhost:8080/ck/agent_money_line_blocker_sport.php">Agent Money Blocker</a></li>
-                <li><a href="http://localhost:8080/ck/agent_period_blocker.php">Agent Period Blocker</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/agent_money_line_blocker_sport.php">Agent Money Blocker</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/agent_period_blocker.php">Agent Period Blocker</a></li>
                 <? } ?>
                 
             </ul>
@@ -634,11 +634,11 @@
          <li>
          	<a href= "javascript:;">Reports</a>
             <ul>
-            	<li><a href="http://localhost:8080/ck/pph_current_bill_report.php" >Current Billing Report</a></li>
-                <li><a href="http://localhost:8080/ck/pph.php?br=1" >Balance Report</a></li>
-                <li><a href="http://localhost:8080/ck/pph_cashier_methods_report.php" class="normal_link">Cashier Methods by Agent</a></li>
+            	<li><a href="<?= BASE_URL ?>/ck/pph_current_bill_report.php" >Current Billing Report</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph.php?br=1" >Balance Report</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/pph_cashier_methods_report.php" class="normal_link">Cashier Methods by Agent</a></li>
                 <? if($current_clerk->im_allow("access_manager")){ ?>
-                <li><a href="http://localhost:8080/ck/player_access_report.php" >Player Access Report</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/player_access_report.php" >Player Access Report</a></li>
                 <? } ?>
             </ul>
          </li>
@@ -651,23 +651,23 @@
       
       <ul>  
             <? if($current_clerk->im_allow("credit_accounting")){ ?>
-              <li><a href= "http://localhost:8080/ck/credit.php">CREDIT</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/credit.php">CREDIT</a></li>
       
             <? } ?> 
             
             <? if($current_clerk->im_allow("balances")){ ?>
-              <li><a href= "http://localhost:8080/ck/balances.php">BALANCE SHEET</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/balances.php">BALANCE SHEET</a></li>
             <? } ?>  
             
              <? if($current_clerk->im_allow("balances")){ ?>
-              <li><a href= "http://localhost:8080/ck/income_statement.php">INCOME STATEMENT</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/income_statement.php">INCOME STATEMENT</a></li>
              <? } ?>  
              
              <? if($current_clerk->im_allow("processing_balances")){ ?>
-             <li><a href= "http://localhost:8080/ck/processing_balances.php">PROCESING BALANCE SHEET</a></li>    <? } ?>
+             <li><a href="<?= BASE_URL ?>/ck/processing_balances.php">PROCESING BALANCE SHEET</a></li>    <? } ?>
              
               <? if($current_clerk->im_allow("pph_balances")){ ?>
-              <li><a href= "http://localhost:8080/ck/pph_balances.php">PPH BALANCE SHEET</a></li> 
+              <li><a href="<?= BASE_URL ?>/ck/pph_balances.php">PPH BALANCE SHEET</a></li> 
               <? } ?>
             
       </ul></li>
@@ -678,32 +678,32 @@
 	 <?php /*?><li><a href= "javascript:;">Transactions</a>
        <ul>  
            <? if($current_clerk->im_allow("prepaid_test")){ ?>
-             <li><a href= "http://localhost:8080/ck/prepaid_test.php">PREPAID TEST</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/prepaid_test.php">PREPAID TEST</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("prepaid_transactions")){ ?>
-            <li><a href= "http://localhost:8080/ck/prepaid_transactions.php">PREPAID</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/prepaid_transactions.php">PREPAID</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("moneypak_transactions")){ ?>
-            <li><a href= "http://localhost:8080/ck/moneypak_transactions.php">PAKS</a></li>
-            <li><a href= "http://localhost:8080/ck/moneypak_transactions.php?safe=1">SAFE PAKS</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/moneypak_transactions.php">PAKS</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/moneypak_transactions.php?safe=1">SAFE PAKS</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("cc_cashback")){ ?>
-              <li><a href= "http://localhost:8080/ck/cc_cashback.php">CC CHARGEBACK</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/cc_cashback.php">CC CHARGEBACK</a></li>
            <? } ?>
            
              <li><a href= "javascript:;">Bitcoins</a>
               <ul>
               <? if($current_clerk->im_allow("bitcoin_address")){ ?>
-              <li><a href= "http://localhost:8080/ck/bitcoin_address.php">BITCOINS ADDRESS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/bitcoin_address.php">BITCOINS ADDRESS</a></li>
              <? } ?>
              <? if($current_clerk->im_allow("buymoneypaks_settings")){ ?>
-              <li><a href= "http://localhost:8080/ck/buymoneypak_settings.php">BUYMONEYPAKS SETTINGS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/buymoneypak_settings.php">BUYMONEYPAKS SETTINGS</a></li>
              <? } ?>
              <? if($current_clerk->im_allow("bitbet_deposits")){ ?>
-              <li><a href= "http://localhost:8080/ck/bitbet_deposits.php">BitBet Transactions</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/bitbet_deposits.php">BitBet Transactions</a></li>
              <? } ?>
               </ul>
              </li>
@@ -717,15 +717,15 @@
        <li><a href= "">Expenses</a>
         <ul>
            <? if($current_clerk->im_allow("dj_expenses")){ ?>
-            <li><a href= "http://localhost:8080/ck/dj_expenses_index.php">Michael's Expenses</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/dj_expenses_index.php">Michael's Expenses</a></li>
            <? } ?>
           
            <? if($current_clerk->im_allow("office_expenses")){ ?>
-             <li><a href= "http://localhost:8080/ck/office_expenses_index.php">Office's Expenses</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/office_expenses_index.php">Office's Expenses</a></li>
           <? } ?>
          
            <? if($current_clerk->im_allow("expenses_admin")){ ?>
-             <li><a href= "http://localhost:8080/ck/expenses_index.php">Expenses</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/expenses_index.php">Expenses</a></li>
            <? } ?>
        
        </ul>
@@ -738,78 +738,78 @@
             
           <? if($current_clerk->vars["level"]->vars["sale_manager"] || $current_clerk->im_allow("phone_admin")  || $current_clerk->im_allow("marketing_names") || $current_clerk->im_allow("all_sbo_transactions") || $current_clerk->im_allow("sbo_daily_new_accounts") || $current_clerk->im_allow("sbo_search_accounts") ||$current_clerk->im_allow("first_deposit") || $current_clerk->im_allow("all_sbo_transactions") || $current_clerk->im_allow("sbo_reload") ){?>  
             
-             <li><a href= "http://localhost:8080/ck/crm_reports.php">CRM REPORTS</a></li>          
+             <li><a href="<?= BASE_URL ?>/ck/crm_reports.php">CRM REPORTS</a></li>          
 		 <? } ?>
             
               <? if($current_clerk->im_allow("central_phone")  && !$current_clerk->im_allow("phone_admin")){ ?>
-              <li><a href="http://localhost:8080/ck/calls_queue.php">Queue Calls</a></li>   
+              <li><a href="<?= BASE_URL ?>/ck/calls_queue.php">Queue Calls</a></li>   
 		   <? } ?>
             
              <? if($current_clerk->admin() || $current_clerk->im_allow("clerks_deposit_report")){ ?>
-              <li><a href= "http://localhost:8080/ck/deposist_report_new.php">DEPOSITS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/deposist_report_new.php">DEPOSITS</a></li>
              <? } ?>
 			
              <? if($current_clerk->admin() || $current_clerk->im_allow("clerks_transaction")){ ?>
-              <li><a href= "http://localhost:8080/ck/transactions.php">TRANSACTIONS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/transactions.php">TRANSACTIONS</a></li>
              <? } ?>
 			
 			 <? if($current_clerk->im_allow("phone_admin") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"] ){ ?>
-              <li><a href= "http://localhost:8080/ck/list.php">LIST</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/list.php">LIST</a></li>
              <? } ?>
            
               
               <? if($current_clerk->im_allow("email_requests")){ ?>
-               <li><a href= "http://localhost:8080/ck/email_requests.php">Email Request</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/email_requests.php">Email Request</a></li>
               <? } ?>  
               
 			  <? if($current_clerk->im_allow("phone_names") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-                <li><a href= "http://localhost:8080/ck/names.php">NAMES</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/names.php">NAMES</a></li>
               <? } ?>
               
               <? if($current_clerk->im_allow("relesed_names")){ ?>
-                <li><a href= "http://localhost:8080/ck/relesed_names.php">RELEASED</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/relesed_names.php">RELEASED</a></li>
               <? } ?>
               
               <? if($current_clerk->vars["level"]->vars["is_sales"]){ ?>
                
                   <? if($current_clerk->vars["user_group"]->vars["id"] == 15 ){ ?>
-                    <li><a href= "http://localhost:8080/ck/name_agent_search_new.php">SEARCH </a></li>
+                    <li><a href="<?= BASE_URL ?>/ck/name_agent_search_new.php">SEARCH </a></li>
 				  <? }
                       else { ?>
-                    <li><a href= "http://localhost:8080/ck/name_search_new.php">SEARCH</a></li>
+                    <li><a href="<?= BASE_URL ?>/ck/name_search_new.php">SEARCH</a></li>
                  <? } ?>
 			 <? } ?>
              
              <? if($current_clerk->im_allow("my_lists_crm_search")){ ?>
-                <li><a href= "http://localhost:8080/ck/full_name_search_new.php">FIND CRM NAME</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/full_name_search_new.php">FIND CRM NAME</a></li>
               <? } ?>
              
 			 <? if($current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-			  <li><a href= "http://localhost:8080/ck/manage_sales_clerks.php">CLERKS</a></li>
+			  <li><a href="<?= BASE_URL ?>/ck/manage_sales_clerks.php">CLERKS</a></li>
              <? } ?>
             
 			 <? if($current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-			   <li><a href= "http://localhost:8080/ck/calls.php">CALLS</a></li>
+			   <li><a href="<?= BASE_URL ?>/ck/calls.php">CALLS</a></li>
              <? } ?>
              
              <? if($current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-              <li><a href= "http://localhost:8080/ck/leads.php">MANAGE LEADS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/leads.php">MANAGE LEADS</a></li>
              <? } ?> 
              
              <? if($current_clerk->vars["level"]->vars["is_admin"]){ ?> 
-               <li><a href= "http://localhost:8080/ck/admin_clerk_index.php">PHONE SYSTEM</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/admin_clerk_index.php">PHONE SYSTEM</a></li>
              <? } ?> 
              
              <? if($current_clerk->im_allow("cs_logs")){ ?>
-               <li><a href= "http://localhost:8080/ck/cs_logs.php">CS LOGS</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/cs_logs.php">CS LOGS</a></li>
              <? } ?> 
              
 			 <? if($current_clerk->im_allow("durango_create")){ ?>
-              <li><a href= "http://localhost:8080/ck/durango_create_name.php">DURANGO NAME</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/durango_create_name.php">DURANGO NAME</a></li>
              <? } ?>
           
              <? if($current_clerk->im_allow("phone_admin") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-               <li><a href= "http://localhost:8080/ck/webs.php">WEBSITES</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/webs.php">WEBSITES</a></li>
              <? } ?> 
             
        </ul>
@@ -822,15 +822,15 @@
     <li><a href= "">AFFILIATES</a>
      <ul>
          <? if($current_clerk->im_allow("affiliate_descriptions")){ ?>
-             <li><a href= "http://localhost:8080/ck/affiliates_description.php">AF COMMENTS </a></li>
+             <li><a href="<?= BASE_URL ?>/ck/affiliates_description.php">AF COMMENTS </a></li>
          <? } ?>
         
          <? if($current_clerk->im_allow("agent_freeplays")){ ?>
-             <li><a href= "http://localhost:8080/ck/agent_freeplays.php">AF FREELAYS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/agent_freeplays.php">AF FREELAYS</a></li>
          <? } ?>
          
          <? if($current_clerk->im_allow("affiliate_leads")){ ?>
-             <li><a href= "http://localhost:8080/ck/affiliates_leads.php">AF LEADS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/affiliates_leads.php">AF LEADS</a></li>
          <? } ?>
       
      </ul>
@@ -843,31 +843,31 @@
     
         
          <? if($current_clerk->im_allow("department_tickets") || $current_clerk->admin()){ ?>
-          <li><a href= "http://localhost:8080/ck/department_tickets.php">TICKETS</a></li>
+          <li><a href="<?= BASE_URL ?>/ck/department_tickets.php">TICKETS</a></li>
 		 <? } ?>   
          
 		  <? if($current_clerk->im_allow("rec_issues")){ ?>
-             <?  // <li><a href= "http://localhost:8080/ck/rec_issues.php">REC ISSUES </a></li> // ?>
+             <?  // <li><a href="<?= BASE_URL ?>/ck/rec_issues.php">REC ISSUES </a></li> // ?>
           <? } ?> 
           
           <? if($current_clerk->im_allow("tickets")){ ?> 
-             <li><a href= "http://localhost:8080/ck/tickets.php">EMAIL TICKETS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/tickets.php">EMAIL TICKETS</a></li>
           <? } ?> 
           
            <? if($current_clerk->im_allow("tickets_categories")){ ?> 
-             <li><a href= "http://localhost:8080/ck/tickets_categories.php">TICKETS CATEGORIES</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/tickets_categories.php">TICKETS CATEGORIES</a></li>
           <? } ?> 
           
            <? if($current_clerk->im_allow("tickets_categories")){ ?> 
-             <li><a href= "http://localhost:8080/ck/tickets_feedback.php">FEEDBACKS TICKETS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/tickets_feedback.php">FEEDBACKS TICKETS</a></li>
           <? } ?> 
           
           <? if($current_clerk->im_allow("tickets_categories")){ ?> 
-             <? // <li><a href= "http://localhost:8080/ck/tickets_broadcast.php">BROADCAST TICKETS</a></li> ?>
+             <? // <li><a href="<?= BASE_URL ?>/ck/tickets_broadcast.php">BROADCAST TICKETS</a></li> ?>
           <? } ?> 
           
            <? if($current_clerk->im_allow("programmers_issues")){ ?> 
-             <li><a href= "http://localhost:8080/ck/programmers_issues.php">Programmers Issues</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/programmers_issues.php">Programmers Issues</a></li>
           <? } ?>              
     
      </ul>
@@ -877,18 +877,18 @@
       <?php /*?><li><a href= "javascript:;">Payouts</a>
       <ul>  
             <? if($current_clerk->im_allow("process_payouts")){ ?>
-               <li><a href= "http://localhost:8080/ck/bitcoins_payouts.php">BITCOINS (<? echo count(search_bitcoins_payouts("", "", "pe", "ac")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/prepaid_payouts.php">PREPAID (<? echo count(search_prepaid_payouts("", "", "pe", "ac")) ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/paypal_payouts.php">PAYPAL (<? echo count(search_paypal_payouts("", "", "pe", "ac")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/cash_transfer_payouts.php">CASHTRANSFER (<? echo count(search_cash_transfer_payouts_for_process("", "")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/special_payouts.php">SPECIAL (<? echo count(search_special_payouts_for_process("", "", "pe", "ac")) ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/moneyorder_payouts.php">MONEYORDER (<? echo count(search_moneyorder_payouts_for_process("", "")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/moneypak_limbos.php">PAKS (<? echo count(get_waiting_mp_payouts()); ?>)</a></li>               
-               <li><a href= "http://localhost:8080/ck/local_payouts.php">LOCALCASH  (<? echo count(get_local_cash_payouts_for_process()); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/bitcoins_payouts.php">BITCOINS (<? echo count(search_bitcoins_payouts("", "", "pe", "ac")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/prepaid_payouts.php">PREPAID (<? echo count(search_prepaid_payouts("", "", "pe", "ac")) ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/paypal_payouts.php">PAYPAL (<? echo count(search_paypal_payouts("", "", "pe", "ac")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/cash_transfer_payouts.php">CASHTRANSFER (<? echo count(search_cash_transfer_payouts_for_process("", "")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/special_payouts.php">SPECIAL (<? echo count(search_special_payouts_for_process("", "", "pe", "ac")) ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/moneyorder_payouts.php">MONEYORDER (<? echo count(search_moneyorder_payouts_for_process("", "")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/moneypak_limbos.php">PAKS (<? echo count(get_waiting_mp_payouts()); ?>)</a></li>               
+               <li><a href="<?= BASE_URL ?>/ck/local_payouts.php">LOCALCASH  (<? echo count(get_local_cash_payouts_for_process()); ?>)</a></li>
                
-               <li><a href= "http://localhost:8080/ck/wire_payouts.php">BANK WIRE  (<? echo count(get_bankwire_payouts_for_process()); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/wire_payouts.php">BANK WIRE  (<? echo count(get_bankwire_payouts_for_process()); ?>)</a></li>
                       
-             <li><a href= "http://localhost:8080/ck/cashier_checks_payouts.php">CASHIER CHECKS  (<? echo count(get_checks_transactions_for_process()); ?>)</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/cashier_checks_payouts.php">CASHIER CHECKS  (<? echo count(get_checks_transactions_for_process()); ?>)</a></li>
             <? } ?>    
             
       </ul>
@@ -901,10 +901,10 @@
     <li><a href= "javascript:;">REPORTS</a>
        <ul>
                          
-              <li><a href= "http://localhost:8080/ck/reports.php">REPORTS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/reports.php">REPORTS</a></li>
               
                                    
-              <li><a href= "http://localhost:8080/ck/players_reports.php">Players REPORTS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/players_reports.php">Players REPORTS</a></li>
                   
        </ul>
     </li>
@@ -942,15 +942,15 @@
      </ul>
     </li><?php */?>
     
-    <li><a href= "http://localhost:8080/process/login/logout.php">LOGOUT</a></li>
+    <li><a href="<?= BASE_URL ?>/process/login/logout.php">LOGOUT</a></li>
     <? } else { ?>
         <? if($current_clerk->vars['user_group']->vars['id'] != 27)  { //horizon?>
-         <li><a href= "http://localhost:8080/ck/calls_queue.php">CRM</a></li>
+         <li><a href="<?= BASE_URL ?>/ck/calls_queue.php">CRM</a></li>
       <? } ?>
         <? if($current_clerk->im_allow("agent_manager")){ ?>
-            <li><a class="normal_link" href="http://localhost:8080/ck/live_betting_access.php">Live Betting Access</a></li>   
+            <li><a class="normal_link" href="<?= BASE_URL ?>/ck/live_betting_access.php">Live Betting Access</a></li>   
          <? } ?>
-        <li><a href= "http://localhost:8080/process/login/logout.php">LOGOUT</a></li>
+        <li><a href="<?= BASE_URL ?>/process/login/logout.php">LOGOUT</a></li>
     <? } ?>
   </ul>
 </div>

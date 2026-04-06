@@ -9,9 +9,9 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Headline System</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 
 
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="http://localhost:8080/ck/headlines/js/script.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/headlines/js/script.js"> </script>
 
 </head>
 <body>
@@ -55,7 +55,7 @@ $logos[1] = "ESPN";
 </div>
 <div class="B" id="div_mob" style="width:30%; padding: 25px 0; margin: 0; float: left;">
 <? /*<div style="width:30%; display:inline-block; border:solid;">
-<img class="img_demo" src='http://localhost:8080/ck/headlines/images/sbo/mobile.jpg'><BR><BR>
+<img class="img_demo" src='\" . BASE_URL . \"/ck/headlines/images/sbo/mobile.jpg'><BR><BR>
 <div class="div_upload"><label class="upload-label"><span onclick="preupload()" class="upload-file-label">UPLOAD HEADLINE</span> </label></div>
  */?>
 </div>

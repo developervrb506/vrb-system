@@ -422,7 +422,7 @@ function generate_lines_code(aff){
 	foot = document.getElementById("foot_banners").value;
 	books = document.getElementById("aff_books").value;
 	code = "<!--Affiliate Code Start Here-->";
-	code += '<iframe width="'+ if_with +'" height="'+ if_height +'" frameborder="0" src="http://localhost:8080/process/live_lines.php?bks='+ books +'&le='+ league +'&aid='+ aff +'&tb='+ head +'&fb='+ foot +'"></iframe>';
+	code += '<iframe width="'+ if_with +'" height="'+ if_height +'" frameborder="0" src="/process/live_lines.php?bks='+ books +'&le='+ league +'&aid='+ aff +'&tb='+ head +'&fb='+ foot +'"></iframe>';
 	code += "<!--Affiliate Code End Here-->"
 	document.getElementById("code_area").style.display = "block";
 	document.getElementById("code").value = code;
@@ -435,7 +435,7 @@ function generate_lines_code_new(aff){
 	foot = document.getElementById("foot_banners").value;
 	books = document.getElementById("aff_books").value;
 	code = "<!--Affiliate Code Start Here-->";
-	code += '<iframe width="'+ if_with +'" height="'+ if_height +'" frameborder="0" src="http://localhost:8080/process/live_lines_new.php?bks='+ books +'&le='+ league +'&aid='+ aff +'&tb='+ head +'&fb='+ foot +'"></iframe>';
+	code += '<iframe width="'+ if_with +'" height="'+ if_height +'" frameborder="0" src="/process/live_lines_new.php?bks='+ books +'&le='+ league +'&aid='+ aff +'&tb='+ head +'&fb='+ foot +'"></iframe>';
 	code += "<!--Affiliate Code End Here-->"
 	document.getElementById("code_area").style.display = "block";
 	document.getElementById("code").value = code;
@@ -509,7 +509,7 @@ function blackjack_trainer_code(affiliate, book_url){
 	code = "<!--Affiliate Code Start Here-->";
 	code += '';
 	code += '<iframe ';
-	code += 'src="http://localhost:8080/process/blackjack_trainer.php?aid='+ affiliate +'&pid='+ promo +'&lurl='+ logo +'"';
+	code += 'src="/process/blackjack_trainer.php?aid='+ affiliate +'&pid='+ promo +'&lurl='+ logo +'"';
 	code += ' allowtransparency="true" frameborder="0" height="350" width="272" scrolling="no"></iframe>';
 	code += "<!--Affiliate Code End Here-->"	
 	
@@ -527,7 +527,7 @@ function twitter_widget_code(affiliate, book_url){
 	code = "<!--Affiliate Code Start Here-->";
 	code += '';
 	code += '<iframe ';
-	code += 'src="http://localhost:8080/process/twitter_widget.php?le='+ def +'&aid='+ affiliate +'&pid='+ promo +'&logo='+ logo +'"';
+	code += 'src="/process/twitter_widget.php?le='+ def +'&aid='+ affiliate +'&pid='+ promo +'&logo='+ logo +'"';
 	code += ' allowtransparency="true" frameborder="0" height="485" width="'+ wi +'" scrolling="no"></iframe>';
 	code += "<!--Affiliate Code End Here-->"
 	
@@ -547,7 +547,7 @@ function trends_widget_code(affiliate, book_url){
 	code = "<!--Affiliate Code Start Here-->";
 	code += ''
 	code += '<iframe ';
-	code += 'src="http://localhost:8080/process/trends_widget.php?le='+ def +'&aid='+ affiliate +'&pid='+ promo +'&logo='+ logo +'"';
+	code += 'src="/process/trends_widget.php?le='+ def +'&aid='+ affiliate +'&pid='+ promo +'&logo='+ logo +'"';
 	code += ' allowtransparency="true" frameborder="0" height="'+ he +'" width="'+ wi +'" scrolling="auto"></iframe>';	
 	code += "<!--Affiliate Code End Here-->"
 	

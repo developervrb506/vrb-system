@@ -7,7 +7,7 @@ body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
 }
 .table_header{
-	background:url(http://localhost:8080/images/temp/table_header_back.jpg) repeat-x bottom left #fff;
+	background:url(/images/temp/table_header_back.jpg) repeat-x bottom left #fff;
 	border-top:1px solid #d5d5d5;
 	border-left:1px solid #d5d5d5;
 	border-right: 1px solid #d5d5d5;

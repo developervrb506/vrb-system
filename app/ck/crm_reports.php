@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Reports</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -35,7 +35,7 @@ Displays all the signups by clerk.
 <? } ?>
 
  <? if($current_clerk->im_allow("sbo_search_accounts")){ ?>
- <a class="normal_link" href="http://localhost:8080/ck/sbo_search_accounts.php">Search SBO Accounts</a><br />
+ <a class="normal_link" href="<?= BASE_URL ?>/ck/sbo_search_accounts.php">Search SBO Accounts</a><br />
  Display a Search of SBO Accounts
  <br /><br />
  <? } ?>

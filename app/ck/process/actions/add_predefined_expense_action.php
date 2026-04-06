@@ -22,7 +22,7 @@
 	 
 	 	
  }
-header("Location: http://localhost:8080/ck/office_expenses_index.php");	
+header("Location: " . BASE_URL . "/ck/office_expenses_index.php");	
 
 
 ?>

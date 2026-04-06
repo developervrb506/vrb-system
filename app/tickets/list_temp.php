@@ -111,7 +111,7 @@ xxxx
     <td><? echo $item->vars["subject"] ?></td>
     <td><? echo $item->vars["tdate"] ?></td>
     <td>
-    	<div class="view_link_container"><a <? if($item->vars["pread"]){ ?>style="color:#333;"<? } ?> href="http://localhost:8080/tickets/ticket.php?show_back=1&tid=<? echo $item->get_password() ?>&deptid=<? echo $item->vars["dep_id_live_chat"] ?>&mobile=<? echo $mobile ?>&wpx=<? echo $account ?>&master=<? if($item->vars["master"]){echo 1;}?>">View</a></div>
+    	<div class="view_link_container"><a <? if($item->vars["pread"]){ ?>style="color:#333;"<? } ?> href="<?= BASE_URL ?>/tickets/ticket.php?show_back=1&tid=<? echo $item->get_password() ?>&deptid=<? echo $item->vars["dep_id_live_chat"] ?>&mobile=<? echo $mobile ?>&wpx=<? echo $account ?>&master=<? if($item->vars["master"]){echo 1;}?>">View</a></div>
     </td>
   </tr>
   <? } ?>

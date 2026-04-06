@@ -77,7 +77,7 @@ if($_SESSION['cc']!=""){
 		$code = '<!--Affiliate Code Start Here-->';
 		$code .= '<a href="'.$link.'" target="_blank">';
 		$code .= $promo->name;
-		$code .= '<img border="0" src="http://localhost:8080/process/image.php?pid='. $promo->id .'&aid='. $current_affiliate->id .'" /></a>';
+		$code .= '<img border="0" src="<?= BASE_URL ?>/process/image.php?pid='. $promo->id .'&aid='. $current_affiliate->id .'" /></a>';
 		$code .= '<!--Affiliate Code End Here-->';
 		?>
         <textarea cols="90" rows="3" readonly="readonly" id="code_<? echo $promo->name ?>"><? echo $code ?></textarea><br />

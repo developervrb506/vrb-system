@@ -50,7 +50,7 @@ validations.push({id:"num",type:"null", msg:"Pak # is required"});
 		<td><input name="zip" type="text" id="zip" /></td>
 	  </tr> 
 	  <tr>    
-		<td><input type="image" src="http://localhost:8080/images/temp/submit.jpg" /></td>
+		<td><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" /></td>
 		<td>&nbsp;</td>
 	  </tr>
 	</table>

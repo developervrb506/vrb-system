@@ -8,7 +8,7 @@ $category =  get_category($_GET["category"]);
 if($_POST){
 	$path = "../images/affiliates/trainer_banners/";
 	$filename = upload_image_partners("logo_file", $path, md5(rand()));
-	if($filename != ""){$logo_url = "http://localhost:8080/process/logo.php?i=" . $filename."_/_trainer";}
+	if($filename != ""){$logo_url = BASE_URL . "/process/logo.php?i=" . $filename."_/_trainer";}
 	$banner_id = $_POST["banners_list"];
 }
 if($_SESSION['cc']!=""){

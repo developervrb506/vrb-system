@@ -16,6 +16,6 @@ if(!is_null($payout)){
 }
 
 
-header("Location: http://localhost:8080/ck/office_expenses_moneypaks.php");
+header("Location: " . BASE_URL . "/ck/office_expenses_moneypaks.php");
 ?>
 <? }else{echo "Access Denied";} ?>

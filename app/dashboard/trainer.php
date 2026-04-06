@@ -4,7 +4,7 @@
 if($_POST){
 	$path = "../images/affiliates/trainer_banners/";
 	$filename = upload_image_partners("logo_file", $path, md5(rand()));
-	if($filename != ""){$logo_url = "http://localhost:8080/images/affiliates/trainer_banners/" . $filename;}
+	if($filename != ""){$logo_url = BASE_URL . "/images/affiliates/trainer_banners/" . $filename;}
 	$banner_id = $_POST["banners_list"];
 }
 ?>

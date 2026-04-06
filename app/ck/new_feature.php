@@ -12,26 +12,26 @@ else { $type = $_GET["type"]; }
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>New Features</title>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
  
 <script type="text/javascript">
 <!--
 function confirmation(id,status,type) {
 
 	if (confirm('Are you sure that you want to '+ status +' this posting?')){		
-	   //window.location = "http://localhost:8080/ck/process/actions/new_feature_action.php?id="+id+"&type="+type;
-	   document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/new_feature_action.php?id="+id+"&type="+type;
+	   //window.location = BASE_URL . "/ck/process/actions/new_feature_action.php?id="+id+"&type="+type;
+	   document.getElementById("idel").src = BASE_URL . "/ck/process/actions/new_feature_action.php?id="+id+"&type="+type;
 	   
 	   document.getElementById("th_status_"+id).innerHTML = status;
 	}	
 }
 function delete_feature(id,type){
 	if(confirm("Are you sure you want to DELETE this entry from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/new_feature_action.php?id="+id+"&type="+type;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/new_feature_action.php?id="+id+"&type="+type;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
@@ -62,7 +62,7 @@ if(isset($_POST['type']) && !empty($_POST['type'])) {
   <option  <? if ($type == "p") { echo ' selected="selected" '; }?> value="p">Player</option>
 
 </select>
-<input type="submit" value="Search">&nbsp;&nbsp;<a href="http://localhost:8080/ck/new_feature_create.php">Add a New</a><br /><br />
+<input type="submit" value="Search">&nbsp;&nbsp;<a href="<?= BASE_URL ?>/ck/new_feature_create.php">Add a New</a><br /><br />
 <BR>
 </form></td>
     <td>&nbsp;</td>
@@ -123,7 +123,7 @@ if($count > 0) { ?>
         ?>
         <a class="normal_link" href="javascript:confirmation(<? echo $feature->vars["id"] ?>,'<? echo $new_status ?>','status')"><? echo $feature->print_status(); ?></a>
         </th>
-        <th class="table_td<? echo $style ?>"><a class="normal_link" href="http://localhost:8080/ck/new_feature_create.php?id=<? echo $feature->vars["id"] ?>">Edit</a></th>  
+        <th class="table_td<? echo $style ?>"><a class="normal_link" href="<?= BASE_URL ?>/ck/new_feature_create.php?id=<? echo $feature->vars["id"] ?>">Edit</a></th>  
         <th class="table_td<? echo $style ?>"><a class="normal_link" href="javascript:delete_feature(<? echo $feature->vars["id"] ?>,'delete')">Delete</a>
         </th> 
   </tr>

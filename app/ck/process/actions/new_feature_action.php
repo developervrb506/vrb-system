@@ -56,7 +56,7 @@ if ($type == 'newEdit'){
 	if ($edit){ $action = 'u'; }
 	else { $action = 'a'; }
 	
-	header("Location: http://localhost:8080/ck/new_feature.php?type=".$f_type);
+	header("Location: " . BASE_URL . "/ck/new_feature.php?type=".$f_type);
 		
 	
 	

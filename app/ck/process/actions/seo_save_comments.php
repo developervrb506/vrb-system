@@ -150,6 +150,6 @@ if($action != ""){
 }
 
 
-header("Location: http://localhost:8080/ck/seo_get_lead.php");
+header("Location: " . BASE_URL . "/ck/seo_get_lead.php");
 ?>
 <? }else{echo "Access Denied";} ?>

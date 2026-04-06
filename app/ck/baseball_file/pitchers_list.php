@@ -49,13 +49,13 @@ $games = get_baseball_games_by_date($from);
 	 //  print_r($game);
    	 //  print_r($player_a);
    	 //  print_r($player_h);
-	   if($player_a->vars["image"] == "no_image" ){ $player_a->vars["image"] = "http://localhost:8080/ck/baseball_file/images/no_image.png";}
-   	   if($player_h->vars["image"] == "no_image" ){ $player_h->vars["image"] = "http://localhost:8080/ck/baseball_file/images/no_image.png";}
+	   if($player_a->vars["image"] == "no_image" ){ $player_a->vars["image"] = BASE_URL . "/ck/baseball_file/images/no_image.png";}
+   	   if($player_h->vars["image"] == "no_image" ){ $player_h->vars["image"] = BASE_URL . "/ck/baseball_file/images/no_image.png";}
            
 		    $image_a = $player_a->vars["image"];
 			$image_h = $player_h->vars["image"];   
 			
-			if($image_a == ""){ $image_a = $image_h = "http://localhost:8080/ck/baseball_file/images/no_image.png"; }
+			if($image_a == ""){ $image_a = $image_h = BASE_URL . "/ck/baseball_file/images/no_image.png"; }
 	   	   
 		   
 ?>

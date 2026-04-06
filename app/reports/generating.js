@@ -1,6 +1,6 @@
 function get_results(url, div, code){
 		if(location.href.indexOf("www.") != -1){
-			url = "http://localhost:8080/" + url;
+			url = "/" + url;
 		}else{
 			url = "http://vrbmarketing.com/" + url;
 		}

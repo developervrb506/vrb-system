@@ -1,5 +1,5 @@
 <div class="page_title">
-  <div class="page_title_link_building"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="http://localhost:8080/images/new_design/link_building.jpg" width="95" height="84" alt="LINK BUILDING" border="0" />
+  <div class="page_title_link_building"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="<?= BASE_URL ?>/images/new_design/link_building.jpg" width="95" height="84" alt="LINK BUILDING" border="0" />
     <h1>LINK BUILDING</h1>
     <p>Say goodbye to weak links in your marketing efforts.</p>
     <!--end page_title_seo--></div>

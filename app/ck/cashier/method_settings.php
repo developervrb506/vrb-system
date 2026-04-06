@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/htmltinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/htmltinymce/tinymce.min.js"></script>
 <script type="text/javascript">
     tinymce.init({
 		selector:'textarea',

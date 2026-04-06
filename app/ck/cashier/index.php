@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Cashier Admin</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -103,14 +103,14 @@ Shadowbox.init();
     
     <? if($current_clerk->im_allow("cashier_deposits")){ ?>
     <p>
-    <strong><a href="http://localhost:8080/ck/sbo_bonus_checker.php" class="normal_link">Deposit Bonus Checker</a></strong><br />
+    <strong><a href="<?= BASE_URL ?>/ck/sbo_bonus_checker.php" class="normal_link">Deposit Bonus Checker</a></strong><br />
     List of Deposits with Bonus, Adjustments Information
     </p>
     <? } ?>
     
     <? if($current_clerk->im_allow("method_regular_player")){ ?>
     <p>
-    <strong><a href="http://localhost:8080/ck/sbo_method_regular_player.php" class="normal_link">Method's Regular Players</a></strong><br />
+    <strong><a href="<?= BASE_URL ?>/ck/sbo_method_regular_player.php" class="normal_link">Method's Regular Players</a></strong><br />
     List of Players that used a Method
     </p>
     <? } ?>
@@ -148,12 +148,12 @@ Shadowbox.init();
 
 
 <?php /*?><p>
-<strong><a href="http://localhost:8080/ck/balances_transactions.php" class="normal_link">Balance Intersystem Transactions</a></strong><br />
+<strong><a href="<?= BASE_URL ?>/ck/balances_transactions.php" class="normal_link">Balance Intersystem Transactions</a></strong><br />
  Balance Intersystem Transactions by status
 </p>
 
 <p>
-<strong><a href="http://localhost:8080/ck/expenses_index.php" class="normal_link">Expense Intersystem Transactions </a></strong><br />
+<strong><a href="<?= BASE_URL ?>/ck/expenses_index.php" class="normal_link">Expense Intersystem Transactions </a></strong><br />
 Search Expense Intersystem Transactions 
 </p><?php */?>
 
@@ -162,7 +162,7 @@ Search Expense Intersystem Transactions
 <?php /*?><? if($current_clerk->im_allow("cashier_deposits")){ ?>
 
 <p>
-<strong><a href="http://localhost:8080/ck/cashier/coins_report.php" class="normal_link">Cryptocoins Report</a></strong><br />
+<strong><a href="<?= BASE_URL ?>/ck/cashier/coins_report.php" class="normal_link">Cryptocoins Report</a></strong><br />
 List of all Cryptocoins and current balances
 </p>
 <? } ?><?php */?>

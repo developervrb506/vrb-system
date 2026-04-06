@@ -16,8 +16,8 @@
 <title>Events leagues</title>
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/book_order.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-ui.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-ui.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('.reorder_link').on('click',function(){
@@ -67,7 +67,7 @@ $(document).ready(function(){
 <? include "../../includes/menu_ck.php" ?>
 <div class="page_content" style="padding-left:50px;">
 <span class="page_title"> Leagues Order <? echo $league ?></span><br /><br />
-<div align="right"><span ><a href="http://localhost:8080/ck/widget_manager/events_leagues.php">Back</a></span></div>
+<div align="right"><span ><a href="<?= BASE_URL ?>/ck/widget_manager/events_leagues.php">Back</a></span></div>
 
 
 <div style="margin-top:20px;">

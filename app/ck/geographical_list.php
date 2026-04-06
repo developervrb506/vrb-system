@@ -7,7 +7,7 @@
 Shadowbox.init();
 function delete_tweet(id){
 	if(confirm("Are you sure you want to DELETE this Tweet from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_tweet.php?tweet="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_tweet.php?tweet="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
@@ -106,7 +106,7 @@ $geo_states = get_states_by_geo_list($lid);
 
 
 <div align="right">
-	<iframe src="http://localhost:8080/ck/process/actions/delete_tweet.php" width="1" height="1" frameborder="0" scrolling="no" id="idel"></iframe>
+	<iframe src="<?= BASE_URL ?>/ck/process/actions/delete_tweet.php" width="1" height="1" frameborder="0" scrolling="no" id="idel"></iframe>
 </div>
 
 </div>

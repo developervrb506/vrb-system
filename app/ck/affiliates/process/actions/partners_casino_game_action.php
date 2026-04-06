@@ -21,7 +21,7 @@ if( isset($_GET["pid"]) ) {
 	
 }
 
-header("Location: http://localhost:8080/ck/affiliates/partners_casino_game_link_view.php?a=".$action);
+header("Location: " . BASE_URL . "/ck/affiliates/partners_casino_game_link_view.php?a=".$action);
 	
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

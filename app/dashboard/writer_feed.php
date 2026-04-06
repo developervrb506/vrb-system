@@ -24,13 +24,13 @@ if($_SESSION['cc']!=""){
 <div class="back_btn_div"><a href="tools.php" class="normal_link">&lt;&lt; BACK</a></div>
 <? if($book->id == 1){ ?>
 <span class="page_title">Sports Betting Articles Feeds</span><br /><br />
-	<a href="http://localhost:8080/process/writers_xml_feed.php?le=NFL&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NFL Articles Feed</a> <br /><br />
-    <a href="http://localhost:8080/process/writers_xml_feed.php?le=NCAAF&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NCAAF Articles Feed</a><br /><br />
-    <a href="http://localhost:8080/process/writers_xml_feed.php?le=NBA&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NBA Articles Feed</a><br /><br />
-    <a href="http://localhost:8080/process/writers_xml_feed.php?le=NCAAB&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NCAAB Articles Feed</a><br /><br />
-    <a href="http://localhost:8080/process/writers_xml_feed.php?le=MLB&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">MLB Articles Feed</a><br /><br />
-    <a href="http://localhost:8080/process/writers_xml_feed.php?le=NHL&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NHL Articles Feed</a><br /><br />
-    <a href="http://localhost:8080/process/writers_xml_feed.php?le=BOXING/MMA&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">BOXING/MMA Articles Feed</a>
+	<a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=NFL&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NFL Articles Feed</a> <br /><br />
+    <a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=NCAAF&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NCAAF Articles Feed</a><br /><br />
+    <a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=NBA&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NBA Articles Feed</a><br /><br />
+    <a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=NCAAB&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NCAAB Articles Feed</a><br /><br />
+    <a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=MLB&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">MLB Articles Feed</a><br /><br />
+    <a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=NHL&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">NHL Articles Feed</a><br /><br />
+    <a href="<?= BASE_URL ?>/process/writers_xml_feed.php?le=BOXING/MMA&aid=<? echo $current_affiliate->id ?>" target="_blank" class="normal_link">BOXING/MMA Articles Feed</a>
  
  
 <? }else if($book->id == 3){ ?>  

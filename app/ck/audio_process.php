@@ -22,12 +22,12 @@ $conn_id = ftp_audio_conecction();
 // download server file
 if (ftp_get($conn_id, $main_path.$local_file, $local_file, FTP_ASCII))
   { 
-  $path = "http://localhost:8080/audio/".$local_file;
+  $path = BASE_URL . "/audio/".$local_file;
   header("Location: $path");
   ?>
   <div id = "audio" name= "audio" style="color:#FFF">
    <?php /*?> <!--   
-    <embed width='248' src='http://localhost:8080/audio/<? echo $local_file ?>' urlsubstitute='<samplestring>:<http://localhost:8080/ck/images/reload.png>'>--><?php */    ?>
+    <embed width='248' src='\" . BASE_URL . \"/audio/<? echo $local_file ?>' urlsubstitute='<samplestring>:<http://localhost:8080/ck/images/reload.png>'>--><?php */    ?>
      FILE DOWNLOADED SUCCESSFULLY, You can use this program to hear the file<BR>
      <a href="http://www.videolan.org/vlc/download-windows.html" target="_blank"><strong>VLC</strong></a>
     </div>

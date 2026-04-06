@@ -6,11 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" media="all" href="http://localhost:8080/includes/calendar/jsDatePick_ltr.min.css" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript" src="../process/js/functions.js"></script>
-<script type="text/javascript" src="http://localhost:8080/includes/calendar/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
 		new JsDatePick({
@@ -25,7 +25,7 @@
 <!--
 function delete_message(id){
 	if(confirm("Are you sure you want to DELETE this entry from the system?")){		
-		$('#idel').attr('src',"http://localhost:8080/ck/process/actions/delete_agent_message.php?id="+id)
+		$('#idel').attr('src',BASE_URL . "/ck/process/actions/delete_agent_message.php?id="+id)
 		$("#tr_" + id).hide();
 	}
 }
@@ -177,7 +177,7 @@ $messages = get_all_agents_messages();
 		}
 		?>
         </th>
-        <th class="table_td<? echo $style ?>"><a class="normal_link" target="_self" href="http://localhost:8080/ck/agents_messages.php?id=<? echo $msj->vars["id"] ?>">Edit</a></th>
+        <th class="table_td<? echo $style ?>"><a class="normal_link" target="_self" href="<?= BASE_URL ?>/ck/agents_messages.php?id=<? echo $msj->vars["id"] ?>">Edit</a></th>
         <th class="table_td<? echo $style ?>"><a class="normal_link" href="javascript:delete_message(<? echo $msj->vars["id"] ?>)">Delete</a> </th>
       </tr>
       <? } ?>

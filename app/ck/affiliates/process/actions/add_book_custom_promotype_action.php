@@ -31,7 +31,7 @@
 	
 	}
 	
-	header("Location: http://localhost:8080/ck/affiliates/partners_custom_promotype_view.php?type=".$_POST["type"]);
+	header("Location: " . BASE_URL . "/ck/affiliates/partners_custom_promotype_view.php?type=".$_POST["type"]);
 
 ?>
 <? } else { echo "ACCESS DENIED"; }?>

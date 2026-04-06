@@ -55,8 +55,8 @@ function action_checkbox(action,total,table){
 	   }
 	  if (check){
 		var tks = tickets.substring(0, tickets.length - 10);
-		//document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/action_feedback.php?important="+important+"&tks="+tks;
-	   window.location = "http://localhost:8080/ck/process/actions/action_feedback.php?important="+important+"&tks="+tks;
+		//document.getElementById("idel").src = BASE_URL . "/ck/process/actions/action_feedback.php?important="+important+"&tks="+tks;
+	   window.location = BASE_URL . "/ck/process/actions/action_feedback.php?important="+important+"&tks="+tks;
 	  }
   }
 }

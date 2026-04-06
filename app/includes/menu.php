@@ -5,7 +5,7 @@
         <!--Left Side Menu-->
     </td>
     <td style="text-align:right;">
-    	<a class="menu_link" href="http://localhost:8080">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    	<a class="menu_link" href="<?= BASE_URL ?>">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
     	<a class="menu_link" href="tools.php">Marketing Tools</a>&nbsp;&nbsp;&nbsp;&nbsp;    	
     	<a class="menu_link" href="reports.php">Reports</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a class="menu_link" href="account.php">Account</a>&nbsp;&nbsp;&nbsp;&nbsp;

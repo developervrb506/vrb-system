@@ -26,13 +26,13 @@ if($_POST["report"]){
     <?	
 }else if($_POST["reload"]){
 	if($_POST["mobile"]){
-		header("Location: http://localhost:8080/ck/mobile/expense.php?e=70");	
+		header("Location: " . BASE_URL . "/ck/mobile/expense.php?e=70");	
 	}else{
-		header("Location: http://localhost:8080/ck/insert_expense.php");
+		header("Location: " . BASE_URL . "/ck/insert_expense.php");
 	}
 }else if(!$_POST["noredirect"]){
-	//header("Location: http://localhost:8080/ck/expenses_index.php?e=47");
-	?><script type="text/javascript">parent.location.href = "http://localhost:8080/ck/expenses_index.php?e=47";</script><?
+	//header("Location: " . BASE_URL . "/ck/expenses_index.php?e=47");
+	?><script type="text/javascript">parent.location.href = BASE_URL . "/ck/expenses_index.php?e=47";</script><?
 }else{
 	?> <div style="padding:25px; text-align:center; color:#fff; font:Arial, Helvetica, sans-serif; font-size:24px;">Expense Inserted</div> <? 	
 }

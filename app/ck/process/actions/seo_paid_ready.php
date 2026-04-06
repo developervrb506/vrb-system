@@ -11,6 +11,6 @@ if($current_clerk->im_allow("seo_system")) {
 	}
 	
 	
-	header("Location: http://localhost:8080/ck/seo_get_lead.php");	
+	header("Location: " . BASE_URL . "/ck/seo_get_lead.php");	
 }
 ?>

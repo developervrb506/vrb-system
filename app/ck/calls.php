@@ -83,8 +83,8 @@ if(isset($_GET["lid"])){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title><? echo $title ?> Calls</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -205,7 +205,7 @@ to:
     <td class="table_td<? echo $style ?>" align="center">
 	
 	<? if (count($audio)>0 && check_ftp_audio_exist($audio["uniqueid"],$conn_id)){ ?>
-        <a href="http://localhost:8080/ck/audio_box.php?id=<? echo $audio["uniqueid"] ?>" class="normal_link" rel="shadowbox;height=150;width=250"> Listen </a>
+        <a href="<?= BASE_URL ?>/ck/audio_box.php?id=<? echo $audio["uniqueid"] ?>" class="normal_link" rel="shadowbox;height=150;width=250"> Listen </a>
    <? } ?>
     </td>
   </tr>

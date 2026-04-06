@@ -6,11 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" media="all" href="http://localhost:8080/includes/calendar/jsDatePick_ltr.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
 <title>The Betting Edge</title>
 
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/includes/calendar/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
 		new JsDatePick({
@@ -30,7 +30,7 @@
 
 function delete_bet(id){
 	if(confirm("Are you sure you want to DELETE this entry from the system?")){
-		document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/insert_betting_edge_action.php?id="+id;
+		document.getElementById("idel").src = BASE_URL . "/ck/process/actions/insert_betting_edge_action.php?id="+id;
 		document.getElementById("tr_"+id).style.display = "none";
 	}
 }
@@ -107,7 +107,7 @@ if($from == ""){
         <td class="table_td<? echo $style ?>"><? echo $bet->vars["bet_type"] ?></td>
         <td class="table_td<? echo $style ?>"><? echo $bet->vars["line"] ?></td>
         <td class="table_td<? echo $style ?>">$<? echo $bet->vars["risk"] ?> / $<? echo $bet->vars["win"] ?> </td>
-         <td class="table_td<? echo $style ?>"><a class="normal_link" href="http://localhost:8080/ck/betting_edge/betting_edge_create.php?id=<? echo $bet->vars["id"] ?>">Edit</a></td>  
+         <td class="table_td<? echo $style ?>"><a class="normal_link" href="<?= BASE_URL ?>/ck/betting_edge/betting_edge_create.php?id=<? echo $bet->vars["id"] ?>">Edit</a></td>  
         <td class="table_td<? echo $style ?>"><a class="normal_link" href="javascript:delete_bet(<? echo $bet->vars["id"] ?>,'delete')">Delete</a>
         </td>       
 

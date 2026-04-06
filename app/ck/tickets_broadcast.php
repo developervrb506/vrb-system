@@ -55,7 +55,7 @@ if(isset($_GET["detail"])){
 	validations.push({id:"message",type:"null", msg:"Message is required"});
     </script>
     <div align="right">
-     <span ><a href="http://localhost:8080/ck/tickets_broadcast.php">Back</a></span>
+     <span ><a href="<?= BASE_URL ?>/ck/tickets_broadcast.php">Back</a></span>
     </div>
 	<div class="form_box" style="width:500px;">
         <form method="post" action="?e=52" onsubmit="return validate(validations)" enctype="multipart/form-data">

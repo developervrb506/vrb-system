@@ -45,7 +45,7 @@ function confirm_chargeback(){
 				else{$camount = abs($player->vars->AvailBalance)*-1;}
 				?>
                 <p>Clear Amount: <input name="amount" type="text" id="amount" value="<? echo $camount ?>" /></p>
-				<p><input type="image" src="http://localhost:8080/images/temp/submit.jpg" /></p>
+				<p><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" /></p>
                 
             </form>
             <? } ?>
@@ -161,7 +161,7 @@ function confirm_chargeback(){
             <td><textarea name="msg" cols="17" rows="3" id="msg"></textarea></td>
           </tr> 
           <tr>    
-            <td><input type="image" src="http://localhost:8080/images/temp/submit.jpg" onclick="this.style.display = 'none'" /></td>
+            <td><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" onclick="this.style.display = 'none'" /></td>
             <td>&nbsp;</td>
           </tr>
         </table>

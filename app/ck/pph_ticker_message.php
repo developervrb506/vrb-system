@@ -10,8 +10,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
 <script type="text/javascript" src="../process/js/functions.js"></script>
 	<script type="text/javascript">
     var validations = new Array();
@@ -26,8 +26,8 @@
 
 function delete_ticker(id){
 	if(confirm("Are you sure you want to DELETE this entry from the system?")){
-		//document.getElementById("idel").src = "http://localhost:8080/ck/process/actions/delete_pph_ticker.php?id="+id;
-		$('#idel').attr('src',"http://localhost:8080/ck/process/actions/delete_pph_ticker.php?id="+id)
+		//document.getElementById("idel").src = BASE_URL . "/ck/process/actions/delete_pph_ticker.php?id="+id;
+		$('#idel').attr('src',BASE_URL . "/ck/process/actions/delete_pph_ticker.php?id="+id)
 		//document.getElementById("tr_"+id).style.display = "none";
 		$("#tr_" + id).hide();
 	}
@@ -126,7 +126,7 @@ $tickets = get_all_pph_ticker();
         <th class="table_td<? echo $style ?>"><? echo str_replace("__cs__","'",$tk->vars["message"]); ?> 
         </th>
         <th class="table_td<? echo $style ?>"><? echo $tk->vars["by"]->vars["name"] ?></th>
-        <th class="table_td<? echo $style ?>"><a class="normal_link" target="_self" href="http://localhost:8080/ck/pph_ticker_message.php?id=<? echo $tk->vars["id"] ?>">Edit</a></th>  
+        <th class="table_td<? echo $style ?>"><a class="normal_link" target="_self" href="<?= BASE_URL ?>/ck/pph_ticker_message.php?id=<? echo $tk->vars["id"] ?>">Edit</a></th>  
         <th class="table_td<? echo $style ?>"><a class="normal_link" href="javascript:delete_ticker(<? echo $tk->vars["id"] ?>)">Delete</a>
         </th> 
   </tr>

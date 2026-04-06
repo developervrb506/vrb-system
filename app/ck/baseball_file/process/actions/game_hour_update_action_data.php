@@ -15,21 +15,21 @@ $gid = "gid=".$_GET["gid"];
 <body style="background:#fff; padding:20px;">
 <div style="display:none">
 <?
-require_once("http://localhost:8080/ck/baseball_file/jobs/espn_games.php");
+require_once(BASE_URL . "/ck/baseball_file/jobs/espn_games.php");
 
-echo @file_get_contents("http://localhost:8080/ck/baseball_file/jobs/pitchers_by_game.php?".$gid);
-echo @file_get_contents("http://localhost:8080/ck/baseball_file/jobs/pitchers_data_home.php?".$gid);
-echo @file_get_contents("http://localhost:8080/ck/baseball_file/jobs/pitchers_data_away.php?".$gid);
-echo @file_get_contents("http://localhost:8080/ck/baseball_file/jobs/pitchers_velocity_home.php?".$gid);
-echo @file_get_contents("http://localhost:8080/ck/baseball_file/jobs/pitchers_velocity_away.php?".$gid);
-echo @file_get_contents("http://localhost:8080/ck/baseball_file/jobs/pitchers_groundball.php?".$gid);
+echo @file_get_contents(BASE_URL . "/ck/baseball_file/jobs/pitchers_by_game.php?".$gid);
+echo @file_get_contents(BASE_URL . "/ck/baseball_file/jobs/pitchers_data_home.php?".$gid);
+echo @file_get_contents(BASE_URL . "/ck/baseball_file/jobs/pitchers_data_away.php?".$gid);
+echo @file_get_contents(BASE_URL . "/ck/baseball_file/jobs/pitchers_velocity_home.php?".$gid);
+echo @file_get_contents(BASE_URL . "/ck/baseball_file/jobs/pitchers_velocity_away.php?".$gid);
+echo @file_get_contents(BASE_URL . "/ck/baseball_file/jobs/pitchers_groundball.php?".$gid);
 
 ?>
 </div>
 Update Completed
 </body>
 <script type="text/javascript">
-parent.location.href="http://localhost:8080/ck/baseball_file/report.php"
+parent.location.href="<?= BASE_URL ?>/ck/baseball_file/report.php"
 </script>
 </html>
 

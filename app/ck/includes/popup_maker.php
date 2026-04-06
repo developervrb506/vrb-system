@@ -56,6 +56,6 @@ if($current_clerk->im_allow("baseball_alerts")){
 
 <? if($alert){ ?>
 <SCRIPT LANGUAGE="JavaScript">
-	msg=window.open("http://localhost:8080/ck/process/actions/alert_window.php","msg","height=300,width=400,left=80,top=80, scrollbars=yes");
+	msg=window.open(BASE_URL . "/ck/process/actions/alert_window.php","msg","height=300,width=400,left=80,top=80, scrollbars=yes");
 </script>
 <? } ?>

@@ -1,5 +1,5 @@
 <div class="page_title">
-  <div class="page_title_content"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="http://localhost:8080/images/new_design/h1_content.jpg" width="95" height="84" alt="Content Consulting" border="0" />
+  <div class="page_title_content"> <img style="display:block; margin-top:-5px; padding-left:5px; float:left;" src="<?= BASE_URL ?>/images/new_design/h1_content.jpg" width="95" height="84" alt="Content Consulting" border="0" />
     <h1>Content Consulting</h1>
     <p>Let's talk about you.</p>
     <!--end page_title_seo--></div>

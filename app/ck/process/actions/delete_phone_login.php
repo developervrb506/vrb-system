@@ -11,6 +11,6 @@ $login =  get_login_by_phone($id_login);
 $login->delete();
 
 
-header("Location: http://localhost:8080/ck/create_user.php?uid=".$clerk."");
+header("Location: " . BASE_URL . "/ck/create_user.php?uid=".$clerk."");
 
 ?>

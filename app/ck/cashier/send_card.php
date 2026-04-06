@@ -126,7 +126,7 @@ if($_POST["action"] == "send"){
 		<td><textarea name="comment" cols="35" rows="7" id="comment"></textarea></td>
 	  </tr>
 	  <tr>    
-		<td><input type="image" src="http://localhost:8080/images/temp/submit.jpg" /></td>
+		<td><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" /></td>
 		<td>&nbsp;</td>
 	  </tr>
 	</table>

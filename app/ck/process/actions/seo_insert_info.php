@@ -30,6 +30,6 @@ $log->vars["action"] = "if";
 $log->insert();
 
 
-header("Location: http://localhost:8080/ck/seo_insert_info.php?e=72");
+header("Location: " . BASE_URL . "/ck/seo_insert_info.php?e=72");
 ?>
 <? }else{echo "Access Denied";} ?>

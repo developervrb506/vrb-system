@@ -44,7 +44,7 @@ html>body #main { width: 500px; }	/* Reset for opera */
 	padding:5px;
 	}	
 #formchat {
-	background:#253635 url(http://localhost:8080/livehelp/themes/titanium/images/bgd-chatarea.gif) top repeat-x;
+	background:#253635 url(/livehelp/themes/titanium/images/bgd-chatarea.gif) top repeat-x;
 	margin:0px;
 	color:#CCC;
 	padding:10px;

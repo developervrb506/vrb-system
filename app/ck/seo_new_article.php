@@ -17,7 +17,7 @@ if(isset($_GET["lid"])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" media="all" href="http://localhost:8080/includes/calendar/jsDatePick_ltr.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
 <title><? echo $title ?></title>
 <script type="text/javascript" src="../process/js/functions.js"></script>
 <script type="text/javascript">
@@ -55,7 +55,7 @@ validations.push({id:"keyword",type:"null", msg:"Keyword is required"});
         <td>File</td>
         <td>
         	<? if($group->vars["file"] != ""){ ?>
-            <a href="http://localhost:8080/ck/csv/<? echo $group->vars["file"]; ?>" target="_blank" class="normal_link">View File</a><br />
+            <a href="<?= BASE_URL ?>/ck/csv/<? echo $group->vars["file"]; ?>" target="_blank" class="normal_link">View File</a><br />
             <? } ?>
         	<input name="afile" type="file" id="afile" />
         </td>

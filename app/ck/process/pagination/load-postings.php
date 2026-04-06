@@ -21,7 +21,7 @@ function confirmation(id,status_id,status) {
 }
 //-->
 </script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/sortables.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 
 <? if(isset($_POST['pageId']) && !empty($_POST['pageId']))
 {
@@ -148,7 +148,7 @@ if($count > 0) { ?>
         ?>
         <a href="javascript:confirmation(<? echo $post["id"] ?>,<? echo $status_id ?>,'<? echo $status ?>')"><? echo $status; ?></a>
         </th>
-        <th class="table_td<? echo $style ?>"><a href="http://localhost:8080/ck/posting/posting.php?post_id=<? echo $post["id"] ?>">Edit</a></th>   
+        <th class="table_td<? echo $style ?>"><a href="<?= BASE_URL ?>/ck/posting/posting.php?post_id=<? echo $post["id"] ?>">Edit</a></th>   
   </tr>
 <? } ?>
 </tbody>

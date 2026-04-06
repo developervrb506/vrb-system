@@ -26,7 +26,7 @@ if(clean_get("edit_id")!=""){
 	$goal->insert();	
 }
 
-header("Location: http://localhost:8080/ck/goals.php?e=58");
+header("Location: " . BASE_URL . "/ck/goals.php?e=58");
 
 ?>
 <? }else{echo "Access Denied";} ?>

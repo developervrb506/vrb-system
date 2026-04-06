@@ -24,9 +24,9 @@ $data["fees"] = $vcc->vars["payout_fee"];
 $key = two_way_enc(implode("_*_",$data));
 
 if(contains_ck($vcc->vars["payout_player"],"AF")){
-	header("Location: http://localhost:8080/ck/dgs_payout_affiliate.php?mts=".$key);
+	header("Location: " . BASE_URL . "/ck/dgs_payout_affiliate.php?mts=".$key);
 }else{
-	header("Location: http://localhost:8080/ck/dgs_payout.php?mts=".$key);
+	header("Location: " . BASE_URL . "/ck/dgs_payout.php?mts=".$key);
 }
 
 ?>

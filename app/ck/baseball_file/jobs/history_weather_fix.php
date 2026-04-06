@@ -106,8 +106,8 @@ $team = $game->vars["team_home"];
 		  
 		  if ($weather["condition"] != ""){
 	   $tdate = date("Y-m-d",strtotime($weather["date"])) ;
-	   echo file_get_contents("http://localhost:8080/ck/baseball_file/jobs/weather_stadistics.php?date=$tdate");	 
-	   echo file_get_contents("http://localhost:8080/ck/baseball_file/jobs/baseball_stats.php?date=$tdate");	 
+	   echo file_get_contents(BASE_URL . "/ck/baseball_file/jobs/weather_stadistics.php?date=$tdate");	 
+	   echo file_get_contents(BASE_URL . "/ck/baseball_file/jobs/baseball_stats.php?date=$tdate");	 
 	 }
 		  
 		  

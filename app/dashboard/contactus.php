@@ -26,7 +26,7 @@ include "../includes/menu.php"; ?>
     <ul>
       <?php /*?><li style="list-style:none;">Toll Free Phone: <span style="font-size:16px;"> 1.800.<span style="display:none;">**</span>986.1152</span></li>
       <br />
-      <li style="list-style:none;">Live Chat: <a style="color:#e94f04;" href="javascript:;" onclick="Javascript:window.open('http://localhost:8080/livehelp/request_email.php?l=admtop&amp;x=1&amp;deptid=1&amp;agsite=vrb','livehelp','width=530,height=410,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">Click Here</a></li>      
+      <li style="list-style:none;">Live Chat: <a style="color:#e94f04;" href="javascript:;" onclick="Javascript:window.open('<?= BASE_URL ?>/livehelp/request_email.php?l=admtop&amp;x=1&amp;deptid=1&amp;agsite=vrb','livehelp','width=530,height=410,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">Click Here</a></li>      
       <br /><?php */?>
       <li style="list-style:none;">Message Us: <a style="color:#e94f04;" href="javascript:;" onClick="Javascript:window.open('http://vrbmarketing.com/tickets/?cat=agents&web=vrb','TicketAlert','width=597,height=460,menubar=no,location=no,resizable=yes,scrollbars=yes,status=no');return(false);" target="_top">Click here to send us a message</a></li>     
     </ul>

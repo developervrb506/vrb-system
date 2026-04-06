@@ -44,9 +44,9 @@ else {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title><? echo $title ?> Calls</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -162,7 +162,7 @@ to:
    <br />
      // COMMMENT ON 09/01/2016, According to Frank that is not used 
     <script type="text/javascript">
-	load_url_content_in_div('http://localhost:8080/ck/calls_queue_complete.php<? echo $data ?>',"aff_totals");
+	load_url_content_in_div('<?= BASE_URL ?>/ck/calls_queue_complete.php<? echo $data ?>',"aff_totals");
     </script><?php */?>
 	
 
@@ -354,7 +354,7 @@ $affiliates = json_decode(file_get_contents("http://www.sportsbettingonline.ag/u
        <td class="table_td<? echo $style ?>" align="center">
 	
 	<? if (check_ftp_audio_exist($call->vars["uniqueid"],$conn_id)){ ?>
-        <a href="http://localhost:8080/ck/process/actions/audio_process.php?id=<? echo $call->vars["uniqueid"] ?>" class="normal_link"> GET Call </a>
+        <a href="<?= BASE_URL ?>/ck/process/actions/audio_process.php?id=<? echo $call->vars["uniqueid"] ?>" class="normal_link"> GET Call </a>
    <?  $str = "Listen"; } else {   if ($current_clerk->vars["id"] == 86){ echo $call->vars["uniqueid"];  }}  ?> 
     </td>
   </tr>

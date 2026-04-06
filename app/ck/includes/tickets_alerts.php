@@ -51,6 +51,6 @@ body {
 }
 </style>
 <span style="font-size:24px">
-  	<a href="http://localhost:8080/ck/tickets.php"  title="<? echo  $str_pending ?>" target="_blank" style="color:#F00;"><? echo $count ?> Unattended Tickets!</a>
+  	<a href="<?= BASE_URL ?>/ck/tickets.php"  title="<? echo  $str_pending ?>" target="_blank" style="color:#F00;"><? echo $count ?> Unattended Tickets!</a>
 </span>
 <? } ?>

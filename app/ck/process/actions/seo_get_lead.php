@@ -16,12 +16,12 @@ if(!is_null($lead)){
 	$log->vars["action"] = "sa";
 	$log->insert();
 	
-	header("Location: http://localhost:8080/ck/seo_lead_detail.php?l=".$lead->vars["id"]);
+	header("Location: " . BASE_URL . "/ck/seo_lead_detail.php?l=".$lead->vars["id"]);
 }else{
 	?>
     <script type="text/javascript">
 	alert("No Leads available");
-	location.href = 'http://localhost:8080/ck/seo_get_lead.php';
+	location.href = BASE_URL . '/ck/seo_get_lead.php';
 	</script>
     <?
 }

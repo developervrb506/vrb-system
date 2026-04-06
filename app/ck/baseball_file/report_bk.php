@@ -15,7 +15,7 @@
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
 <title>Baseball File</title>
 <link rel="stylesheet" type="text/css" media="all" href="../../includes/calendar/jsDatePick_ltr.min.css" />
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 
 <? 
 
@@ -109,10 +109,10 @@ $preseason = true;
 ?>
 
 
-<script type="text/javascript" src="http://localhost:8080/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
 <script type="text/javascript" src="js/functions.js"> </script>
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ck/includes/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -775,7 +775,7 @@ $fix = false;;
 	   if (!$game->vars["espn_game"]){
 	   ?>
           <td class="table_td<? echo $style ?>_red" style="font-size:12px;">
-	   <a href="http://localhost:8080/ck/baseball_file/game_hour_fix.php?gid=<? echo $game->vars["id"]?>" class="normal_link" rel="shadowbox;height=270;width=300"><? echo $hour ?></a>
+	   <a href="<?= BASE_URL ?>/ck/baseball_file/game_hour_fix.php?gid=<? echo $game->vars["id"]?>" class="normal_link" rel="shadowbox;height=270;width=300"><? echo $hour ?></a>
             </td>
 	   <? 
       }
@@ -816,7 +816,7 @@ $fix = false;;
       </td>
       
       <td   id="game_info_<? echo $game->vars["id"]?>" class="table_td<? echo $style ?>" style="font-size:12px;">
-      	<a href="http://localhost:8080/ck/baseball_file/stadium_phones.php?sid=<? echo $stadium->vars["id"]?>" class="normal_link" rel="shadowbox;height=700;width=630"><? echo "(".$game->vars["home_rotation"].") ".$game->vars["home"]?></a>
+      	<a href="<?= BASE_URL ?>/ck/baseball_file/stadium_phones.php?sid=<? echo $stadium->vars["id"]?>" class="normal_link" rel="shadowbox;height=700;width=630"><? echo "(".$game->vars["home_rotation"].") ".$game->vars["home"]?></a>
         <BR><BR>
         <span style="font-size: 14px;" title="Yesterday's Score"><strong>Y Scr :</strong> <? echo $yesterday_data['runs_home']?></span>
       </td>
@@ -1068,7 +1068,7 @@ $fix = false;;
 	        ?>"
         
         > <img src="images/<? echo $weather->vars["wind_direction"] ?>.png" width="98" height="98" /></div>
-         <a href="http://localhost:8080/ck/baseball_file/stadium_wind_data.php?st=<? echo $stadium->vars["team_id"] ?>&wd=<? echo $weather->vars["wind_direction"] ?>" target="_blank" >
+         <a href="<?= BASE_URL ?>/ck/baseball_file/stadium_wind_data.php?st=<? echo $stadium->vars["team_id"] ?>&wd=<? echo $weather->vars["wind_direction"] ?>" target="_blank" >
          <? echo $weather->vars["wind_direction"] ; /* if (in_array($weather->vars["wind_direction"],$g_wind)) { echo '  Ok  '; }  */ ?>
          <? }
          else{
@@ -1076,7 +1076,7 @@ $fix = false;;
 		 }?>
           </a>
  <div class="box">
- <iframe src="http://localhost:8080/ck/baseball_file/stadium_wind_data.php?st=<? echo $stadium->vars["team_id"] ?>&wd=<? echo $weather->vars["wind_direction"]  ?>" width = "300px" height = "475px"></iframe></div>
+ <iframe src="<?= BASE_URL ?>/ck/baseball_file/stadium_wind_data.php?st=<? echo $stadium->vars["team_id"] ?>&wd=<? echo $weather->vars["wind_direction"]  ?>" width = "300px" height = "475px"></iframe></div>
      </td> 
      
      <td name="weather_stadistics" class="table_td<? echo $style.$weather_style ?>" style="font-size:12px;" id="wp<? echo $game->vars["id"]?>">
@@ -1387,7 +1387,7 @@ $fix = false;;
         </div>
 	<? if (isset($games_bets[$game->vars["id"]])) { ?>
      
-     <a href="http://localhost:8080/ck/baseball_file/bets.php?gid=<? echo $game->vars["id"] ?>" class="normal_link" rel="shadowbox;height=270;width=300"> View Bet</a>
+     <a href="<?= BASE_URL ?>/ck/baseball_file/bets.php?gid=<? echo $game->vars["id"] ?>" class="normal_link" rel="shadowbox;height=270;width=300"> View Bet</a>
     
     <? } ?>
     
@@ -1616,7 +1616,7 @@ $fix = false;;
 		   }?> 
 		   <BR>
            <? if ($player_name_a != "" ){ ?>
-           <a href="http://localhost:8080/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_a->vars["espn_player"] ?>&name=<? echo $player_name_a ?>&img=<? echo $player_a->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_home->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_home->vars["team_name"]  ?>">Info</a><div class="box"><iframe src="http://localhost:8080/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_a->vars["espn_player"] ?>&name=<? echo $player_name_a ?>&img=<? echo $player_a->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_home->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_home->vars["team_name"]  ?>" width = "550px" height = "500px"></iframe></div>
+           <a href="<?= BASE_URL ?>/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_a->vars["espn_player"] ?>&name=<? echo $player_name_a ?>&img=<? echo $player_a->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_home->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_home->vars["team_name"]  ?>">Info</a><div class="box"><iframe src="<?= BASE_URL ?>/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_a->vars["espn_player"] ?>&name=<? echo $player_name_a ?>&img=<? echo $player_a->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_home->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_home->vars["team_name"]  ?>" width = "550px" height = "500px"></iframe></div>
 		   <? } ?>
 		      
    
@@ -1881,7 +1881,7 @@ $fix = false;;
            else{ echo "<strong>".$player_name_b."</strong>"; } ?> 
        
     <? if ($player_name_b != "" ){ ?>        
-   <BR><a href="http://localhost:8080/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_h->vars["espn_player"] ?>&name=<? echo $player_name_b ?>&img=<? echo $player_h->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_away->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_away->vars["team_name"]  ?>">Info</a><div class="box"><iframe src="http://localhost:8080/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_h->vars["espn_player"] ?>&name=<? echo $player_name_b ?>&img=<? echo $player_h->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_away->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_away->vars["team_name"]  ?>" width = "550px" height = "500px"></iframe></div>
+   <BR><a href="<?= BASE_URL ?>/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_h->vars["espn_player"] ?>&name=<? echo $player_name_b ?>&img=<? echo $player_h->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_away->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_away->vars["team_name"]  ?>">Info</a><div class="box"><iframe src="<?= BASE_URL ?>/ck/baseball_file/player_fantasy_data.php?player=<? echo $player_h->vars["espn_player"] ?>&name=<? echo $player_name_b ?>&img=<? echo $player_h->vars["image"] ?>&std=<? echo $stadium->vars["id"]?>&std_name=<? echo $stadium->vars["name"] ?>&vs=<? echo $fangraphs_team_away->vars["espn_team"]  ?>&vs_name=<? echo $fangraphs_team_away->vars["team_name"]  ?>" width = "550px" height = "500px"></iframe></div>
    <? } ?>
    
      <div id="manual_pitcher_home<? echo $game->vars["id"]?>" style="display:none">	 

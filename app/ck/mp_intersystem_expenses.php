@@ -10,7 +10,7 @@ if(!is_numeric($amount)){$amount = 0;}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/ck/balances/api/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
 </head>
 <body style="background:#fff; padding:20px;">
 <span class="page_title">Intersystem Expense</span><br /><br />
@@ -40,7 +40,7 @@ if(!is_numeric($amount)){$amount = 0;}
         <td>
         	<? $data = get_all_expense_emails(); ?>
         	<? create_objects_list("email", "email", $data, "id", "name", "-- None --") ?><br />
-            <a href="http://localhost:8080/ck/expense_email_list.php" class="normal_link" target="_parent">
+            <a href="<?= BASE_URL ?>/ck/expense_email_list.php" class="normal_link" target="_parent">
             	Manage emails list
             </a>
         </td>

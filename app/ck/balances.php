@@ -7,8 +7,8 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="includes/js/jquery-1.8.0.min.js"></script>
 <title>Balance Sheet</title>
-<link rel="stylesheet" href="http://localhost:8080/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="http://localhost:8080/includes/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -199,4 +199,4 @@ Shadowbox.init();
 
 </div>
 <? include "../includes/footer.php" ?>
-<? }else if($current_clerk->im_allow("processing_balances")){header("Location: http://localhost:8080/ck/processing_balances.php");}else if($current_clerk->im_allow("pph_balances")){header("Location: http://localhost:8080/ck/pph_balances.php");}else{echo "Access Denied";} ?>
+<? }else if($current_clerk->im_allow("processing_balances")){header("Location: " . BASE_URL . "/ck/processing_balances.php");}else if($current_clerk->im_allow("pph_balances")){header("Location: " . BASE_URL . "/ck/pph_balances.php");}else{echo "Access Denied";} ?>

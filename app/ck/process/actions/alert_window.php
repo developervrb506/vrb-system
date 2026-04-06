@@ -119,7 +119,7 @@ if($current_clerk->im_allow("baseball_alerts")){
               Credit Card Denied for <strong><? echo $ccd["player"] ?></strong> at <strong><? echo date("h:m A",strtotime($ccd["tdate"])); ?></strong>	
               <? if($ccd["crm_name"] > 0){ ?>
               <br />
-              <a target="_blank" href="http://localhost:8080/ck/call.php?odid=<? echo $ccd["crm_name"] ?>" class="normal_link">
+              <a target="_blank" href="<?= BASE_URL ?>/ck/call.php?odid=<? echo $ccd["crm_name"] ?>" class="normal_link">
               	Open Call
               </a>
               <? } ?>
@@ -244,7 +244,7 @@ if($current_clerk->im_allow("baseball_alerts")){
           <tr>
             <td style="color:#060;" class="table_td<? echo $style ?>">
                     Player <? echo $hcall->vars["player"] ?> <? echo strtolower($hcall->vars["request"]) ?><br />
-                    <a href="http://localhost:8080/ck/help_call_requesrts.php" class="normal_link" target="_blank">View Request</a>
+                    <a href="<?= BASE_URL ?>/ck/help_call_requesrts.php" class="normal_link" target="_blank">View Request</a>
             </td>
            
             <td class="table_td<? echo $style?>" align="center">

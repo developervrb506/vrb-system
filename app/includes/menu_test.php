@@ -6,21 +6,21 @@
     <li><a href= "">VRB</a>
     <ul>
              
-			 <li><a href= "http://localhost:8080/ck/index.php">HOME</a></li>
+			 <li><a href="<?= BASE_URL ?>/ck/index.php">HOME</a></li>
 			 <? if($current_clerk->im_allow("users") || $current_clerk->admin()) { ?>
-             <li><a href= "http://localhost:8080/ck/clerks.php">Users</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/clerks.php">Users</a></li>
              <? } ?>
              
 			 <? if($current_clerk->admin()){ ?>
-             <li><a href= "http://localhost:8080/ck/user_groups.php">Groups</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/user_groups.php">Groups</a></li>
              <? } ?>
              
 			 <? if($current_clerk->im_allow("all_schedules") || $current_clerk->is_manager()){ ?>
-             <li><a href= "http://localhost:8080/ck/schedules.php">Schedules</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/schedules.php">Schedules</a></li>
              <? } ?>
              
 			 <? if($current_clerk->admin()){ ?>
-              <li><a href= "http://localhost:8080/ck/messages.php">MESSAGES</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/messages.php">MESSAGES</a></li>
              <? } ?>
              
 			 <? if($current_clerk->admin()){ ?>
@@ -28,13 +28,13 @@
              <? } ?>
            
              <? if($current_clerk->im_allow("rules") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"] ){ ?>
-             <li><a href= "http://localhost:8080/ck/rules.php">Rules</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/rules.php">Rules</a></li>
              <? } ?>  
              
              <? if($current_clerk->im_allow("goals_admin")){ ?>
-              <li><a href= "http://localhost:8080/ck/goals.php">GOALS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/goals.php">GOALS</a></li>
              <? }else{ ?> 
-              <li><a href="http://localhost:8080/ck/my_goals.php" >MY GOALS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/my_goals.php" >MY GOALS</a></li>
              <? } ?>    
     </ul></li> 
        
@@ -42,31 +42,31 @@
     <li><a href= "">SBO</a>
      <ul>
        <? if($current_clerk->im_allow("sbo_main_page")){ ?>
-             <li><a href= "http://localhost:8080/ck/sbo_index.php">SBO Home</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/sbo_index.php">SBO Home</a></li>
         <? } ?>
         <? if(!$current_clerk->im_allow("sbo_main_page")){ ?>
                 <? if($current_clerk->im_allow("sbo_cashback")) { ?>
-                 <li><a href= "http://localhost:8080/ck/sbo_cashback.php">10% Cashback</a></li>
+                 <li><a href="<?= BASE_URL ?>/ck/sbo_cashback.php">10% Cashback</a></li>
                 <? } ?>
                 
 				<? if($current_clerk->im_allow("special_deposits")) { ?>
-                <li><a href= "http://localhost:8080/ck/special_deposit.php">Special Deposits</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/special_deposit.php">Special Deposits</a></li>
                 <? } ?>
                 
 				<? if($current_clerk->im_allow("special_deposits")) { ?>
-                <li><a href= "http://localhost:8080/ck/special_payout.php">Special Payouts</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/special_payout.php">Special Payouts</a></li>
                 <? } ?>
                 
 				<? if(($current_clerk->im_allow("balance_adjustment")) || ($current_clerk->im_allow("balance_disbursements")) || ($current_clerk->im_allow("balance_receipt"))){ ?>
-                <li><a href= "http://localhost:8080/ck/balance_manager.php">Balance Manager</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/balance_manager.php">Balance Manager</a></li>
                 <? } ?>
                 
                  <? if($current_clerk->im_allow("sbo_banking")){ ?>
-                <li><a href= "http://localhost:8080/ck/sbo_banking.php">SBO BANKING</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/sbo_banking.php">SBO BANKING</a></li>
                 <? } ?>
                 
 				<? if($current_clerk->im_allow("reverse_transactions")){ ?>
-                <li><a href= "http://localhost:8080/ck/reverse_transactions.php">Reverse Transactions</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/reverse_transactions.php">Reverse Transactions</a></li>
                  <? } ?>
          <? } ?>     
       </ul></li>
@@ -75,7 +75,7 @@
       <li><a href= "">PPH</a>
       <ul>  
             <? if($current_clerk->im_allow("pph_accounting")){ ?>
-              <li><a href= "http://localhost:8080/ck/pph.php">PPH</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/pph.php">PPH</a></li>
             <? } ?>  
       </ul></li>
       
@@ -84,23 +84,23 @@
       
       <ul>  
             <? if($current_clerk->im_allow("credit_accounting")){ ?>
-              <li><a href= "http://localhost:8080/ck/credit.php">CREDIT</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/credit.php">CREDIT</a></li>
       
             <? } ?> 
             
             <? if($current_clerk->im_allow("balances")){ ?>
-              <li><a href= "http://localhost:8080/ck/balances.php">BALANCE SHEET</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/balances.php">BALANCE SHEET</a></li>
             <? } ?>  
             
              <? if($current_clerk->im_allow("balances")){ ?>
-              <li><a href= "http://localhost:8080/ck/income_statement.php">INCOME STATEMENT</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/income_statement.php">INCOME STATEMENT</a></li>
              <? } ?>  
              
              <? if($current_clerk->im_allow("processing_balances")){ ?>
-             <li><a href= "http://localhost:8080/ck/processing_balances.php">PROCESING BALANCE SHEET</a></li>    <? } ?>
+             <li><a href="<?= BASE_URL ?>/ck/processing_balances.php">PROCESING BALANCE SHEET</a></li>    <? } ?>
              
               <? if($current_clerk->im_allow("pph_balances")){ ?>
-              <li><a href= "http://localhost:8080/ck/pph_balances.php">PPH BALANCE SHEET</a></li> 
+              <li><a href="<?= BASE_URL ?>/ck/pph_balances.php">PPH BALANCE SHEET</a></li> 
               <? } ?>
             
       </ul></li>
@@ -111,19 +111,19 @@
 	 <li><a href= "">Transactions</a>
        <ul>  
            <? if($current_clerk->im_allow("prepaid_test")){ ?>
-             <li><a href= "http://localhost:8080/ck/prepaid_test.php">PREPAID TEST</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/prepaid_test.php">PREPAID TEST</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("prepaid_transactions")){ ?>
-            <li><a href= "http://localhost:8080/ck/prepaid_transactions.php">PREPAID</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/prepaid_transactions.php">PREPAID</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("moneypak_transactions")){ ?>
-            <li><a href= "http://localhost:8080/ck/moneypak_transactions.php">MONEYPAK</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/moneypak_transactions.php">MONEYPAK</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("cc_cashback")){ ?>
-              <li><a href= "http://localhost:8080/ck/cc_cashback.php">CC CHARGEBACK</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/cc_cashback.php">CC CHARGEBACK</a></li>
            <? } ?>
       </ul>
     </li>
@@ -133,15 +133,15 @@
        <li><a href= "">Expenses</a>
         <ul>
            <? if($current_clerk->im_allow("dj_expenses")){ ?>
-            <li><a href= "http://localhost:8080/ck/dj_expenses_index.php">Michael's Expenses</a></li>
+            <li><a href="<?= BASE_URL ?>/ck/dj_expenses_index.php">Michael's Expenses</a></li>
            <? } ?>
           
            <? if($current_clerk->im_allow("office_expenses")){ ?>
-             <li><a href= "http://localhost:8080/ck/office_expenses_index.php">Office's Expenses</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/office_expenses_index.php">Office's Expenses</a></li>
           <? } ?>
          
            <? if($current_clerk->im_allow("expenses_admin")){ ?>
-             <li><a href= "http://localhost:8080/ck/expenses_index.php">Expenses</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/expenses_index.php">Expenses</a></li>
            <? } ?>
        
        </ul>
@@ -152,62 +152,62 @@
        <li><a href= "">CRM</a>
        <ul>
              <? if($current_clerk->admin() || $current_clerk->im_allow("clerks_deposit_report")){ ?>
-              <li><a href= "http://localhost:8080/ck/deposist_report_new.php">DEPOSITS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/deposist_report_new.php">DEPOSITS</a></li>
              <? } ?>
 			
              <? if($current_clerk->admin() || $current_clerk->im_allow("clerks_transaction")){ ?>
-              <li><a href= "http://localhost:8080/ck/transactions.php">TRANSACTIONS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/transactions.php">TRANSACTIONS</a></li>
              <? } ?>
 			
 			 <? if($current_clerk->im_allow("phone_admin") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"] ){ ?>
-              <li><a href= "http://localhost:8080/ck/list.php">LIST</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/list.php">LIST</a></li>
              <? } ?>
            
               
               <? if($current_clerk->im_allow("email_requests")){ ?>
-               <li><a href= "http://localhost:8080/ck/email_requests.php">Email Request</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/email_requests.php">Email Request</a></li>
               <? } ?>  
               
 			  <? if($current_clerk->im_allow("phone_names") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-                <li><a href= "http://localhost:8080/ck/names.php">NAMES</a></li>
+                <li><a href="<?= BASE_URL ?>/ck/names.php">NAMES</a></li>
               <? } ?>
               
               <? if($current_clerk->vars["level"]->vars["is_sales"]){ ?>
                
                   <? if($current_clerk->vars["user_group"]->vars["id"] == 15 ){ ?>
-                    <li><a href= "http://localhost:8080/ck/name_agent_search_new.php">SEARCH</a></li>
+                    <li><a href="<?= BASE_URL ?>/ck/name_agent_search_new.php">SEARCH</a></li>
 				  <? }
                    else{ ?>
-                    <li><a href= "http://localhost:8080/ck/name_search_new.php">SEARCH</a></li>
+                    <li><a href="<?= BASE_URL ?>/ck/name_search_new.php">SEARCH</a></li>
                  <? } ?>
 			 <? } ?>
              
 			 <? if($current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-			  <li><a href= "http://localhost:8080/ck/manage_sales_clerks.php">CLERKS</a></li>
+			  <li><a href="<?= BASE_URL ?>/ck/manage_sales_clerks.php">CLERKS</a></li>
              <? } ?>
             
 			 <? if($current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-			   <li><a href= "http://localhost:8080/ck/calls.php">CALLS</a></li>
+			   <li><a href="<?= BASE_URL ?>/ck/calls.php">CALLS</a></li>
              <? } ?>
              
              <? if($current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-              <li><a href= "http://localhost:8080/ck/leads.php">MANAGE LEADS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/leads.php">MANAGE LEADS</a></li>
              <? } ?> 
              
              <? if($current_clerk->vars["level"]->vars["is_admin"]){ ?> 
-               <li><a href= "http://localhost:8080/ck/admin_clerk_index.php">PHONE SYSTEM</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/admin_clerk_index.php">PHONE SYSTEM</a></li>
              <? } ?> 
              
              <? if($current_clerk->im_allow("cs_logs")){ ?>
-               <li><a href= "http://localhost:8080/ck/cs_logs.php">CS LOGS</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/cs_logs.php">CS LOGS</a></li>
              <? } ?> 
              
 			 <? if($current_clerk->im_allow("durango_create")){ ?>
-              <li><a href= "http://localhost:8080/ck/durango_create_name.php">DURANGO NAME</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/durango_create_name.php">DURANGO NAME</a></li>
              <? } ?>
           
              <? if($current_clerk->im_allow("phone_admin") || $current_clerk->admin() || $current_clerk->vars["level"]->vars["sale_manager"]){ ?>
-               <li><a href= "http://localhost:8080/ck/webs.php">WEBSITES</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/webs.php">WEBSITES</a></li>
              <? } ?> 
             
        </ul>
@@ -220,15 +220,15 @@
     <li><a href= "">AFFILIATES</a>
      <ul>
          <? if($current_clerk->im_allow("affiliate_descriptions")){ ?>
-             <li><a href= "http://localhost:8080/ck/affiliates_description.php">AF COMMENTS </a></li>
+             <li><a href="<?= BASE_URL ?>/ck/affiliates_description.php">AF COMMENTS </a></li>
          <? } ?>
         
          <? if($current_clerk->im_allow("agent_freeplays")){ ?>
-             <li><a href= "http://localhost:8080/ck/agent_freeplays.php">AF FREELAYS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/agent_freeplays.php">AF FREELAYS</a></li>
          <? } ?>
          
          <? if($current_clerk->im_allow("affiliate_leads")){ ?>
-             <li><a href= "http://localhost:8080/ck/affiliates_leads.php">AF LEADS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/affiliates_leads.php">AF LEADS</a></li>
          <? } ?>
       
      </ul>
@@ -238,14 +238,14 @@
     <? // Tickets Menu ?>
 	<li><a href= "">TICKETS</a>
     <ul>
-          <li><a href= "http://localhost:8080/ck/department_tickets.php">TICKETS</a></li>
+          <li><a href="<?= BASE_URL ?>/ck/department_tickets.php">TICKETS</a></li>
 		  
 		  <? if($current_clerk->im_allow("rec_issues")){ ?>
-             <li><a href= "http://localhost:8080/ck/rec_issues.php">REC ISSUES </a></li>
+             <li><a href="<?= BASE_URL ?>/ck/rec_issues.php">REC ISSUES </a></li>
           <? } ?> 
           
           <? if($current_clerk->im_allow("tickets")){ ?> 
-             <li><a href= "http://localhost:8080/ck/tickets.php">EMAIL TICKETS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/tickets.php">EMAIL TICKETS</a></li>
           <? } ?>              
     
      </ul>
@@ -255,14 +255,14 @@
       <li><a href= "">Payouts</a>
       <ul>  
             <? if($current_clerk->im_allow("process_payouts")){ ?>
-               <li><a href= "http://localhost:8080/ck/bitcoins_payouts.php">BITCOINS (<? echo count(search_bitcoins_payouts("", "", "pe", "ac")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/prepaid_payouts.php">PREPAID (<? echo count(search_prepaid_payouts("", "", "pe", "ac")) ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/paypal_payouts.php">PAYPAL (<? echo count(search_paypal_payouts("", "", "pe", "ac")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/cash_transfer_payouts.php">CASHTRANSFER (<? echo count(search_cash_transfer_payouts_for_process("", "")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/special_payouts.php">SPECIAL (<? echo count(search_special_payouts_for_process("", "", "pe", "ac")) ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/moneyorder_payouts.php">MONEYORDER (<? echo count(search_moneyorder_payouts_for_process("", "")); ?>)</a></li>
-               <li><a href= "http://localhost:8080/ck/moneypak_limbos.php">MONEYPAK (<? echo count(get_waiting_mp_payouts()); ?>)</a></li>               
-               <li><a href= "http://localhost:8080/ck/local_payouts.php">LOCALCASH  (<? echo count(get_local_cash_payouts_for_process()); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/bitcoins_payouts.php">BITCOINS (<? echo count(search_bitcoins_payouts("", "", "pe", "ac")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/prepaid_payouts.php">PREPAID (<? echo count(search_prepaid_payouts("", "", "pe", "ac")) ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/paypal_payouts.php">PAYPAL (<? echo count(search_paypal_payouts("", "", "pe", "ac")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/cash_transfer_payouts.php">CASHTRANSFER (<? echo count(search_cash_transfer_payouts_for_process("", "")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/special_payouts.php">SPECIAL (<? echo count(search_special_payouts_for_process("", "", "pe", "ac")) ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/moneyorder_payouts.php">MONEYORDER (<? echo count(search_moneyorder_payouts_for_process("", "")); ?>)</a></li>
+               <li><a href="<?= BASE_URL ?>/ck/moneypak_limbos.php">MONEYPAK (<? echo count(get_waiting_mp_payouts()); ?>)</a></li>               
+               <li><a href="<?= BASE_URL ?>/ck/local_payouts.php">LOCALCASH  (<? echo count(get_local_cash_payouts_for_process()); ?>)</a></li>
             <? } ?>   
       </ul>
      </li>
@@ -272,19 +272,19 @@
      <li><a href= "">Systems</a>
       <ul>
            <? if($current_clerk->im_allow("baseball_file")){ ?>
-             <li><a href= "http://localhost:8080/ck/baseball_file/report.php">BASEBALL </a></li>
+             <li><a href="<?= BASE_URL ?>/ck/baseball_file/report.php">BASEBALL </a></li>
            <? } ?>
           
            <? if($current_clerk->im_allow("tweets")){ ?>
-             <li><a href= "http://localhost:8080/ck/tweets_index.php">TWEETS</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/tweets_index.php">TWEETS</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("programmers_book")){ ?>
-             <li><a href= "http://localhost:8080/ck/programmers_book.php">PROGRAMMER BOOK</a></li>
+             <li><a href="<?= BASE_URL ?>/ck/programmers_book.php">PROGRAMMER BOOK</a></li>
            <? } ?>
            
            <? if($current_clerk->im_allow("betting_basics")){ ?> 
-     <li><a href= "http://localhost:8080/ck/betting_index.php">Betting</a></li>
+     <li><a href="<?= BASE_URL ?>/ck/betting_index.php">Betting</a></li>
            <? } ?>  
         
      </ul>
@@ -294,11 +294,11 @@
     <li><a href= "">REPORTS</a>
        <ul>
                          
-              <li><a href= "http://localhost:8080/ck/crm_reports.php">CRM REPORTS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/crm_reports.php">CRM REPORTS</a></li>
               
-              <li><a href= "http://localhost:8080/ck/reports.php">REPORTS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/reports.php">REPORTS</a></li>
                      
-              <li><a href= "http://localhost:8080/ck/players_reports.php">Players REPORTS</a></li>
+              <li><a href="<?= BASE_URL ?>/ck/players_reports.php">Players REPORTS</a></li>
                   
        </ul>
     </li>

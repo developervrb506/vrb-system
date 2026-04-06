@@ -70,6 +70,6 @@ for($i=0;$i<count($amounts);$i++){
 
 
 
-header("Location: http://localhost:8080/ck/expenses_index.php?e=47");
+header("Location: " . BASE_URL . "/ck/expenses_index.php?e=47");
 ?>
 <? }else{echo "Access Denied";} ?>

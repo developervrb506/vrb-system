@@ -62,6 +62,6 @@ $trans->insert();
 $acc->move_balance($total);
 
 
-header("Location: http://localhost:8080/ck/pph.php?e=55");
+header("Location: " . BASE_URL . "/ck/pph.php?e=55");
 ?>
 <? }else{echo "Access Denied";} ?>

@@ -58,7 +58,7 @@ validations.push({id:"cvv",type:"null", msg:"CVV is required"});
         <td><input name="cvv" type="text" id="cvv" /></td>
       </tr>
       <tr>
-        <td><input type="image" src="http://localhost:8080/images/temp/submit.jpg" /></td>
+        <td><input type="image" src="<?= BASE_URL ?>/images/temp/submit.jpg" /></td>
         <td>&nbsp;</td>
       </tr>
     </table>

@@ -12,6 +12,6 @@ $trans->vars["note"] = clean_get("note");
 $trans->insert();
 $acc->move_balance(clean_get("amount"));
 
-header("Location: http://localhost:8080/ck/credit.php?e=57");
+header("Location: " . BASE_URL . "/ck/credit.php?e=57");
 ?>
 <? }else{echo "Access Denied";} ?>

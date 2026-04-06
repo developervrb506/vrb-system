@@ -11,6 +11,6 @@ if(!is_null($method) && trim($_POST["new_acc"]) != ""){
 	$acc->insert();
 }
 
-header("Location: http://localhost:8080/ck/cashier_access_list.php?mid=".$method->vars["id"]."&e=80");
+header("Location: " . BASE_URL . "/ck/cashier_access_list.php?mid=".$method->vars["id"]."&e=80");
 ?>
 <? }else{echo "Access Denied";} ?>
