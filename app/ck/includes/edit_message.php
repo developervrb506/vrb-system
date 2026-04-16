@@ -2,7 +2,7 @@
 <? include(ROOT_PATH . "/ck/process/admin_security.php"); ?>
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <? $message = get_ck_message($_GET["mid"]); ?>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"content",type:"null", msg:"Content is required"});

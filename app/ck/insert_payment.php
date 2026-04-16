@@ -35,7 +35,7 @@ if(isset($_GET["cid"])){
 		});
 	};
 </script>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"clerk_list",type:"null", msg:"Clerk is required"});

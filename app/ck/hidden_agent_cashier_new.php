@@ -8,7 +8,7 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
 <title><? echo $title ?></title>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"account",type:"null", msg:"Account is required"});

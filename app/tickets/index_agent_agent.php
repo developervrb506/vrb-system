@@ -13,7 +13,7 @@ $live_help_departments = get_live_help_departments();
 <? if (!isset($mobile) and $mobile == 1) { ?>
 
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
     <script type="text/javascript">
     var validations = new Array();
     
@@ -112,7 +112,7 @@ $live_help_departments = get_live_help_departments();
 <? } else { ?>
 
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
     <script type="text/javascript">
     var validations = new Array();
     

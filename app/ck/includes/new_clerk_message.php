@@ -4,7 +4,7 @@
     <div style="float:right; width:auto;">
         <a onclick="display_div('new_message_content')" href="javascript:;" class="normal_link">Close</a>
     </div>
-    <script type="text/javascript" src="../process/js/functions.js"></script>
+    <script type="text/javascript" src="../process/js/functions.js?v=2"></script>
     <script type="text/javascript">
     var validations = new Array();
     validations.push({id:"title",type:"null", msg:"Subject is required"});

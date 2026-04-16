@@ -15,7 +15,7 @@ $promos = get_casino_games_links($book->id);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title><? echo ucwords($book->name); ?> Casino Games Links</title>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 </head>
 
 <body>

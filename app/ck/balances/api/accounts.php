@@ -1,4 +1,4 @@
-<? include_once("./ck/process/security.php"); ?>
+<? include_once(ROOT_PATH . "/ck/process/security.php"); ?>
 <? if($current_clerk->im_allow("intersystem_transactions")){ 
 
 

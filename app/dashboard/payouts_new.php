@@ -61,7 +61,7 @@ if(isset($_POST["book"])){
 	};
 </script>
 
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations1 = new Array();
 validations1.push({id:"book",type:"null", msg:"Select a Brand"});

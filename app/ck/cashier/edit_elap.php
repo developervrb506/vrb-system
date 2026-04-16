@@ -21,7 +21,7 @@
 		});
 	};
 </script>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 
 <? echo file_get_contents("http://cashier.vrbmarketing.com/admin/edit_elap.php?c=2002&p=PRXniq92iewoie2112ias&".$_SERVER['QUERY_STRING']); ?>
 

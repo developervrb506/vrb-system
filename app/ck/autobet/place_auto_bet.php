@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 <script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
 <script type="text/javascript" src="../includes/js/bets.js"></script>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 <script type="text/javascript" src="../../process/js/jquery.js"></script>
 <script type="text/javascript">
 Shadowbox.init();

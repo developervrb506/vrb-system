@@ -12,8 +12,8 @@ $adj = get_adjusted_balance($type, $system, $account);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 	<script type="text/javascript">
     var validations = new Array();
     validations.push({id:"amount",type:"numeric", msg:"Please insert an adjusted balance"});

@@ -25,7 +25,7 @@ if(isset($_POST["sent"])){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Change Password</title>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"old",type:"null", msg:"Please insert yout current password"});

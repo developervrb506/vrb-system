@@ -31,7 +31,7 @@ if (!is_null($master_list)){
 <? if (isset($mobile) and $mobile == 1) { ?>
 <? include("header_top_mobile.php") ?>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 </head>
 <body>
 <div class="mobile_container">
@@ -46,7 +46,7 @@ xxxx
 <? } else { ?>
 
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 
 <div class="container">
 <? include("header.php") ?>

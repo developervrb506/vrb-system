@@ -1865,7 +1865,7 @@ function get_all_accounts_transactions_ids(){
 
 function get_all_accounts_transactions_ids_date_range($from,$to){
 	betting_db();
-	$sql = "SELECT DISTINCT transaction_id as id FROM  account_transaction Where tdate >= '".$from."' AND tdate <= '".$to."' ORDER BY tdate DESC ";
+	$sql = "SELECT transaction_id as id FROM account_transaction WHERE tdate >= '".$from."' AND tdate <= '".$to."' GROUP BY transaction_id ORDER BY MAX(tdate) DESC";
 	//echo $sql; 
 	return get_str($sql);
 }

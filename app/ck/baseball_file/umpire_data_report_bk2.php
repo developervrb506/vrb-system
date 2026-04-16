@@ -10,7 +10,7 @@ if($current_clerk->im_allow("baseball_file")){
 <title>Baseball Report</title>
 
 
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 <script type="text/javascript" src="js/functions.js"> </script>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
 <script type="text/javascript">

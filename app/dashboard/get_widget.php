@@ -1,6 +1,6 @@
 <? include(ROOT_PATH . "/process/functions.php"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<script type="text/javascript" src="process/js/functions.js"></script>
+<script type="text/javascript" src="process/js/functions.js?v=2"></script>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,7 +9,7 @@
 </head>
 <body>
 <? include "../includes/header.php" ?>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"name",type:"null", msg:"The need to write your Name"});

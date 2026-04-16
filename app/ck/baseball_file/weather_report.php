@@ -20,7 +20,7 @@ if($current_clerk->im_allow("baseball_file")){ ?>
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>/ck/includes/Datatables/datatables.css">
    
     <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/Datatables/DataTables/js/jquery.dataTables.min.js"> </script>
-   <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+   <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
   <script type="text/javascript" charset="utf8" src="<?= BASE_URL ?>/ck/includes/DataTables/datatables.js"></script>
 
  */?>

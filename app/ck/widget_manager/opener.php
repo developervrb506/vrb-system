@@ -11,7 +11,7 @@ set_time_limit(0);
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../includes/js/jquery-ui.css" rel="stylesheet" type="text/css" />
 <title>Events leagues</title>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 <script src="../includes/js/jquery-ui-1-11.js"></script>  
 <script>
 function progress_bar() {

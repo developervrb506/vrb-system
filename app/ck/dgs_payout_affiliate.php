@@ -78,7 +78,7 @@ if(!is_numeric($agent_balance)){$agent_balance = 0;}
 <body>
 <div class="page_content" style="padding-left:10px;">
 <span class="page_title">DGS Payout</span><br /><br />
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"methods_list",type:"null", msg:"Please Select the Payment Method"});

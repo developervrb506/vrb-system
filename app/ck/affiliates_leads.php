@@ -42,7 +42,7 @@
 <script type="text/javascript">
 Shadowbox.init();
 </script>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 </head>
 <body>
 <? $page_style = " width:100%;"; ?>

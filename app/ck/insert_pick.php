@@ -15,7 +15,7 @@ $pick = get_inspin_pick($_GET["gid"], $_GET["period"]);
 <body style="background:#fff; padding:20px;">
 <script type="text/javascript" src="includes/js/bets.js"></script>
 
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations1 = new Array();
 validations1.push({id:"team1",type:"null", msg:"Please Select a Team"});

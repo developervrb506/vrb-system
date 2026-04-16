@@ -25,7 +25,7 @@
 		});
 	};
 </script>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 <title>Time to approve deposits</title>
 </head>
 <body>

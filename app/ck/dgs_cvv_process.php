@@ -18,7 +18,7 @@ if($vcc->vars["deposit_status"] == "pe"){
 	<body>
 	<div class="page_content" style="padding-left:10px;">
 	<span class="page_title">Paypal Deposit</span><br /><br />
-	<script type="text/javascript" src="../process/js/functions.js"></script>
+	<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 	<script type="text/javascript">
 	var validations = new Array();
 	validations.push({id:"player",type:"null", msg:"Please insert the Player Account"});

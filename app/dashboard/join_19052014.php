@@ -14,7 +14,7 @@ $pweburl = $_COOKIE['websiteurl'];
 clean_register_cookies();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,7 +23,7 @@ clean_register_cookies();
 </head>
 <body class="body_blank_pages">
 <? include(ROOT_PATH . "/includes/new_design/header.php"); ?>
-<script type="text/javascript" src="../process/js/functions.js"></script> 
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script> 
 <script type="text/javascript">
 function refresh_captcha(){
 	document.getElementById("captcha_image").src = "../includes/captcha.php?rand" + Math.floor(Math.random()*100);

@@ -13,7 +13,7 @@
 	$accounts = get_all_betting_accounts();
 	$identifiers = get_all_betting_identifiers();
 	?>
-	<script type="text/javascript" src="../process/js/functions.js"></script>
+	<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
     <script type="text/javascript" src="includes/js/bets.js"></script>
 	<script type="text/javascript">
     var validations = new Array();

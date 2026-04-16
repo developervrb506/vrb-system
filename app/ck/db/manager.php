@@ -38,6 +38,10 @@ function get_str($selections_sql, $unique = false, $index_field = "NO_FIELD") {
         $strs = array();
         $selections_sql_res = $conn_db->mysqli_connector->query($selections_sql . " #system query: " . curPageURL());
         insert_error_log("MySQL", $selections_sql, true);
+        if ($selections_sql_res === false) {
+            insert_error_log("MySQL", "Query failed: " . $conn_db->mysqli_connector->error . " | SQL: " . $selections_sql);
+            return $unique ? null : [];
+        }
         while ($selections_info = $selections_sql_res->fetch_assoc()) {
             $has = true;
             $vars = array_keys($selections_info);
@@ -72,6 +76,10 @@ function get($selections_sql, $type, $unique = false, $index_field = "NO_FIELD")
         $has = false;
         $selections_sql_res = $conn_db->mysqli_connector->query($selections_sql . " #system query: " . curPageURL());
         insert_error_log("MySQL", $selections_sql, true);
+        if ($selections_sql_res === false) {
+            insert_error_log("MySQL", "Query failed: " . $conn_db->mysqli_connector->error . " | SQL: " . $selections_sql);
+            return $unique ? null : [];
+        }
         while ($selections_info = $selections_sql_res->fetch_assoc()) {
             $has = true;
             $vars = array_keys($selections_info);

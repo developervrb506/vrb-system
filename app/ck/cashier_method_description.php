@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<?= BASE_URL ?>/includes/shadowbox/shadowbox.css" type="text/css" media="screen" />
 <title>Cashier Method Description</title>
 <script type="text/javascript" src="<?= BASE_URL ?>/includes/shadowbox/shadowbox.js"></script>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -59,7 +59,7 @@ if(isset($_GET["mid"])){
 	?>
     <span class="page_title"><? echo $title ?></span><br /><br />
 	<? include "includes/print_error.php" ?>
-    <script type="text/javascript" src="../process/js/functions.js"></script>
+    <script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 	
     <script type="text/javascript">
     var validations = new Array();

@@ -19,7 +19,7 @@ if(isset($_POST["search"])){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Search Client</title>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 //validations.push({id:"last",type:"null", msg:"Last Name is required"});

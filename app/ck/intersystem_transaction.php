@@ -11,9 +11,9 @@ $preusers[] = array("name"=>"Michael","email"=>"davejohnson000@hotmail.com");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">var BASE_URL = "<?= BASE_URL ?>";</script>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?cc=89"></script>
-<script type="text/javascript" src="../process/js/functions.js?cc=12"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 	<script type="text/javascript">
     var validations = new Array();
     validations.push({id:"system_list_from",type:"null", msg:"Please Select a System"});

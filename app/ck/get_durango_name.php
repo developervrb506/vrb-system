@@ -10,7 +10,7 @@ $durango = get_random_durango_name($type);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 </head>
 <body style="background:#fff; padding:20px;">
 <span class="page_title">Durango Name</span><br /><br />

@@ -8,7 +8,7 @@ if($current_clerk->im_allow("baseball_file")){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Baseball Report</title>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 <script type="text/javascript" src="js/functions.js"> </script>
 
 <script type="text/javascript">

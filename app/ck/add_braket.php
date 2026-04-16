@@ -33,7 +33,7 @@ if(isset($_POST["player"])){
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Add Braket Entry</title>
 
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"player",type:"null", msg:"Player is required"});

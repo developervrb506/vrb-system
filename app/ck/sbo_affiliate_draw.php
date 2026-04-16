@@ -12,7 +12,7 @@
 <span class="page_title">Affiliate <? echo ($_GET["aff"])?> Draw</span>
 <br /><br />
 <div class="form_box" style="width:290px; padding:30px;">
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations2 = new Array();
 validations2.push({id:"account",type:"null", msg:"Please Insert the Account"});

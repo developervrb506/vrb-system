@@ -10,7 +10,7 @@
 <body>
 <div class="page_content" style="padding:10px;">
 <strong><? echo $player ?> commun IPs</strong>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 
 	<? echo file_get_contents("http://www.sportsbettingonline.ag/utilities/process/reports/player_commun_ips.php?player=".$player); ?>
 

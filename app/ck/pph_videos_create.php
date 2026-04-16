@@ -8,7 +8,7 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>PPH Sites Videos</title>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 
 <script type="text/javascript">
 var validations = new Array();

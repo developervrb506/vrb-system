@@ -16,7 +16,7 @@
 <br /><br />
 <div class="form_box" style="width:600px;">
 Insert Balance Adjustment<br /><br />
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"account",type:"null", msg:"Please Insert the Account"});

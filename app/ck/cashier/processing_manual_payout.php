@@ -15,7 +15,7 @@ if(is_numeric($tans)){
 	<body>
 	<div class="page_content" style="padding:10px;">
 	<strong>Process Transaction #<? echo $tans ?> Manually</strong><br /><br />
-	<script type="text/javascript" src="../../process/js/functions.js"></script>
+	<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 	<div class="form_box" id="confirm_div">
 	
     <script type="text/javascript">

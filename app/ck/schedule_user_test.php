@@ -54,7 +54,7 @@ $vacations = get_all_clerk_vacations($user->vars["id"],$real_date, date( "Y-m-d"
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Schedule User</title>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 
 function change_active(day,active){

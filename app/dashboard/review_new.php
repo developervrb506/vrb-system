@@ -4,7 +4,7 @@
 <head>
 <? $book = $_GET["book"]; ?>
 <? $category = $_GET["category"]; ?>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Reviews</title>

@@ -58,7 +58,7 @@ $default_msg = "Hi \nWe would like to invite you to review your latest $method p
 
 <div class="page_content" style="padding:10px;">
     <h1>Review Request</h1>
-    <script type="text/javascript" src="../../process/js/functions.js"></script>
+    <script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
     
     <? if(is_null($review)){ ?>
     

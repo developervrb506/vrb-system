@@ -10,7 +10,8 @@
 <body>
 <div class="page_content" style="padding:10px;">
 <p><strong>Use deposit as Transfer</strong></p>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript">var BASE_URL = "<?= BASE_URL ?>";</script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
 
 <?

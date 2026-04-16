@@ -10,7 +10,7 @@
 <body>
 <div class="page_content" style="padding:10px;">
 <strong>New Chargeback</strong><br /><br />
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 function confirm_chargeback(){
 	if(document.getElementById('is_call').value == "1" && document.getElementById('is_email').value == "1" && document.getElementById('is_descriptor').value == "1" && document.getElementById('is_message').value == "1" && document.getElementById('is_locked').value == "1"){

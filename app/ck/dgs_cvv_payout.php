@@ -13,7 +13,7 @@ $vcc = get_vcc($_GET["vid"]);
 <body>
 <div class="page_content" style="padding-left:10px;">
 <span class="page_title">Credit Card Information</span><br /><br />
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"number",type:"null", msg:"Please insert the Credit Card Number"});

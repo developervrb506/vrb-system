@@ -20,7 +20,7 @@ if(!is_null($transaction)){
 ?>
 <span class="page_title">Send Cash Transfer by Bitcoins to <? echo $transaction->vars["sender_account"] ?></span><br /><br />
 <? include "includes/print_error.php" ?>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"amount",type:"numeric", msg:"Please insert the Amount"});

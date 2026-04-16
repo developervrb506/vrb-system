@@ -9,7 +9,7 @@
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?= BASE_URL ?>/includes/calendar/jsDatePick_ltr.min.css" />
 <title>The Betting Edge</title>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.3.min.js"> </script>
 <script type="text/javascript" src="<?= BASE_URL ?>/includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">

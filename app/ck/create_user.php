@@ -36,7 +36,7 @@ if(isset($_GET["uid"])){
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Create New User</title>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.3.min.js"> </script>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
  <script>
     jQuery.noConflict(); // prevent conflicts with prototype
   </script>

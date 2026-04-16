@@ -13,7 +13,7 @@
              user-scalable=no;" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <title>Messages</title>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"title",type:"null", msg:"Subject is required"});

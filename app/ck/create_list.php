@@ -28,7 +28,7 @@ tinyMCE.init({
 });
 </script>
 
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"name",type:"null", msg:"Name is required"});

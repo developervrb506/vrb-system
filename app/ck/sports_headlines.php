@@ -8,7 +8,7 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>Sports Headlines</title>
-<script type="text/javascript" src="/process/js/functions.js"> </script>
+<script type="text/javascript" src="/process/js/functions.js?v=2"> </script>
 <script type="text/javascript" src="/ck/includes/js/sortables.js"></script>
 <script type="text/javascript" src="/process/js/jquery.js"> </script>
  

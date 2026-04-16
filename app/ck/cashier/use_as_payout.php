@@ -10,7 +10,7 @@
 <body>
 <div class="page_content" style="padding:10px;">
 <p><strong>Use deposit as Payout</strong></p>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 
 <form method="post" onsubmit="return validate(validations)" action="poster.php" target="_parent">
     <input name="way" type="hidden" id="way" value="use_for_payout" />

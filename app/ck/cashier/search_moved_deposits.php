@@ -77,7 +77,7 @@ function pre_submit(){
 }
 
 </script>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/balances/api/functions.js"></script>
 <title>Search Moved Deposits</title>
 </head>

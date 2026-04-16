@@ -15,7 +15,7 @@ else { $type = $_GET["type"]; }
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/jquery-1.8.0.min.js"></script>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <title>New Features</title>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"> </script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"> </script>
 <script type="text/javascript" src="<?= BASE_URL ?>/ck/includes/js/sortables.js"></script>
  
 <script type="text/javascript">

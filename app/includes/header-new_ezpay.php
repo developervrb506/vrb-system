@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ezpay.com</title>
-<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script>
 <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
 <link href="css/ezpay_style.css" rel="stylesheet" type="text/css" />
 </head>

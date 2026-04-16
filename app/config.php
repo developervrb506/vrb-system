@@ -1,6 +1,15 @@
 <?php
 
-ob_start();
+ob_start(function($buffer) {
+    // Inject BASE_URL as a JS variable into every HTML page automatically.
+    // Uses str_replace so it only fires when </head> is present (HTML pages),
+    // leaving JSON/plain-text AJAX responses untouched.
+    if (defined('BASE_URL') && strpos($buffer, '</head>') !== false) {
+        $script = '<script type="text/javascript">var BASE_URL = "' . BASE_URL . '";</script>';
+        $buffer = str_replace('</head>', $script . '</head>', $buffer);
+    }
+    return $buffer;
+});
 
 define('ROOT_PATH', __DIR__);
 

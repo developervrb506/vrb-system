@@ -37,7 +37,7 @@ if(!is_null($ticket)){
 <? include("header_top_mobile.php") ?>
 <? } ?>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"message",type:"null", msg:"Please Write a Message"});

@@ -10,7 +10,7 @@
 <body>
 <div class="page_content" style="padding:10px;">
 <strong>DGS Deposit</strong>
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"methods_list",type:"null", msg:"Please Select the Payment Method"});

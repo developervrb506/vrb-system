@@ -1,3 +1,4 @@
+<script type="text/javascript">var BASE_URL = "<?= BASE_URL ?>";</script>
 <a name="page_top" id="page_top"></a>
 <div class="container" style=" <? echo $page_style ?>"  <? if($no_select){ ?>onmouseover="deselect()"<? } ?>>
 <div class="header" id="header_div">
@@ -61,7 +62,7 @@ function in_string($full,$search){
 if (!is_null($current_clerk) && false) {
 	//alerts
 	if($current_clerk->im_allow("alerts")){
-		?> <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js"></script> <?
+		?> <script type="text/javascript" src="<?= BASE_URL ?>/process/js/functions.js?v=2"></script> <?
 		if(!$noalerts){
 			?><div class="alerts_container" id="alerter"></div><?
 			?> 

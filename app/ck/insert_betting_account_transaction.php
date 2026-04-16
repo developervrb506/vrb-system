@@ -23,7 +23,7 @@
 <? if(!isset($_POST["store"])){ ?>
 <script type="text/javascript" src="includes/js/bets.js"></script>
 <? $accounts = get_all_betting_accounts(); ?>
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 	<script type="text/javascript">
     var validations = new Array();
     /*validations.push({id:"faccount",type:"null", msg:"Please Write a 'From' Account Number"});

@@ -34,7 +34,7 @@ function show_braodcast(){
  <a id="a_broad" class="normal_link" onclick="show_braodcast();" href="#" >BroadCast Ticket</a>
  <? } ?>
 <br /><br />
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
     
 <div class="form_box" id="form_div" style="display:block">
     <script type="text/javascript">

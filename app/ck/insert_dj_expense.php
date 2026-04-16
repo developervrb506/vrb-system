@@ -9,7 +9,7 @@
 </head>
 <body style="background:#fff; padding:20px;">
 
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"amount",type:"numeric", msg:"Please insert an Amount"});

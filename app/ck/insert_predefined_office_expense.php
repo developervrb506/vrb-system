@@ -11,7 +11,7 @@
 </head>
 <body style="background:#fff; padding:20px;">
 
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <link rel="stylesheet" type="text/css" media="all" href="../includes/calendar/jsDatePick_ltr.min.css" />
 <script type="text/javascript" src="../includes/calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">

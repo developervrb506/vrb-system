@@ -569,19 +569,16 @@ function get_all_names_by_processor(pid){
 function get_external_content(url, div, code){
 		
 		if(url.indexOf("sportsbettingonline") == -1){
-			if(location.href.indexOf("vrbprocessing") != -1){
-				mainurl = "vrbprocessing";
+			if(typeof window.BASE_URL !== 'undefined'){
+				url = window.BASE_URL + "/" + url;
+			}else if(location.href.indexOf("vrbprocessing") != -1){
+				url = "https://vrbprocessing.com/" + url;
 			}else if(location.href.indexOf("ezpay") != -1){
-				mainurl = "ezpay";
+				url = "https://www.ezpay.com/" + url;
 			}else if(location.href.indexOf("buybitcoins") != -1){
-				mainurl = "buybitcoins";	
+				url = "https://buybitcoins.com/" + url;
 			}else{
-				mainurl = "vrbmarketing";
-			}		
-			if(location.href.indexOf("www.") != -1){
-				url = "https://www."+mainurl+".com/" + url;
-			}else{
-				url = "https://"+mainurl+".com/" + url;
+				url = location.origin + "/" + url;
 			}
 		}
 		if (window.XMLHttpRequest) {    

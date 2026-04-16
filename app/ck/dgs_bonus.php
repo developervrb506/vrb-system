@@ -13,7 +13,7 @@ if(@file_get_contents("http://cash.ezpay.com/checker.php") != 'OK'){$cash_url = 
 </head>
 <body>
 <div class="page_content" style="padding-left:10px;">
-<script type="text/javascript" src="../process/js/functions.js"></script>
+<script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 <script type="text/javascript">
 var validations = new Array();
 validations.push({id:"fees",type:"numeric", msg:"Please insert the Fees"});

@@ -46,7 +46,7 @@ if(isset($_GET["detail"])){
 	?>
     <span class="page_title"><? echo $title ?></span><br /><br />
 	<? include "includes/print_error.php" ?>
-    <script type="text/javascript" src="../process/js/functions.js"></script>
+    <script type="text/javascript" src="../process/js/functions.js?v=2"></script>
 	<script type="text/javascript">
     var validations = new Array();
     validations.push({id:"player",type:"null", msg:"Player is required"});

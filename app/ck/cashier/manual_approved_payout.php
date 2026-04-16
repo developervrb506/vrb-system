@@ -10,7 +10,7 @@
 <body>
 <div class="page_content" style="padding:10px;">
 <strong>Manual Approved Payout</strong><br /><br />
-<script type="text/javascript" src="../../process/js/functions.js"></script>
+<script type="text/javascript" src="../../process/js/functions.js?v=2"></script>
 
 
 <? echo file_get_contents("http://cashier.vrbmarketing.com/admin/manual_approved_payout.php?c=2002&p=PRXniq92iewoie2112ias&".$_SERVER['QUERY_STRING']); ?>
