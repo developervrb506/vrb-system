@@ -103,34 +103,32 @@
 				$res .= $trans->vars["id"];
 				
 			break;
-			case "6":			
-				if($type == "de"){
-					$str_acc = "to_account";
-				}else if($type == "wi"){
-					$str_acc = "from_account";
-				}
+			case "6":
 				$trans = new _pph_transaction();
 				$pphacc = get_pph_account($account);
 				if(!is_null($pphacc)){
 					$trans->vars["amount"] = $amount;
 					$trans->vars["tdate"] = date("Y-m-d H:i:s");
 					$trans->vars["note"] = $comment;
-					$trans->vars[$str_acc] = $account;
+					$trans->vars["from_account"] = ($type == "wi") ? $account : 0;
+					$trans->vars["to_account"]   = ($type == "de") ? $account : 0;
+					$trans->vars["external_id"]  = 0;
 					$trans->insert();
 					if($type == "wi"){$amount *= -1;}
 					$pphacc->move_balance($amount);
 					$res = $trans->vars["id"];
 				}
-				
+
 			break;
 			case "7":
-			
+
 				if($type == "wi"){$amount *= -1;}
 				$exp = new _expense();
 				$exp->vars["amount"] = $amount;
 				$exp->vars["category"] = $account;
 				$exp->vars["note"] = $comment;
-				$exp->vars["edate"] = date("Y-m-d H:i:s");
+				$exp->vars["edate"] = date("Y-m-d");
+				$exp->vars["inserted_date"] = date("Y-m-d H:i:s");
 				$exp->insert();
 				$res = $exp->vars["id"];
 			break;

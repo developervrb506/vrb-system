@@ -30,6 +30,8 @@ $trans->vars["amount"] = clean_get("amount");
 $trans->vars["note"] = clean_get("note").". ".clean_get("hidden_note");
 $trans->vars["tdate"] = date("Y-m-d H:i:s");
 $trans->vars["inserted_by"] = $current_clerk->vars["id"];
+$trans->vars["status"] = "pe";
+$trans->vars["dgs_ID"] = "";
 
 $emails = "";
 if(isset($_POST['emails'])){
@@ -46,7 +48,7 @@ foreach(explode(",", clean_get("other")) as $email){
 	}
 }
 
-$emails = substr($emails,1);
+$emails = $emails ? substr($emails, 1) : "";
 
 $trans->vars["emails"] = $emails;
 

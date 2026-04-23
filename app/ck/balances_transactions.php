@@ -30,11 +30,11 @@ $status = post_get("status_list","pe");
 		var params = "?id="+id+"&f=<? echo $from ?>&t=<? echo $to ?>&s=<? echo $status ?>";
 		if(type == "c"){
 			if(confirm("Are you sure you want to Cancel this Transaction?")){				
-				location.href = BASE_URL . "/ck/process/actions/cancel_intersystem_action.php"+params;
+				location.href = BASE_URL + "/ck/process/actions/cancel_intersystem_action.php"+params;
 			}
 		}else if(type == "a"){
-			if(confirm("Are you sure you want to Accept this Transaction?")){				
-				location.href = BASE_URL . "/ck/process/actions/accept_intersystem_action.php"+params;
+			if(confirm("Are you sure you want to Accept this Transaction?")){
+				location.href = BASE_URL + "/ck/process/actions/accept_intersystem_action.php"+params;
 			}
 		}
 	}
