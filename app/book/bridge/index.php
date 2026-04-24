@@ -46,26 +46,21 @@
 
 <div class="bridge-container">
 
-  <!--
+ 
   <button class="btn-cashier" onclick="goCashier()">
     CASHIER
   </button>
- BOTON -->
 
+ <!--
 <a   class="btn-cashier" href="https://vrb-cashier.vercel.app/bitbet/23C2A58/sign-in" target="_blank">
   CASHIER
-</a>
-
-
-http://localhost:3000/bitbet/23C2A58/sign-in
-
-
+</a>-->
 
 
   <!-- TEXTO -->
   <div class="info-text">
-    Wagering - 866-921-8362<br>
-    Agents - 866-968-7946
+     <!--Wagering - 866-921-8362<br>
+    Agents - 866-968-7946 -->
   </div>
 
 </div>
@@ -81,10 +76,27 @@ window.addEventListener("message", function(event) {
   }
 });
 
-// Acción botón (temporal)
+// Acciï¿½n botï¿½n (temporal)
+/*
 function goCashier() {
   alert("Dominio detectado: " + parentDomain);
-}
+}*/
+
+  async function goCashier() {                                                                                                     const domain = parentDomain; // already set in the page                                                                    
+    try {                                                                                                                            const res = await fetch(                                                                                                 
+        "https://vrb-cashier.vercel.app/api/cashier-lookup?domain=" + encodeURIComponent(domain)
+      );
+      if (!res.ok) {
+        alert("There is not Cashier active for this site.");
+        return;
+      }
+      const data = await res.json();
+      window.open(data.url, "_blank");
+    } catch (e) {
+      alert("There is not Cashier active for this site.");
+    }
+  }
+
 </script>
 
 </body>
