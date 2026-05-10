@@ -84,7 +84,7 @@ function goCashier() {
 
   async function goCashier() {                                                                                                     const domain = parentDomain; // already set in the page                                                                    
     try {                                                                                                                            const res = await fetch(                                                                                                 
-        "https://vrb-cashier.vercel.app/api/cashier-lookup?domain=" + encodeURIComponent(domain)
+        "https://cashier.vrbmarketing.com/api/cashier-lookup?domain=" + encodeURIComponent(domain)
       );
       if (!res.ok) {
         alert("There is not Cashier active for this site.");
