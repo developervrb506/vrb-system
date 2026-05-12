@@ -7196,5 +7196,95 @@ class _graded_time_leagues{
 	}
 }
 
+class _c_agents {
+	var $vars = array();
+	function __construct($pvars = array()){$this->vars = $pvars;}
+	function initial(){}
+	function update($specific = NULL){
+		accounting_db();
+		return update($this, "c_agents", $specific);
+	}
+	function insert(){
+		accounting_db();
+		$this->vars["id"] = insert($this, "c_agents");
+	}
+	function delete(){
+		accounting_db();
+		delete("c_agents", $this->vars["id"]);
+	}
+}
+
+class _c_agent_assignments {
+	var $vars = array();
+	function __construct($pvars = array()){$this->vars = $pvars;}
+	function initial(){}
+	function update($specific = NULL){
+		accounting_db();
+		return update($this, "c_agent_assignments", $specific);
+	}
+	function insert(){
+		accounting_db();
+		$this->vars["id"] = insert($this, "c_agent_assignments");
+	}
+	function delete(){
+		accounting_db();
+		delete("c_agent_assignments", $this->vars["id"]);
+	}
+}
+
+class _c_agent_call_notes {
+	var $vars = array();
+	function __construct($pvars = array()){$this->vars = $pvars;}
+	function initial(){}
+	function update($specific = NULL){
+		accounting_db();
+		return update($this, "c_agent_call_notes", $specific);
+	}
+	function insert(){
+		accounting_db();
+		$this->vars["id"] = insert($this, "c_agent_call_notes");
+	}
+	function delete(){
+		accounting_db();
+		delete("c_agent_call_notes", $this->vars["id"]);
+	}
+}
+
+class _c_agent_payments {
+	var $vars = array();
+	function __construct($pvars = array()){$this->vars = $pvars;}
+	function initial(){}
+	function update($specific = NULL){
+		accounting_db();
+		return update($this, "c_agent_payments", $specific);
+	}
+	function insert(){
+		accounting_db();
+		$this->vars["id"] = insert($this, "c_agent_payments");
+	}
+	function delete(){
+		accounting_db();
+		delete("c_agent_payments", $this->vars["id"]);
+	}
+}
+
+class _c_agent_balance_movements {
+	var $vars = array();
+	function __construct($pvars = array()){$this->vars = $pvars;}
+	function initial(){}
+	function update($specific = NULL){
+		accounting_db();
+		return update($this, "c_agent_balance_movements", $specific);
+	}
+	function insert(){
+		accounting_db();
+		$this->vars["id"] = insert($this, "c_agent_balance_movements");
+	}
+	function delete(){
+		accounting_db();
+		delete("c_agent_balance_movements", $this->vars["id"]);
+	}
+}
+
 
 ?>

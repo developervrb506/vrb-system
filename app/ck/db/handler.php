@@ -77,6 +77,15 @@ function get_clerk($id, $available = false){
 	$sql = "SELECT * FROM user WHERE id = '$id' $sql_av";
 	return get($sql, "clerk", true);
 }
+
+function get_clerk_available_list(){
+	clerk_db();
+	$sql = "SELECT * FROM user WHERE id IN (1,2,25,78,86,255)";
+	return get($sql, "clerk", false, "id");
+}
+
+
+
 function get_clerk_by_name($name){
 	clerk_db();
 	$sql = "SELECT * FROM user WHERE name LIKE '$name'";
@@ -7606,9 +7615,65 @@ function get_pph_account_by_name_test($name){
 
 function get_player_headline_image($league,$team){
 	 props_db();
-	
+
 	$sql = "SELECT espn_id,team,name,type FROM players WHERE league = '".$league."' and team = '".$team."' and headline = 1  ORDER BY name ASC";
 	//echo $sql;
 	return get_str($sql);
 
+}
+
+// --- Agent Payment Control ---
+
+function get_c_agent($id){
+	accounting_db();
+	$sql = "SELECT * FROM c_agents WHERE id = '$id'";
+	return get($sql, "_c_agents", true);
+}
+
+function get_c_agent_by_code($code){
+	accounting_db();
+	$sql = "SELECT * FROM c_agents WHERE agent_code = '" . addslashes($code) . "'";
+	return get($sql, "_c_agents", true);
+}
+
+function get_c_agents_all(){
+	accounting_db();
+	$sql = "SELECT * FROM c_agents ORDER BY agent_code ASC";
+	return get($sql, "_c_agents");
+}
+
+function get_c_agent_call_notes_by_agent($agent_id){
+	accounting_db();
+	$sql = "SELECT * FROM c_agent_call_notes WHERE agent_id = '$agent_id' ORDER BY created_at DESC";
+	return get($sql, "_c_agent_call_notes");
+}
+
+function get_c_agent_payments_by_agent($agent_id){
+	accounting_db();
+	$sql = "SELECT * FROM c_agent_payments WHERE agent_id = '$agent_id' ORDER BY created_at DESC";
+	return get($sql, "_c_agent_payments");
+}
+
+function get_c_agent_balance_movements_by_agent($agent_id){
+	accounting_db();
+	$sql = "SELECT * FROM c_agent_balance_movements WHERE agent_id = '$agent_id' ORDER BY created_at ASC";
+	return get($sql, "_c_agent_balance_movements");
+}
+
+function get_c_active_assignment_by_agent($agent_id){
+	accounting_db();
+	$sql = "SELECT * FROM c_agent_assignments WHERE agent_id = '$agent_id' AND released_at IS NULL ORDER BY assigned_at DESC LIMIT 1";
+	return get($sql, "_c_agent_assignments", true);
+}
+
+function get_c_payment($id){
+	accounting_db();
+	$sql = "SELECT * FROM c_agent_payments WHERE id = '$id'";
+	return get($sql, "_c_agent_payments", true);
+}
+
+function get_c_payment_by_reference($ref){
+	accounting_db();
+	$sql = "SELECT * FROM c_agent_payments WHERE deposit_reference_id = '" . addslashes($ref) . "'";
+	return get($sql, "_c_agent_payments", true);
 }
