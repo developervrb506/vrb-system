@@ -590,8 +590,13 @@
             <? if($current_clerk->im_allow("pph_accounting")){ ?>
               <li><a href="<?= BASE_URL ?>/ck/pph.php">PPH</a></li>
             <? } ?> 
-      </ul></li>
       
+   
+      <? if($current_clerk->im_allow("agent_control")){ ?>
+              <li><a href="<?= BASE_URL ?>/ck/agent_control/">Agent Control</a></li>
+            <? } ?> 
+          </li>
+      </ul>
       <? // PPH ?>
       <? if($current_clerk->im_allow("pph_accounting")){ ?>
       <li><a href= "javascript:;">PPH2</a>
