@@ -15,10 +15,10 @@ if(isset($_POST["process"])){
 		$upagn->vars["phone_price"] = $_POST["phone_price"];
 		$upagn->vars["internet_price"] = $_POST["internet_price"];
 		$upagn->vars["liveplus_price"] = $_POST["liveplus_price"];
-		$upagn->vars["horsesplus_price"] = $_POST["horsesplus_price"];
+		$upagn->vars["horsesplus_price"] = $_POST["horsesplus_price"] ?? 0;
 		$upagn->vars["propsplus_price"] = $_POST["propsplus_price"];
 		$upagn->vars["payment_method"] = $_POST["payment_method"];
-		$upagn->vars["livecasino_price"] = $_POST["livecasino_price"];
+		$upagn->vars["livecasino_price"] = $_POST["livecasino_price"] ?? 0;
 		$upagn->vars["base_price"] = $_POST["base_price"];
 		$upagn->vars["max_players"] = $_POST["max_players"];
 		
@@ -29,7 +29,7 @@ if(isset($_POST["process"])){
 		$upagn->vars["city"] = $_POST["city"];
 		$upagn->vars["state"] = $_POST["state"];
 		$upagn->vars["pph_agent"] = $_POST["pph_agent"];
-		$upagn->vars["master_agent"] = $_POST["master_agent"];
+		$upagn->vars["master_agent"] = $_POST["master_agent"] ?: 0;
 		$upagn->vars["house"] = $_POST["house"];
 		
 		$upagn->vars["is_commission"] = $_POST["is_commission"];
@@ -46,8 +46,8 @@ if(isset($_POST["process"])){
 		$newagn->vars["phone_price"] = $_POST["phone_price"];
 		$newagn->vars["internet_price"] = $_POST["internet_price"];
 		$newagn->vars["liveplus_price"] = $_POST["liveplus_price"];
-		$newagn->vars["livecasino_price"] = $_POST["livecasino_price"];
-		$newagn->vars["horsesplus_price"] = $_POST["horsesplus_price"];
+		$newagn->vars["livecasino_price"] = $_POST["livecasino_price"] ?? 0;
+		$newagn->vars["horsesplus_price"] = $_POST["horsesplus_price"] ?? 0;
 		$newagn->vars["propsplus_price"] = $_POST["propsplus_price"];
 		$newagn->vars["payment_method"] = $_POST["payment_method"];
 		$newagn->vars["base_price"] = $_POST["base_price"];
@@ -60,16 +60,34 @@ if(isset($_POST["process"])){
 		$newagn->vars["city"] = $_POST["city"];
 		$newagn->vars["state"] = $_POST["state"];
 		$newagn->vars["pph_agent"] = $_POST["pph_agent"];
-		$newagn->vars["master_agent"] = $_POST["master_agent"];
+		$newagn->vars["master_agent"] = $_POST["master_agent"] ?: 0;
 		$newagn->vars["house"] = $_POST["house"];
 		
 		$newagn->vars["is_commission"] = $_POST["is_commission"];
 		$newagn->vars["commission_owner"] = $_POST["commission_owner"];
 		if(!$newagn->vars["is_commission"]){$newagn->vars["commission_owner"] = 0;}
-		
+		$newagn->vars["balance"] = 0;
+		$newagn->vars["last_billing"] = '2026-01-01';
+
 		$newagn->insert();
 		$setid = $newagn ->vars["id"];
-	}
+	
+    //INSERT ALSO IN THE C TABLES
+    if($newagn->vars['id']){
+      $c_agent = new _c_agents();
+      $c_agent->vars['agent_code'] = $newagn->vars['name'];
+      $c_agent->vars['agent_name'] = $newagn->vars['person_name'];
+      $c_agent->vars['current_balance'] = 0;
+      $c_agent->vars['status'] = 'active';
+      $c_agent->insert();
+
+
+
+    }
+     
+    
+  
+    }
 	
 	delete_all_cashier_methods_by_agent($setid);
 	$pkeys = array_keys($_POST);
@@ -105,9 +123,10 @@ Shadowbox.init();
 <? 
 if(isset($_GET["detail"])){
 	//details
-	$agent = get_pph_account($_GET["acc"]);
+	$agent = isset($_GET["acc"]) ? get_pph_account($_GET["acc"]) : null;
 	if(is_null($agent)){
 		$title = "Add new Account";
+		$agent = new _pph_account();
 	}else{
 		$title = "Edit Account";
 		$hidden = '<input name="update_id" type="hidden" id="update_id" value="'.$agent->vars["id"] .'" />';

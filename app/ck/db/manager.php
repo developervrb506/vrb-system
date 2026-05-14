@@ -125,7 +125,9 @@ function insert($object, $table, $print = false) {
             $params .= "`$key`, ";
         }
         foreach ($vars as $var) {
-            if (is_string($var) || is_numeric($var)) {
+            if (is_null($var)) {
+                $values .= "NULL, ";
+            } elseif (is_string($var) || is_numeric($var)) {
                 $values .= "'" . $conn_db->mysqli_connector->real_escape_string($var) . "', ";
             } else {
                 $values .= "'" . $conn_db->mysqli_connector->real_escape_string($var->vars["id"]) . "', ";
@@ -160,7 +162,9 @@ function insert_test($object, $table, $print = false) {
             $params .= "`$key`, ";
         }
         foreach ($vars as $var) {
-            if (is_string($var) || is_numeric($var)) {
+            if (is_null($var)) {
+                $values .= "NULL, ";
+            } elseif (is_string($var) || is_numeric($var)) {
                 $values .= "'" . $conn_db->mysqli_connector->real_escape_string($var) . "', ";
             } else {
                 $values .= "'" . $conn_db->mysqli_connector->real_escape_string($var->vars["id"]) . "', ";
