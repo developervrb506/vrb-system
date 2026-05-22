@@ -1,6 +1,11 @@
 <?php
 
- // Conection compatible with PHP 8 
+ // Conection compatible with PHP 8
+
+$__config = __DIR__ . '/../../config.php';
+if (file_exists($__config)) {
+    require_once $__config;
+}
 
 class conn_db {
     public array $databases = [];
@@ -9,39 +14,39 @@ class conn_db {
     public ?object $mysqli_connector = null;
 
     public function __construct() {
-        
-        $this->databases["clerk_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_clerks");
-        $this->databases["mail_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_mails");
-		$this->databases["sbolines_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_live_odds");
-		$this->databases["processing_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_wu");
-		$this->databases["betting_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_betting");
-		$this->databases["tickets_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_tickets");
-		$this->databases["accounting_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_accounting");
-		$this->databases["livehelp_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_livehelp");
-		$this->databases["baseball_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_baseball_file");
-		$this->databases["mlb_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_mlb");
-		$this->databases["nba_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_nba");
-		$this->databases["nhl_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_nhl");
-		$this->databases["nfl_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_nfl");
-		$this->databases["props_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_props");
-		$this->databases["tweets_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_tweet");
-		$this->databases["sbo_sports_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_sports");
-		$this->databases["sbo_seo_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_seo");
-		$this->databases["sbo_liveodds_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_live_odds");
-		$this->databases["sbo_posting"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_posting");
-		$this->databases["inspinc_statsdb1"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_inspinc_statsdb1");
-		$this->databases["inspinc_tweetdb1"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_inspinc_tweetdb1");
-		$this->databases["affiliate_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_affiliates");
-		$this->databases["sbo_book_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_book");
-		$this->databases["sbo_breaket_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_marchmadness");
-		$this->databases["tabs_db"] = new database("db", "vrbmarketing_admin", "AKFtgOX29FTgbWlVf", "vrbmarketing_tabs");
 
-        // SQL 
+        $this->databases["clerk_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_clerks");
+        $this->databases["mail_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_mails");
+		$this->databases["sbolines_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_live_odds");
+		$this->databases["processing_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_wu");
+		$this->databases["betting_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_betting");
+		$this->databases["tickets_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_tickets");
+		$this->databases["accounting_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_accounting");
+		$this->databases["livehelp_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_livehelp");
+		$this->databases["baseball_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_baseball_file");
+		$this->databases["mlb_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_mlb");
+		$this->databases["nba_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_nba");
+		$this->databases["nhl_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_nhl");
+		$this->databases["nfl_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_nfl");
+		$this->databases["props_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_props");
+		$this->databases["tweets_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_tweet");
+		$this->databases["sbo_sports_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_sports");
+		$this->databases["sbo_seo_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_seo");
+		$this->databases["sbo_liveodds_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_live_odds");
+		$this->databases["sbo_posting"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_posting");
+		$this->databases["inspinc_statsdb1"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_inspinc_statsdb1");
+		$this->databases["inspinc_tweetdb1"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_inspinc_tweetdb1");
+		$this->databases["affiliate_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_affiliates");
+		$this->databases["sbo_book_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_book");
+		$this->databases["sbo_breaket_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_marchmadness");
+		$this->databases["tabs_db"] = new database(DB_HOST, DB_USER, DB_PASS, "vrbmarketing_tabs");
+
+        // SQL
         //$this->databases["dgs_reports"] = new database("192.168.10.4", "sbo", "S0urs3C0nnect0r!", "DGSDATA", true); // new
     }
 
     public function connect($id) {
-      
+
         global $__dgs_reports_replacement;
 
         if ($id == "dgs_reports" && $__dgs_reports_replacement != "") {

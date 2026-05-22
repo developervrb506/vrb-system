@@ -1,4 +1,6 @@
 <?
+$__config = __DIR__ . '/../config.php';
+if (file_exists($__config)) { require_once $__config; }
 require_once(ROOT_PATH . "/db/handler.php");
 require_once(ROOT_PATH . '/process/classes.php');
 require_once(ROOT_PATH . '/reports/classes.php');
@@ -10,10 +12,10 @@ $url_headlines_vrb = BASE_URL . '/images/headlines/';
 
 function affiliates_db() {
   global $mysqli;
-  $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
-  $dbname = "vrbmarketing_affiliates";  
+  $dbhost = DB_HOST;
+  $dbuser = DB_USER;
+  $dbpass = DB_PASS;
+  $dbname = "vrbmarketing_affiliates";
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
   if (mysqli_errno($mysqli)) {

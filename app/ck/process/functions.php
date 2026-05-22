@@ -21,8 +21,8 @@ function mail_db() {
 	/*
   global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_mails";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -54,8 +54,8 @@ function sbolines_db() {
   db_connect('sbolines_db');	
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_live_odds";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -85,8 +85,8 @@ function processing_db() {
   db_connect('processing_db');
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_wu";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -101,8 +101,8 @@ db_connect('clerk_db');
 /*
   global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_clerks";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -121,8 +121,8 @@ function betting_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_betting";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -138,8 +138,8 @@ function tickets_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_tickets";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -155,8 +155,8 @@ function accounting_db() {
 	
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_accounting";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -171,8 +171,8 @@ function livehelp_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_livehelp";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -188,8 +188,8 @@ function baseball_db() {
   /*
   global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_baseball_file";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -205,8 +205,8 @@ function mlb_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_mlb";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -222,8 +222,8 @@ function nba_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_nba";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -239,8 +239,8 @@ function nhl_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_nhl";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -256,8 +256,8 @@ function nfl_db() {
   	
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_nfl";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -273,8 +273,8 @@ function props_db() {
   	
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_props";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -290,8 +290,8 @@ function tweets_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_tweet";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -308,8 +308,8 @@ function sbo_sports_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_sports";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -325,8 +325,8 @@ function sbo_seo_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_seo";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -342,8 +342,8 @@ function sbo_liveodds_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_live_odds";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -361,8 +361,8 @@ function sbo_posting() {
  /*
   global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_posting";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -379,8 +379,8 @@ function inspinc_statsdb1() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_inspinc_statsdb1";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -397,8 +397,8 @@ function inspinc_tweetdb1() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_inspinc_tweetdb1";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -429,8 +429,8 @@ function affiliate_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_affiliates";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -446,8 +446,8 @@ function sbo_book_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_book";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -462,8 +462,8 @@ function sbo_breaket_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_marchmadness";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 
@@ -481,8 +481,8 @@ function tabs_db() {
   
   /*global $mysqli;
   $dbhost = "db"; 
-  $dbuser = "vrbmarketing_admin"; 
-  $dbpass = "AKFtgOX29FTgbWlVf"; 
+  $dbuser = "REDACTED";
+  $dbpass = "REDACTED";
   $dbname = "vrbmarketing_tabs";  
   $mysqli = @mysqli_connect('p:'.$dbhost, $dbuser, $dbpass, $dbname);  
   mysqli_select_db($mysqli,"$dbname"); 

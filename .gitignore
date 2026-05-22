@@ -7,3 +7,5 @@ mysql_data/
 *.rar
 *.sql
 *.zip
+app/config.php
+.tools/

@@ -1,5 +1,14 @@
 <?php
 
+// ===============================
+// DATABASE CREDENTIALS (local only)
+// ===============================
+// Copy this file to app/config.php and fill in real values.
+// app/config.php is gitignored — never commit it.
+define('DB_HOST', 'db');
+define('DB_USER', 'your_db_user');
+define('DB_PASS', 'your_db_password');
+
 ob_start(function($buffer) {
     // Inject BASE_URL as a JS variable into every HTML page automatically.
     // Uses str_replace so it only fires when </head> is present (HTML pages),
