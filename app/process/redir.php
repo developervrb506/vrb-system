@@ -2,6 +2,21 @@
 //default example:   http://localhost:8080/process/redir.php?aid=999&default&book=wagerweb
 include(ROOT_PATH . "/process/functions.php");
 
+// SECURITY GUARD: allow only expected numeric redirect params
+$aid_raw = isset($_GET["aid"]) ? $_GET["aid"] : "";
+$pid_raw = isset($_GET["pid"]) ? $_GET["pid"] : "";
+
+if (!preg_match('/^[0-9]+(-[0-9]+)?$/', $aid_raw)) {
+    http_response_code(400);
+    exit;
+}
+
+if (!isset($_GET["default"]) && !preg_match('/^[0-9]+$/', $pid_raw)) {
+    http_response_code(400);
+    exit;
+}
+
+
 $ip = $_GET["ip"];
 if(trim($ip) != ""){$_SERVER['REMOTE_ADDR'] = $ip;}
 
