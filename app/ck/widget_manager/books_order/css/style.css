@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;	
+}
+
+.container_book {
+	width: 	100%;
+	display: flex;
+	flex-direction: column	;
+	align-items: center;
+}
+
+.books{
+	max-width: 	250px;
+	width: 100%;
+	list-style: none;
+}
+
+.books .book {
+
+	width: 100%;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	margin-bottom: 7px;
+}
+
+.books .check {
+
+	width: 20px;
+	height: 60px;
+	accent-color: green;
+}
+
+.sub {
+	color: coral;
+}

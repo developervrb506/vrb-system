@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  php:
+    build: .
+    container_name: php_app
+    ports:
+      - "8082:80"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: vrbmarketing_admin
+      MYSQL_PASSWORD: AKFtgOX29FTgbWlVf
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

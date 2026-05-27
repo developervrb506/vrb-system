@@ -1,0 +1,10 @@
+[20-Sep-2013 10:28:04 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:28:05 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:28:14 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:28:52 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:29:10 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:29:33 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:29:34 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:29:58 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4
+[20-Sep-2013 10:30:22 America/New_York] PHP Fatal error:  Cannot redeclare western_union_db() (previously declared in /home/vrbmarke/public_html/wu/process/functions.php:6) in /home/vrbmarke/public_html/wu/process/functions.php on line 17
+[20-Sep-2013 10:30:41 America/New_York] PHP Fatal error:  Call to undefined function get_adjusted_balances() in /home/vrbmarke/public_html/ck/balances/processing_adjustments_feed.php on line 4

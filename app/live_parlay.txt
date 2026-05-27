@@ -1,0 +1,111 @@
+-- mvanwagner@coredata.eu 
+-- RBL_UngradeBet can stay the same but RBL_GradeBet needs to be changed
+-- See proposal below
+-- Why?
+-- Because if you look at the code for RBL_UngradeBet, if the bet being
+-- ungraded is a Winner, the amount that gets 'Ungraded' is automatically
+-- set to WinAmount (from WagerHeader / GradedWagerHeader).
+-- However, when a bet is graded through RBL_GradeBet, the WinAmount is
+-- NEVER updated if the win amount is less than the WinAmount currently
+-- stored in WagerHeader.
+-- Why is this a problem?
+-- Because if the bet is a HALF WIN (asian handicap), the win amount
+-- will be less than the WinAmount from WagerHeader
+-- So the amount the player will be credited is wrong!
+-- Same thing will happen if the bet was a live parlay and one or
+-- more selections were cancelled; now the total payout will be less
+-- so the actual WinAmount will be less than the original WinAmount
+
+-- Based on:  RBL_GradeBet
+CREATE PROCEDURE #CoreLive_GradeBet
+	@IdWager int,
+	@Amount money,
+	@Result tinyint,
+	@IdUser smallint,
+	@hash varchar(255),
+	@timestamp BIGINT,
+    @GameDate datetime, 
+    @WagerType int,
+    @spVersion int,
+	@prmOutResult int output
+WITH ENCRYPTION
+AS
+-- comment: sp_password
+SET NOCOUNT ON
+IF EXISTS(SELECT IdWager FROM dbo.WagerHeader WITH(NOLOCK) WHERE IdWager = @IdWager AND WagerType = @WagerType)-- RBL WagerType
+BEGIN
+	DECLARE @CurrentDate datetime
+	DECLARE @IdPlayer int
+	DECLARE @RiskAmount money
+	DECLARE @WinAmount money
+	DECLARE @TaxAmount money
+	DECLARE @MoneyChange money
+	DECLARE @CompleteDescription varchar(100)
+	
+	DECLARE @salt VARCHAR(255)
+    DECLARE @saltOriginal VARCHAR(255)
+	DECLARE @ProperHash VARCHAR(255)
+	DECLARE @HashValues VARCHAR(MAX)
+	DECLARE @mytime BIGINT
+	SET XACT_ABORT ON
+	BEGIN TRANSACTION
+	SET @CurrentDate = GETDATE()
+	-- Get wager data
+	SELECT 
+		@IdPlayer = IdPlayer, 
+		@RiskAmount = RiskAmount, 
+		@WinAmount = WinAmount,
+		@TaxAmount = TaxAmount,
+		@MoneyChange = MoneyChange,
+		@CompleteDescription = CompleteDescription
+	FROM dbo.WagerHeader WITH(NOLOCK)
+	WHERE IdWager = @IdWager
+	-- Update wager header
+	UPDATE dbo.WagerHeader WITH(ROWLOCK) SET
+		SettledDate = @GameDate,
+		Result = @Result,
+		Graded = 1,
+		LastModification = @CurrentDate
+	WHERE IdWager = @IdWager
+	
+	-- Bug discovered on July 2021
+	-- If bet is a winner, and the passed amount is not same as the WinAmount,
+	-- We need to update WagerHeader before wager is moved to GradedWagerHeader
+	-- If we don't update this field, and the bet was a Half-Win (Asian Handicap)
+	-- Or bet is a parlay with one or more cancelled legs, WinAmount will be less
+	-- than OriginalWinAmount and when RBL_UngradeBet is called, the UngradeBet
+	-- Operation would credit the account for the original WinAmount stored in
+	-- the DB when this is not the amount that was actually awarded as a win
+	-- in the original GradeBet call.
+	IF (@Result = 1 AND @WinAmount != @Amount)
+	BEGIN
+		UPDATE dbo.WagerHeader WITH(ROWLOCK) SET WinAmount = @Amount
+		WHERE IdWager = @IdWager
+	END
+	
+	-- Update wager detail
+	UPDATE dbo.WagerDetail WITH(ROWLOCK) SET
+		Graded = 1,
+		Result = @Result
+	WHERE IdWager = @IdWager
+	-- Update statistics
+    -- Version 2 has extra params in Grade_UpdatePlayerStatistic: SILLossAmount, SYLLossAmount, FreePlayAmount.  Clients have said to just set this to 0 so they are shown here as 0, 0, 0
+    IF (@spVersion != 2)
+        EXEC dbo.Grade_UpdatePlayerStatistic @IdPlayer,	@Amount, @RiskAmount, 'S', @IdUser, @TaxAmount
+    ELSE
+        EXEC dbo.Grade_UpdatePlayerStatistic @IdPlayer,	@Amount, @RiskAmount, 'S', @IdUser, @TaxAmount, 0, 0, 0
+	-- Insert PlayerAccounting
+	EXEC dbo.Grade_InsertPlayerAccounting @IdPlayer, @IdWager, @CompleteDescription, 'W', @Amount, @MoneyChange, @GameDate, @IdUser, @TaxAmount
+	-- Insert tax transaction
+	-- EXEC dbo.Grade_InsertTaxTransact @TaxId, @IdBook, @IdPlayer, @Idwager, @TransactDateTime, @MoneyChange, @TransactAmount
+	-- Move wager to graded
+	EXEC dbo.Grade_MoveWagerToGraded @IdWager, @Result, @GameDate, @TaxAmount
+	COMMIT TRANSACTION
+	SET XACT_ABORT OFF
+	SET @prmOutResult = 1
+END
+ELSE 
+BEGIN
+	SET @prmOutResult = -1000
+END
+RETURN

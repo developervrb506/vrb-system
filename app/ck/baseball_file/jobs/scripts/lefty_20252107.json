@@ -1,0 +1,102 @@
+[
+  {
+    "team": "Braves",
+    "avg": ".230"
+  },
+  {
+    "team": "Cubs",
+    "avg": ".248"
+  },
+  {
+    "team": "Reds",
+    "avg": ".221"
+  },
+  {
+    "team": "Pirates",
+    "avg": ".217"
+  },
+  {
+    "team": "Giants",
+    "avg": ".209"
+  },
+  {
+    "team": "Phillies",
+    "avg": ".258"
+  },
+  {
+    "team": "Dodgers",
+    "avg": ".253"
+  },
+  {
+    "team": "Cardinals",
+    "avg": ".233"
+  },
+  {
+    "team": "Red Sox",
+    "avg": ".272"
+  },
+  {
+    "team": "White Sox",
+    "avg": ".234"
+  },
+  {
+    "team": "Guardians",
+    "avg": ".218"
+  },
+  {
+    "team": "Tigers",
+    "avg": ".262"
+  },
+  {
+    "team": "Orioles",
+    "avg": ".224"
+  },
+  {
+    "team": "Athletics",
+    "avg": ".255"
+  },
+  {
+    "team": "Twins",
+    "avg": ".233"
+  },
+  {
+    "team": "Yankees",
+    "avg": ".261"
+  },
+  {
+    "team": "Angels",
+    "avg": ".224"
+  },
+  {
+    "team": "Rangers",
+    "avg": ".218"
+  },
+  {
+    "team": "Astros",
+    "avg": ".266"
+  },
+  {
+    "team": "Mets",
+    "avg": ".230"
+  },
+  {
+    "team": "Royals",
+    "avg": ".247"
+  },
+  {
+    "team": "Nationals",
+    "avg": ".245"
+  },
+  {
+    "team": "Padres",
+    "avg": ".243"
+  },
+  {
+    "team": "Brewers",
+    "avg": ".255"
+  },
+  {
+    "team": "Mariners",
+    "avg": ".241"
+  }
+]

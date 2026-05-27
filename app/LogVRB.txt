@@ -1,0 +1,130 @@
+2024-09-26 13:25:12
+POST
+<pre>Array
+(
+    [key] => 80671d7106e4b327f1c34289eb47cb05
+    [no_parent] => 0
+    [add_odds] => 1
+    [dgs_game] => 0
+    [none_date] => 2024-09-26 20:15:00
+    [odate] => 2024-09-26 20:15:00
+    [edate] => 2024-09-26 17:15:00
+    [sport] => TNT
+    [name] => TO WIN NFC CHAMPIONSHIP TEST DELETE
+    [oleague] => 448
+    [type] => 42
+    [rot_1] => 10151
+    [team_1] => SAN FRANCISCO 49ERS
+    [odds_1] => +375
+    [rot_2] => 10152
+    [team_2] => DETROIT LIONS
+    [odds_2] => +475
+    [rot_3] => 10153
+    [team_3] => DALLAS COWBOYS
+    [odds_3] => +1200
+    [rot_4] => 10154
+    [team_4] => GREEN BAY PACKERS
+    [odds_4] => +900
+    [rot_5] => 10155
+    [team_5] => PHILADELPHIA EAGLES
+    [odds_5] => +500
+    [rot_6] => 10156
+    [team_6] => LOS ANGELES RAMS
+    [odds_6] => +3000
+    [rot_7] => 10157
+    [team_7] => ATLANTA FALCONS
+    [odds_7] => +2000
+    [rot_8] => 10158
+    [team_8] => CHICAGO BEARS
+    [odds_8] => +3000
+    [rot_9] => 10159
+    [team_9] => MINNESOTA VIKINGS
+    [odds_9] => +1200
+    [rot_10] => 10160
+    [team_10] => SEATTLE SEAHAWKS
+    [odds_10] => +1200
+    [rot_11] => 10161
+    [team_11] => TAMPA BAY BUCCANEERS
+    [odds_11] => +2000
+    [rot_12] => 10162
+    [team_12] => ARIZONA CARDINALS
+    [odds_12] => +3000
+    [rot_13] => 10163
+    [team_13] => NEW ORLEANS SAINTS
+    [odds_13] => +1400
+    [rot_14] => 10164
+    [team_14] => NEW YORK GIANTS
+    [odds_14] => +10000
+    [rot_15] => 10165
+    [team_15] => WASHINGTON COMMANDERS
+    [odds_15] => +5000
+    [rot_16] => 10166
+    [team_16] => CAROLINA PNATHERS
+    [odds_16] => +10000
+)
+</pre>
+2024-09-26 13:25:40
+POST
+<pre>Array
+(
+    [key] => 80671d7106e4b327f1c34289eb47cb05
+    [no_parent] => 1
+    [add_odds] => 1
+    [dgs_game] => 0
+    [none_date] => 2024-09-26 20:15:00
+    [odate] => 2024-09-26 20:15:00
+    [edate] => 2024-09-26 17:15:00
+    [sport] => TNT
+    [name] => TO WIN NFC CHAMPIONSHIP TEST DELETE 2
+    [oleague] => 448
+    [type] => 42
+    [rot_1] => 10151
+    [team_1] => SAN FRANCISCO 49ERS
+    [odds_1] => +375
+    [rot_2] => 10152
+    [team_2] => DETROIT LIONS
+    [odds_2] => +475
+    [rot_3] => 10153
+    [team_3] => DALLAS COWBOYS
+    [odds_3] => +1200
+    [rot_4] => 10154
+    [team_4] => GREEN BAY PACKERS
+    [odds_4] => +900
+    [rot_5] => 10155
+    [team_5] => PHILADELPHIA EAGLES
+    [odds_5] => +500
+    [rot_6] => 10156
+    [team_6] => LOS ANGELES RAMS
+    [odds_6] => +3000
+    [rot_7] => 10157
+    [team_7] => ATLANTA FALCONS
+    [odds_7] => +2000
+    [rot_8] => 10158
+    [team_8] => CHICAGO BEARS
+    [odds_8] => +3000
+    [rot_9] => 10159
+    [team_9] => MINNESOTA VIKINGS
+    [odds_9] => +1200
+    [rot_10] => 10160
+    [team_10] => SEATTLE SEAHAWKS
+    [odds_10] => +1200
+    [rot_11] => 10161
+    [team_11] => TAMPA BAY BUCCANEERS
+    [odds_11] => +2000
+    [rot_12] => 10162
+    [team_12] => ARIZONA CARDINALS
+    [odds_12] => +3000
+    [rot_13] => 10163
+    [team_13] => NEW ORLEANS SAINTS
+    [odds_13] => +1400
+    [rot_14] => 10164
+    [team_14] => NEW YORK GIANTS
+    [odds_14] => +10000
+    [rot_15] => 10165
+    [team_15] => WASHINGTON COMMANDERS
+    [odds_15] => +5000
+    [rot_16] => 10166
+    [team_16] => CAROLINA PNATHERS
+    [odds_16] => +10000
+)
+</pre>

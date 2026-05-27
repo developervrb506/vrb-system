@@ -1,0 +1,9 @@
+[11-Feb-2019 01:54:33 UTC] PHP Warning:  require(../src/config/db.php): failed to open stream: No such file or directory in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[11-Feb-2019 01:54:33 UTC] PHP Warning:  require(../src/config/db.php): failed to open stream: No such file or directory in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[11-Feb-2019 01:54:33 UTC] PHP Fatal error:  require(): Failed opening required '../src/config/db.php' (include_path='/home/aandrade/viixel.com') in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[11-Feb-2019 22:15:04 UTC] PHP Warning:  require(../src/config/db.php): failed to open stream: No such file or directory in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[11-Feb-2019 22:15:04 UTC] PHP Warning:  require(../src/config/db.php): failed to open stream: No such file or directory in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[11-Feb-2019 22:15:04 UTC] PHP Fatal error:  require(): Failed opening required '../src/config/db.php' (include_path='/home/aandrade/viixel.com') in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[19-Feb-2019 10:05:51 UTC] PHP Warning:  require(../src/config/db.php): failed to open stream: No such file or directory in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[19-Feb-2019 10:05:51 UTC] PHP Warning:  require(../src/config/db.php): failed to open stream: No such file or directory in /home/aandrade/viixel.com/slim/public/index.php on line 6
+[19-Feb-2019 10:05:51 UTC] PHP Fatal error:  require(): Failed opening required '../src/config/db.php' (include_path='/home/aandrade/viixel.com') in /home/aandrade/viixel.com/slim/public/index.php on line 6

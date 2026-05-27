@@ -1,0 +1,26 @@
+app/config.php
+app/twitter/xml/
+node_modules/
+vendor/
+.env
+.DS_Store
+mysql_data/
+*.rar
+*.sql
+*.zip
+app/tools/special/bkp/
+app/tools/special/fix/
+**/_notes/
+**/dwsync.xml
+**/Thumbs.db
+# Local/editor files
+.vscode/
+.idea/
+*.bak
+*.backup
+*.tmp
+*.log
+app/images/headlines/
+app/ck/posting/templates/
+app/livehelp/
+app/ck/player_files/

@@ -1,0 +1,30 @@
+name: Deploy VRB System
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to AWS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+            cd ~/vrb-system
+
+            echo "=== Syncing AWS with GitHub main ==="
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+
+            echo "=== Rebuilding and restarting Docker ==="
+            docker compose up -d --build
+
+            echo "=== Deploy completed ==="
