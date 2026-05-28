@@ -82,7 +82,7 @@ if(isset($_POST["process"])){
       $c_agent->insert();
     }
      
-    exit;
+   // exit;
   
     }
 	
