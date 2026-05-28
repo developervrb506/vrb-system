@@ -2295,7 +2295,7 @@ class _pph_account{
 	}
 	function insert(){
 	   accounting_db();
-	   $this->vars["id"] = insert($this, "pph_account");
+	   $this->vars["id"] = insert_test($this, "pph_account");
 	}
 	function move_balance($amount){
 		$this->vars["balance"] += $amount;

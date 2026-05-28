@@ -80,12 +80,9 @@ if(isset($_POST["process"])){
       $c_agent->vars['current_balance'] = 0;
       $c_agent->vars['status'] = 'active';
       $c_agent->insert();
-
-
-
     }
      
-    
+    exit;
   
     }
 	
